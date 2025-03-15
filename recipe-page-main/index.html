@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+    <!-- Display site properly based on user's device -->
+    <meta
+      name="description"
+      content="Learn how to make a simple and delicious omelette with this easy-to-follow recipe. Includes preparation and cooking times, ingredients, and nutrition details."
+    />
+
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Simple Omelette Recipe" />
+    <meta
+      property="og:description"
+      content="Quick and easy omelette recipe with preparation and cooking instructions. Perfect for any meal."
+    />
+    <meta property="og:image" content="./assets/images/image-omelette.jpeg" />
+    <meta
+      property="og:url"
+      content="https://alok-38.github.io/frontendMentor/recipe-page-main/"
+    />
+    <meta property="og:site_name" content="Frontend Mentor Recipe Page" />
+
+    <!-- Twitter Cards Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Simple Omelette Recipe" />
+    <meta
+      name="twitter:description"
+      content="Quick and easy omelette recipe with preparation and cooking instructions. Perfect for any meal."
+    />
+    <meta name="twitter:image" content="./assets/images/image-omelette.jpeg" />
 
     <link
       rel="icon"
@@ -12,7 +39,43 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Recipe page</title>
+    <title>Simple Omelette Recipe - Frontend Mentor</title>
+
+    <!-- Schema Markup for Recipe -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": "Simple Omelette",
+        "image": "./assets/images/image-omelette.jpeg",
+        "description": "Quick and easy omelette recipe with preparation and cooking instructions. Perfect for any meal.",
+        "recipeYield": "1 serving",
+        "prepTime": "PT5M",
+        "cookTime": "PT5M",
+        "totalTime": "PT10M",
+        "ingredients": [
+          "2-3 large eggs",
+          "Salt to taste",
+          "Pepper to taste",
+          "1 tablespoon of butter or oil",
+          "Optional fillings: cheese, diced vegetables, cooked meats, herbs"
+        ],
+        "instructions": [
+          "In a bowl, beat the eggs with a pinch of salt and pepper until well mixed.",
+          "Place a non-stick frying pan over medium heat and add butter or oil.",
+          "Once the butter is melted, pour in the eggs and tilt the pan to coat evenly.",
+          "Add optional fillings when the eggs begin to set but are still slightly runny.",
+          "Fold the omelette in half and cook for another minute before serving."
+        ],
+        "nutrition": {
+          "@type": "NutritionInformation",
+          "calories": "27 kcal",
+          "carbohydrateContent": "0g",
+          "proteinContent": "20g",
+          "fatContent": "22g"
+        }
+      }
+    </script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,7 +85,7 @@
       <img
         class="omelette-img"
         src="./assets/images/image-omelette.jpeg"
-        alt="Omelette"
+        alt="A perfectly cooked omelette with a golden-brown surface, ideal for a quick meal."
       />
 
       <h1 class="article-heading">Simple Omelette Recipe</h1>
@@ -48,7 +111,7 @@
           <li>2-3 large eggs</li>
           <li>Salt, to taste</li>
           <li>Pepper, to taste</li>
-          <li>1 tablespoon of butter or omelette-img</li>
+          <li>1 tablespoon of butter or oil</li>
           <li>
             Optional fillings: cheese, diced vegetables, cooked meats, herbs
           </li>
@@ -61,9 +124,9 @@
         <h2>Instructions</h2>
         <ol>
           <li>
-            <b>Beat the eggs: </b> In a bowl, beat the eggs with a pinch of salt
-            and pepper until they are well mixed. You can add a tablespoon of
-            water or milk for a fluffier texture.
+            <b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of salt
+            and pepper until well mixed. You can add a tablespoon of water or
+            milk for a fluffier texture.
           </li>
           <li>
             <b>Heat the pan:</b> Place a non-stick frying pan over medium heat
@@ -80,11 +143,10 @@
             chosen fillings over one half of the omelette.
           </li>
           <li>
-            <b>Fold and serve: </b>As the omelette continues to cook, carefully
+            <b>Fold and serve:</b> As the omelette continues to cook, carefully
             lift one edge and fold it over the fillings. Let it cook for another
             minute, then slide it onto a plate.
           </li>
-
           <li>
             <b>Enjoy:</b> Serve hot, with additional salt and pepper if needed.
           </li>
@@ -100,23 +162,23 @@
 
         <div class="nutrition-table">
           <div>
-            <span class="nutrient">Calories</span
-            ><span class="nutrient-value">27kcal</span>
+            <span class="nutrient">Calories</span>
+            <span class="nutrient-value">27kcal</span>
           </div>
           <hr />
           <div>
-            <span class="nutrient">Carbs</span
-            ><span class="nutrient-value">0g</span>
+            <span class="nutrient">Carbs</span>
+            <span class="nutrient-value">0g</span>
           </div>
           <hr />
           <div>
-            <span class="nutrient">Protein</span
-            ><span class="nutrient-value">20g</span>
+            <span class="nutrient">Protein</span>
+            <span class="nutrient-value">20g</span>
           </div>
           <hr />
           <div>
-            <span class="nutrient">Fat</span
-            ><span class="nutrient-value">22g</span>
+            <span class="nutrient">Fat</span>
+            <span class="nutrient-value">22g</span>
           </div>
         </div>
       </section>
