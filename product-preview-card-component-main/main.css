@@ -1,0 +1,10 @@
+@import url(preset.css);
+
+h1 {
+    font-family: var(--textpreset-1-font-family);
+    font-weight: var(--textpreset-1-font-weight);
+    font-size: var(--textpreset-1-font-size);
+    line-height: var(--textpreset-1-line-height);
+    letter-spacing: var(--textpreset-1-letter-spacing);
+    color: var(--textpreset-1-color);
+}
