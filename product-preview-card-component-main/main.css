@@ -1,4 +1,40 @@
+@import url(reset.css);
 @import url(preset.css);
+
+body {
+    background-color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    width: 600px;
+    height: 456px;
+    display: flex;
+    overflow: hidden;
+    border-radius: var(--spacing-100);
+}
+
+section:first-of-type {
+    background-image: url('./images/image-product-desktop.jpg');
+    background-size: cover;
+    height: 456px;
+    width: 300px;
+    background-position: center;
+}
+
+section:last-of-type {
+    width: 300px;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: var(--spacing-400);
+}
 
 h1 {
     font-family: var(--textpreset-1-font-family);
@@ -7,4 +43,74 @@ h1 {
     line-height: var(--textpreset-1-line-height);
     letter-spacing: var(--textpreset-1-letter-spacing);
     color: var(--textpreset-1-color);
+}
+
+p:first-of-type {
+    font-family: var(--textpreset-4-font-family);
+    font-weight: var(--textpreset-4-font-weight);
+    font-size: var(--textpreset-4-font-size);
+    line-height: var(--textpreset-4-line-height);
+    letter-spacing: var(--textpreset-4-letter-spacing);
+    color: var(--textpreset-4-color);
+    text-transform: uppercase;
+}
+
+p:nth-of-type(2) {
+    font-family: var(--textpreset-5-font-family);
+    font-weight: var(--textpreset-5-font-weight);
+    font-size: var(--textpreset-5-font-size);
+    line-height: var(--textpreset-5-line-height);
+    letter-spacing: var(--textpreset-5-letter-spacing);
+    color: var(--textpreset-5-color);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+p:last-of-type {
+    width: 191px;
+    font-family: var(--textpreset-1-font-family);
+    font-weight: var(--textpreset-1-font-weight);
+    font-size: var(--textpreset-1-font-size);
+    line-height: var(--textpreset-1-line-height);
+    letter-spacing: var(--textpreset-1-letter-spacing);
+    color: var(--Green-500);
+}
+
+p:last-of-type span {
+    font-family: var(--textpreset-5-font-family);
+    font-weight: var(--textpreset-5-font-weight);
+    font-size: var(--textpreset-5-font-size);
+    line-height: var(--textpreset-5-line-height);
+    letter-spacing: var(--textpreset-5-letter-spacing);
+    color: var(--textpreset-5-color);
+    text-decoration: line-through;
+}
+
+button {
+    outline: unset;
+    border: unset;
+    padding: var(--spacing-200) var(--spacing-400);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    background-color: var(--Green-500);
+    color: var(--White);
+    width: 236px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-family: inherit;
+    margin-top: 15px;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background-color: var(--Green-700);
+}
+
+footer {
+    margin-top: 5vh;
 }
