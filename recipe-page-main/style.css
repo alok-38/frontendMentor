@@ -1,65 +1,178 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
 
+/* Box Sizing Reset */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+/* Root Variables */
 :root {
-    /* Color Primary */
-    --Nutmeg: hsl(14, 45%, 36%);
-    --Dark-Raspberry: hsl(332, 51%, 32%);
-    /* Neutral */
-    --White: hsl(0, 0%, 100%);
-    --Rose-White: hsl(330, 100%, 98%);
-    --Eggshell: hsl(30, 54%, 90%);
-    --Light-Grey: hsl(30, 18%, 87%);
-    --Wenge-Brown: hsl(30, 10%, 34%);
-    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --background-primary: hsl(28, 50%, 90%);
+    --text-primary: hsl(30, 10%, 34%);
+    --text-secondary: hsl(14, 45%, 36%);
+    --text-white: hsl(0, 0%, 100%);
+    --text-accent: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --border-light: hsl(30, 18%, 87%);
+    --border-dark: hsl(24, 5%, 18%);
+    --font-primary: 'Outfit', sans-serif;
 }
 
+/* Body Styles */
 body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    color: var(--text-primary);
+    background-color: var(--background-primary);
     display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
-    width: 100vw;
-    align-items: center;
     justify-content: center;
-    background-color: #f3e5d7;
+    align-items: center;
     line-height: 1.5;
 }
 
-main {
-    background-color: #fff;
-    padding: 40px;
-    max-width: 736px;
-    border-radius: 24px;
+/* Main Container Styles */
+.main-container {
+    background-color: var(--text-white);
+    display: flex;
+    max-width: 50%;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
 }
 
-section:not(:nth-of-type(2)) {
-    font-family: "Young Serif", serif;
+/* Omelette Image Styles */
+.omelette-img {
+    background-size: cover;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
 }
 
-h1 {
-    color: var(--Dark-Charcoal);
-    font-size: 2.5rem;
+/* Article Heading Styles */
+.article-heading {
+    margin-bottom: 4px;
+    font-family: 'Young Serif', sans-serif;
+    color: var(--border-dark);
+    font-size: 3rem;
 }
 
-header img {
-    display: block;
+/* Prep Section Styles */
+.prep-section {
+    background-color: var(--text-accent);
+    padding: 12px 0 0 12px;
+    border-radius: 10px;
+}
+
+.prep-section h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7a284e;
+}
+
+.prep-section li {
+    padding-bottom: 10px;
+}
+
+/* Ingredients, Instructions, Nutrition Styles */
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+    color: var(--text-secondary);
+    font-size: 2rem;
+    font-family: 'Young Serif', sans-serif;
+    margin: 18px 0;
+}
+
+.prep-section b,
+.instructions ol li b {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.ingredients ul,
+.instructions ol {
+    padding: 0;
+    padding-left: 25px;
+    margin-top: 0;
+}
+
+.ingredients li,
+.instructions li {
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+/* Horizontal Rule Styles */
+hr {
     width: 100%;
-    max-width: 656px;
-    height: 300px;
-    object-fit: cover;
-    margin: 0 auto 40px auto;
+    color: var(--border-light);
+    opacity: 0.5;
 }
 
-td:not(:last-child) {
-    border-bottom: ;
+/* Ordered List Styles */
+ol {
+    counter-reset: item;
+    list-style-type: none;
 }
 
-footer {
-    margin-top: auto;
+ol li {
+    counter-increment: item;
+    position: relative;
+}
+
+ol li:before {
+    content: counter(item) '.';
+    position: absolute;
+    left: -1.5em;
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+/* Nutrition Table Styles */
+.nutrition-table {
+    margin: 20px 0;
+}
+
+.nutrition-table div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nutrient,
+.nutrient-value {
+    flex-basis: 50%;
+    font-size: 1.5rem;
+}
+
+.nutrient-value {
+    color: var(--text-secondary);
+    font-weight: bold;
+
+}
+
+/* Attribution Styles */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        max-width: 100%;
+        /* Adjusted max-width for smaller screens */
+        margin: 0;
+        padding: 1rem;
+    }
 }
