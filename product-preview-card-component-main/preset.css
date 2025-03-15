@@ -14,35 +14,40 @@
     /* typography */
     --textpreset-1-font-family: 'Fraunces', sans-serif;
     --textpreset-1-font-weight: bold;
-    --textpreset-1-font-size: 32px;
+    --textpreset-1-font-size: clamp(24px, 6vw, 32px);
+    /* responsive */
     --textpreset-1-line-height: 100%;
     --textpreset-1-letter-spacing: 0px;
     --textpreset-1-color: var(--Black);
 
     --textpreset-2-font-family: 'Montserrat', sans-serif;
     --textpreset-2-font-weight: bold;
-    --textpreset-2-font-size: 14px;
+    --textpreset-2-font-size: clamp(12px, 3vw, 14px);
+    /* responsive */
     --textpreset-2-line-height: 110%;
     --textpreset-2-letter-spacing: 0px;
     --textpreset-2-color: var(--Black);
 
     --textpreset-3-font-family: 'Montserrat', sans-serif;
     --textpreset-3-font-weight: medium;
-    --textpreset-3-font-size: 14px;
+    --textpreset-3-font-size: clamp(12px, 3vw, 14px);
+    /* responsive */
     --textpreset-3-line-height: 160%;
     --textpreset-3-letter-spacing: 0px;
     --textpreset-3-color: var(--White);
 
     --textpreset-4-font-family: 'Montserrat', sans-serif;
     --textpreset-4-font-weight: medium;
-    --textpreset-4-font-size: 12px;
+    --textpreset-4-font-size: clamp(10px, 2.5vw, 12px);
+    /* responsive */
     --textpreset-4-line-height: 120%;
     --textpreset-4-letter-spacing: 5px;
     --textpreset-4-color: var(--Grey);
 
     --textpreset-5-font-family: 'Montserrat', sans-serif;
     --textpreset-5-font-weight: medium;
-    --textpreset-5-font-size: 13px;
+    --textpreset-5-font-size: clamp(11px, 2.8vw, 13px);
+    /* responsive */
     --textpreset-5-line-height: 120%;
     --textpreset-5-letter-spacing: 0px;
     --textpreset-5-color: var(--Grey);
@@ -54,5 +59,4 @@
     --spacing-200: 16px;
     --spacing-100: 8px;
     --spacing-50: 4px;
-
 }
