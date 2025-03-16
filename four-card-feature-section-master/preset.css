@@ -1,66 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    /* colors */
+    /* Colors */
     --Grey-500: #4d4f62;
     --Grey-400: #6a7178;
     --White: #ffffff;
     --Red: #ea5454;
-    --Cyan: #4ad3d2;
+    --Cyan: #44d3d2;
     --Blue: #549ef2;
     --Orange: #fcae4a;
-    --Primary: #FAFAFA;
 
     /* Typography */
-    /* text-preset-1 */
-    --font-preset-1-font-family: 'Poppins', sans-serif;
-    --font-preset-1-font-weight: 600;
+    --text-preset-1-font: 'Poppins', sans-serif;
+    --text-preset-1-weight: 600;
     /* Semibold */
-    --font-preset-1-font-size: clamp(24px, 5vw, 36px);
-    /* fluid typography */
-    --font-preset-1-line-height: 140%;
-    --font-preset-1-letter-spacing: 0.25px;
+    --text-preset-1-size: 36px;
+    --text-preset-1-line-height: 140%;
+    --text-preset-1-letter-spacing: 0.25px;
 
-    /* text-preset-4 */
-    --font-preset-4-font-family: 'Poppins', sans-serif;
-    --font-preset-4-font-weight: 400;
-    /* Regular */
-    --font-preset-4-font-size: clamp(24px, 5vw, 15px);
-    /* fluid typography */
-    --font-preset-4-line-height: 140%;
-    --font-preset-4-letter-spacing: 0px;
-
-    /* text-preset-5 */
-    --font-preset-5-font-family: 'DM Sans', sans-serif;
-    --font-preset-5-font-weight: 400;
-    /* Regular */
-    --font-preset-5-font-size: clamp(10px, 2vw, 13px);
-    /* fluid typography */
-    --font-preset-5-line-height: 160%;
-    --font-preset-5-letter-spacing: 0px;
-
-    /* text-preset-2 */
-    --font-preset-2-font-family: 'Poppins', sans-serif;
-    --font-preset-2-font-weight: 200;
+    --text-preset-2-font: 'Poppins', sans-serif;
+    --text-preset-2-weight: 200;
     /* Extra Light */
-    --font-preset-2-font-size: clamp(24px, 5vw, 36px);
-    /* fluid typography */
-    --font-preset-2-line-height: 140%;
-    --font-preset-2-letter-spacing: 0.25px;
+    --text-preset-2-size: 36px;
+    --text-preset-2-line-height: 140%;
+    --text-preset-2-letter-spacing: 0.25px;
 
-    /* text-preset-3 */
-    --font-preset-3-font-family: 'Poppins', sans-serif;
-    --font-preset-3-font-weight: 600;
+    --text-preset-3-font: 'Poppins', sans-serif;
+    --text-preset-3-weight: 600;
     /* Semibold */
-    --font-preset-3-font-size: clamp(14px, 4vw, 20px);
-    /* fluid typography */
-    --font-preset-3-line-height: 135%;
-    --font-preset-3-letter-spacing: 0px;
+    --text-preset-3-size: 20px;
+    --text-preset-3-line-height: 135%;
+    --text-preset-3-letter-spacing: 0px;
 
-    /* Responsive spacing */
-    --space-500: clamp(30px, 8vw, 40px);
-    --space-400: clamp(24px, 6vw, 32px);
-    --space-300: clamp(18px, 4vw, 24px);
-    --space-200: clamp(12px, 3vw, 16px);
-    --space-100: clamp(6px, 1.5vw, 8px);
+    --text-preset-4-font: 'Poppins', sans-serif;
+    --text-preset-4-weight: 400;
+    /* Regular */
+    --text-preset-4-size: 16px;
+    --text-preset-4-line-height: 160%;
+    --text-preset-4-letter-spacing: 0px;
+
+    --text-preset-5-font: 'DM Sans', sans-serif;
+    --text-preset-5-weight: 400;
+    /* Regular */
+    --text-preset-5-size: 13px;
+    --text-preset-5-line-height: 160%;
+    --text-preset-5-letter-spacing: 0px;
+
+    /* Spacing */
+    --spacing-500: 40px;
+    --spacing-400: 32px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-100: 8px;
 }
+
