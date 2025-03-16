@@ -124,3 +124,54 @@ footer a {
             "card1 card3 card4";
     }
 }
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+    .container {
+        max-width: 60rem;
+    }
+
+    main {
+        max-width: 768px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for tablet */
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4";
+    }
+}
+
+@media (max-width: 375px) {
+
+    .container {
+        max-width: 23rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* Center the container horizontally */
+    }
+
+    main {
+        max-width: 23rem;
+        /* Match the container's max-width */
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4";
+        /* Stack the cards vertically */
+        justify-items: center;
+        /* Center the cards horizontally within the grid */
+        gap: 1rem;
+        /* Optional: Adds space between the cards */
+    }
+
+    .card {
+        width: 100%;
+        /* Ensures cards take up the full width of the grid */
+    }
+}
