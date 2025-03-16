@@ -5,12 +5,17 @@ body {
     background-color: #FAFAFA;
 }
 
+.container {
+    margin: auto;
+    max-width: 30rem;
+}
+
 header {
     width: 540px;
     background-color: var(--White);
     color: var(--Grey-500);
     height: 158px;
-    margin: 0 auto 100px auto;
+    margin: 2rem auto 2.5rem auto;
     text-align: center;
 }
 
@@ -33,10 +38,6 @@ header h1 span {
     font-weight: var(--text-preset-1-weight);
 }
 
-main {
-    display: flex;
-    margin: auto;
-}
 
 article {
     border-radius: var(--spacing-100);
@@ -45,25 +46,35 @@ article {
     width: 350px;
     height: 250px;
     padding: var(--spacing-400);
+    box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
 }
 
 
 article:first-of-type {
     border-top: 4px solid var(--Cyan);
+    grid-area: card1;
+    align-self: center;
 }
 
 article:nth-of-type(3) {
     border-top: 4px solid var(--Orange);
+    grid-area: card2;
 }
 
 
 article:nth-of-type(2) {
     border-top: 4px solid var(--Red);
+    grid-area: card3;
 }
 
 
 article:nth-of-type(4) {
     border-top: 4px solid var(--Blue);
+    grid-area: card4;
+    align-self: center;
 }
 
 article div {
@@ -98,4 +109,18 @@ footer {
 footer a {
     text-decoration: none;
     color: indianred;
+}
+
+@media(min-width:64rem) {
+    .container {
+        max-width: 70rem;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "card1 card2 card4"
+            "card1 card3 card4";
+    }
 }
