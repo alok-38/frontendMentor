@@ -1,2 +1,58 @@
 @import url(reset.css);
 @import url(preset.css);
+
+body {
+    background-color: #FAFAFA;
+}
+
+article {
+    border-radius: var(--spacing-100);
+    overflow: hidden;
+    background-color: var(--White);
+    width: 350px;
+    height: 250px;
+    padding: var(--spacing-400);
+}
+
+article:first-of-type {
+    border-top: 4px solid var(--Cyan);
+}
+
+article:nth-of-type(2) {
+    border-top: 4px solid var(--Red);
+}
+
+article:nth-of-type(3) {
+    border-top: 4px solid var(--Orange);
+}
+
+article:nth-of-type(4) {
+    border-top: 4px solid var(--Blue);
+}
+
+article div {
+    margin-bottom: 32px;
+}
+
+article img {
+    margin-left: auto;
+}
+
+article div h2 {
+    color: var(--Grey-500);
+    --text-preset-3-font: 'Poppins', sans-serif;
+    --text-preset-3-weight: 600;
+    --text-preset-3-size: 20px;
+    --text-preset-3-line-height: 135%;
+    --text-preset-3-letter-spacing: 0px;
+    margin-bottom: 6px;
+}
+
+article div p {
+    color: var(--Grey-400);
+    --text-preset-5-font: 'DM Sans', sans-serif;
+    --text-preset-5-weight: 400;
+    --text-preset-5-size: 13px;
+    --text-preset-5-line-height: 160%;
+    --text-preset-5-letter-spacing: 0px;
+}
