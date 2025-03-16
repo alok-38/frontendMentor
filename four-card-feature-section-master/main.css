@@ -6,9 +6,18 @@ body {
     background-color: var(--Primary);
 }
 
+main {
+    max-width: 1114px;
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+    margin: auto;
+    position: relative;
+    grid-gap: 32px;
+}
+
 header {
     width: 540px;
-    margin: auto;
+    margin: 50px auto;
     color: var(--Grey-500);
     display: flex;
     flex-direction: column;
@@ -44,9 +53,34 @@ header p {
 
 article {
     background-color: var(--White);
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     padding: var(--space-400);
+    box-shadow: 4px 16px 24px rgba(131, 131, 133, 0.3), 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    height: 250px;
 }
+
+article:nth-of-type(2) {
+    margin-bottom: 0;
+}
+
+article:last-of-type {
+    position: relative;
+    left: 110%;
+}
+
+article:first-of-type,
+article:nth-of-type(3) {
+    position: relative;
+    top: 50%;
+}
+
+
+article div {
+    width: 286px;
+}
+
 
 article h2 {
     font-weight: var(--font-preset-3-font-weight);
@@ -55,6 +89,7 @@ article h2 {
     line-height: var(--font-preset-3-line-height);
     letter-spacing: var(--font-preset-3-letter-spacing);
     color: var(--Grey-500);
+    margin-bottom: 6px;
 }
 
 article p {
@@ -77,8 +112,10 @@ article div {
 footer {
     color: var(--Grey-400);
     text-align: center;
+    margin-top: 50px;
 }
 
 footer a {
     text-decoration: none;
+    color: orange;
 }
