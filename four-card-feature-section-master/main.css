@@ -5,6 +5,39 @@ body {
     background-color: #FAFAFA;
 }
 
+header {
+    width: 540px;
+    background-color: var(--White);
+    color: var(--Grey-500);
+    height: 158px;
+    margin: 0 auto 100px auto;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--text-preset-1-font);
+    font-weight: var(--text-preset-2-weight);
+    margin-bottom: 16px;
+    font-size: var(--text-preset-1-size);
+}
+
+header p {
+    width: 540px;
+    margin: auto;
+    line-height: var(--text-preset-4-line-height);
+    font-weight: var(--text-preset-4-weight);
+    font-size: var(--text-preset-4-size);
+}
+
+header h1 span {
+    font-weight: var(--text-preset-1-weight);
+}
+
+main {
+    display: flex;
+    margin: auto;
+}
+
 article {
     border-radius: var(--spacing-100);
     overflow: hidden;
@@ -14,17 +47,20 @@ article {
     padding: var(--spacing-400);
 }
 
+
 article:first-of-type {
     border-top: 4px solid var(--Cyan);
-}
-
-article:nth-of-type(2) {
-    border-top: 4px solid var(--Red);
 }
 
 article:nth-of-type(3) {
     border-top: 4px solid var(--Orange);
 }
+
+
+article:nth-of-type(2) {
+    border-top: 4px solid var(--Red);
+}
+
 
 article:nth-of-type(4) {
     border-top: 4px solid var(--Blue);
@@ -40,19 +76,26 @@ article img {
 
 article div h2 {
     color: var(--Grey-500);
-    --text-preset-3-font: 'Poppins', sans-serif;
-    --text-preset-3-weight: 600;
-    --text-preset-3-size: 20px;
-    --text-preset-3-line-height: 135%;
-    --text-preset-3-letter-spacing: 0px;
     margin-bottom: 6px;
+    font-family: var(--text-preset-3-font);
+    font-weight: var(--text-preset-3-weight);
+    font-size: var(--text-preset-3-size);
 }
 
 article div p {
     color: var(--Grey-400);
-    --text-preset-5-font: 'DM Sans', sans-serif;
-    --text-preset-5-weight: 400;
-    --text-preset-5-size: 13px;
-    --text-preset-5-line-height: 160%;
-    --text-preset-5-letter-spacing: 0px;
+    font-family: var(--text-preset-5-font);
+    font-weight: var(--text-preset-5-weight);
+    font-size: var(--text-preset-5-size);
+}
+
+footer {
+    text-align: center;
+    font-family: var(--text-preset-4-font);
+    font-size: var(--text-preset-5-size);
+}
+
+footer a {
+    text-decoration: none;
+    color: indianred;
 }
