@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200,300,400,500,600,700,800&display=swap');
+
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --grey-900: #48556a;
+    --grey-500: #6e8098;
+    --grey-400: #9daec2;
+    --grey-200: #ecf2f8;
+
+    /* Typography */
+    --text-preset-font-family: "Manrope", sans-serif;
+    --text-preset-font-weight: 700;
+
+    /* preset 1 */
+    --text-preset-1-font-size: 20px;
+    --text-preset-1-line-height: 130%;
+    --text-preset-1-letter-spacing: 0.25px;
+
+    /* preset 2 */
+    --text-preset-2-font-size: 13px;
+    --text-preset-2-line-height: 140%;
+    --text-preset-2-letter-spacing: 0.12px;
+
+    /* preset 3 */
+    --text-preset-3-font-size: 13px;
+    --text-preset-3-line-height: 140%;
+    --text-preset-3-letter-spacing: 0.12px;
+    --text-preset-3-font-weight: 500;
+
+    /* preset 4 */
+    --text-preset-4-font-size: 13px;
+    --text-preset-4-line-height: 140%;
+    --text-preset-4-letter-spacing: 0.25px;
+    /* adjusted from 25% to 0.25px */
+    --text-preset-4-font-weight: 400;
+
+    /* Spacing */
+    --spacing-0: 0px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-700: 56px;
+    --spacing-800: 64px;
+    --spacing-1300: 104px;
+    --spacing-2000: 160px;
+}

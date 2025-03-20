@@ -1,0 +1,32 @@
+@import url('reset.css');
+@import url('preset.css');
+
+body {
+    background-color: var(--grey-200);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    width: 730px;
+}
+
+main img {
+    width: 285px;
+    height: 280px;
+}
+
+article {
+    padding: var(--spacing-200) var(--spacing-500);
+}
+
+footer {
+    margin-top: auto;
+}
