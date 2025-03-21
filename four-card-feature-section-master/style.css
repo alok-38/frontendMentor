@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --ff-sans: "Poppins", sans-serif;
+
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+
+    --fs-400: 0.9275rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.625rem;
+    --fs-900: 2.5rem;
+
+    --clr-neutral-900: hsl(234, 12%, 34%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+
+    --clr-teal: hsl(180, 62%, 55%);
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-yellow: hsl(34, 97%, 64%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--clr-neutral-400);
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--clr-neutral-900);
+    line-height: 1.1;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.wrapper--narrow {
+    max-width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem;
+}
+
+.layout-grid {
+    display: flex;
+}
+
+.col {
+    border: 3px solid dodgerblue;
+}
+
+footer {
+    font-size: var(--fs-400);
+    text-align: center;
+}
+
+footer a {
+    color: dodgerblue;
+    text-decoration: none;
+}
