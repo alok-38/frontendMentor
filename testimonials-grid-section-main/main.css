@@ -1,29 +1,67 @@
-@import url('reset.css');
-@import url('preset.css');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Typography */
+    --ff-sans: "Barlow", sans-serif;
+
+    --fw-normal: 500;
+    --fw-bold: 600;
+
+    --fs-400: 0.688rem;
+    --fs-500: 0.813rem;
+    --fs-600: 1.25rem;
+
+
+    /* Colors */
+
+    --clr-primary-50: hsl(260, 100%, 95%);
+    --clr-primary-300: hsl(264, 82%, 80%);
+    --clr-primary-500: hsl(263, 55%, 52%);
+
+    --clr-neutral-white: hsl(0, 0%, 100%);
+    --clr-grey-100: hsl(214, 17%, 92%);
+    --clr-grey-200: hsl(0, 0%, 81%);
+    --clr-grey-400: hsl(224, 10%, 45%);
+    --clr-grey-500: hsl(217, 19%, 35%);
+    --clr-dark-blue: hsl(219, 29%, 14%);
+    --clr-neutral-black: hsl(0, 0%, 7%);
+
+    /* Spacing */
+    --space-50: 0.25rem;
+    --space-100: 0.5rem;
+    --space-200: 1rem;
+    --space-300: 1.5rem;
+    --space-400: 2rem;
+    --space-500: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: var(--fs-500);
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+}
 
 body {
-    background-color: #F6F5F6;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    flex-direction: column;
+    margin: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
+.layout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-article {
-    grid-area: card;
-    box-sizing: border-box;
-    background: #733FC8;
-    border-radius: 10px;
-    padding: 2em 1.75em;
-    margin: 1em;
-    grid-template-columns: 45px auto;
+.row-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+section {
+    display: flex;
 }
