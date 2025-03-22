@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Colors */
+    --black: #121212;
+    --dark-blue: #19202D;
+    --white: #FFFFFF;
+
+    /* Grey Shades */
+    --grey-100: #E7EAEE;
+    --grey-200: #CFCFCF;
+    --grey-400: #676D7E;
+    --grey-500: #48556A;
+
+    /* Purple Shades */
+    --purple-50: #EDE4FF;
+    --purple-300: #A775F1;
+    --purple-500: #733FC8;
+
+    /* RGB Values */
+    --black-rgb: rgb(18, 18, 18);
+    --dark-blue-rgb: rgb(25, 32, 45);
+    --white-rgb: rgb(255, 255, 255);
+
+    --grey-100-rgb: rgb(231, 234, 238);
+    --grey-200-rgb: rgb(207, 207, 207);
+    --grey-400-rgb: rgb(103, 109, 126);
+    --grey-500-rgb: rgb(72, 85, 106);
+
+    --purple-50-rgb: rgb(237, 228, 255);
+    --purple-300-rgb: rgb(167, 117, 241);
+    --purple-500-rgb: rgb(115, 63, 200);
+
+    /* Typography  */
+    --ff-sans: 'Barlow Semi Condensed', sans-serif;
+    --fw-semibold: 600;
+    --fw-medium: 500;
+    --fs-600: 1.25rem;
+    --fs-500: 0.813rem;
+    --fs-500-sm: 0.688rem;
+
+    /* Spacing */
+    --space-500: 2.5rem;
+    --space-400: 2rem;
+    --space-300: 1.5rem;
+    --space-200: 1rem;
+    --space-100: 0.5rem;
+    --space-50: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-sans);
+    /* non italic style */
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+.avatar {
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 600px 250px;
+}
