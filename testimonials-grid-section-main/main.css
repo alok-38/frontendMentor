@@ -65,3 +65,15 @@ body {
 section {
     display: flex;
 }
+
+/* profile */
+.avatar {
+    display: flex;
+}
+
+.avatar img:first-of-type {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+}
