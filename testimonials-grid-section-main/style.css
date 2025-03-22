@@ -64,15 +64,10 @@ body {
     margin: 0;
 }
 
-.avatar {
+img:not(.bg) {
     display: block;
     width: 28px;
     height: 28px;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 600px 250px;
 }
