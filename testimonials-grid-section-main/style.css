@@ -71,3 +71,49 @@ img:not(.bg) {
     object-fit: cover;
     border-radius: 50%;
 }
+
+.section--top__row--div {
+    background-color: var(--purple-500);
+}
+
+.section--top__row--div p:first-of-type,
+.profile--container h3,
+.section--top__col--div p:first-of-type,
+.section--top__col--div h3 {
+    color: var(--white);
+}
+
+.section--top__row--div p:last-of-type,
+.profile--container span {
+    color: var(--purple-50);
+}
+
+.section--top__col--div {
+    background-color: var(--grey-500);
+}
+
+.section--top__col--div p:last-of-type,
+.section--top__col--div span {
+    color: var(--grey-100);
+}
+
+.section--bottom__col--div {
+    background-color: var(--white);
+}
+
+.section--bottom__col--div h3,
+.section--bottom__col--div p:first-of-type {
+    color: var(--grey-500);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-family: inherit;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
