@@ -1,10 +1,9 @@
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -14,6 +13,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: "Figtree", sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    font-family: inherit;
 }
 
 main {
@@ -23,11 +28,109 @@ main {
     border-radius: 1.25rem;
     border: 1px solid #111111;
     box-shadow: 8px 8px 0px 0px #000000;
+    margin-bottom: 50px;
+}
+
+h3 {
+    background-color: hsl(47, 88%, 63%);
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: hsl(0, 0%, 7%);
+    margin: 1.5rem 0 1rem 0;
+}
+
+div:first-of-type p {
+    color: hsl(0, 0%, 7%);
+}
+
+main>p {
+    color: hsl(0, 0%, 42%);
+    margin-bottom: 1.5rem;
+
+}
+
+h1 {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 1rem 0;
 }
 
 img {
+    object-fit: cover;
+}
+
+main img:not(div img) {
     width: 100%;
     border-radius: 0.625rem;
-    max-height: 18rem;
-    max-width: 18rem;
+    /* max-height: 18rem; */
+    /* max-width: 18rem; */
+    display: block;
+    margin: auto;
 }
+
+div img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+div:last-of-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+span {
+    font-weight: 800;
+}
+
+footer {
+    height: 50px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-family: inherit;
+    color: indianred;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        margin: 1.5rem;
+    }
+
+    main {
+        max-width: 327px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    h3 {
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    div:first-of-type p {
+        color: hsl(0, 0%, 7%);
+        font-size: 12px;
+    }
+
+    main>p {
+        color: hsl(0, 0%, 42%);
+        font-size: 14px;
+    }
+}
+
