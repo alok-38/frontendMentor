@@ -1,0 +1,172 @@
+    :root {
+        /* Spacing */
+        --spacing-500: 2.5rem;
+        --spacing-300: 1.5rem;
+        --spacing-200: 1rem;
+        --spacing-150: 0.75rem;
+        --spacing-100: 0.5rem;
+        --spacing-50: 0.25rem;
+
+        /* Typography */
+        /* Font Family */
+        --font-family-inter: 'Inter', sans-serif;
+
+        /* Text Preset 1 */
+        --text-1-font-family: var(--font-family-inter);
+        --text-1-font-weight: 700;
+        /* Inter Bold */
+        --text-1-font-size: 1.5rem;
+        --text-1-line-height: 150%;
+        --text-1-letter-spacing: 0px;
+
+        /* Text Preset 2 */
+        --text-2-font-family: var(--font-family-inter);
+        --text-2-font-weight: 400;
+        /* Inter Regular */
+        --text-2-font-size: 0.875rem;
+        --text-2-line-height: 150%;
+        --text-2-letter-spacing: 0px;
+
+        /* Text Preset 2 Bold */
+        --text-2-bold-font-family: var(--font-family-inter);
+        --text-2-bold-font-weight: 700;
+        /* Inter Bold */
+        --text-2-bold-font-size: 0.875rem;
+        --text-2-bold-line-height: 150%;
+        --text-2-bold-letter-spacing: 0px;
+
+        /* Grey Shades */
+        --grey-900-hex: #141414;
+        --grey-900-rgb: 20, 20, 20;
+        --grey-900-hsl: 0, 0%, 8%;
+
+        --grey-800-hex: #1F1F1F;
+        --grey-800-rgb: 31, 31, 31;
+        --grey-800-hsl: 0, 0%, 12%;
+
+        --grey-700-hex: #333333;
+        --grey-700-rgb: 51, 51, 51;
+        --grey-700-hsl: 0, 0%, 20%;
+
+        /* Green */
+        --green-hex: #C4F82A;
+        --green-rgb: 196, 248, 42;
+        --green-hsl: 75, 94%, 57%;
+
+        /* White */
+        --white-hex: #FFFFFF;
+        --white-rgb: 255, 255, 255;
+        --white-hsl: 0, 0%, 100%;
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family-inter);
+        background-color: var(--grey-900-hex);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    a {
+        color: inherit;
+        font-family: inherit;
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    main {
+        background-color: var(--grey-800-hex);
+        width: 384px;
+        padding: var(--spacing-500);
+        text-align: center;
+        margin-bottom: 50px;
+        border-radius: 12px;
+    }
+
+    main p:not(div p) {
+        margin: 1.5rem 0 1.5rem 0;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    div p {
+        color: var(--green-hex);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    img {
+        object-fit: cover;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+    }
+
+    h1,
+    p,
+    li {
+        color: var(--white-hex);
+    }
+
+    h1 {
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+
+    span {
+        color: var(--green-hex);
+    }
+
+    li {
+        background-color: var(--grey-700-hex);
+        height: 45px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        border-radius: 8px;
+        width: 304px;
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: var(--green-hex);
+        color: var(--grey-900-hex);
+        font-weight: 900;
+    }
+
+    footer {
+        font-size: var(--text-2-font-size);
+    }
+
+    footer a {
+        color: var(--green-hex);
+    }
+
+    @media screen and (max-width: 376px) {
+        body {
+            margin: 0 24px;
+        }
+
+        main {
+            width: 327px;
+            padding: 24px;
+        }
+
+        li {
+            width: 279px;
+        }
+    }
