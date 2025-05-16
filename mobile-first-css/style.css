@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(249, 241, 235);
+    color: #ffffff;
+}
+
+nav {
+    background-color: tomato;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    transition: clip-path ease-in-out 700ms;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+svg {
+    cursor: pointer;
+}
