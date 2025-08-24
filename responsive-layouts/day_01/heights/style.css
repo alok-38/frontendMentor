@@ -4,15 +4,13 @@
 
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
-.parent {
+.container {
     background-color: #23424a;
-    padding: 50px;
+    color: #ffffff;
+    width: 80%;
     margin: 0 auto;
-}
-
-.child {
-    background-color: #38cfd9;
-    height: 250px;
+    padding: 5em;
 }
