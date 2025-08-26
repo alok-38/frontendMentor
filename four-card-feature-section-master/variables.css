@@ -1,0 +1,29 @@
+:root {
+    /* === Neutrals === */
+    --color-grey-500: #4D4F62;
+    --color-grey-400: #6A7178;
+    --color-white: #FFFFFF;
+    --background-color: #FAFAFA;
+
+    /* === Primary Colors === */
+    --color-red: #EA5454;
+    --color-cyan: #44D3D2;
+    --color-blue: #549EF2;
+    --color-orange: #FCAE4A;
+
+    /* === Optional: RGB format for overlays/shadows etc. */
+    --rgb-grey-500: 77, 79, 98;
+    --rgb-grey-400: 106, 113, 120;
+    --rgb-white: 255, 255, 255;
+    --rgb-red: 234, 84, 84;
+    --rgb-cyan: 68, 211, 210;
+    --rgb-blue: 84, 158, 242;
+    --rgb-orange: 252, 174, 74;
+
+    /* spacing.css */
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+}
