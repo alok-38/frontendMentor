@@ -183,7 +183,7 @@ div,
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: inherit;
 }
 
 @media screen and (max-width: 768px) {
