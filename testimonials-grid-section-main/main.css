@@ -31,28 +31,142 @@ body {
     flex-direction: column;
 }
 
+img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+    outline: unset;
+}
+
 main {
     max-width: 1114px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
+.avatar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.avatar div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+h4 {
+    font-size: var(--font-size-13);
+    font-weight: var(--weight-regular);
+}
+
+.avatar div p {
+    font-size: var(--font-size-11);
+}
+
+.description {
+    font-size: var(--font-size-20);
+    line-height: var(--line-height-120);
+    font-weight: var(--weight-semibold);
+}
+
+.testimonial {
+    font-size: var(--font-size-13);
+    line-height: var(--line-height-140);
+}
+
+.daniel .testimonial {
+    color: var(--purple-50);
+}
+
+div,
+.vertical {
+    border-radius: 8px;
+}
+
+.wide,
+.narrow {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 288px;
+
+}
+
+.wide {
+    width: 540px;
+}
+
+.wide .testimonial {
+    width: 476px;
+}
+
+.wide .description,
+.wide .avatar,
+.jonathan .description,
+.jonathan .avatar div {
+    color: #fff;
+}
+
+.wide,
+.narrow,
+.vertical {
+    padding: 32px;
+}
+
+.vertical {
+    margin-left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.narrow,
+.vertical {
+    width: 255px;
+}
+
 .daniel {
     background-image: url(images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-color: var(--purple-500);
+    background-position: 92% top;
+}
+
+.jonathan {
+    background-color: var(--grey-500);
+}
+
+.jonathan .testimonial,
+.patrick .testimonial {
+    color: var(--grey-100);
+}
+
+.jeanette,
+.kira {
+    background-color: #fff;
+}
+
+.jeanette .description,
+.kira .description {
+    color: var(--grey-500);
+}
+
+.patrick {
+    background-color: var(--color-dark-blue);
 }
 
 .horizontal {
     display: grid;
-    margin-right: 32px;
 }
 
 .top {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-bottom: 24px;
     gap: 32px;
+    margin-bottom: 24px;
 }
 
 .bottom {
@@ -65,8 +179,10 @@ main {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
