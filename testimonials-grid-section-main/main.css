@@ -186,3 +186,32 @@ div,
     color: hsl(228, 45%, 44%);
 }
 
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .horizontal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top,
+    .bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wide,
+    .vertical {
+        width: 647px;
+        margin: auto;
+    }
+
+    .kira,
+    .patrick,
+    .daniel {
+        width: 100%;
+    }
+}
