@@ -31,6 +31,14 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    color: var(--grey-400);
+    margin-block-end: 2rem;
+}
+
 img {
     width: 28px;
     height: 28px;
@@ -187,14 +195,15 @@ div,
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        padding: 72px 24px;
+    }
+
     main {
         display: flex;
         flex-direction: column;
-    }
-
-    .horizontal {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
     }
 
     .top,
@@ -203,15 +212,34 @@ div,
         flex-direction: column;
     }
 
-    .wide,
-    .vertical {
-        width: 647px;
+    .daniel,
+    .patrick {
+        width: 100%;
+    }
+
+    .jonathan,
+    .jeanette {
         margin: auto;
     }
 
-    .kira,
-    .patrick,
-    .daniel {
+    .kira {
         width: 100%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .jonathan,
+    .jeanette,
+    .kira {
+        width: 100%;
+        margin: auto;
     }
 }
