@@ -1,0 +1,72 @@
+@import url(preset.css);
+
+/* === Barlow Semi Condensed - Medium === */
+@font-face {
+    font-family: 'Barlow Semi Condensed';
+    src: url('../Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* === Barlow Semi Condensed - SemiBold === */
+@font-face {
+    font-family: 'Barlow Semi Condensed';
+    src: url('../Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F6F5F6;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    max-width: 1114px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.daniel {
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-color: var(--purple-500);
+}
+
+.horizontal {
+    display: grid;
+    margin-right: 32px;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 24px;
+    gap: 32px;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+}
+
+/* footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
