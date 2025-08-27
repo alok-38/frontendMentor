@@ -229,17 +229,3 @@ div,
 
 }
 
-@media screen and (width: 375px) {
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .jonathan,
-    .jeanette,
-    .kira {
-        width: 100%;
-        margin: auto;
-    }
-}
