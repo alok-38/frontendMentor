@@ -1,0 +1,17 @@
+:root {
+    /* Cyan */
+    --cyan-600: #4D96A9;
+    --cyan-300: #8FE3F9;
+
+    /* Purple */
+    --purple-600: #855FB1;
+    --purple-300: #D9B8FF;
+
+    /* Slate */
+    --slate-900: #28283D;
+    --slate-600: #87879D;
+    --slate-300: #D1D1DF;
+
+    /* White */
+    --white: #FAFAFA;
+}
