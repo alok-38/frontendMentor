@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    /* Variable font supports weight range */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./Red_Hat_Display/RedHatDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
 :root {
     /* Cyan */
     --cyan-600: #4D96A9;
