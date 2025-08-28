@@ -1,0 +1,117 @@
+@import url(preset.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-200);
+}
+
+img {
+    display: block;
+    object-fit: cover;
+}
+
+article:first-of-type img {
+    width: 285px;
+    height: 280px;
+}
+
+/* main */
+main {
+    max-width: 730px;    
+    display: flex;
+    height: 280px;
+    gap: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    outline: unset;
+}
+
+article:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 365px;
+    /* padding: 0 40px; */
+    height: 220px;
+}
+
+article:last-of-type p {
+    color: var(--color-grey-500);
+    font-weight: var(--text-2-medium-font-weight);
+    font-size: var(--text-2-medium-font-size);
+    line-height: var(--text-2-medium-line-height);
+    letter-spacing: var(--text-2-medium-letter-spacing);
+}
+
+h1 {
+    font-size: var(--text-1-font-size);
+    line-height: var(--text-1-line-height);
+    letter-spacing: var(--text-1-letter-spacing);
+    font-weight: var(--text-1-font-weight);
+    color: var(--color-grey-900);
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile>div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.profile>div h2,
+.profile>div date {
+    color: var(--color-grey-900);
+    font-size: var(--text-2-bold-font-size);
+    line-height: var(--text-2-bold-line-height);
+    letter-spacing: var(--text-2-bold-letter-spacing);
+    font-weight: var(--text-2-bold-font-weight);
+}
+
+.profile>div date {
+    color: var(--color-grey-400);
+    font-weight: var(--text-2-medium-font-weight);
+}
+
+button {
+    cursor: pointer;
+    outline: unset;
+    border: unset;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-200);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: inherit;
+}
