@@ -14,4 +14,54 @@
 
     /* White */
     --white: #FAFAFA;
+
+    /* Font Family */
+    --font-primary: 'Red Hat Display', sans-serif;
+
+    /* Font Weights */
+    --font-weight-black: 900;
+    --font-weight-medium: 500;
+
+    /* Text Preset 1 – Display Black */
+    --text-1-size: 64px;
+    --text-1-line-height: 110%;
+    --text-1-letter-spacing: 0px;
+    --text-1-weight: var(--font-weight-black);
+
+    /* Text Preset 2 – Display Black */
+    --text-2-size: 40px;
+    --text-2-line-height: 110%;
+    --text-2-letter-spacing: 0px;
+    --text-2-weight: var(--font-weight-black);
+
+    /* Text Preset 3 – Display Black */
+    --text-3-size: 16px;
+    --text-3-line-height: 110%;
+    --text-3-letter-spacing: 4px;
+    --text-3-weight: var(--font-weight-black);
+
+    /* Text Preset 4 – Display Medium */
+    --text-4-size: 18px;
+    --text-4-line-height: 110%;
+    --text-4-letter-spacing: 0px;
+    --text-4-weight: var(--font-weight-medium);
+
+    /* Text Preset 5 – Display Black */
+    --text-5-size: 16px;
+    --text-5-line-height: 150%;
+    --text-5-letter-spacing: 0px;
+    --text-5-weight: var(--font-weight-black);
+
+    /* Spacing Scale */
+    --space-1400: 112px;
+    --space-1000: 80px;
+    --space-900: 72px;
+    --space-800: 64px;
+    --space-700: 56px;
+    --space-500: 40px;
+    --space-400: 32px;
+    --space-300: 24px;
+    --space-200: 16px;
+    --space-100: 8px;
+    --space-50: 4px;
 }
