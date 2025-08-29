@@ -83,7 +83,7 @@ h1 {
 }
 
 .profile>div h2,
-.profile>div date {
+.profile>div time {
     color: var(--color-grey-900);
     font-size: var(--text-2-bold-font-size);
     line-height: var(--text-2-bold-line-height);
@@ -91,7 +91,7 @@ h1 {
     font-weight: var(--text-2-bold-font-weight);
 }
 
-.profile>div date {
+.profile>div time {
     color: var(--color-grey-400);
     font-weight: var(--text-2-medium-font-weight);
 }
