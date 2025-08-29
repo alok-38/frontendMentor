@@ -175,6 +175,7 @@ button {
         height: 538px;
         display: flex;
         flex-direction: column;
+        margin: auto;
     }
 
     article:first-of-type img {
