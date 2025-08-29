@@ -1,0 +1,94 @@
+/* Roboto Regular (400) */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/static/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Roboto Bold (700) */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto/static/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    /* White */
+    --color-white: #FFFFFF;
+
+    /* Grey */
+    --color-grey: #949494;
+
+    /* Blue Shades */
+    --color-blue-800: #242742;
+    --color-blue-700: #36384D;
+
+    /* Red */
+    --color-red: #FF6155;
+
+    /* Gradient Colors */
+    --color-gradient-4: #FF6A3A;
+    --color-red-400: #FF527B;
+
+    /* Optional RGB if needed */
+    --rgb-white: 255, 255, 255;
+    --rgb-grey: 148, 148, 148;
+    --rgb-blue-800: 36, 39, 66;
+    --rgb-blue-700: 54, 56, 77;
+    --rgb-red: 255, 97, 85;
+    --rgb-gradient-4: 255, 106, 58;
+    --rgb-red-400: 255, 82, 123;
+
+    /* Optional HSL if needed */
+    --hsl-white: 0, 100%, 100%;
+    --hsl-grey: 0, 0%, 58%;
+    --hsl-blue-800: 234, 29%, 20%;
+    --hsl-blue-700: 235, 18%, 26%;
+    --hsl-red: 4, 100%, 67%;
+    --hsl-gradient-4: 15, 100%, 61%;
+    --hsl-red-400: 346, 100%, 66%;
+
+    /* Text Preset 1 */
+    --text-1-font-family: 'Roboto', sans-serif;
+    --text-1-font-weight: 700;
+    --text-1-font-size: 56px;
+    --text-1-line-height: 100%;
+    --text-1-letter-spacing: 0px;
+
+    /* Text Preset 1 - Mobile */
+    --text-1-mobile-font-size: 40px;
+
+    /* Text Preset 2 (Bold) */
+    --text-2-bold-font-family: 'Roboto', sans-serif;
+    --text-2-bold-font-weight: 700;
+    --text-2-bold-font-size: 16px;
+    --text-2-bold-line-height: 150%;
+    --text-2-bold-letter-spacing: 0px;
+
+    /* Text Preset 2 (Regular) */
+    --text-2-regular-font-family: 'Roboto', sans-serif;
+    --text-2-regular-font-weight: 400;
+    --text-2-regular-font-size: 16px;
+    --text-2-regular-line-height: 150%;
+    --text-2-regular-letter-spacing: 0px;
+
+    /* Text Preset 3 */
+    --text-3-font-family: 'Roboto', sans-serif;
+    --text-3-font-weight: 700;
+    --text-3-font-size: 12px;
+    --text-3-line-height: 150%;
+    --text-3-letter-spacing: 0px;
+
+    /* spacing */
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-900: 72px;
+    --spacing-1300: 104px;
+}
