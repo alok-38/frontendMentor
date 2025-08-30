@@ -149,6 +149,12 @@ button {
     align-items: center;
     justify-content: center;
     font-size: 15.5px;
+    cursor: not-allowed;
+}
+
+button.active {
+    background-color: green;
+    cursor: pointer;
 }
 
 label {
@@ -203,6 +209,7 @@ footer a {
 
     section:first-child {
         width: 528px;
+        padding: 0;
     }
 
     section:first-child>div {
@@ -233,39 +240,49 @@ footer a {
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .container {
-        width: 375px;
         height: 842px;
-        padding: 0 0 44px 0;
-        overflow: hidden;
+        padding: 0;
     }
 
     main {
-        width: 375px;
+        width: 100%;
+        min-width: 375px;
         height: 798px;
         display: flex;
         flex-direction: column-reverse;
-        gap: 40px;
-        overflow: hidden;
     }
 
     img {
-        width: 375px;
+        display: block;
         height: 284px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
         overflow: hidden;
-        object-fit: cover;
+        margin: auto;
+        padding: 0;
+        max-width: 375px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
 
     section:first-child {
-        width: 327px;
-        height: 474px;
+        max-width: 327px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    form {
+        max-width: 327px;
         margin: auto;
     }
 
-    section:first-child>div {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
+    button {
+        font-size: 12px;
+    }
+
+    footer {
+        display: none;
     }
 }
