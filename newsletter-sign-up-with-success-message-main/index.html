@@ -17,6 +17,7 @@
 
 <body>
 
+  <!-- Main Container -->
   <div class="container">
     <main>
       <section>
@@ -29,23 +30,34 @@
             <li>And much more!</li>
           </ul>
         </div>
+
         <form>
-          <label for="email">Email address</label>
-          <input id="email" autofocus type="email" placeholder="email@company.com" required></input>
+          <div class="email-labels">
+            <label for="email">Email address</label>
+            <label class="error-message" for="email">valid email required</label>
+          </div>
+          <input id="email" type="email" placeholder="email@company.com" required />
           <button type="button">Subscribe to monthly newsletter</button>
         </form>
-        <div class="thanks">
-          Thanks for subscribing!
-          A confirmation email has been sent to ash@loremcompany.com.
-          Please open it and click the button inside to confirm your subscription.
-          Dismiss message
-        </div>
       </section>
+
       <section>
         <img src="./assets/images/illustration-sign-up-desktop.svg" alt="sign up illustration" width="100%">
       </section>
     </main>
   </div>
+
+  <!-- Modal/Thanks Message (outside container) -->
+  <div class="thanks" style="visibility: hidden;">
+    <img src="assets/check.png" alt="success checkmark">
+    <h2>Thanks for subscribing!</h2>
+    <p>
+      A confirmation email has been sent to <span id="confirmed-email">ash@loremcompany.com</span>.
+      Please open it and click the button inside to confirm your subscription.
+    </p>
+    <button id="dismiss-btn">Dismiss message</button>
+  </div>
+
 
 
   <footer class="attribution">
