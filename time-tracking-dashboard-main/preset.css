@@ -1,0 +1,229 @@
+/* Regular weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Bold weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Light weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* SemiBold weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Black weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Medium weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* ExtraBold weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Regular Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Bold Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* SemiBold Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Black Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* ExtraBold Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Light Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Medium Italic weight of Rubik */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Regular Variable Font (for dynamic weight adjustments) */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    /* Dynamic range from 100 to 900 */
+    font-style: normal;
+}
+
+/* Italic Variable Font (for dynamic weight and italic adjustments) */
+@font-face {
+    font-family: 'Rubik';
+    src: url('/path/to/Rubik-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    /* Dynamic range from 100 to 900 */
+    font-style: italic;
+}
+
+
+:root {
+    /* White and Black */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Navy Colors */
+    --navy-950: #0E1323;
+    --navy-900: #1C204B;
+    --navy-800: #33397A;
+    --navy-200: #BBC0FF;
+
+    /* Orange */
+    --orange-300: #FF8B64;
+
+    /* Purple */
+    --purple-700: #7335D2;
+    --purple-600: #5747EA;
+    --purple-500: #7078C9;
+
+    /* Blue */
+    --blue-300: #55C2E6;
+
+    /* Pink */
+    --pink-400: #FF5E7D;
+
+    /* Green */
+    --green-400: #4BCF82;
+
+    /* Yellow */
+    --yellow-300: #F1C75B;
+
+    /* Grey */
+    --grey-200: #D8D8D8;
+
+    /* Text Preset 1 - Rubik Light */
+    --text-preset-1-font-family: 'Rubik', sans-serif;
+    --text-preset-1-font-weight: 300;
+    /* Light */
+    --text-preset-1-font-size: 56px;
+    --text-preset-1-line-height: 66px;
+    --text-preset-1-letter-spacing: 0px;
+
+    /* Text Preset 2 - Rubik Light */
+    --text-preset-2-font-family: 'Rubik', sans-serif;
+    --text-preset-2-font-weight: 300;
+    /* Light */
+    --text-preset-2-font-size: 40px;
+    --text-preset-2-line-height: 47px;
+    --text-preset-2-letter-spacing: 0px;
+
+    /* Text Preset 3 - Rubik Light */
+    --text-preset-3-font-family: 'Rubik', sans-serif;
+    --text-preset-3-font-weight: 300;
+    /* Light */
+    --text-preset-3-font-size: 32px;
+    --text-preset-3-line-height: 38px;
+    --text-preset-3-letter-spacing: 0px;
+
+    /* Text Preset 4 - Rubik Light */
+    --text-preset-4-font-family: 'Rubik', sans-serif;
+    --text-preset-4-font-weight: 300;
+    /* Light */
+    --text-preset-4-font-size: 24px;
+    --text-preset-4-line-height: 28px;
+    --text-preset-4-letter-spacing: 0px;
+
+    /* Text Preset 5 (Medium) - Rubik Medium */
+    --text-preset-5-medium-font-family: 'Rubik', sans-serif;
+    --text-preset-5-medium-font-weight: 500;
+    /* Medium */
+    --text-preset-5-medium-font-size: 18px;
+    --text-preset-5-medium-line-height: 21px;
+    --text-preset-5-medium-letter-spacing: 0px;
+
+    /* Text Preset 5 (Regular) - Rubik Regular */
+    --text-preset-5-regular-font-family: 'Rubik', sans-serif;
+    --text-preset-5-regular-font-weight: 400;
+    /* Regular */
+    --text-preset-5-regular-font-size: 18px;
+    --text-preset-5-regular-line-height: 21px;
+    --text-preset-5-regular-letter-spacing: 0px;
+
+    /* Text Preset 6 - Rubik Regular */
+    --text-preset-6-font-family: 'Rubik', sans-serif;
+    --text-preset-6-font-weight: 400;
+    /* Regular */
+    --text-preset-6-font-size: 15px;
+    --text-preset-6-line-height: 18px;
+    --text-preset-6-letter-spacing: 0px;
+
+    /* Spacing Variables */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+}
