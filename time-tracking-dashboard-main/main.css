@@ -10,22 +10,33 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: var(--font-family-rubik);
     align-items: center;
     justify-content: center;
     background-color: var(--navy-950);
-    font-family: var(--text-preset-1-font-family);
     color: var(--white);
+}
+
+img {
+    object-fit: cover;
+}
+
+button {
+    display: flex;
+    align-items: center;
+}
+
+button img {
+    width: 21px;
+    height: 5px;
+    color: var(--navy-200);
 }
 
 main {
     max-width: 1116px;
+    height: 520px;
     display: flex;
     gap: 32px;
-}
-
-section:first-child {
-    display: flex;
-    flex-direction: column;
 }
 
 section:last-child {
@@ -35,15 +46,48 @@ section:last-child {
 }
 
 article {
+    width: 255px;
+    height: 244px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
-footer {
+article>div {
+    padding: 32px;
+    width: 255px;
+    height: 199px;
+    background-color: var(--navy-900);
+}
+
+.work {
+    background-color: var(--orange-300);
+}
+
+.play {
+    background-color: var(--blue-300);
+}
+
+.study {
+    background-color: var(--pink-400);
+}
+
+.exercise {
+    background-color: var(--green-400);
+}
+
+.social {
+    background-color: var(--purple-700);
+}
+
+.self {
+    background-color: var(--yellow-300);
+}
+
+.attribution {
     font-size: 11px;
     text-align: center;
 }
 
-footer a {
+.attribution a {
     color: inherit;
 }
