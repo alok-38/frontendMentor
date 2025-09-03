@@ -6,6 +6,94 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-grey-200);
+    font-family: var(--font-family-primary);
+}
+
+h1 {
+    width: 86.66px;
+    height: 53.14px;
+    color: var(--color-grey-600);
+    margin-top: -80px;
+    margin-bottom: 70px;
+    font-size: var(--text-5-size);
+    line-height: var(--text-5-line-height);
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+h1 span {
+    display: block;
+    color: var(--color-grey-600);
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 920px;
+    height: 481px;
+    border-radius: 25px;
+    background-color: var(--color-white);
+    padding: 32px;
+}
+
+main {
+    display: flex;
+    width: 840px;
+    height: 417px;
+    gap: 48px;
+}
+
+h5 {
+    color: var(--color-grey-500);
+    font-size: var(--text-5-size);
+    line-height: var(--text-5-line-height);
+}
+
+label {
+    display: block;
+}
+
+section:first-child .btn {
+    width: 379px;
+    height: 144px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+section:first-child .btn button {
+    width: 116px;
+    height: 48px;
+    padding: 8px 16px;
+    cursor: pointer;
+    outline: unset;
+    border: unset;
+    background-color: var(--color-green-900);
+}
+
+section:first-child .btn .green-400 {
+    background-color: var(--color-green-400);
+}
+
+section:first-child .btn .custom {
+    background-color: var(--color-grey-50);
+    color: var(--color-grey-550);
+}
+
+section:last-child {
+    background-color: var(--color-green-900);
+    border-radius: 15px;
+    padding: 24px 32px;
+    width: 413px;
+    height: 417px;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
