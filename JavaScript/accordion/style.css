@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.accordion {
+    max-width: 600px;
+    margin: auto;
+}
+
+.accordion-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-question:hover {
+    background-color: #ddd;
+}
+
+.accordion-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+}
+
+.accordion-item.active .accordion-answer {
+    display: block;
+}
