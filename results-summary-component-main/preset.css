@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('/assets/Hanken_Grotesk/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('/assets/Hanken_Grotesk/static/HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('/assets/Hanken_Grotesk/static/HankenGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+:root {
+    /* Font Families */
+    --font-hanken: 'Hanken Grotesk', sans-serif;
+
+    /* Text Presets */
+    --text-1-size: 72px;
+    --text-1-line-height: 100%;
+    --text-1-weight: 800;
+
+    --text-2-size: 56px;
+    --text-2-line-height: 100%;
+    --text-2-weight: 800;
+
+    --text-3-size: 32px;
+    --text-3-line-height: 130%;
+    --text-3-weight: 700;
+
+    --text-4-size: 24px;
+    --text-4-line-height: 130%;
+    --text-4-weight: 700;
+
+    --text-5-size: 18px;
+    --text-5-line-height: 130%;
+    --text-5-weight-bold: 700;
+    --text-5-weight-medium: 500;
+
+    --text-6-size: 16px;
+    --text-6-line-height: 130%;
+    --text-6-weight-bold: 700;
+    --text-6-weight-medium: 500;
+
+    /* Spacing Scale */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-1000: 80px;
+
+    /* Base Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Navy */
+    --color-navy-950: #303B59;
+    --color-navy-200: #CAC9FF;
+    --color-navy-50: #ECF2FF;
+
+    /* Blue */
+    --color-blue-800: #1125D6;
+    --color-blue-50: #F3F4FD;
+
+    /* Yellow */
+    --color-yellow-400: #FFB21E;
+    --color-yellow-50: #FFFBF4;
+
+    /* Red */
+    --color-red-400: #FF5555;
+    --color-red-50: #FFF6F6;
+
+    /* Green */
+    --color-green-500: #00BB8F;
+    --color-green-50: #F2FCF9;
+
+    /* Gradients */
+    --gradient-1-start: #4D21C9;
+    --gradient-1-end: #2521C9;
+
+    --gradient-2-start: #7755FF;
+    --gradient-2-end: #2F2CE9;
+}
