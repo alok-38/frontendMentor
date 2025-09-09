@@ -26,6 +26,7 @@ main {
     gap: 48px;
     max-width: 1113px;
     align-items: center;
+    flex: 1;
 }
 
 button {
@@ -56,14 +57,37 @@ input {
     margin-bottom: 24px;
 }
 
-button:first-of-type {
+input:hover {
+    border: 1px solid var(--color-purple-700);
+}
+
+button:first-of-type:not(form button) {
     background-color: var(--color-purple-700);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
 }
 
 form button:last-of-type {
     margin-bottom: 8px;
     width: 100%;
     background-color: var(--color-green-400);
+    box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.0909);
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* 👇 Press/click effect */
+form button:last-of-type:active {
+    transform: translateY(2px);
+    box-shadow: inset 0px -2px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+form button:last-of-type:hover {
+    background-color: var(--color-green-300);
 }
 
 section:first-of-type article {
@@ -99,6 +123,7 @@ form {
     padding: 32px 40px;
     width: 540px;
     margin: 0 auto;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
 }
 
 form p {
@@ -121,4 +146,67 @@ form p a {
 
 .attribution a {
     color: inherit;
+}
+
+@media (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 540px;
+        padding: 88px 114px 89px;
+        gap: 64px;
+        height: 847px;
+    }
+
+    section:first-of-type article {
+        width: 525px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 327px;
+        padding: 88px 24px 68px;
+        gap: 64px;
+        margin: 0 auto;
+        height: 844px;
+    }
+
+    section:first-of-type article {
+        width: 327px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: var(--preset-2-size);
+        line-height: var(--preset-2-line-height);
+        letter-spacing: var(--preset-2-letter-spacing);
+        font-weight: var(--preset-2-weight);
+    }
+
+    form {
+        width: 327px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    form input {
+        width: 279px;
+        display: block;
+        margin: 8 auto;
+    }
+
+    button:not(form button) {
+        width: 327px;
+        margin-bottom: 24px;
+    }
+
 }
