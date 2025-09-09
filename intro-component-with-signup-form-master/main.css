@@ -1,0 +1,124 @@
+@import url(preset.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-primary);
+    background-image: url(images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-red-400);
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    gap: 48px;
+    max-width: 1113px;
+    align-items: center;
+}
+
+button {
+    height: 60px;
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-weight: var(--preset-4-semibold-weight);
+}
+
+input {
+    outline: unset;
+    border: unset;
+    padding: 16px 32px;
+    width: 460px;
+    height: 56px;
+    border: 1px solid var(--color-gray-200);
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--color-gray-900);
+    font-size: var(--preset-3-size);
+    margin-bottom: 24px;
+}
+
+button:first-of-type {
+    background-color: var(--color-purple-700);
+}
+
+form button:last-of-type {
+    margin-bottom: 8px;
+    width: 100%;
+    background-color: var(--color-green-400);
+}
+
+section:first-of-type article {
+    display: flex;
+    width: 525px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+h1 {
+    font-size: var(--preset-1-size);
+    line-height: var(--preset-1-line-height);
+    letter-spacing: var(--preset-1-letter-spacing);
+    font-weight: var(--preset-1-weight);
+}
+
+section:first-of-type article p {
+    font-size: var(--preset-3-size);
+    line-height: var(--preset-3-line-height);
+    letter-spacing: var(--preset-3-letter-spacing);
+    font-weight: var(--preset-3-weight);
+}
+
+section:last-of-type {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+}
+
+form {
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 32px 40px;
+    width: 540px;
+    margin: 0 auto;
+}
+
+form p {
+    color: var(--color-purple-350);
+    font-size: var(--preset-5-medium-size);
+    text-align: center;
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--color-red-400);
+    font-weight: var(--preset-4-semibold-weight);
+}
+
+/* footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: inherit;
+}

@@ -1,0 +1,132 @@
+/* Poppins Regular */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Poppins Medium */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Poppins Medium Italic */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Poppins SemiBold */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Poppins Bold */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    /* Font Family */
+    --font-primary: 'Poppins', sans-serif;
+
+    /* Text Preset 1 */
+    --preset-1-size: 50px;
+    --preset-1-line-height: 110%;
+    --preset-1-letter-spacing: -0.5px;
+    --preset-1-weight: 700;
+
+    /* Text Preset 2 */
+    --preset-2-size: 28px;
+    --preset-2-line-height: 130%;
+    --preset-2-letter-spacing: -0.3px;
+    --preset-2-weight: 700;
+
+    /* Text Preset 3 */
+    --preset-3-size: 16px;
+    --preset-3-line-height: 165%;
+    --preset-3-letter-spacing: 0px;
+    --preset-3-weight: 500;
+
+    /* Text Preset 4 (Bold) */
+    --preset-4-bold-size: 15px;
+    --preset-4-bold-line-height: 175%;
+    --preset-4-bold-letter-spacing: 0.25px;
+    --preset-4-bold-weight: 700;
+
+    /* Text Preset 4 (SemiBold) */
+    --preset-4-semibold-size: 15px;
+    --preset-4-semibold-line-height: 175%;
+    --preset-4-semibold-letter-spacing: 2px;
+    --preset-4-semibold-weight: 600;
+
+    /* Text Preset 4 (Regular) */
+    --preset-4-regular-size: 15px;
+    --preset-4-regular-line-height: 175%;
+    --preset-4-regular-letter-spacing: 0.25px;
+    --preset-4-regular-weight: 400;
+
+    /* Text Preset 5 (Bold) */
+    --preset-5-bold-size: 11px;
+    --preset-5-bold-line-height: 190%;
+    --preset-5-bold-letter-spacing: 0px;
+    --preset-5-bold-weight: 700;
+
+    /* Text Preset 5 (Medium) */
+    --preset-5-medium-size: 11px;
+    --preset-5-medium-line-height: 190%;
+    --preset-5-medium-letter-spacing: 0px;
+    --preset-5-medium-weight: 500;
+
+    /* Text Preset 5 (Medium Italic) */
+    --preset-5-medium-italic-size: 11px;
+    --preset-5-medium-italic-line-height: 155%;
+    --preset-5-medium-italic-letter-spacing: 0px;
+    --preset-5-medium-italic-weight: 500;
+
+    /* Neutral Colors */
+    --color-white: #FFFFFF;
+    /* White */
+    --color-black: #000000;
+    /* Black */
+    --color-gray-900: #3D3B48;
+    /* Gray 900 */
+    --color-gray-200: #DEDEDE;
+    /* Gray 200 */
+
+    /* Purple Palette */
+    --color-purple-700: #5E54A4;
+    /* Primary Purple */
+    --color-purple-400: #A6A1CF;
+    --color-purple-350: #BAB7D4;
+
+    /* Green Palette */
+    --color-green-400: #38CC8B;
+    /* Success Green */
+    --color-green-300: #77E2B3;
+
+    /* Red Palette */
+    --color-red-400: #FF7979;
+    /* Error Red */
+
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+}
