@@ -1,0 +1,117 @@
+/* Libre Franklin - Font Face Declarations */
+
+/* Bold */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* SemiBold */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('./Libre_Franklin/static/LibreFranklin-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+:root {
+    /* Font Family */
+    --font-primary: 'Libre Franklin', sans-serif;
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Line Height */
+    --line-height-base: 1.25;
+    /* 125% */
+
+    /* Letter Spacing */
+    --letter-spacing-base: 0px;
+
+    /* Font Sizes */
+    --font-size-1: 48px;
+    /* Text Preset 1 */
+    --font-size-2: 20px;
+    /* Text Preset 2 */
+    --font-size-3: 16px;
+    /* Text Preset 3 */
+    --font-size-4: 12px;
+    /* Text Preset 4 */
+    --font-size-5: 10px;
+    /* Text Preset 5 */
+
+    /* Spacing Scale */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+
+    /* Base Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Blue Shades */
+    --color-blue-950: #15202A;
+    --color-blue-500: #4C7BF3;
+    --color-blue-200: #C2D3FF;
+
+    /* Gray Shades */
+    --color-gray-400: #969696;
+    --color-gray-100: #EBEBEB;
+    --color-gray-50: #FBFCFF;
+
+    /* Red */
+    --color-red-400: #FF5466;
+
+    /* Green */
+    --color-green-500: #2ECC71;
+}
