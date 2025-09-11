@@ -4,11 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
   <meta name="description" content="contact form">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
   <title>Frontend Mentor | Contact form</title>
 
   <link rel="stylesheet" href="main.css">
@@ -19,8 +17,43 @@
 
   <div class="container">
     <h1>Contact Us</h1>
-    <form role="form" aria-label="form">
-      
+    <form method="post">
+      <div class="name-input">
+        <div>
+          <label for="first-name">First Name<span>&ast;</span></label>
+          <input type="text" id="first-name" autofocus required>
+        </div>
+        <div>
+          <label for="last-name">Last Name<span>&ast;</span></label>
+          <input type="text" id="last-name" autofocus required>
+        </div>
+      </div>
+      <div class="email-address">
+        <label for="email Address">Email Address<span>&ast;</span></label>
+        <input type="email" name="email" id="email" id="email" autofocus required>
+      </div>
+      <div class="query-type">
+        <label for="query Type">Query Type<span>&ast;</span></label>
+        <article>
+          <div style="display: flex;">
+            <input type="radio" name="general-enquiry" id="general-enquiry" required>
+            <p>General Enquiry</p>
+          </div>
+          <div style="display: flex;">
+            <input type="radio" name="general-enquiry" id="general-enquiry" required>
+            <p>General Enquiry</p>
+          </div>
+        </article>
+      </div>
+      <div class="message-box">
+        <label for="message-box">Message<span>&ast;</span></label>
+        <textarea name="message-box" id="message-box" autofocus></textarea>
+      </div>
+      <div class="consent-box">
+        <input type="checkbox" name="consent-box" id="consent-box">
+        <p>I consent to being contacted by the team <span>&ast;</span></p>
+      </div>
+      <button type="submit">Submit</button>
     </form>
   </div>
 
