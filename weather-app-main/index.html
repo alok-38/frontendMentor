@@ -4,65 +4,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-   <meta name="description" content="weather app using the open metro API">
 
+  <!-- Basic SEO -->
+  <meta name="description" content="A simple and responsive weather app built using the Open-Meteo API.">
+  <meta name="keywords" content="Weather, Open-Meteo, Weather App, Forecast, Frontend Mentor">
+  <meta name="author" content="Alok Kumar">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <title>Frontend Mentor | Weather app</title>
+  <!-- Title -->
+  <title>Weather App | Frontend Mentor Challenge</title>
 
+  <!-- Social Sharing (Open Graph for Facebook, LinkedIn) -->
+  <meta property="og:title" content="Weather App | Frontend Mentor Challenge">
+  <meta property="og:description" content="A responsive weather app using Open-Meteo API. Built by Alok Kumar.">
+  <meta property="og:image"
+    content="https://alok-38.github.io/frontendMentor/weather-app-main/assets/images/social-preview.png">
+  <meta property="og:url" content="https://alok-38.github.io/frontendMentor/weather-app-main/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Weather App | Frontend Mentor Challenge">
+  <meta name="twitter:description" content="A responsive weather app built with HTML, CSS, and JS.">
+  <meta name="twitter:image"
+    content="https://alok-38.github.io/frontendMentor/weather-app-main/assets/images/social-preview.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://alok-38.github.io/frontendMentor/weather-app-main/">
+
+  <!-- CSS and JS -->
   <link rel="stylesheet" href="main.css">
   <script src="app.js" defer></script>
 </head>
 
+
 <body>
 
-  Units
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="weather logo">
+      </div>
+      <div class="select-wrapper">
+        <img src="assets/images/icon-units.svg" alt="Units gear icon" />
+        <select id="units" name="units" aria-label="Select measurement units">
+          <option value="" disabled selected>Units</option>
+          <optgroup label="Temperature">
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+          </optgroup>
+          <optgroup label="Wind Speed">
+            <option value="kmh">Kilometers/hour (km/h)</option>
+            <option value="mph">Miles/hour (mph)</option>
+          </optgroup>
+          <optgroup label="Precipitation">
+            <option value="mm">Millimeters (mm)</option>
+            <option value="in">Inches (in)</option>
+          </optgroup>
+        </select>
+      </div>
 
-  Switch to Imperial/Metric
+    </nav>
 
-  Temperature
-
-  Celsius (°C)
-  Fahrenheit (°F)
-
-  Wind Speed
-
-  km/h
-  mph
-
-  Precipitation
-
-  Millimeters (mm)
-  Inches (in)
-
-  How's the sky looking today?
-
-  Search for a city, e.g., New York
-  Search
-
-  Feels like
-  <!-- Insert temperature here -->
-
-  Humidity
-  <!-- Insert humidity here -->
-
-  Wind
-  <!-- Insert wind here -->
-
-  Precipitation
-  <!-- Insert precipitation here -->
-
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
-
-  Hourly forecast
-  <!-- Insert hourly forecast for the selected day here -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    <header>
+      <h1>How's the sky looking today?</h1>
+    </header>
+    <div class="form-wrapper">
+      <form aria-label="Search for city weather">
+        <div><svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="24" height="24" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path
+              d="M10.5 3a7.5 7.5 0 0 1 6.13 11.85l4.28 4.29a1 1 0 0 1-1.42 1.42l-4.29-4.28A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11z" />
+          </svg><input type="text" id="search" name="city" placeholder="Search for a city, e.g., New York" required />
+        </div>
+        <button type="submit">Search</button>
+      </form>
+      <p>No search result found!</p>
+    </div>
+    Feels like
+    <!-- Insert temperature here -->
+    Humidity
+    <!-- Insert humidity here -->
+    Wind
+    <!-- Insert wind here -->
+    Precipitation
+    <!-- Insert precipitation here -->
+    Daily forecast
+    <!-- Insert daily forecast for the next 7 days here -->
+    Hourly forecast
+    <!-- Insert hourly forecast for the selected day here -->
   </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Alokananda Y</a>.
+  </footer>
 </body>
 
 </html>

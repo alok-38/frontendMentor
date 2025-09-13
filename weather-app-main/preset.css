@@ -1,0 +1,148 @@
+/* DM Sans */
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./Bricolage_Grotesque,DM_Sans/DM_Sans/static/DMSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./Bricolage_Grotesque,DM_Sans/DM_Sans/static/DMSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./Bricolage_Grotesque,DM_Sans/DM_Sans/static/DMSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./Bricolage_Grotesque,DM_Sans/DM_Sans/static/DMSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('./Bricolage_Grotesque,DM_Sans/DM_Sans/static/DMSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bricolage Grotesque */
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('./Bricolage_Grotesque,DM_Sans/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+:root {
+    /* === Text Presets === */
+
+    --text-1-font: 'DM Sans', sans-serif;
+    --text-1-weight: 600;
+    --text-1-style: italic;
+    --text-1-size: 96px;
+    --text-1-line-height: 100%;
+    --text-1-letter-spacing: -2px;
+
+    --text-2-font: 'Bricolage Grotesque', sans-serif;
+    --text-2-weight: 700;
+    --text-2-style: normal;
+    --text-2-size: 52px;
+    --text-2-line-height: 120%;
+    --text-2-letter-spacing: 0;
+
+    --text-3-font: 'DM Sans', sans-serif;
+    --text-3-weight: 300;
+    --text-3-style: normal;
+    --text-3-size: 32px;
+    --text-3-line-height: 100%;
+    --text-3-letter-spacing: 0;
+
+    --text-4-font: 'DM Sans', sans-serif;
+    --text-4-weight: 700;
+    --text-4-style: normal;
+    --text-4-size: 28px;
+    --text-4-line-height: 120%;
+    --text-4-letter-spacing: 0;
+
+    --text-5-font: 'DM Sans', sans-serif;
+    --text-5-weight: 600;
+    --text-5-style: normal;
+    --text-5-size: 20px;
+    --text-5-line-height: 120%;
+    --text-5-letter-spacing: 0;
+
+    --text-5m-font: 'DM Sans', sans-serif;
+    --text-5m-weight: 500;
+    --text-5m-style: normal;
+    --text-5m-size: 20px;
+    --text-5m-line-height: 120%;
+    --text-5m-letter-spacing: 0;
+
+    --text-6-font: 'DM Sans', sans-serif;
+    --text-6-weight: 500;
+    --text-6-style: normal;
+    --text-6-size: 18px;
+    --text-6-line-height: 120%;
+    --text-6-letter-spacing: 0;
+
+    --text-7-font: 'DM Sans', sans-serif;
+    --text-7-weight: 500;
+    --text-7-style: normal;
+    --text-7-size: 16px;
+    --text-7-line-height: 120%;
+    --text-7-letter-spacing: 0;
+
+    --text-8-font: 'DM Sans', sans-serif;
+    --text-8-weight: 500;
+    --text-8-style: normal;
+    --text-8-size: 14px;
+    --text-8-line-height: 120%;
+    --text-8-letter-spacing: 0;
+
+    /* === Spacing Scale === */
+    --spacing-0: 0;
+    --spacing-025: 2px;
+    --spacing-050: 4px;
+    --spacing-075: 6px;
+    --spacing-100: 8px;
+    --spacing-125: 10px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-250: 20px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+    --spacing-1200: 96px;
+    --spacing-1400: 112px;
+    --spacing-1600: 128px;
+    --spacing-1800: 140px;
+
+    /* === Neutral === */
+    --color-neutral-900: #02012C;
+    --color-neutral-800: #262540;
+    --color-neutral-700: #302F4A;
+    --color-neutral-600: #3C3B5E;
+    --color-neutral-300: #ACACB7;
+    --color-neutral-200: #D4D3D9;
+    --color-neutral-0: #FFFFFF;
+
+    /* === Orange === */
+    --color-orange-500: #FF820A;
+
+    /* === Blue === */
+    --color-blue-500: #4658D9;
+    --color-blue-700: #2B1B9C;
+}

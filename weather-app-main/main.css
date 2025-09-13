@@ -14,13 +14,198 @@ body {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    padding: 48px 112px 80px 112px;
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
 }
 
+.container {
+    max-width: 1216px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+/* navigation */
+nav {
+    max-width: 1216px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 43px;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+header {
+    max-width: 731px;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 64px;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--text-2-font);
+    font-weight: var(--text-2-weight);
+    font-style: var(--text-2-style);
+    font-size: var(--text-2-size);
+    line-height: var(--text-2-line-height);
+}
+
+.select-wrapper {
+    display: flex;
+    background: transparent;
+    color: #ffffff;
+    width: 119px;
+    background-color: var(--color-neutral-800);
+    border: unset;
+    outline: unset;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.select-wrapper:hover {
+    background-color: var(--color-neutral-700);
+}
+
+.select-wrapper select {
+    width: 65px;
+    background: transparent;
+    color: #ffffff;
+    outline: unset;
+    border: unset;
+    font-family: var(--text-7-font);
+    font-weight: var(--text-7-weight);
+    font-style: var(--text-7-style);
+    font-size: var(--text-7-size);
+    line-height: var(--text-7-line-height);
+    cursor: pointer;
+}
+
+.form-wrapper {
+    max-width: 1216px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.form-wrapper p {
+    font-weight: var(--text-4-weight);
+    font-style: var(--text-4-style);
+    line-height: var(--text-4-line-height);
+    font-family: var(--text-4-font);
+    font-size: var(--text-4-size);
+}
+
+.form-wrapper form {
+    max-width: 656px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.form-wrapper form input {
+    width: 526px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    color: var(--color-neutral-200);
+    background: transparent;
+    background-color: var(--color-neutral-800);
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    font-family: var(--text-5-font);
+    font-weight: var(--text-5-weight);
+    font-style: var(--text-5-style);
+    font-size: var(--text-5-size);
+    line-height: var(--text-5-line-height);
+}
+
+.form-wrapper form input:hover {
+    background-color: var(--color-neutral-700);
+}
+
+.form-wrapper form input:focus {
+    background-color: var(--color-neutral-800);
+}
+
+
+.form-wrapper form input::placeholder {
+    padding-left: 25px;
+}
+
+/* Icon inside the input field */
+.form-wrapper form svg {
+    position: absolute;
+    /* if inside a relatively positioned container */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    color: var(--color-neutral-200);
+    pointer-events: none;
+}
+
+.form-wrapper form button {
+    background: transparent;
+    background-color: var(--color-blue-500);
+    border-radius: 12px;
+    outline: unset;
+    border: unset;
+    color: var(--color-neutral-0);
+    padding: 16px 24px;
+    width: 114px;
+    height: 56px;
+    cursor: pointer;
+    font-family: var(--text-5-font);
+    font-weight: var(--text-5-weight);
+    font-style: var(--text-5-style);
+    font-size: var(--text-5-size);
+    line-height: var(--text-5-line-height);
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.form-wrapper form button:hover {
+    background-color: var(--color-blue-700);
+}
+
+.form-wrapper form button:focus {
+    background-color: var(--color-blue-500);
+    box-shadow: 0 0 0 3px #02012C;
+}
+
+/* Add this for click/press effect */
+.form-wrapper form button:active {
+    transform: scale(0.97);
+    /* slight press-down effect */
+    background-color: var(--color-blue-800);
+    /* optional darker shade */
+    box-shadow: 0 0 0 2px #02012C;
+    /* slightly smaller box shadow on press */
+}
+
+/* footer */
 .attribution {
     font-size: 11px;
     text-align: center;
     color: inherit;
     font-family: inherit;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .attribution a {
