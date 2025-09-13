@@ -28,6 +28,7 @@ body {
 
 .container {
     max-width: 450px;
+    width: 100%;
     overflow: hidden;
     border-radius: 20px;
     background-color: #fff;
@@ -238,21 +239,14 @@ button[type="button"]:hover {
     }
 }
 
+/* Responsive: Mobile (<= 375px) */
 @media (max-width: 375px) {
     body {
-        padding: 24px;
-        overflow-y: auto;
+        padding: 16px;
     }
 
     .container {
-        width: 100%;
-        max-width: 327px;
-        margin: 0 auto;
-    }
-
-    main {
-        width: 100%;
-        max-width: 279px;
-        margin: 0 auto;
+        padding: 24px;
+        max-width: 100%;
     }
 }
