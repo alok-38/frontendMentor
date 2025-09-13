@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./fonts/Red_Hat_Display/static/RedHatDisplay-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./fonts/Red_Hat_Display/static/RedHatDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./fonts/Red_Hat_Display/static/RedHatDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Red Hat Display';
+    src: url('./fonts/Red_Hat_Display/static/RedHatDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+:root {
+    /* Font Family */
+    --font-family-display: 'Red Hat Display', sans-serif;
+
+    /* Text Preset 1 */
+    --text-preset-1-size: 28px;
+    --text-preset-1-line-height: 135%;
+    --text-preset-1-weight: 900;
+    /* Black */
+    --text-preset-1-letter-spacing: 0px;
+
+    /* Text Preset 2 */
+    --text-preset-2-size: 22px;
+    --text-preset-2-line-height: 135%;
+    --text-preset-2-weight: 900;
+    /* Black */
+    --text-preset-2-letter-spacing: 0px;
+
+    /* Text Preset 3 */
+    --text-preset-3-size: 16px;
+    --text-preset-3-line-height: 165%;
+    --text-preset-3-letter-spacing: 0px;
+
+    --text-preset-3-black-weight: 900;
+    --text-preset-3-bold-weight: 700;
+    --text-preset-3-medium-weight: 500;
+
+    /* Text Preset 4 */
+    --text-preset-4-size: 15px;
+    --text-preset-4-line-height: 165%;
+    --text-preset-4-letter-spacing: 0px;
+
+    --text-preset-4-black-weight: 900;
+    --text-preset-4-bold-weight: 700;
+    --text-preset-4-medium-weight: 500;
+
+    /* Spacing Scale */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-600: 48px;
+
+    /* Base Colors */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* Gray */
+    --color-gray-600: #717FA6;
+
+    /* Purple */
+    --color-purple-500: #766CF1;
+
+    /* Blue */
+    --color-blue-950: #1F2E55;
+    --color-blue-700: #382AE1;
+    --color-blue-150: #D6E1FF;
+    --color-blue-100: #E0E8FF;
+    --color-blue-50: #F7F9FF;
+}
