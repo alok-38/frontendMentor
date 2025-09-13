@@ -21,6 +21,109 @@ body {
     max-width: 840px;
 }
 
+section:first-of-type {
+    display: flex;
+    gap: 32px;
+    width: 728px;
+}
+
+section:first-of-type div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Chrome, Safari, Edge */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number] {
+    width: 160px;
+    height: 64px;
+    padding: 8px 24px;
+    outline: unset;
+    border: 1px solid var(--color-grey-200);
+    color: var(--color-black);
+    font-family: var(--preset-3-font);
+    font-weight: var(--preset-3-weight);
+    font-style: var(--preset-3-style);
+    font-size: var(--preset-3-size);
+    line-height: var(--preset-3-line-height);
+    background-color: #ffffff;
+}
+
+section:last-of-type {
+    width: 728px;
+    height: 342px;
+}
+
+section:nth-of-type(2) {
+    width: 728px;
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    width: 632px;
+    height: 1px;
+    color: var(--color-grey-200);
+}
+
+label {
+    text-transform: uppercase;
+    font-family: var(--preset-5-bold-font);
+    font-weight: var(--preset-5-bold-weight);
+    font-style: var(--preset-5-bold-style);
+    font-size: var(--preset-5-bold-size);
+    line-height: var(--preset-5-bold-line-height);
+    letter-spacing: var(--preset-5-bold-letter-spacing);
+    color: var(--color-grey-500);
+}
+
+h1 {
+    font-weight: var(--preset-1-weight);
+    font-size: var(--preset-1-size);
+    line-height: var(--preset-1-line-height);
+    letter-spacing: var(--preset-1-letter-spacing);
+}
+
+h1 span {
+    display: flex;
+    gap: 8px;
+}
+
+.year,
+.months,
+.days {
+    color: var(--color-purple-500);
+}
+
+img {
+    object-fit: cover;
+    outline: unset;
+    border: unset;
+}
+
+.icon {
+    background-color: var(--color-purple-500);
+    width: 96px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: auto;
+}
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -35,4 +138,102 @@ body {
 .attribution a {
     color: inherit;
     font-family: inherit;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 126px 41px 127px 46px;
+    }
+
+    .container {
+        width: 686px;
+        height: 707px;
+        padding: 56px;
+    }
+
+    section:nth-of-type(2) {
+        width: 574px;
+        height: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        position: static;
+        /* Reset from absolute/relative */
+        margin: 0 auto;
+        /* Center horizontally */
+    }
+
+    .icon img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 165px 16px;
+    }
+
+    .container {
+        padding: 48px 24px;
+        width: 343px;
+        height: 482px;
+        margin: 0 auto;
+    }
+
+    section {
+        width: 295px;
+        margin: 0 auto;
+    }
+
+    section:first-of-type {
+        height: 72px;
+        display: flex;
+        gap: 16px;
+        margin: 0 auto;
+    }
+
+    section:first-of-type div {
+        width: 87.67px;
+        height: 72px;
+    }
+
+    input {
+        width: 87.67px;
+        height: 46px;
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    /* Error */
+    input.error {
+        border-color: orangered;
+    }
+
+    .error-message {
+        color: orangered;
+        font-size: 0.75rem;
+        margin-top: 4px;
+        display: block;
+    }
+
+
+    label {
+        font-size: var(--preset-6-bold-size);
+        line-height: var(--preset-6-bold-line-height);
+    }
+
+    h1 {
+        font-weight: var(--preset-2-weight);
+        font-style: italic;
+        font-size: var(--preset-2-size);
+        line-height: var(--preset-2-line-height);
+        letter-spacing: var(--preset-2-letter-spacing);
+    }
 }
