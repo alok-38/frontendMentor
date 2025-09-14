@@ -98,6 +98,7 @@ main {
     outline: unset;
     border: 1px solid var(--color-neutral-600);
     width: 182px;
+    height: 118px;
 }
 
 .daily--forcast__wrapper {
@@ -111,6 +112,7 @@ main {
     border-radius: 12px;
     background-color: var(--color-neutral-800);
     border: 1px solid var(--color-neutral-600);
+    height: 165px;
 }
 
 aside {
@@ -118,6 +120,59 @@ aside {
     background-color: var(--color-neutral-800);
     border-radius: 20px;
     overflow: hidden;
+    padding: 24px;
+}
+
+aside h2 {
+    margin-bottom: 0;
+}
+
+aside .select-wrapper {
+    display: flex;
+    width: 336px;
+    justify-content: space-between;
+    align-items: center;
+    height: 37px;
+    vertical-align: middle;
+    margin-bottom: 16px;
+}
+
+aside .select-wrapper select {
+    outline: unset;
+    border: unset;
+    width: 120px;
+    display: flex;
+    gap: 12px;
+    background-color: var(--color-neutral-600);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-family: var(--text-5m-font);
+    font-weight: var(--text-5m-weight);
+    font-style: var(--text-5m-style);
+    font-size: var(--text-5m-size);
+    line-height: var(--text-5m-line-height);
+}
+
+aside .select-wrapper select:hover {
+    background-color: var(--color-neutral-700);
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    background-color: var(--color-neutral-700);
+    border: 1px solid var(--color-neutral-600);
+    width: 336px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 10px 16px 10px 12px;
+}
+
+aside ul li:not(aside ul li:last-of-type) {
+    margin-bottom: 16px;
 }
 
 h1 {

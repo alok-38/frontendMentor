@@ -36,6 +36,12 @@
 
   <!-- CSS and JS -->
   <link rel="stylesheet" href="main.css">
+  <!-- font awesome -->
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
   <script src="app.js" defer></script>
 </head>
 
@@ -49,7 +55,7 @@
       </div>
       <div class="select-wrapper">
         <img src="assets/images/icon-units.svg" alt="Units gear icon" />
-        <select id="units" name="units" aria-label="Select measurement units">
+        <select id="unit-select" name="units" aria-label="Select measurement units">
           <option value="" disabled selected>Units</option>
           <optgroup label="Temperature">
             <option value="celsius">Celsius (°C)</option>
@@ -69,6 +75,7 @@
     </nav>
 
     <header>
+      <!-- font awesome icon goes here -->
       <h1>How's the sky looking today?</h1>
     </header>
     <main>
@@ -106,7 +113,10 @@
             </div>
           </article>
           <article>
-            <h2>Daily forecast</h2>
+            <div>
+              <h2>Daily forecast</h2>
+
+            </div>
             <!-- Insert daily forecast for the next 7 days here -->
             <div class="daily--forcast__wrapper">
               <div></div>
@@ -120,8 +130,29 @@
           </article>
         </section>
         <aside>
-          <h2>Hourly forecast</h2>
+          <div class="select-wrapper">
+            <h2>Hourly forecast</h2>
+            <select id="day-select" name="units" aria-label="Select measurement units">
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+          </div>
           <!-- Insert hourly forecast for the selected day here -->
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </aside>
       </div>
     </main>
