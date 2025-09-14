@@ -71,30 +71,60 @@
     <header>
       <h1>How's the sky looking today?</h1>
     </header>
-    <div class="form-wrapper">
-      <form aria-label="Search for city weather">
-        <div><svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="24" height="24" viewBox="0 0 24 24"
-            fill="currentColor" aria-hidden="true">
-            <path
-              d="M10.5 3a7.5 7.5 0 0 1 6.13 11.85l4.28 4.29a1 1 0 0 1-1.42 1.42l-4.29-4.28A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11z" />
-          </svg><input type="text" id="search" name="city" placeholder="Search for a city, e.g., New York" required />
-        </div>
-        <button type="submit">Search</button>
-      </form>
-      <p>No search result found!</p>
-    </div>
-    Feels like
-    <!-- Insert temperature here -->
-    Humidity
-    <!-- Insert humidity here -->
-    Wind
-    <!-- Insert wind here -->
-    Precipitation
-    <!-- Insert precipitation here -->
-    Daily forecast
-    <!-- Insert daily forecast for the next 7 days here -->
-    Hourly forecast
-    <!-- Insert hourly forecast for the selected day here -->
+    <main>
+      <div class="form-wrapper">
+        <form aria-label="Search for city weather">
+          <div><svg xmlns="http://www.w3.org/2000/svg" class="search-icon" width="24" height="24" viewBox="0 0 24 24"
+              fill="currentColor" aria-hidden="true">
+              <path
+                d="M10.5 3a7.5 7.5 0 0 1 6.13 11.85l4.28 4.29a1 1 0 0 1-1.42 1.42l-4.29-4.28A7.5 7.5 0 1 1 10.5 3zm0 2a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11z" />
+            </svg><input type="text" id="search" name="city" placeholder="Search for a city, e.g., New York" required />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+        <p>No search result found!</p>
+      </div>
+      <div class="weather-report">
+        <section>
+          <article></article>
+          <article>
+            <div>
+              Feels like
+              <!-- Insert temperature here -->
+            </div>
+            <div>
+              Humidity
+              <!-- Insert humidity here -->
+            </div>
+            <div>
+              Wind
+              <!-- Insert wind here -->
+            </div>
+            <div>
+              Precipitation
+              <!-- Insert precipitation here -->
+            </div>
+          </article>
+          <article>
+            <h2>Daily forecast</h2>
+            <!-- Insert daily forecast for the next 7 days here -->
+            <div class="daily--forcast__wrapper">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </article>
+        </section>
+        <aside>
+          <h2>Hourly forecast</h2>
+          <!-- Insert hourly forecast for the selected day here -->
+        </aside>
+      </div>
+    </main>
   </div>
 
   <footer class="attribution">

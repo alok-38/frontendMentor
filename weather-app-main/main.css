@@ -36,11 +36,88 @@ nav {
     margin-bottom: 64px;
 }
 
+select option,
+select optgroup {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 214px;
+    height: 412px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--color-neutral-800);
+}
+
+
 header {
     max-width: 731px;
     width: 100%;
     margin-inline: auto;
     margin-bottom: 64px;
+}
+
+main {
+    max-width: 1216px;
+    width: 100%;
+    margin-inline: auto;
+}
+
+.weather-report {
+    display: flex;
+    gap: 32px;
+    max-width: 1216px;
+    width: 100%;
+}
+
+.weather-report section {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+
+.weather-report section article:first-of-type {
+    height: 286px;
+    border-radius: 20px;
+    background-color: var(--color-neutral-800);
+    /* background: linear-gradient(45deg, var(--color-blue-500) 0%, var(--color-blue-700) 100%); */
+    margin-bottom: 32px;
+}
+
+.weather-report section article:nth-of-type(2) {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.weather-report section article:nth-of-type(2) div {
+    background-color: var(--color-neutral-800);
+    border-radius: 12px;
+    padding: 20px;
+    outline: unset;
+    border: 1px solid var(--color-neutral-600);
+    width: 182px;
+}
+
+.daily--forcast__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.daily--forcast__wrapper div {
+    width: 100.57px;
+    padding: 16px 10px;
+    border-radius: 12px;
+    background-color: var(--color-neutral-800);
+    border: 1px solid var(--color-neutral-600);
+}
+
+aside {
+    width: 384px;
+    background-color: var(--color-neutral-800);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 h1 {
@@ -50,6 +127,15 @@ h1 {
     font-style: var(--text-2-style);
     font-size: var(--text-2-size);
     line-height: var(--text-2-line-height);
+}
+
+h2 {
+    font-family: var(--text-5-font);
+    font-weight: var(font-weight);
+    font-style: var(font-style);
+    font-size: var(font-size);
+    line-height: var(line-height);
+    margin-bottom: 20px;
 }
 
 .select-wrapper {
@@ -85,6 +171,8 @@ h1 {
     font-size: var(--text-7-size);
     line-height: var(--text-7-line-height);
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .form-wrapper {
@@ -112,6 +200,7 @@ h1 {
     display: flex;
     gap: 16px;
     position: relative;
+    margin-bottom: 48px;
 }
 
 .form-wrapper form input {
