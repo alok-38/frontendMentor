@@ -37,10 +37,7 @@
   <!-- CSS and JS -->
   <link rel="stylesheet" href="main.css">
   <!-- font awesome -->
-   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <script src="app.js" defer></script>
 </head>
@@ -89,6 +86,10 @@
           </div>
           <button type="submit">Search</button>
         </form>
+        <div id="loading-spinner" style="display: none; text-align: center; margin-top: 16px;">
+          <i class="fa-solid fa-spinner fa-spin" style="font-size: 1.5rem; color: #ccc;"></i>
+        </div>
+
         <p>No search result found!</p>
       </div>
       <div class="weather-report">

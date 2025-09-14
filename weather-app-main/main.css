@@ -261,7 +261,7 @@ h2 {
 .form-wrapper form input {
     width: 526px;
     height: 56px;
-    padding: 16px 24px;
+    padding: 16px 64px;
     border-radius: 12px;
     color: var(--color-neutral-200);
     background: transparent;
@@ -275,6 +275,11 @@ h2 {
     font-size: var(--text-5-size);
     line-height: var(--text-5-line-height);
 }
+
+.form-wrapper p {
+    display: none;
+}
+
 
 .form-wrapper form input:hover {
     background-color: var(--color-neutral-700);
