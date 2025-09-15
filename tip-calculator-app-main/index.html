@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tip calculator application" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Tip Calculator App</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <main>
+
+      <form aria-labelledby="tip-calculator-form">
+        <section>
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" inputmode="decimal" required />
+        </section>
+
+        <fieldset>
+          <legend>Select Tip &percnt;</legend>
+          <div class="button-group" role="group" aria-label="Tip percentage options">
+            <button type="button" aria-label="Tip 5 percent">5%</button>
+            <button type="button" aria-label="Tip 10 percent">10%</button>
+            <button type="button" aria-label="Tip 15 percent">15%</button>
+            <button type="button" aria-label="Tip 25 percent">25%</button>
+            <button type="button" aria-label="Tip 50 percent">50%</button>
+            <button type="button" aria-label="custom">Custom</button>
+          </div>
+        </fieldset>
+
+        <section>
+          <label for="number">Number of People</label>
+          <input type="number" name="number" id="number" inputmode="numeric" required />
+        </section>
+      </form>
+
+      <article aria-label="Calculated tip summary">
+        <div class="summary">
+          <div>
+            <p>
+              Tip Amount<br />
+              <span aria-hidden="true">/ person</span>
+            </p>
+            <output id="tip-amount" aria-live="polite">$0.00</output>
+          </div>
+
+          <div>
+            <p>
+              Total<br />
+              <span aria-hidden="true">/ person</span>
+            </p>
+            <output id="total-amount" aria-live="polite">$0.00</output>
+          </div>
+        </div>
+
+        <button type="reset">Reset</button>
+      </article>
+    </main>
+  </div>
+
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>.
+    Coded by <a href="#">Alokananda Y</a>.
+  </footer>
+</body>
+
+</html>
