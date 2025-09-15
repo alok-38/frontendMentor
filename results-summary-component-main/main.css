@@ -1,0 +1,43 @@
+@import url(preset.css);
+
+body {
+    font-family: var(--font-hanken);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue-50);
+}
+
+main {
+    display: flex;
+    border-radius: 32px;
+    max-width: 736px;
+    width: 100%;
+    overflow: hidden;
+}
+
+section:first-of-type {
+    width: 368px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+/* footer */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: inherit;
+    font-family: inherit;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.attribution a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}

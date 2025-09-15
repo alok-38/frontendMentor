@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('./assets/Hanken_Grotesk/static/HankenGrotesk-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('./assets/Hanken_Grotesk/static/HankenGrotesk-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('./assets/Hanken_Grotesk/static/HankenGrotesk-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+:root {
+    /* Font Families */
+    --font-hanken: 'Hanken Grotesk', sans-serif;
+
+    /* Font Weights */
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Text Presets */
+    --text-1-size: 72px;
+    --text-1-line: 100%;
+    --text-1-weight: var(--font-weight-extrabold);
+
+    --text-2-size: 56px;
+    --text-2-line: 100%;
+    --text-2-weight: var(--font-weight-extrabold);
+
+    --text-3-size: 32px;
+    --text-3-line: 130%;
+    --text-3-weight: var(--font-weight-bold);
+
+    --text-4-size: 24px;
+    --text-4-line: 130%;
+    --text-4-weight: var(--font-weight-bold);
+
+    --text-5-bold-size: 18px;
+    --text-5-bold-line: 130%;
+    --text-5-bold-weight: var(--font-weight-bold);
+
+    --text-5-medium-size: 18px;
+    --text-5-medium-line: 130%;
+    --text-5-medium-weight: var(--font-weight-medium);
+
+    --text-6-bold-size: 16px;
+    --text-6-bold-line: 130%;
+    --text-6-bold-weight: var(--font-weight-bold);
+
+    --text-6-medium-size: 16px;
+    --text-6-medium-line: 130%;
+    --text-6-medium-weight: var(--font-weight-medium);
+
+    /* Spacing Scale */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-1000: 80px;
+
+    /* Base Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    /* Navy */
+    --color-navy-950: #303b59;
+    --color-navy-200: #cac9ff;
+    --color-navy-50: #ecf2ff;
+
+    /* Blue */
+    --color-blue-800: #1125d6;
+    --color-blue-50: #f3f4fd;
+
+    /* Yellow */
+    --color-yellow-400: #ffb21e;
+    --color-yellow-50: #fffbf4;
+
+    /* Red */
+    --color-red-400: #ff5555;
+    --color-red-50: #fff6f6;
+
+    /* Green */
+    --color-green-500: #00bb8f;
+    --color-green-50: #f2fcf9;
+
+    /* Gradients */
+    --gradient-1: linear-gradient(90deg, #4d21c9, #2521c9);
+    --gradient-2: linear-gradient(90deg, #7755ff, #2f2ce9);
+}
