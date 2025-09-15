@@ -27,6 +27,10 @@ body {
     background-color: #fff;
 }
 
+header {
+    margin-bottom: 88px;
+}
+
 main {
     display: flex;
     max-width: 840px;
@@ -287,4 +291,79 @@ article button:active {
 .attribution a {
     font-family: inherit;
     color: inherit;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 80px 80px 80px;
+    }
+
+    .container {
+        max-width: 608px;
+        width: 100%;
+        border-radius: 25px;
+        padding: 48px 80px;
+        margin-inline: auto;
+        height: 900px;
+    }
+
+    main {
+        max-width: 457px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-inline: auto;
+        height: 692px;
+    }
+
+    form,
+    article {
+        width: 100%;
+        margin-inline: auto;
+        max-width: 457px;
+    }
+
+    article button {
+        display: block;
+        margin: auto;
+    }
+
+    header {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    header {
+        margin-bottom: 40px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 375px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 32px 24px;
+        gap: 32px;
+    }
+
+    form,
+    article {
+        width: 100%;
+        max-width: 327px;
+    }
+
+    form {
+        height: auto;
+    }
+
+    article {
+        padding: 24px;
+        height: auto;
+    }
 }
