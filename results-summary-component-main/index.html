@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <meta name="description" content="results summary component">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="results summary component" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
   <title>Frontend Mentor | Results summary component</title>
 
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css" />
+  <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       <h1>Your Result</h1>
       <div class="result">
         <h2>
-          76
+          0
           <span>of 100</span>
         </h2>
       </div>
@@ -30,31 +30,46 @@
     </section>
 
     <section>
-      <h3>Summary</h3>
-      <ul>
-        <li>
-          Reaction
-          80 / 100
-        </li>
-        <li>
-          Memory
-          92 / 100
-        </li>
-        <li>
-          Verbal
-          61 / 100
-        </li>
-        <li>
-          Visual
-          72 / 100
-        </li>
-      </ul>
-      <button type="submit">Continue</button>
+      <div class="summary-wrapper">
+        <h3>Summary</h3>
+        <ul>
+          <li>
+            <div>
+              <img src="assets/images/icon-reaction.svg" alt="reaction" />
+              <p>Reaction</p>
+            </div>
+            <p><span data-score="80">0</span> / 100</p>
+          </li>
+          <li>
+            <div>
+              <img src="assets/images/icon-memory.svg" alt="memory" />
+              <p>Memory</p>
+            </div>
+            <p><span data-score="92">0</span> / 100</p>
+          </li>
+          <li>
+            <div>
+              <img src="assets/images/icon-verbal.svg" alt="verbal" />
+              <p>Verbal</p>
+            </div>
+            <p><span data-score="61">0</span> / 100</p>
+          </li>
+          <li>
+            <div>
+              <img src="assets/images/icon-visual.svg" alt="visual" />
+              <p>Visual</p>
+            </div>
+            <p><span data-score="72">0</span> / 100</p>
+          </li>
+        </ul>
+        <button type="submit">Get Score</button>
+      </div>
     </section>
   </main>
 
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
     Coded by <a href="#">Alokananda Y</a>.
   </footer>
 </body>
