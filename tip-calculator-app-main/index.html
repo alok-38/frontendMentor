@@ -18,7 +18,10 @@
       <form aria-labelledby="tip-calculator-form">
         <section>
           <label for="bill">Bill</label>
-          <input type="number" name="bill" id="bill" inputmode="decimal" required />
+          <div class="input-wrapper">
+            <img src="images/icon-dollar.svg" alt="dollar">
+            <input autofocus type="number" name="bill" id="bill" inputmode="decimal" placeholder="142.55" />
+          </div>
         </section>
 
         <fieldset>
@@ -35,13 +38,16 @@
 
         <section>
           <label for="number">Number of People</label>
-          <input type="number" name="number" id="number" inputmode="numeric" required />
+          <div class="input-wrapper">
+            <img src="images/icon-person.svg" alt="person">
+            <input type="number" name="number" id="number" inputmode="numeric" required placeholder="5"/>
+          </div>
         </section>
       </form>
 
       <article aria-label="Calculated tip summary">
         <div class="summary">
-          <div>
+          <div class="tip-amount">
             <p>
               Tip Amount<br />
               <span aria-hidden="true">/ person</span>
@@ -49,7 +55,7 @@
             <output id="tip-amount" aria-live="polite">$0.00</output>
           </div>
 
-          <div>
+          <div class="bill-total">
             <p>
               Total<br />
               <span aria-hidden="true">/ person</span>

@@ -43,6 +43,59 @@ form {
     gap: 40px;
 }
 
+.input-wrapper {
+    position: relative;
+    /* Needed to position the image absolutely inside */
+    width: 379px;
+    height: 48px;
+}
+
+.input-wrapper img {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 16px;
+    object-fit: cover;
+    pointer-events: none;
+    /* So image doesn't block input clicks */
+}
+
+input {
+    padding: 8px 16px 8px 32px;
+    outline: unset;
+    border: unset;
+    background: transparent;
+    background-color: var(--color-grey-50);
+    border-radius: 5px;
+    width: 379px;
+    height: 48px;
+    font-size: 16px;
+}
+
+input:hover,
+input:focus {
+    border: 2px solid var(--color-green-400);
+    background-color: var(--color-grey-50);
+}
+
+input::placeholder {
+    text-align: right;
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    color: var(--color-green-900);
+    font-weight: bold;
+}
+
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
 label,
 legend {
     margin-bottom: 8px;
@@ -54,11 +107,170 @@ legend {
 
 fieldset {
     border: unset;
+    max-width: 379px;
+    width: 100%;
 }
 
 form section {
     display: flex;
     flex-direction: column;
+}
+
+form section img {
+    width: 13px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8px;
+}
+
+button {
+    outline: unset;
+    background: transparent;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button {
+    padding: 8px 16px;
+    width: 116px;
+    height: 48px;
+    background-color: var(--color-green-900);
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+button[aria-label="Tip 15 percent"] {
+    background-color: var(--color-green-400);
+    color: var(--color-green-900);
+}
+
+button[aria-label="custom"] {
+    background-color: var(--color-grey-50);
+    color: var(--color-grey-550);
+}
+
+button[aria-label="custom"]:hover {
+    color: #fff;
+}
+
+button[aria-label="Tip 15 percent"]:hover {
+    background-color: var(--color-green-200);
+}
+
+button[aria-label="Tip 15 percent"]:focus-visible {
+    outline: 2px solid var(--color-green-800);
+    outline-offset: 2px;
+}
+
+button[aria-label="Tip 15 percent"]:active {
+    transform: scale(0.96);
+    background-color: var(--color-green-400);
+    /* Optional: can use darker tone */
+}
+
+form button:hover {
+    background-color: var(--color-green-800);
+}
+
+form button:focus-visible {
+    outline: 2px solid var(--color-green-400);
+    outline-offset: 3px;
+}
+
+form button:active {
+    transform: scale(0.96);
+    /* subtle click feedback */
+    background-color: var(--color-green-750);
+}
+
+article {
+    padding: 24px 32px;
+    background-color: var(--color-green-900);
+    max-width: 413px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tip-amount,
+.bill-total {
+    display: flex;
+    width: 333px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount p,
+.bill-total p {
+    font-size: var(--text-5-size);
+    line-height: var(--text-5-line-height);
+    color: #fff;
+    font-weight: 600;
+}
+
+.tip-amount p span,
+.bill-total p span {
+    color: var(--color-grey-400);
+    font-size: var(--text-6-size);
+    line-height: var(--text-6-line-height);
+}
+
+output {
+    color: var(--color-green-400);
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    letter-spacing: var(--text-1-letter-spacing);
+}
+
+article button {
+    width: 333px;
+    height: 48px;
+    color: var(--color-green-900);
+    font-size: var(--text-4-size);
+    line-height: var(--text-4-line-height);
+    background-color: var(--color-green-400);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+/* 🖱️ Hover state */
+article button:hover {
+    background-color: var(--color-green-200);
+}
+
+/* ⌨️ Focus-visible (keyboard accessibility) */
+article button:focus-visible {
+    outline: 2px solid var(--color-green-800);
+    outline-offset: 3px;
+}
+
+/* 🖱️ Click/Active/Pressed state */
+article button:active {
+    transform: scale(0.96);
+    /* subtle press effect */
+    background-color: var(--color-green-200);
 }
 
 .attribution {
