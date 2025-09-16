@@ -16,15 +16,36 @@
 <body>
 
   <div class="container">
-    Password Generator
-    P4$5W0rD!
-    Character Length
-    Include Uppercase Letters
-    Include Lowercase Letters
-    Include Numbers
-    Include Symbols
-    Strength
-    Generate
+    <h1>Password Generator</h1>
+    <section class="display">
+      <input type="text" id="passwordOutput" value="P4$5W0rD!" readonly>
+      <img src="assets/images/icon-copy.svg" alt="copy" class="copy-icon">
+    </section>
+
+    <section>
+      <article class="password-length">
+        <div>
+          <p>Character Length</p>
+          <div>.</div>
+        </div>
+        <input type="range" id="length-slider" min="4" max="32" value="12" step="1">
+      </article>
+      Include Uppercase Letters
+      Include Lowercase Letters
+      Include Numbers
+      Include Symbols
+      <article class="strength">
+        <input type="text" id="passwordOutput" value="Strength" readonly>
+        <div class="password-strength">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </article>
+
+      <button type="button">Generate</button>
+    </section>
   </div>
 
 </body>
