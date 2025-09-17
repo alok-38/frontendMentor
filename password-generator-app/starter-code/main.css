@@ -131,7 +131,6 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
     background-color: var(--green-200);
     margin-top: -10px;
-    /* box-shadow: 0 0 10px var(--green-200), 0 0 20px var(--green-200); */
     transition: box-shadow 0.3s ease;
     position: relative;
     z-index: 2;
@@ -208,13 +207,46 @@ input[type="range"]::-moz-range-thumb:hover {
     height: 72px;
     padding: 24px 32px;
     margin-inline: auto;
+    background-color: var(--grey-850);
+    margin: 32px 0;
+}
+
+#passwordStrength {
+    background: transparent;
+    outline: unset;
+    border: unset;
+    width: 413px;
+    height: 28px;
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    color: var(--grey-600);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .password-strength {
     width: 64px;
+    height: 28px;
     gap: 8px;
     display: flex;
 }
+
+.password-strength div {
+    width: 10px;
+    height: 28px;
+    border: 2px solid var(--grey-200);
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Active bars: green and slightly scale up */
+.password-strength div.active {
+    background-color: var(--green-200);
+    transform: scaleY(1.3);
+}
+
+/* Parameters styling */
 
 .parameters {
     margin: 32px 0 0 0;
@@ -229,17 +261,42 @@ input[type="range"]::-moz-range-thumb:hover {
     align-items: center;
 }
 
-.parameters div input {
+/* Hide native checkbox and rebuild it */
+.parameters div input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    outline: unset;
-    border: unset;
     border: 2px solid var(--grey-200);
-    appearance: none;
-    /* Remove default styling */
-    -webkit-appearance: none;
-    /* For Safari */
     background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Checkmark */
+.parameters div input[type="checkbox"]::before {
+    content: '';
+    width: 10px;
+    height: 5px;
+    border: solid var(--grey-200);
+    border-width: 0 0 2px 2px;
+    transform: rotate(-45deg) scale(0);
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* When checked, show the checkmark */
+.parameters div input[type="checkbox"]:checked::before {
+    transform: rotate(-45deg) scale(1);
+}
+
+/* Optional: Hover state */
+.parameters div input[type="checkbox"]:hover {
+    border-color: var(--grey-100);
 }
 
 .parameters div p {
@@ -248,11 +305,50 @@ input[type="range"]::-moz-range-thumb:hover {
     color: var(--grey-200);
 }
 
-.strength {
+button {
+    outline: none;
+    border: none;
+    background-color: var(--green-200);
+    color: var(--grey-800);
     max-width: 476px;
     width: 100%;
-    height: 72px;
-    padding: 24px 32px;
-    background-color: var(--grey-850);
-    margin: 32px 0;
+    height: 65px;
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    padding: 24px 176px;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+/* Hover state: transparent background, green border and text */
+button:hover {
+    background: transparent;
+    border: 2px solid var(--green-200);
+    color: var(--green-200);
+}
+
+/* Focus outline for accessibility */
+button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(0, 255, 100, 0.4);
+}
+
+/* Pressed effect */
+button:active {
+    transform: translateY(2px);
+}
+
+/* Arrow movement - keep original colors, no filter */
+button img {
+    transition: transform 0.2s ease;
+}
+
+/* On hover/focus, move arrow */
+button:hover img,
+button:focus img {
+    transform: translateX(4px);
 }
