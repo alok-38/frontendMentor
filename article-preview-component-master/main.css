@@ -116,19 +116,19 @@ button {
 
 /* Hover state */
 button:hover {
-  background-color: var(--color-grey-300);
+    background-color: var(--color-grey-300);
 }
 
 /* Focus state (keyboard navigation) */
 button:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 /* Active (click/press) state */
 button:active {
-  transform: scale(0.95);
-  background-color: var(--color-grey-400);
+    transform: scale(0.95);
+    background-color: var(--color-grey-400);
 }
 
 footer {
@@ -144,4 +144,64 @@ footer {
 footer a {
     font-family: inherit;
     color: inherit;
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 608px;
+        width: 100%;
+        display: flex;
+        gap: 32px;
+    }
+
+    .card-content {
+        max-width: 311px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    h1 {
+        font-size: var(--text-1-font-size);
+        line-height: var(--text-1-line-height);
+        letter-spacing: var(--text-1-letter-spacing);
+        font-weight: var(--text-1-font-weight);
+    }
+
+    .card-image img {
+        width: 229px;
+        height: 346px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 64px 24px 65px 24px;
+    }
+
+    main {
+        max-width: 375px;
+        width: 100%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .card-content {
+        width: 267px;
+        margin: auto;
+        padding-top: 0;
+    }
+
+    .card-image img {
+        max-width: 327px;
+        height: 200px;
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
 }
