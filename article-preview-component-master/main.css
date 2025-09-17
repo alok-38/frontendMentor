@@ -21,6 +21,8 @@ main {
     max-width: 730px;
     width: 100%;
     background-color: #fff;
+    box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+    position: relative;
 }
 
 .card {
@@ -129,6 +131,95 @@ button:focus-visible {
 button:active {
     transform: scale(0.95);
     background-color: var(--color-grey-400);
+}
+
+/* pop up */
+.modal--button__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    position: absolute;
+    right: -75px;
+    bottom: 45px;
+}
+
+.modal {
+    background-color: var(--color-grey-900);
+    width: 248px;
+    height: 55px;
+    box-shadow: 0px 10px 10px 0px rgba(201, 213, 225, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+/* Triangle pointer */
+.modal::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    /* Position below modal */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--color-grey-900) transparent transparent transparent;
+}
+
+
+.modal-content {
+    display: flex;
+    gap: 24px;
+    width: 171px;
+    height: 20px;
+    align-items: center;
+}
+
+.modal-content a {
+    font-size: var(--text-3-font-size);
+    line-height: var(--text-3-line-height);
+    letter-spacing: var(--text-3-letter-spacing);
+    font-weight: var(--text-3-font-weight);
+    color: var(--color-grey-400);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+
+}
+
+/* Hover state */
+.modal-content a:hover {
+    color: var(--color-grey-600);
+    transform: translateY(-2px);
+}
+
+/* Focus state */
+.modal-content a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+/* Optional: Slight scale on press */
+.modal-content a:active {
+    transform: scale(0.95);
+}
+
+.modal-content a img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
 }
 
 footer {
