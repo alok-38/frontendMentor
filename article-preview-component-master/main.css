@@ -1,6 +1,8 @@
 @import url(preset.css);
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,51 +17,37 @@ body {
     background-color: var(--color-grey-200);
 }
 
-img {
-    display: block;
-    object-fit: cover;
+main {
+    max-width: 730px;
+    width: 100%;
+    background-color: #fff;
 }
 
-article:first-of-type img {
+.card {
+    display: flex;
+    gap: 40px;
+}
+
+.card-image img {
     width: 285px;
     height: 280px;
 }
 
-/* main */
-main {
-    max-width: 730px;
-    display: flex;
-    height: 280px;
-    gap: 40px;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #ffffff;
-}
-
-.profile img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    outline: unset;
-}
-
-article:last-of-type {
+.card-content {
+    max-width: 365px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 365px;
-    /* padding: 0 40px; */
-    height: 220px;
-    padding-top: 30px;
-    padding-right: 40px;
+    padding: 30px 0 40px;
 }
 
-article:last-of-type p {
+.card-content p {
     color: var(--color-grey-500);
-    font-weight: var(--text-2-medium-font-weight);
-    font-size: var(--text-2-medium-font-size);
-    line-height: var(--text-2-medium-line-height);
-    letter-spacing: var(--text-2-medium-letter-spacing);
+    font-size: var(--text-2-bold-font-size);
+    line-height: var(--text-2-bold-line-height);
+    letter-spacing: var(--text-2-bold-letter-spacing);
+    font-weight: var(--text-2-bold-font-weight);
 }
 
 h1 {
@@ -70,20 +58,20 @@ h1 {
     color: var(--color-grey-900);
 }
 
+img {
+    outline: unset;
+    border: unset;
+    object-fit: cover;
+}
+
 .profile {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
+    height: 40px;
 }
 
-.profile>div {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.profile>div h2,
-.profile>div time {
+.profile .name {
     color: var(--color-grey-900);
     font-size: var(--text-2-bold-font-size);
     line-height: var(--text-2-bold-line-height);
@@ -91,95 +79,69 @@ h1 {
     font-weight: var(--text-2-bold-font-weight);
 }
 
-.profile>div time {
+time {
     color: var(--color-grey-400);
-    font-weight: var(--text-2-medium-font-weight);
+    font-size: var(--text-2-bold-font-size);
+    line-height: var(--text-2-bold-line-height);
+    letter-spacing: var(--text-2-bold-letter-spacing);
+    font-weight: var(--text-2-bold-font-weight);
 }
 
-.pop-up {
-    width: 248px;
-    height: 67px;
-    padding: 18px 38px;
-    background-color: var(--color-grey-900);
-    border-radius: 16px;
-    position: absolute;
-    top: 400px;
-    right: 425px;
-    visibility: hidden;
-    /* Start hidden */
+.author {
     display: flex;
-    /* So it stays aligned when shown */
     align-items: center;
-    justify-content: space-around;
-    color: white;
+    gap: 16px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 button {
-    cursor: pointer;
     outline: unset;
     border: unset;
+    cursor: pointer;
+    background: transparent;
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    background-color: var(--color-grey-200);
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-grey-200);
-    position: relative;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+/* Hover state */
+button:hover {
+  background-color: var(--color-grey-300);
+}
 
+/* Focus state (keyboard navigation) */
+button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
 
-/* .attribution {
-    font-size: 11px;
+/* Active (click/press) state */
+button:active {
+  transform: scale(0.95);
+  background-color: var(--color-grey-400);
+}
+
+footer {
+    font-family: inherit;
+    color: inherit;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
     text-align: center;
 }
 
-.attribution a {
+footer a {
+    font-family: inherit;
     color: inherit;
-} */
-
-@media (max-width: 768px) {
-    main {
-        width: 608px;
-        height: 346px;
-    }
-
-    .pop-up {
-        width: 248px;
-        height: 67px;
-        padding: 18px 38px;
-        background-color: var(--color-grey-900);
-        border-radius: 16px;
-        position: absolute;
-        top: 375px;
-        left: 500px;
-        visibility: hidden;
-        /* Start hidden */
-        display: flex;
-        /* So it stays aligned when shown */
-        align-items: center;
-        justify-content: space-around;
-        color: white;
-    }
-
-    article:first-of-type img {
-        width: 285px;
-        height: 346px;
-    }
-}
-
-@media (max-width: 375px) {
-    main {
-        width: 327px;
-        height: 538px;
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-    }
-
-    article:first-of-type img {
-        width: 327px;
-        height: 200px;
-    }
 }

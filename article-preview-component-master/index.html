@@ -17,42 +17,52 @@
 <body>
 
   <main>
-    <article>
-      <img src="images/drawers.jpg" alt="picture of drawers" width="100%">
-    </article>
-    <article>
-      <h1>
-        Shift the overall look and feel by adding these wonderful
-        touches to furniture in your home
-      </h1>
-      <p>
-        Ever been in a room and felt like something was missing? Perhaps
-        it felt slightly bare and uninviting. I've got some simple tips
-        to help you make any room feel complete.
-      </p>
-      <div class="profile">
-        <div>
-          <img src="images/avatar-michelle.jpg" alt="avatar of michelle" width="100%">
-          <div>
-            <h2>Michelle Appleton</h2>
-            <time datetime="2020-06-28">28 Jun 2020</time>
-          </div>
-        </div>
-        <div>
-          <div class="pop-up">
+    <article class="card">
+      <!-- Left side: image -->
+      <section class="card-image">
+        <img src="images/drawers.jpg" alt="Picture of drawers" />
+      </section>
 
+      <!-- Right side: content -->
+      <section class="card-content">
+        <h1>
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </h1>
+        <p>
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I've got some simple tips
+          to help you make any room feel complete.
+        </p>
+
+        <!-- Footer: author info and share -->
+        <div class="profile">
+          <div class="author">
+            <img src="images/avatar-michelle.jpg" alt="Avatar of Michelle Appleton" class="avatar" />
+            <div>
+              <p class="name">Michelle Appleton</p>
+              <time datetime="2020-06-28">28 Jun 2020</time>
+            </div>
           </div>
-          <button aria-label="Share article" type="button"><img src="images/icon-share.svg" alt="share icon"
-              style="width: 15px; height: 12.97px;"></button>
+
+          <div class="share">
+            <div class="pop-up">
+              <!-- Optional share tooltip or content -->
+            </div>
+            <button aria-label="Share article" type="button" class="share-button">
+              <img src="images/icon-share.svg" alt="Share icon" style="width: 15px; height: 12.97px;" />
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
     </article>
   </main>
 
-  <!-- <footer class="attribution">
+
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/alok-38">Alokananda Y</a>.
-  </footer> -->
+  </footer>
 </body>
 
 </html>
