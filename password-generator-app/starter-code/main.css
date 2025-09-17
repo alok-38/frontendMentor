@@ -49,7 +49,7 @@ h1 {
 }
 
 .display input {
-    width: 476px;
+    width: 100%;
     height: 42px;
     outline: unset;
     border: unset;
@@ -68,7 +68,7 @@ h1 {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    right: 50px;
+    right: 30px;
     transform: translateY(-50%);
     transition: filter 0.3s ease, transform 0.3s ease;
 }
@@ -108,7 +108,6 @@ input[type="range"] {
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
-
 }
 
 /* Webkit (Chrome, Safari) */
@@ -116,6 +115,12 @@ input[type="range"]::-webkit-slider-runnable-track {
     border-radius: 5px;
     background: var(--grey-850);
     height: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Track glow when dragging */
+input[type="range"].glow::-webkit-slider-runnable-track {
+    box-shadow: 0 0 10px var(--green-200), 0 0 20px var(--green-200);
 }
 
 /* WebKit (Chrome, Safari, Edge) */
@@ -125,10 +130,62 @@ input[type="range"]::-webkit-slider-thumb {
     width: 28px;
     border-radius: 50%;
     background-color: var(--green-200);
-    cursor: pointer;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    transition: background 0.2s ease;
     margin-top: -10px;
+    /* box-shadow: 0 0 10px var(--green-200), 0 0 20px var(--green-200); */
+    transition: box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow:
+        0 0 14px var(--green-200),
+        0 0 28px var(--green-200);
+    transition: box-shadow 0.2s ease;
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    height: 8px;
+    background: var(--grey-850);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="range"].glow::-moz-range-track {
+    box-shadow: 0 0 10px var(--green-200), 0 0 20px var(--green-200);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: var(--green-200);
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--green-200), 0 0 20px var(--green-200);
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    box-shadow:
+        0 0 14px var(--green-200),
+        0 0 28px var(--green-200);
+    transition: box-shadow 0.2s ease;
+}
+
+.password-length div p {
+    display: flex;
+    justify-content: space-between;
+    max-width: 476px;
+    width: 100%;
+    align-items: center;
+}
+
+.password-length div p span {
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    color: var(--green-200);
 }
 
 .password-length div>p {
@@ -138,14 +195,8 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .password-length div>div {
-    border: 2px solid var(--green-200);
-    width: 20px;
-    height: 42px;
-    border-radius: 12px;
     color: var(--green-200);
-    display: flex;
     align-items: center;
-    justify-content: center;
     font-size: 24px;
 }
 
@@ -165,8 +216,43 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
 }
 
-.password-strength div {
+.parameters {
+    margin: 32px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.parameters div {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.parameters div input {
+    width: 20px;
+    height: 20px;
+    outline: unset;
+    border: unset;
     border: 2px solid var(--grey-200);
-    width: 10px;
-    height: 28px;
+    appearance: none;
+    /* Remove default styling */
+    -webkit-appearance: none;
+    /* For Safari */
+    background-color: transparent;
+}
+
+.parameters div p {
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    color: var(--grey-200);
+}
+
+.strength {
+    max-width: 476px;
+    width: 100%;
+    height: 72px;
+    padding: 24px 32px;
+    background-color: var(--grey-850);
+    margin: 32px 0;
 }

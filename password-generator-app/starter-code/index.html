@@ -25,17 +25,30 @@
     <section>
       <article class="password-length">
         <div>
-          <p>Character Length</p>
-          <div>.</div>
+          <p>Character Length <span>0</span></p>
         </div>
-        <input type="range" id="length-slider" min="4" max="32" value="12" step="1">
+        <input type="range" id="rangeSlider" min="4" max="32" value="12" step="1">
       </article>
-      Include Uppercase Letters
-      Include Lowercase Letters
-      Include Numbers
-      Include Symbols
+      <article class="parameters">
+        <div>
+          <input type="checkbox" name="" id="checkbox">
+          <p>Include Uppercase Letters</p>
+        </div>
+        <div>
+          <input type="checkbox" name="" id="checkbox">
+          <p>Include Lowercase Letters</p>
+        </div>
+        <div>
+          <input type="checkbox" name="" id="checkbox">
+          <p>Include Numbers</p>
+        </div>
+        <div>
+          <input type="checkbox" name="" id="checkbox">
+          <p>Include Symbols</p>
+        </div>
+      </article>
       <article class="strength">
-        <input type="text" id="passwordOutput" value="Strength" readonly>
+        <input type="text" id="passwordStrength" value="Strength" readonly>
         <div class="password-strength">
           <div></div>
           <div></div>
