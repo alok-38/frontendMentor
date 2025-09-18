@@ -17,20 +17,16 @@ body {
     font-family: var(--text-1-font-family);
     background-color: var(--color-blue-700);
     color: var(--color-blue-800);
-    overflow: hidden;
 }
 
 .container {
     padding: 32px;
     border-radius: 36px;
-    border: 1px solid #151515;
     box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
     background-color: #fff;
     max-width: 904px;
     width: 100%;
     overflow: hidden;
-    height: auto;
-    margin-top: 10vh;
 }
 
 main {
@@ -38,7 +34,7 @@ main {
     gap: 64px;
     width: 100%;
     justify-content: space-between;
-    align-items: stretch;
+    height: 593px;
 }
 
 .sign-up__container {
@@ -97,7 +93,6 @@ ul li {
     gap: 16px;
 }
 
-
 input,
 button {
     cursor: pointer;
@@ -107,12 +102,7 @@ button {
     outline: unset;
     border: unset;
     background: transparent;
-    transition:
-        background-color 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.1s ease;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.1s ease;
 }
 
 .email-labels {
@@ -127,6 +117,7 @@ button {
 
 .email-labels label:last-of-type {
     color: var(--color-red);
+    display: none;
 }
 
 input[type="email"] {
@@ -178,6 +169,49 @@ button:active {
     transform: scale(0.97);
 }
 
+/* thanks section */
+.thanks--container {
+    max-width: 504px;
+    height: 520px;
+    padding: 64px;
+    background-color: #fff;
+    border-radius: 36px;
+    display: none;
+}
+
+.thanks--container section {
+    width: 376px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.thanks--container section img {
+    width: 64px !important;
+    height: 64px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.thanks--container section h2 {
+    font-weight: var(--text-1-font-weight);
+    font-size: var(--text-1-font-size);
+    line-height: var(--text-1-line-height);
+}
+
+.thanks--container section p {
+    font-weight: var(--text-2-bold-font-weight);
+    font-size: var(--text-2-bold-font-size);
+    line-height: var(--text-2-bold-line-height);
+    color: rgb(124, 124, 135);
+}
+
+#confirmed-email {
+    font-weight: var(--text-3-font-weight);
+    color: var(--color-blue-800);
+}
+
 /* footer */
 footer {
     color: var(--color-grey);
@@ -190,7 +224,6 @@ footer {
     right: 0;
     left: 0;
     text-align: center;
-
 }
 
 footer a {
@@ -199,46 +232,87 @@ footer a {
 }
 
 /* Mobile devices */
+
 @media screen and (max-width: 375px) {
+    html {
+        height: 100%;
+    }
+
     body {
         margin: 0;
         padding: 0;
+        overflow-y: auto;
+        /* Allow vertical scroll */
+        min-height: 100vh;
     }
 
     .container {
-        margin: 0;
-        border-radius: 0%;
-        padding: 0;
-        border: unset;
-    }
-
-    h1 {
-        font-size: var(--text-1-mobile-font-size);
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        padding: 0 !important;
+        max-width: 375px;
+        margin-top: 0;
+        border-radius: 0% !important;
+        margin-bottom: 0 !important;
     }
 
     main {
         display: flex;
         flex-direction: column-reverse;
         gap: 40px;
-    }
-
-    section {
-        width: 100%;
-        height: 798px;
-    }
-
-    section:last-of-type img {
-        max-width: 100%;
-        height: 284px;
-        width: 375px;
-        border-bottom-left-radius: 16px;
-        border-bottom-right-radius: 16px;
+        height: auto;
+        /* let content define height */
+        align-items: stretch;
+        /* full width for children */
     }
 
     section:first-of-type {
         max-width: 327px;
+        margin: auto;
+    }
+
+
+    section:first-of-type,
+    section:last-of-type {
         width: 100%;
-        height: 474px;
+        flex-shrink: 0;
+        /* prevent shrinking */
+    }
+
+    section:last-of-type {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    section:last-of-type img {
+        display: block;
+        height: 284px;
+        max-width: 375px;
+        width: 100%;
+    }
+
+    .sign-up__container {
+        max-width: 327px;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+    }
+
+    form button {
+        font-weight: var(--text-2-regular-font-weight);
+        line-height: var(--text-2-regular-line-height);
+        font-size: 12.5px;
+    }
+
+    h1 {
+        font-size: var(--text-1-mobile-font-size) !important;
     }
 
     footer {
@@ -247,18 +321,79 @@ footer a {
 }
 
 
-
 /* Tablets */
 @media screen and (max-width: 768px) {
-    /* Tablet styles */
-}
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+        min-height: 100vh;
+    }
 
-/* Laptops */
-@media screen and (max-width: 1024px) {
-    /* Laptop styles */
-}
+    .container {
+        width: 100%;
+        border-radius: 0;
+        padding: 40px;
+        max-width: 608px;
+        border-radius: 36px;
+        margin: 73px auto;
+    }
 
-/* Desktop */
-@media screen and (min-width: 1025px) {
-    /* Desktop styles */
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        /* slightly bigger gap */
+        height: auto;
+        align-items: stretch;
+    }
+
+
+    section:first-of-type,
+    section:last-of-type {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    section:last-of-type {
+        margin: 0;
+        padding: 0;
+    }
+
+    section:last-of-type img {
+        height: 358.29px;
+        max-width: 528px;
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    .sign-up__container {
+        max-width: 480px;
+        /* wider container for tablets */
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    form input,
+    form button {
+        width: 100%;
+        font-size: 1rem;
+        /* bigger font size */
+    }
+
+    form button {
+        font-weight: var(--text-2-regular-font-weight);
+        line-height: var(--text-2-regular-line-height);
+        font-size: 1.125rem;
+        padding: 14px 0;
+    }
+
+    h1 {
+        font-size: var(--text-1-font-size);
+    }
+
+    footer {
+        display: none;
+    }
 }
