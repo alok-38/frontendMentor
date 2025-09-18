@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing forms with JavaScript
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <form id="form" novalidate>
+            <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" />
+                <span aria-live="polite" id="name-error"></span>
+            </div>
+            <div>
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" />
+                <span aria-live="polite" id="email-error"></span>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" />
+                <span aria-live="polite" id="password-error"></span>
+            </div>
+            <div>
+                <label for="confirm-password">Re-enter password</label>
+                <input id="confirm-password" name="confirm-password" type="password" />
+                <span aria-live="polite" id="confirm-password-error"></span>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
