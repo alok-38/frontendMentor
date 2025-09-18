@@ -1,9 +1,11 @@
 @import url(preset.css);
 
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
     font-family: var(--text-1-font-family);
     background-color: var(--color-blue-700);
     color: var(--color-blue-800);
+    overflow: hidden;
 }
 
 .container {
@@ -25,17 +28,154 @@ body {
     background-color: #fff;
     max-width: 904px;
     width: 100%;
-    height: 641px;
-    margin-top: auto;
+    overflow: hidden;
+    height: auto;
+    margin-top: 10vh;
 }
 
 main {
-    width: 840px;
     display: flex;
+    gap: 64px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.sign-up__container {
+    width: 376px;
+    padding: 71.5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.sign-up__container div:not(form div) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+h1 {
+    font-weight: var(--text-1-font-weight);
+    font-size: var(--text-1-font-size);
+    line-height: var(--text-1-line-height);
+}
+
+.sign-up__container p {
+    font-weight: 500;
+    font-size: var(--text-2-bold-font-size);
+    line-height: var(--text-2-bold-line-height);
+    color: var(--color-blue-800);
+}
+
+section:last-of-type img {
+    object-fit: cover;
+    width: 400px;
+    height: 593px;
 }
 
 ul {
     list-style-type: none;
+}
+
+ul img {
+    object-fit: cover;
+    width: 21px;
+    height: 21px;
+}
+
+ul li:not(ul li:last-of-type) {
+    margin-bottom: 8px;
+}
+
+ul li {
+    font-weight: var(--text-2-regular-font-weight);
+    font-size: var(--text-2-regular-font-size);
+    line-height: var(--text-2-regular-line-height);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+input,
+button {
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    border-radius: 8px;
+    outline: unset;
+    border: unset;
+    background: transparent;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.1s ease;
+}
+
+.email-labels {
+    display: flex;
+    justify-content: space-between;
+    font-weight: var(--text-3-font-weight);
+    font-size: var(--text-3-font-size);
+    line-height: var(--text-3-line-height);
+    width: 376px;
+    margin-bottom: 8px;
+}
+
+.email-labels label:last-of-type {
+    color: var(--color-red);
+}
+
+input[type="email"] {
+    margin-bottom: 24px;
+    display: block;
+    padding: 16px 24px;
+    border: 1px solid #000000;
+    font-weight: var(--text-2-regular-font-weight);
+    font-size: var(--text-2-regular-font-size);
+    line-height: var(--text-2-regular-line-height);
+}
+
+/* Input effects */
+input[type="email"]:hover {
+    border-color: var(--color-blue-800);
+}
+
+input[type="email"]:focus {
+    border-color: var(--color-blue-800);
+    box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.25);
+    /* soft glow */
+}
+
+input[type="email"]:active {
+    transform: scale(0.98);
+}
+
+button {
+    padding: 16px 72px;
+    background-color: var(--color-blue-800);
+    font-weight: var(--text-2-bold-font-weight);
+    line-height: var(--text-2-bold-line-height);
+    color: #fff;
+    font-size: 15px;
+}
+
+/* Button effects */
+button:hover {
+    background-color: var(--color-blue-700);
+    /* lighter on hover */
+}
+
+button:focus {
+    outline: 2px solid var(--color-blue-600);
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: scale(0.97);
 }
 
 /* footer */
@@ -56,4 +196,69 @@ footer {
 footer a {
     color: var(--color-grey);
     font-family: var(--text-3-font-family);
+}
+
+/* Mobile devices */
+@media screen and (max-width: 375px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin: 0;
+        border-radius: 0%;
+        padding: 0;
+        border: unset;
+    }
+
+    h1 {
+        font-size: var(--text-1-mobile-font-size);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    section {
+        width: 100%;
+        height: 798px;
+    }
+
+    section:last-of-type img {
+        max-width: 100%;
+        height: 284px;
+        width: 375px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    section:first-of-type {
+        max-width: 327px;
+        width: 100%;
+        height: 474px;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    /* Tablet styles */
+}
+
+/* Laptops */
+@media screen and (max-width: 1024px) {
+    /* Laptop styles */
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    /* Desktop styles */
 }
