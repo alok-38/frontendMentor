@@ -120,6 +120,7 @@ button {
     display: none;
 }
 
+
 input[type="email"] {
     margin-bottom: 24px;
     display: block;
@@ -168,6 +169,21 @@ button:focus {
 button:active {
     transform: scale(0.97);
 }
+
+/* For error message */
+input[type="email"].invalid {
+    border: 1px solid var(--color-red);
+    background-color: var(--color-red-100);
+    color: var(--color-red);
+}
+
+.error-message {
+    display: none;
+    color: var(--color-red);
+    font-size: var(--text-3-font-size);
+    line-height: var(--text-3-line-height);
+}
+
 
 /* thanks section */
 .thanks--container {
@@ -317,6 +333,37 @@ footer a {
 
     footer {
         display: none;
+    }
+
+    .thanks--container {
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        height: 100vh;
+        border-radius: 0%;
+        padding: 149px 24px 70px 24px;
+    }
+
+    .thanks--container section h2 {
+        font-size: 24px;
+    }
+
+    .thanks--container section {
+        height: 623px;
+        max-width: 327px;
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .thanks--container section button {
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .thanks--container section .success--checkmark {
+        margin: 0 auto;
     }
 }
 
