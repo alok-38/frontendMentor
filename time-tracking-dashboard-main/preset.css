@@ -21,6 +21,7 @@
 
 
 :root {
+    box-sizing: border-box;
     /* Font Family */
     --font-family-rubik: 'Rubik', sans-serif;
 
@@ -101,4 +102,35 @@
 
     /* Grey */
     --grey-200: #D8D8D8;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-style: none;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    /* inherit color from parent to avoid default blue */
+    text-decoration: none;
+    /* remove underline */
+    cursor: pointer;
+    /* show pointer cursor */
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    /* add underline on hover/focus for accessibility */
 }
