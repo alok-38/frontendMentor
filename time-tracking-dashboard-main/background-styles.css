@@ -5,6 +5,36 @@ article>div:first-child {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+    border-radius: 25px 25px 0 0;
+
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self {
+  position: relative;
+}
+
+
+/* Pseudo-elements for concave effect */
+.work::before,
+.play::before,
+.study::before,
+.exercise::before,
+.social::before,
+.self::before {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* sticks out of bottom edge */
+  left: 0;
+  height: 15px;
+  width: 100%;
+  background-color: var(--navy-900); 
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .work {
