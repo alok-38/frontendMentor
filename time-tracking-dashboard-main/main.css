@@ -27,7 +27,16 @@ section:first-of-type {
     border-bottom-right-radius: 15px;
 }
 
-article > div:nth-child(2) > button + div {
+article>div:nth-of-type(2)>div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+article>div:nth-of-type(2)>div h2 {
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: var(--text-1-weight);
 }
 
 button {
@@ -112,8 +121,17 @@ article {
     height: 244px;
 }
 
-article div {
+article>div:nth-of-type(2) {
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+article>div:nth-of-type(2) p {
+    font-size: var(--text-6-size);
+    line-height: var(--text-6-line-height);
+    font-weight: var(--text-6-weight);
 }
 
 footer {
@@ -190,6 +208,11 @@ footer {
         margin: 0 auto;
     }
 
+    article {
+        max-width: 327px;
+        width: 100%;
+    }
+
     section:first-of-type {
         max-width: 327px;
         width: 100%;
@@ -207,5 +230,21 @@ footer {
 
     footer {
         display: none;
+    }
+
+    section:first-of-type div {
+        display: flex;
+        justify-content: center;
+    }
+
+    section:first-of-type img {
+        width: 65px;
+        height: 64px;
+    }
+
+    h1 {
+        font-size: var(--text-4-size);
+        line-height: var(--text-4-line-height);
+        font-size: var(font-size);
     }
 }
