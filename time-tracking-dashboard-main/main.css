@@ -23,6 +23,34 @@ section:first-of-type {
     max-width: 255px;
     width: 100%;
     background-color: var(--navy-900);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+article > div:nth-child(2) > button + div {
+}
+
+button {
+    display: flex;
+    width: 195px;
+    height: 21px;
+    gap: 136px;
+    background: transparent;
+    align-items: center;
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    color: #fff;
+    font-size: var(--text-5-medium-medium);
+    line-height: var(--text-5-medium-line-height);
+    font-weight: var(--text-5-medium-weight);
+    justify-content: space-between;
+}
+
+button img {
+    max-width: 21px;
+    height: 5px;
+    object-fit: cover;
 }
 
 section:first-of-type img {
@@ -40,6 +68,7 @@ section>div:first-of-type {
     display: flex;
     flex-direction: column;
     gap: 40px;
+    height: 354px;
 }
 
 section>div:first-of-type h1 {
