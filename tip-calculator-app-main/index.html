@@ -17,7 +17,7 @@
   <div class="container">
     <main>
 
-      <form aria-labelledby="tip-calculator-form">
+      <form aria-labelledby="tip-calculator-form" novalidate>
         <section>
           <label for="bill">Bill</label>
           <div class="input-wrapper">
@@ -34,7 +34,7 @@
             <button type="button" aria-label="Tip 15 percent">15%</button>
             <button type="button" aria-label="Tip 25 percent">25%</button>
             <button type="button" aria-label="Tip 50 percent">50%</button>
-            <button type="button" aria-label="custom">Custom</button>
+            <button id="custom-tip" type="button" aria-label="custom">Custom</button>
           </div>
         </fieldset>
 
@@ -42,7 +42,7 @@
           <label for="number">Number of People</label>
           <div class="input-wrapper">
             <img src="images/icon-person.svg" alt="person">
-            <input type="number" name="number" id="number" inputmode="numeric" required placeholder="5" />
+            <input type="number" name="number" id="number" inputmode="numeric"  placeholder="5" />
           </div>
         </section>
       </form>
