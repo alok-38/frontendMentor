@@ -1,0 +1,54 @@
+:root {
+    /* Font Family */
+    --font-rubik: 'Rubik', sans-serif;
+
+    /* Typography Presets */
+
+    /* Preset 1 */
+    --preset-1-font-size: 144px;
+    --preset-1-line-height: 100%;
+    --preset-1-letter-spacing: 0px;
+    --preset-1-font-weight: 500;
+
+    --preset-1-mobile-font-size: 88px;
+
+    /* Preset 2 */
+    --preset-2-font-size: 64px;
+    --preset-2-line-height: 100%;
+    --preset-2-letter-spacing: 0px;
+    --preset-2-font-weight: 500;
+
+    --preset-2-mobile-font-size: 40px;
+    --preset-2-light-font-weight: 300;
+
+    /* Preset 3 */
+    --preset-3-font-size: 36px;
+    --preset-3-line-height: 120%;
+    --preset-3-letter-spacing: 0px;
+    --preset-3-font-weight: 500;
+
+    --preset-3-mobile-font-size: 20px;
+
+    /* Preset 4 */
+    --preset-4-font-size: 18px;
+    --preset-4-line-height: 100%;
+    --preset-4-letter-spacing: 0px;
+    --preset-4-font-weight: 500;
+
+    /* Preset 5 */
+    --preset-5-medium-font-size: 24px;
+    --preset-5-regular-font-size: 24px;
+    --preset-5-mobile-font-size: 14px;
+    --preset-5-line-height: 150%;
+    --preset-5-letter-spacing: 0px;
+    --preset-5-medium-font-weight: 500;
+    --preset-5-regular-font-weight: 400;
+    --preset-5-italic-font-size: 28px;
+
+    /* Preset 6 */
+    --preset-6-font-size: 20px;
+    --preset-6-line-height: 150%;
+    --preset-6-letter-spacing: 0px;
+    --preset-6-font-style: italic;
+    --preset-6-font-weight: 400;
+}

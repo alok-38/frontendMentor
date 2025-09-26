@@ -1,0 +1,37 @@
+/* Font Face Setup for Rubik */
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/static/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/static/Rubik-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Optional: If you want to support variable fonts instead */
+@font-face {
+    font-family: 'Rubik Variable';
+    src: url('../fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Variable';
+    src: url('../fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}

@@ -1,0 +1,13 @@
+:root {
+    /* Spacing Scale */
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1600: 128px;
+    --spacing-1800: 144px;
+    --spacing-2300: 184px;
+}

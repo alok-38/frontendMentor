@@ -1,0 +1,10 @@
+@import url(colors.css);
+@import url(font-face.css);
+@import url(spacing.css);
+@import url(typography.css);
+@import url(reset.css);
+
+body {
+    font-family: var(--font-rubik);
+    color: var(----blue-900);
+}
