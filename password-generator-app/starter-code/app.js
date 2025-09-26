@@ -1,74 +1,41 @@
-// Helper: calculate strength based on length and types of chars included
-function calculateStrength(length, typesCount) {
-    if (length >= 12 && typesCount >= 3) return 4; // Very Strong
-    if (length >= 10 && typesCount >= 2) return 3; // Strong
-    if (length >= 8 && typesCount >= 1) return 2;  // Medium
-    if (length > 0) return 1;                      // Weak
-    return 0;                                      // None
-}
+const passwordOutputEl = document.getElementById('passwordOutput');
+const rangeSliderEl = document.getElementById('rangeSlider');
+const checkBoxes = document.querySelectorAll('input[type="checkbox"]');
+const copyIcon = document.querySelector('.copy-icon');
+const passwordLength = document.querySelector('span');
+const passwordStrengthLow = document.querySelector('.password-strength div:first-of-type');
+// Get initial color from computed style (more reliable)
+const passwordStrengthColor = window.getComputedStyle(passwordStrengthLow).backgroundColor;
 
-// Helper: map score to descriptive text
-function strengthText(score) {
-    switch (score) {
-        case 4: return 'Very Strong';
-        case 3: return 'Strong';
-        case 2: return 'Medium';
-        case 1: return 'Weak';
-        default: return 'Strength';
+let counter = 0;
+let previousValue = parseInt(rangeSliderEl.value, 10);
+
+const firstCheckBox = checkBoxes[0];
+
+function updateColor() {
+    
+    if (counter >= 5 && firstCheckBox.checked) {
+        passwordStrengthLow.style.backgroundColor = "#A4FFAF";
+    } else {
+        passwordStrengthLow.style.backgroundColor = passwordStrengthColor;
     }
 }
 
-const generateButton = document.querySelector('button');
-const range = document.querySelector('input[type="range"]');
-const passwordOutput = document.getElementById('passwordOutput');
-const strengthTextInput = document.getElementById('passwordStrength');
-const strengthBars = document.querySelectorAll('.password-strength > div');
+rangeSliderEl.addEventListener('input', () => {
+    const currentValue = parseInt(rangeSliderEl.value, 10);
 
-generateButton.addEventListener('click', () => {
-    const length = parseInt(range.value, 10);
-    const checkboxes = document.querySelectorAll('.parameters div input[type="checkbox"]');
-    const includeUppercase = checkboxes[0]?.checked;
-    const includeLowercase = checkboxes[1]?.checked;
-    const includeNumbers = checkboxes[2]?.checked;
-    const includeSymbols = checkboxes[3]?.checked;
-
-    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
-    const numberChars = '0123456789';
-    const symbolChars = '!@#$%^&*()_+{}:"<>?|[];\',./`~';
-
-    let charset = '';
-    if (includeUppercase) charset += uppercaseChars;
-    if (includeLowercase) charset += lowercaseChars;
-    if (includeNumbers) charset += numberChars;
-    if (includeSymbols) charset += symbolChars;
-
-    if (!charset) {
-        alert('Please select at least one character type!');
-        return;
+    if (currentValue > previousValue) {
+        counter++;
+    } else if (currentValue < previousValue) {
+        counter--;
     }
 
-    let password = '';
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-    }
+    passwordLength.textContent = counter;
+    previousValue = currentValue;
 
-    passwordOutput.value = password;
+    updateColor();
+});
 
-    // Calculate strength score
-    const typesCount = [includeUppercase, includeLowercase, includeNumbers, includeSymbols].filter(Boolean).length;
-    const score = calculateStrength(length, typesCount);
-
-    // Update text
-    strengthTextInput.value = strengthText(score);
-
-    // Update bars with class toggling for smooth CSS transitions
-    strengthBars.forEach((bar, idx) => {
-        if (idx < score) {
-            bar.classList.add('active');
-        } else {
-            bar.classList.remove('active');
-        }
-    });
+firstCheckBox.addEventListener('change', () => {
+    updateColor();
 });

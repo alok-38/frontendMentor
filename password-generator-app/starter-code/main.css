@@ -352,3 +352,34 @@ button:hover img,
 button:focus img {
     transform: translateX(4px);
 }
+
+@media screen and (max-width: 768) {
+    .container {
+        max-width: 540px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 375) {
+
+    body {
+        padding: 65px 16px;
+    }
+
+    .container {
+        max-width: 343px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .strength {
+        width: 100%;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+
+}
