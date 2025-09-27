@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="quiz app">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Frontend quiz app</title>
   <link rel="stylesheet" href="./css/main.css">
+  <script src="app.js" defer></script>
 </head>
+
 <body>
+  <nav>
+    <section hidden>
+      <div><img src="assets/images/icon-accessibility.svg" alt="accessibility"></div>
+      <h2>Accessibility</h2>
+    </section>
+    <section aria-label="Theme toggle">
+      <img src="assets/images/icon-sun-light.svg" alt="sun">
 
-  <!-- Quiz menu start -->
+      <label class="toggle-switch">
+        <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="slider"></span>
+      </label>
 
-  Welcome to the Frontend Quiz!
-  Pick a subject to get started.
+      <img src="assets/images/icon-moon-light.svg" alt="moon">
+    </section>
+  </nav>
+  <main>
+    <!-- Quiz Menu Start -->
+    <section id="quiz-menu" aria-label="Quiz Menu">
+      <header>
+        <h1><span>Welcome to the</span> Frontend Quiz!</h1>
+        <p>Pick a subject to get started.</p>
+      </header>
+      <ul>
+        <li><button>
+            <div><img src="assets/images/icon-html.svg" alt="html"></div>HTML
+          </button></li>
+        <li><button>
+            <div><img src="assets/images/icon-css.svg" alt="CSS"></div>CSS
+          </button></li>
+        <li><button>
+            <div><img src="assets/images/icon-js.svg" alt="JavaScript"></div>JavaScript
+          </button></li>
+        <li><button>
+            <div><img src="assets/images/icon-accessibility.svg" alt="accessibility"></div>Accessibility
+          </button></li>
+      </ul>
+    </section>
+    <!-- Quiz Menu End -->
 
-  HTML
-  CSS
-  JavaScript
-  Accessibility
+    <!-- Quiz Question Start -->
+    <section id="quiz-question" aria-label="Quiz Question" hidden>
+      <article>
+        <div>
+          <p>Question <span id="question-number">1</span> of 10</p>
+          <h2 id="question-text">What does HTML stand for?</h2>
+        </div>
+        <div></div>
+      </article>
+      <article>
+        <ul>
+          <li><button>A. Hyper Text Markup Language</button></li>
+          <li><button>B. Hot Mail</button></li>
+          <li><button>C. How to Make Landingpage</button></li>
+          <li><button>D. Hyper Trainer Marking Language</button></li>
+        </ul>
+        <button>Submit Answer</button>
+      </article>
+    </section>
+    <!-- Quiz Question End -->
 
-  <!-- Quiz menu end -->
-
-  <!-- Quiz question start -->
-
-  Question <!-- number --> of 10
-
-  A
-  B
-  C
-  D
-
-  Submit answer
-
-  <!-- Quiz question end -->
-
-  <!-- Quiz completed start -->
-
-  Quiz completed
-  You scored...
-
-  <!-- score --> out of 10
-
-  <!-- Quiz completed end -->
-
+    <!-- Quiz Completed Start -->
+    <section id="quiz-result" aria-label="Quiz Results" hidden>
+      <h2>Quiz Completed</h2>
+      <p>You scored <strong id="score">8</strong> out of 10</p>
+      <button>Try Again</button>
+    </section>
+    <!-- Quiz Completed End -->
+  </main>
 </body>
+
+
 </html>
