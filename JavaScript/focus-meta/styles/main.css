@@ -1,0 +1,33 @@
+@import url(font-face.css);
+@import url(variables.css);
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Theme Toggle Layout */
+.theme--toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem;
+}
+
+/* Toggle Switch */
+.toggle--switch {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #A729F5;
+    border-radius: 12px;
+    cursor: pointer;
+}
