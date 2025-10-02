@@ -12,6 +12,32 @@ body {
     background-color: #f4f6fa;
 }
 
+/* for dark mode */
+body.dark {
+    background-color: #313e51;
+    color: white;
+}
+
+body.dark h1 {
+    color: white;
+}
+
+body.dark .container .logo a {
+    color: white;
+}
+
+
+body.light {
+    background-color: #f4f6fa;
+    color: #a729f5;
+}
+
+body.light h1,
+body.light .logo a,
+body.light button {
+    color: #a729f5;
+}
+
 .container {
     max-width: 1157px;
     width: 100%;
@@ -146,7 +172,11 @@ button {
 
 button:first-of-type {
     background-color: #A729F5;
-    color: white;
+}
+
+button:first-of-type img {
+    filter: brightness(0) invert(1);
+
 }
 
 button:nth-child(2) {
@@ -174,4 +204,63 @@ button:focus-visible {
 button:active {
     transform: translateY(1px);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button img {
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 740px) {
+    .container {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .container {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    main {
+        max-width: 350px;
+        height: auto;
+        width: 100%;
+        margin: auto;
+    }
+
+    header {
+        margin: auto;
+        max-width: 275px;
+        width: 100%;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .display {
+        max-width: 250px;
+        height: 250px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin: auto;
+    }
 }
