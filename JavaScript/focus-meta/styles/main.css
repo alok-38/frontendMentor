@@ -4,6 +4,34 @@
 body {
     min-height: 100vh;
     font-family: var(--font-sans);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f6fa;
+}
+
+.container {
+    max-width: 1157px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+    font-family: inherit;
+    color: #A729F5;
+    font-weight: var(--font-semibold);
+    font-size: var(--text-4xl);
 }
 
 img {
@@ -30,4 +58,120 @@ img {
     background-color: #A729F5;
     border-radius: 12px;
     cursor: pointer;
+}
+
+/* Hide default checkbox */
+.toggle--switch input[type="checkbox"] {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Ball (Knob) */
+.toggle--switch .ball {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Move ball when checked */
+.toggle--switch input[type="checkbox"]:checked+.ball {
+    transform: translateX(26px);
+}
+
+/* main */
+main {
+    max-width: 469px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.display {
+    width: 437px;
+    height: 437px;
+    border-radius: 50%;
+    border: 1px solid #A729F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: inherit;
+    color: #A729F5;
+    line-height: 100%;
+    font-weight: var(--font-semibold);
+    font-size: 72px;
+}
+
+.buttons {
+    display: flex;
+    max-width: 596px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+button {
+    outline: unset;
+    border: unset;
+    background: transparent;
+    cursor: pointer;
+    width: 140px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Smooth transitions for visual states */
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.2s ease,
+        transform 0.1s ease;
+}
+
+button:first-of-type {
+    background-color: #A729F5;
+    color: white;
+}
+
+button:nth-child(2) {
+    background-color: #F0F0F0;
+    color: #333;
+}
+
+button:last-of-type {
+    background-color: #FFFFFF;
+}
+
+/* --- Hover Effect --- */
+button:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- Focus Effect (Keyboard Accessibility) --- */
+button:focus-visible {
+    outline: 2px solid #A729F5;
+    outline-offset: 4px;
+}
+
+/* --- Active (Click/Press) Effect --- */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
