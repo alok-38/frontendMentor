@@ -35,6 +35,8 @@ nav a {
     line-height: var(--text-3-line-height);
     font-weight: var(--text-3-weight);
     display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover {
@@ -42,8 +44,12 @@ nav a:hover {
     color: var(--color-neutral-900);
 }
 
-nav a img:hover {
-    background-color: var(--color-green-500);
+nav a img {
+    transition: filter 0.3s ease;
+}
+
+nav a:hover img {
+    filter: sepia(1) saturate(2) hue-rotate(120deg);
 }
 
 h1 {
