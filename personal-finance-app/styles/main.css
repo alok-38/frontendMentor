@@ -4,3 +4,67 @@
 @import url(border-radius.css);
 @import url(spacing.css);
 @import url(reset.css);
+
+body {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-beige-100);
+    color: var(--color-neutral-900);
+}
+
+.container {
+    display: flex;
+}
+
+.overview {
+    padding: var(--spacing-400) var(--spacing-500);
+    max-width: 1060px;
+    width: 100%;
+}
+
+nav {
+    background-color: var(--color-neutral-900);
+    text-decoration: none;
+}
+
+nav a {
+    width: 276px;
+    height: 56px;
+    padding: 16px 32px;
+    color: var(--color-neutral-300);
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    font-weight: var(--text-3-weight);
+    display: flex;
+}
+
+nav a:hover {
+    background-color: var(--color-beige-100);
+    color: var(--color-neutral-900);
+}
+
+nav a img:hover {
+    background-color: var(--color-green-500);
+}
+
+h1 {
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: var(--text-1-weight);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-400) 0;
+}
+
+header article {
+    padding: var(--spacing-300);
+    border-radius: var(--radius-24);
+}
+
+header article:hover {
+    cursor: pointer;
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+}

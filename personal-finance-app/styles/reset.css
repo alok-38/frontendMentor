@@ -21,6 +21,12 @@
 body {
     /* 5. Improve text rendering */
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* 7. Inherit fonts for form controls */
@@ -29,6 +35,9 @@ button,
 textarea,
 select {
     font: inherit;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 /* 8. Avoid text overflows */
@@ -40,6 +49,7 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+    margin: 0;
 }
 
 /* 9. Improve line wrapping */
@@ -54,6 +64,31 @@ h4,
 h5,
 h6 {
     text-wrap: balance;
+}
+
+/* 8. Normalize images and media */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 9. Remove list styles by default */
+ul,
+ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* 10. Remove default button styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /*
