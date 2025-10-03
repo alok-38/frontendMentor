@@ -1,0 +1,38 @@
+:root {
+    /* Font Family */
+    --font-family-sans: 'Public Sans', sans-serif;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* Typography Presets */
+
+    /* Preset 1 - Heading */
+    --text-1-size: 32px;
+    --text-1-line-height: 120%;
+    --text-1-weight: var(--font-weight-bold);
+
+    /* Preset 2 - Subheading */
+    --text-2-size: 20px;
+    --text-2-line-height: 120%;
+    --text-2-weight: var(--font-weight-bold);
+
+    /* Preset 3 - Section Title */
+    --text-3-size: 16px;
+    --text-3-line-height: 150%;
+    --text-3-weight: var(--font-weight-bold);
+
+    /* Preset 4 - Body */
+    --text-4-size: 14px;
+    --text-4-line-height: 150%;
+    --text-4-weight: var(--font-weight-regular);
+    --text-4-bold-weight: var(--font-weight-bold);
+
+    /* Preset 5 - Caption */
+    --text-5-size: 12px;
+    --text-5-line-height: 150%;
+    --text-5-weight: var(--font-weight-bold);
+    --text-5-medium-weight: var(--font-weight-medium);
+}
