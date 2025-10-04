@@ -30,6 +30,26 @@ nav a {
     width: 276px;
     height: 56px;
     padding: 16px 32px;
+}
+
+.logo {
+    padding: 40px 32px;
+}
+
+.logo a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+}
+
+.logo a:hover img {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px var(--color-cyan-300));
+}
+
+nav a {
+    width: 276px;
+    height: 56px;
+    padding: var(--spacing-200) var(--spacing-400);
     color: var(--color-neutral-300);
     font-size: var(--text-3-size);
     line-height: var(--text-3-line-height);
@@ -40,7 +60,12 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--color-beige-100);
+    gap: 16px;
+    text-decoration: none;
+}
+
+nav a:hover:not(nav .logo a) {
+    >>>>>>>4c0ddf4 (Initial commit after repo repair) background-color: var(--color-beige-100);
     color: var(--color-neutral-900);
 }
 
