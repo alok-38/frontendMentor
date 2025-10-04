@@ -34,43 +34,78 @@
     <div class="overview">
       <h1>Overview</h1>
       <header>
-        <article>
+        <article class="current-balance">
           <h5>Current Balance</h5>
           <!-- Add balance -->
+          <p id="balance"></p>
         </article>
-        <article>
+        <article class="income">
           <h5>Income</h5>
           <!-- Add income -->
+          <p id="income"></p>
         </article>
-        <article>
+        <article class="expenses">
           <h5>Expenses</h5>
           <!-- Add expenses -->
+          <p id="expenses"></p>
         </article>
       </header>
       <main>
-        <section>
-          Pots
-          See Details
-          Total Saved
-          <!-- Add pots data -->
-        </section>
-        <section>
-          Transactions
-          View All
-        </section>
-        <aside>
-          Budgets
-          See Details
-          <!-- Add budgets data -->
-          Transactions
-          View All
-          <!-- Add transactions data -->
+        <section class="saving--pot">
+          <div>
+            <h2>Saving Pot</h2>
+            <a href="#">See Details <img src="assets/images/icon-caret-right.svg" alt="right caret"></a>
+          </div>
           <article>
-            Recurring Bills
-            See Details
-            <!-- Add recurring bills data -->
+            <section class="pot-summary">
+              <img src="assets/images/icon-pot.svg" alt="pots">
+              <div>
+                <h6>Total Saved</h6>
+                <!-- Add pots data -->
+                <p></p>
+              </div>
+            </section>
+            <section class="pot-class">
+              <div>
+                <h6>Savings</h6>
+                <p id="savings"></p>
+              </div>
+              <div>
+                <h6>Christmas Gift</h6>
+                <p id="christmas"></p>
+              </div>
+              <div>
+                <h6>Concert Ticket</h6>
+                <p id="concert"></p>
+              </div>
+              <div>
+                <h6>New Laptop</h6>
+                <p id="laptop"></p>
+              </div>
+            </section>
           </article>
-        </aside>
+        </section>
+        <section class="budgets">
+          <div>
+            <h2>Budgets</h2>
+            <a href="budgets.html">See Details <img src="assets/images/icon-caret-right.svg" alt="right caret"></a>
+          </div>
+          <!-- Add budgets data -->
+        </section>
+        <section class="transactions">
+          <div>
+            <h2>Transactions</h2>
+            <a href="transactions.html">View All <img src="assets/images/icon-caret-right.svg" alt="right caret"></a>
+          </div>
+          <!-- Add transactions data -->
+        </section>
+        <section class="recurring--bills">
+          <div>
+            <h2>Recurring Bills</h2>
+            <a href="recurring.html">See Details <img src="assets/images/icon-caret-right.svg" alt="right caret"></a>
+          </div>
+          <!-- Add recurring bills data -->
+        </section>
       </main>
     </div>
   </div>
