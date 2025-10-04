@@ -46,6 +46,7 @@ nav a {
     filter: drop-shadow(0 0 8px var(--color-cyan-300));
 }
 
+
 nav a {
     width: 276px;
     height: 56px;
@@ -57,6 +58,8 @@ nav a {
     display: flex;
     align-items: center;
     transition: background-color 0.2s ease, color 0.2s ease;
+    gap: 16px;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -65,7 +68,7 @@ nav a:hover {
 }
 
 nav a:hover:not(nav .logo a) {
-    >>>>>>>4c0ddf4 (Initial commit after repo repair) background-color: var(--color-beige-100);
+    background-color: var(--color-beige-100);
     color: var(--color-neutral-900);
 }
 
@@ -77,6 +80,24 @@ nav a:hover img {
     filter: sepia(1) saturate(2) hue-rotate(120deg);
 }
 
+nav section:last-of-type {
+    padding: var(--spacing-200) var(--spacing-400);
+}
+
+nav section:last-of-type button:hover img {
+    filter: sepia(1) saturate(2) hue-rotate(120deg);
+}
+
+nav section:last-of-type button {
+    color: var(--color-neutral-100);
+    display: flex;
+    gap: 16px;
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    font-weight: var(--text-3-weight);
+}
+
+
 h1 {
     font-size: var(--text-1-size);
     line-height: var(--text-1-line-height);
@@ -87,15 +108,31 @@ header {
     display: flex;
     justify-content: space-between;
     margin: var(--spacing-400) 0;
+    gap: 24px;
 }
 
 header article {
     padding: var(--spacing-300);
     border-radius: var(--radius-24);
+    width: 337.33px;
+    height: 119px;
+    background-color: var(--color-neutral-0);
+}
+
+
+header article h5 {
+    font-size: var(--text-4-size);
+    line-height: var(--text-4-line-height);
+    font-weight: var(--text-4-weight);
+    color: var(--color-neutral-500);
 }
 
 header article:hover {
     cursor: pointer;
     background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+}
+
+header article:hover h5 {
     color: var(--color-neutral-0);
 }
