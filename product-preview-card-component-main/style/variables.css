@@ -1,0 +1,85 @@
+/* ================================
+   Font Faces
+================================ */
+@font-face {
+    font-family: "Fraunces";
+    src: url("../style/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("https://fonts.gstatic.com/s/montserrat/v25/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pXo.woff2") format("woff2");
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DM Sans";
+    src: url("https://fonts.gstatic.com/s/dmsans/v11/rP2Hp2ywxg089UriCZa4HfY.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* ================================
+   Root Variables
+================================ */
+:root {
+    /* ---------- Colors ---------- */
+    --clr-black: #1C232B;
+    --clr-grey: #6C7289;
+    --clr-cream: #F2EAE2;
+    --clr-white: #FFFFFF;
+    --clr-green-500: #3D8168;
+    --clr-green-700: #1A4032;
+
+    /* ---------- Typography ---------- */
+    --ff-fraunces: "Fraunces", serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+    --ff-dm-sans: "DM Sans", sans-serif;
+
+    /* ---------- Text Presets ---------- */
+    /* text-preset-1 */
+    --text-1-font: var(--ff-fraunces);
+    --text-1-size: 32px;
+    --text-1-line-height: 100%;
+    --text-1-letter-spacing: 0px;
+    --text-1-weight: 700;
+
+    /* text-preset-2 */
+    --text-2-font: var(--ff-montserrat);
+    --text-2-size: 13px;
+    --text-2-line-height: 120%;
+    --text-2-letter-spacing: 0px;
+    --text-2-weight: 700;
+
+    /* text-preset-3 */
+    --text-3-font: var(--ff-montserrat);
+    --text-3-size: 14px;
+    --text-3-line-height: 160%;
+    --text-3-letter-spacing: 0px;
+    --text-3-weight: 500;
+
+    /* text-preset-4 */
+    --text-4-font: var(--ff-montserrat);
+    --text-4-size: 12px;
+    --text-4-line-height: 120%;
+    --text-4-letter-spacing: 5px;
+    --text-4-weight: 500;
+
+    /* text-preset-5 */
+    --text-5-font: var(--ff-dm-sans);
+    --text-5-size: 16px;
+    --text-5-line-height: 18px;
+    --text-5-letter-spacing: 0px;
+    --text-5-weight: 400;
+
+    /* ---------- Spacing Scale ---------- */
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-200: 16px;
+    --space-300: 24px;
+    --space-400: 32px;
+    --space-500: 40px;
+}
