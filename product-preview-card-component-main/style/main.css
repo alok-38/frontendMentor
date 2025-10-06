@@ -41,10 +41,36 @@ article {
     gap: 24px;
 }
 
+article p:first-of-type {
+    font-size: var(--text-4-size);
+    font-family: var(--text-4-font);
+    line-height: var(--text-4-line-height);
+    letter-spacing: var(--text-4-letter-spacing);
+    font-weight: var(--text-4-weight);
+    text-transform: uppercase;
+    color: var(--clr-grey);
+}
+
+h1 {
+    font-family: var(--text-1-font);
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: var(--text-1-weight);
+}
+
+article p:last-of-type {
+    color: var(--clr-grey);
+    font-family: var(--text-3-font);
+    font-size: var(--text-3-size);
+    line-height: var(--text-3-line-height);
+    font-weight: var(--text-3-weight);
+}
+
 .price {
     display: flex;
     align-items: center;
-    margin: 32px 0  ;
+    margin: 32px 0;
+    gap: 16px;
 }
 
 figure img {
@@ -57,17 +83,73 @@ figure img {
 section {
     display: flex;
     flex-direction: column;
-    padding: clamp(1.5rem, 3vw + 1rem, 2rem); /* 24px → 32px */
+    padding: clamp(1.5rem, 3vw + 1rem, 2rem);
+    /* 24px → 32px */
+}
+
+.price h2:not(.price p) {
+    color: var(--clr-green-500);
+    font-family: var(--text-1-font);
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: var(--text-1-weight);
+}
+
+.price p {
+    color: var(--clr-grey);
+    font-family: var(--text-5-font);
+    font-size: var(--text-5-size);
+    font-weight: var(--text-5-weight);
 }
 
 button {
-    font-family: inherit;
     border: none;
     background: none;
     outline: unset;
     max-width: 236px;
     width: 100%;
     height: 50px;
+    font-weight: var(--text-2-weight);
+    font-family: var(--text-2-font);
+    font-size: var(--text-2-size);
+    line-height: var(--text-2-line-height);
+    cursor: pointer;
+    background-color: var(--clr-green-500);
+    display: flex;
+    padding: 16px 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: var(--clr-white);
+    gap: 8px;
+    /* 💫 Smooth transitions for hover & active states */
+    transition:
+        background-color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+/* 🖱️ Hover state */
+button:hover {
+    background-color: var(--clr-green-700);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* 🎯 Focus-visible (keyboard navigation) */
+button:focus-visible {
+    outline: 3px solid var(--clr-green-500);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px rgba(61, 129, 104, 0.3);
+}
+
+/* 👆 Active / Pressed state */
+button:active {
+    transform: translateY(0);
+    background-color: var(--clr-green-700);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.1s;
+    /* quicker feedback */
 }
 
 .attribution {
@@ -82,4 +164,36 @@ button {
 .attribution a {
     color: inherit;
     font-family: inherit;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        align-items: stretch;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: none;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    figure {
+        width: 100%;
+    }
+
+    figure img {
+        display: block;
+        width: 100%;
+        height: 342px;
+        object-fit: cover;
+        content: url("../images/image-product-mobile.jpg");
+        margin: auto;
+    }
+
+    section button {
+        width: 100%;
+    }
 }
