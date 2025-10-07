@@ -32,7 +32,16 @@ main {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     background-color: var(--clr-white);
     overflow: hidden;
-    height: 456px;
+}
+
+figure img {
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+figure img.mobile {
+    display: none;
 }
 
 article {
@@ -166,36 +175,30 @@ button:active {
     font-family: inherit;
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        align-items: stretch;
-    }
-
+/* Media queries */
+@media (max-width: 600px) {
     main {
+        width: 100%;
+        margin: auto;
         display: flex;
         flex-direction: column;
-        max-width: none;
-        width: 100%;
-        height: auto;
-        border-radius: 0;
     }
 
-    figure {
-        width: 100%;
+    figure img.desktop {
+        display: none;
     }
 
-    figure img {
-        display: block;
-        width: 100%;
-        height: 342px;
+    main figure img.mobile {
+        min-width: 100%;
         object-fit: cover;
-        content: url("../images/image-product-mobile.jpg");
-        margin: auto;
+        display: block;
     }
 
-    section button {
+    main figure,
+    main section {
         width: 100%;
     }
+
 }
 
 /* modal */
@@ -259,99 +262,99 @@ button:active {
 
 /* ===== MODAL OVERLAY ===== */
 .modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1000;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
 }
 
 .modal-overlay.active {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ===== MODAL BOX ===== */
 .modal {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.3s ease;
-  position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .modal.active {
-  transform: translateY(0);
-  opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* ===== CLOSE BUTTON ===== */
 .modal .close-btn {
-  all: unset;
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 20px;
-  color: #888;
-  cursor: pointer;
-  line-height: 1;
+    all: unset;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .modal .close-btn:hover {
-  color: #000;
-  transform: scale(1.1);
+    color: #000;
+    transform: scale(1.1);
 }
 
 /* ===== MODAL TEXT ===== */
 .modal h2 {
-  font-size: 22px;
-  margin-bottom: 8px;
-  text-align: center;
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-align: center;
 }
 
 .modal p {
-  color: #555;
-  margin-bottom: 20px;
-  text-align: center;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* ===== MODAL BUTTONS ===== */
 .modal-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 .modal-buttons button {
-  all: unset;
-  background: #eee;
-  border-radius: 8px;
-  padding: 10px 18px;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
+    all: unset;
+    background: #eee;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .modal-buttons .cart-btn {
-  background: #000;
-  color: #fff;
+    background: #000;
+    color: #fff;
 }
 
 .modal-buttons .cart-btn:hover {
-  background: #333;
+    background: #333;
 }
 
 .modal-buttons .continue-btn:hover {
-  background: #ddd;
+    background: #ddd;
 }
