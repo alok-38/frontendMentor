@@ -34,9 +34,26 @@
         <h2>$149.99</h2>
         <p>$169.99</p>
       </div>
-      <button type="button"><img src="images/icon-cart.svg" alt="cart">Add to Cart</button>
+      <button type="button" class="add-to-cart-btn">
+        <img src="images/icon-cart.svg" alt="cart">Add to Cart
+      </button>
+
+
     </section>
   </main>
+
+  <!-- modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalBox">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h2>Item added to cart 🛒</h2>
+      <p>Your product has been added successfully.</p>
+      <div class="modal-buttons">
+        <button class="continue-btn" id="continueBtn">Continue Shopping</button>
+        <button class="cart-btn">Go to Cart</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
