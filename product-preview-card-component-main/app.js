@@ -13,6 +13,7 @@ if (addToCartBtn && modalOverlay && modalBox && closeModal && continueBtn) {
         modalOverlay.classList.add('active');
         // small delay for smooth animation
         setTimeout(() => modalBox.classList.add('active'), 50);
+        // modalBox.classList.add('active');
     });
 
     // === Close modal helper ===
