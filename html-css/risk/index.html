@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Pyramid</title>
+    <style>
+        :root {
+            --color-emergency: #1F314F;
+            /* Slate-900 */
+            --color-low: #68778D;
+            /* Slate-500 */
+            --color-medium: #D5E1EF;
+            /* Slate-300 */
+            --color-high: #FF6B6B;
+            /* Accent red for high risk */
+            --text-color: #FFFFFF;
+
+            --font-family-primary: 'Outfit', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family-primary);
+            background-color: #D5E1EF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .pyramid {
+            width: 320px;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .layer {
+            width: 80%;
+            text-align: center;
+            padding: 20px 10px;
+            margin: 5px 0;
+            border-radius: 10px;
+            color: var(--text-color);
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .emergency {
+            background-color: var(--color-emergency);
+            width: 100%;
+        }
+
+        .low-risk {
+            background-color: var(--color-low);
+            width: 90%;
+        }
+
+        .medium-risk {
+            background-color: var(--color-medium);
+            color: #1F314F;
+            width: 70%;
+        }
+
+        .high-risk {
+            background-color: var(--color-high);
+            width: 50%;
+        }
+
+        .layer ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            text-align: left;
+            font-weight: 400;
+        }
+
+        .layer ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pyramid">
+        <div class="layer high-risk">
+            High Risk
+            <ul>
+                <li>Cryptocurrency (1-10%)</li>
+                <li>Day Trading / F&O</li>
+                <li>Angel / Startup Investments</li>
+            </ul>
+        </div>
+
+        <div class="layer medium-risk">
+            Medium Risk
+            <ul>
+                <li>Corporate Bonds (AAA-AA)</li>
+                <li>Debt Mutual Funds</li>
+                <li>Real Estate</li>
+                <li>Stocks</li>
+            </ul>
+        </div>
+
+        <div class="layer low-risk">
+            Low Risk
+            <ul>
+                <li>Employment Provident Fund</li>
+                <li>Gold (digital)</li>
+                <li>Public Provident Fund</li>
+            </ul>
+        </div>
+
+        <div class="layer emergency">
+            Emergency & Protection
+            <ul>
+                <li>Emergency Fund (12 months)</li>
+                <li>FD for Parents' Retirement</li>
+                <li>Health Insurance</li>
+                <li>Life Insurance (Term)</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+@import url(font-face.css);
+@import url(root-variables.css);
+@import url(reset.css);
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: var(--color-white);
+    /* Modern awesome box-shadow */
+    box-shadow: 0 4px 8px rgba(31, 49, 79, 0.1),
+        0 8px 16px rgba(31, 49, 79, 0.1),
+        0 16px 32px rgba(31, 49, 79, 0.05);
+    padding: 16px 16px 40px 16px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 16px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+h1 {
+    color: var(--color-slate-900);
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: var(--text-1-weight);
+}
+
+p {
+    color: var(--color-slate-500);
+    font-size: var(--text-2-size);
+    line-height: var(--text-2-line-height);
+    letter-spacing: var(--text-2-letter-spacing);
+    font-weight: var(--text-2-weight);
+}
+
+@media (max-width: 375px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        max-width: 320px;
+        width: 100%;
+        margin: auto;
+    }
+}

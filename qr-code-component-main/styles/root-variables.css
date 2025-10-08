@@ -1,0 +1,29 @@
+/* ===== Root Variables ===== */
+:root {
+    /* Colors */
+    --color-slate-900: #1F314F;
+    --color-slate-500: #68778D;
+    --color-slate-300: #D5E1EF;
+    --color-white: #FFFFFF;
+
+    /* Typography */
+    --font-family-primary: 'Outfit', sans-serif;
+
+    /* Text Presets */
+    --text-1-size: 22px;
+    --text-1-line-height: 120%;
+    --text-1-letter-spacing: 0px;
+    --text-1-weight: 700;
+    /* Outfit Bold */
+
+    --text-2-size: 15px;
+    --text-2-line-height: 140%;
+    --text-2-letter-spacing: 0.2px;
+    --text-2-weight: 400;
+    /* Outfit Regular */
+
+    /* Spacing */
+    --spacing-500: 40px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+}
