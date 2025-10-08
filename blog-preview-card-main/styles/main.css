@@ -1,0 +1,128 @@
+@import url(font-face.css);
+@import url(root-variables.css);
+@import url(reset.css);
+
+main {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 8px 8px 0px 0px #000000;
+    max-width: 384px;
+    width: 100%;
+    padding: 24px;
+    cursor: pointer;
+}
+
+main:hover {
+    transform: translateY(-2px);
+}
+
+/* Focus state — visible outline for accessibility */
+main:focus {
+    outline: 2px solid var(--color-gray-950);
+    outline-offset: 3px;
+}
+
+main:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.title:hover {
+    color: var(--color-yellow);
+    background-color: var(--color-gray-950);
+}
+
+
+img {
+    border-radius: 10px;
+}
+
+article {
+    margin: 24px 0;
+    color: var(--color-gray-950);
+    cursor: pointer;
+}
+
+.title {
+    font-weight: var(--text-1-font-weight);
+    font-size: var(--text-1-font-size);
+    line-height: var(--text-1-line-height);
+}
+
+article a:not(.title) {
+    background-color: var(--color-yellow);
+    border-radius: 4px;
+    padding: 4px 12px;
+    width: 82px;
+    height: 29px;
+    font-weight: var(--text-3-bold-font-weight);
+    font-size: var(--text-3-font-size);
+    line-height: var(--text-3-line-height);
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover state — slightly darker yellow and small lift */
+article a:not(.title):hover {
+    background-color: #e0be3f;
+    /* a bit darker yellow */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus state — visible outline for accessibility */
+article a:not(.title):focus {
+    outline: 2px solid var(--color-gray-950);
+    outline-offset: 3px;
+}
+
+/* Active (press) state — pressed-down look */
+article a:not(.title):active {
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: #caa731;
+    /* even darker yellow */
+}
+
+article p:first-of-type {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+article p:last-of-type {
+    color: var(--color-gray-500);
+    font-weight: var(--text-2-font-weight);
+    font-size: var(--text-2-font-size);
+    line-height: var(--text-2-line-height);
+    margin-top: 24px;
+}
+
+cite {
+    display: flex;
+    font-style: normal;
+    align-items: center;
+    gap: 12px;
+    font-weight: var(--text-3-bold-font-weight);
+    font-size: var(--text-3-font-size);
+    line-height: var(--text-3-line-height);
+}
+
+cite img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    main {
+        max-width: 327px;
+        width: 100%;
+    }
+}

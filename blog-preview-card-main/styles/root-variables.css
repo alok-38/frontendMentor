@@ -1,0 +1,43 @@
+@import url(font-face.css);
+
+:root {
+    /* ===== Colors ===== */
+    --color-yellow: #F4D04E;
+    --color-gray-950: #111111;
+    --color-gray-500: #6B6B6B;
+    --color-white: #FFFFFF;
+
+    /* ===== Typography ===== */
+    --font-family-primary: 'Figtree', sans-serif;
+
+    /* Text Presets */
+    --text-1-font-weight: 800;
+    /* Extra Bold */
+    --text-1-font-size: 24px;
+    --text-1-line-height: 150%;
+    --text-1-letter-spacing: 0;
+
+    --text-2-font-weight: 500;
+    /* Medium */
+    --text-2-font-size: 16px;
+    --text-2-line-height: 150%;
+    --text-2-letter-spacing: 0;
+
+    --text-3-font-weight: 500;
+    /* Medium */
+    --text-3-font-size: 14px;
+    --text-3-line-height: 150%;
+    --text-3-letter-spacing: 0;
+
+    --text-3-bold-font-weight: 800;
+    /* Extra Bold */
+    --text-3-bold-font-size: 14px;
+    --text-3-bold-line-height: 150%;
+    --text-3-bold-letter-spacing: 0;
+
+    /* ===== Spacing ===== */
+    --spacing-300: 24px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}
