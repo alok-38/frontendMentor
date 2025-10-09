@@ -6,4 +6,121 @@ main {
     background-color: var(--color-grey-800);
     border-radius: 12px;
     padding: 40px;
+    max-width: 384px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+img {
+    object-fit: cover;
+    outline: unset;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    line-height: var(--text-1-line-height);
+}
+
+h1 {
+    color: #fff;
+    font-weight: var(--text-1-font-weight);
+    font-size: var(--text-1-font-size);
+
+}
+
+address {
+    color: var(--color-green);
+    font-weight: var(--text-2-font-weight);
+    font-size: var(--text-2-font-size);
+    font-style: normal;
+}
+
+p {
+    font-weight: var(--text-2-font-weight);
+    font-size: var(--text-2-font-size);
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #fff;
+}
+
+a:not(footer a) {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: var(--color-grey-700);
+    max-width: 304px;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover state */
+a:not(footer a):hover {
+    background-color: var(--color-grey-800);
+    transform: translateY(-2px);
+    /* slight lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Focus state (keyboard accessibility) */
+a:not(footer a):focus {
+    outline: 2px solid var(--color-green);
+    outline-offset: 3px;
+}
+
+/* Active / pressed state */
+a:not(footer a):active {
+    background-color: var(--color-grey-900);
+    transform: translateY(0);
+    /* pressed down */
+    box-shadow: none;
+}
+
+footer {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    main {
+        max-width: 384px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 0 24px;
+    }
+
+    main {
+        max-width: 327px;
+        width: 100%;
+    }
+
+    article {
+        text-align: center;
+    }
 }
