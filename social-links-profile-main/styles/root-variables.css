@@ -1,0 +1,38 @@
+:root {
+    /* ===== Colors ===== */
+    --color-grey-900: #141414;
+    --color-grey-800: #1F1F1F;
+    --color-grey-700: #333333;
+    --color-green: #C4F82A;
+    --color-white: #FFFFFF;
+
+    /* ===== Typography ===== */
+    --font-family-primary: 'Inter', sans-serif;
+
+    /* Text Presets */
+    --text-1-font-weight: 700;
+    /* Bold */
+    --text-1-font-size: 24px;
+    --text-1-line-height: 150%;
+    --text-1-letter-spacing: 0;
+
+    --text-2-font-weight: 400;
+    /* Regular */
+    --text-2-font-size: 14px;
+    --text-2-line-height: 150%;
+    --text-2-letter-spacing: 0;
+
+    --text-2-bold-font-weight: 700;
+    /* Bold */
+    --text-2-bold-font-size: 14px;
+    --text-2-bold-line-height: 150%;
+    --text-2-bold-letter-spacing: 0;
+
+    /* ===== Spacing ===== */
+    --spacing-500: 40px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}
