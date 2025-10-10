@@ -1,0 +1,29 @@
+/* ===== Young Serif ===== */
+@font-face {
+    font-family: 'Young Serif';
+    src: url('./assets/Young_Serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ===== Outfit ===== */
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/Outfit/static/Outfit-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/Outfit/static/Outfit-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/Outfit/static/Outfit-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

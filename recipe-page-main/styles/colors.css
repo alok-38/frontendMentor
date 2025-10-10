@@ -1,0 +1,25 @@
+:root {
+    /* ===== Rose ===== */
+    --color-rose-800: #7A284E;
+    /* Deep rose */
+    --color-rose-50: #FFF7FB;
+    /* Light rose */
+
+    /* ===== Stone ===== */
+    --color-stone-900: #312E2C;
+    /* Dark stone */
+    --color-stone-600: #5F564D;
+    /* Medium stone */
+    --color-stone-150: #E3DDD7;
+    /* Light stone */
+    --color-stone-100: #F3E5D7;
+    /* Extra light stone */
+
+    /* ===== Brown ===== */
+    --color-brown-800: #854632;
+    /* Dark brown */
+
+    /* ===== Neutral ===== */
+    --color-white: #FFFFFF;
+    /* Pure white */
+}

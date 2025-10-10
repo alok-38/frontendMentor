@@ -1,0 +1,47 @@
+:root {
+    /* ===== Colors ===== */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray: #333333;
+    --color-primary: #C4F82A;
+    /* example green, adjust as needed */
+
+    /* ===== Typography ===== */
+    --font-family-serif: 'Young Serif', serif;
+    --font-family-sans: 'Outfit', sans-serif;
+
+    /* Text Presets */
+    --text-1-font-family: var(--font-family-serif);
+    --text-1-font-weight: 400;
+    --text-1-font-size: 40px;
+    --text-1-line-height: 100%;
+    --text-1-letter-spacing: 0;
+
+    --text-2-font-family: var(--font-family-serif);
+    --text-2-font-weight: 400;
+    --text-2-font-size: 28px;
+    --text-2-line-height: 100%;
+    --text-2-letter-spacing: 0;
+
+    --text-3-font-family: var(--font-family-sans);
+    --text-3-font-weight: 600;
+    /* SemiBold */
+    --text-3-font-size: 20px;
+    --text-3-line-height: 100%;
+    --text-3-letter-spacing: 0;
+
+    --text-4-font-family: var(--font-family-sans);
+    --text-4-font-weight: 700;
+    /* Bold */
+    --text-4-font-size: 16px;
+    --text-4-line-height: 150%;
+    --text-4-letter-spacing: 0;
+
+    /* ===== Spacing ===== */
+    --spacing-500: 40px;
+    --spacing-300: 24px;
+    --spacing-200: 16px;
+    --spacing-150: 12px;
+    --spacing-100: 8px;
+    --spacing-50: 4px;
+}

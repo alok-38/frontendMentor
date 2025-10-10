@@ -1,0 +1,31 @@
+@import url(font-face.css);
+@import url(typography.css);
+@import url(colors.css);
+@import url(spacing.css);
+@import url(reset.css);
+
+body {
+    background-color: var(--color-stone-100);
+    color: var(--color-stone-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    border-radius: 24px;
+    padding: 40px;
+    max-width: 736px;
+    width: 100%;
+    background-color: #fff;
+}
+
+img {
+    object-fit: cover;
+    max-width: 656px;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
