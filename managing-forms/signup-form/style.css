@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #36384d, #101016);
+}
+
+.container {
+    background-color: #fff;
+    padding: 32px;
+    max-width: 904px;
+    width: 100%;
+    border-radius: 36px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    max-width: 840px;
+    width: 100%;
+    display: flex;
+    gap: 64px;
+}
+
+img {
+    height: 593px;
+    max-width: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 376px;
+    width: 100%;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+form div div {
+    display: flex;
+    justify-content: space-between;
+}
+
+form div div span {
+    color: red;
+}
+
+h1 {
+    color: #242742;
+    font-size: 56px;
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+button {
+    cursor: pointer;
+    height: 56px;
+    background: transparent;
+    outline: unset;
+    border: unset;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+input {
+    padding: 16px 24px;
+    border: 1px solid #949494;
+    width: 100%;
+}
+
+/* ✨ Input: Focus effect */
+input:focus {
+    border-color: #4facfe;
+    /* Blue glow */
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.3);
+}
+
+/* 🖱️ Input: Hover effect */
+input:hover {
+    border-color: #4facfe;
+}
+
+/* 🟣 Button base */
+button {
+    padding: 16px 72px;
+    background-color: #101016;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+}
+
+/* 🖱️ Button: Hover */
+button:hover {
+    background-color: #2c2c44;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 👆 Button: Focus (keyboard accessibility) */
+button:focus {
+    outline: 2px solid #4facfe;
+    outline-offset: 4px;
+}
+
+/* 👇 Button: Active (click/press down) */
+button:active {
+    transform: scale(0.98);
+    background-color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(to right, orange, orangered);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+/* 👩‍💻 Base styles for desktop/larger screens (default) */
+
+
+/* 📱 Styles for tablets and below (up to 768px wide) */
+@media (max-width: 768px) {
+
+    /* Tablet styles here */
+    .container {
+        max-width: 608px;
+        width: 100%;
+        padding: 40px;
+        overflow: hidden;
+    }
+
+    main {
+        max-width: 528px;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    input,
+    button {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 528px;
+        width: 100%;
+        height: 358.29px;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    section {
+        max-width: 528px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
+
+/* 📱 Styles for small mobile screens (up to 375px wide) */
+@media (max-width: 375px) {
+
+    /* Mobile styles here */
+    .container {
+        padding: 16px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        font-size: 13px;
+        padding: 12px 16px;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+
+/* Basic modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.modal button {
+    width: 100%;
+}
+
+.modal button:hover {
+    background-color: orange;
+    color: black;
+    font-size: 16px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.modal.hidden {
+    display: none;
+}
