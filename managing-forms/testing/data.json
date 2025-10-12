@@ -1,0 +1,27 @@
+{
+    "id": 1024,
+    "username": "janedoe",
+    "email": "janedoe@example.com",
+    "isActive": true,
+    "profile": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "age": 28,
+        "gender": "female",
+        "location": {
+            "city": "New York",
+            "state": "NY",
+            "country": "USA"
+        }
+    },
+    "preferences": {
+        "language": "en",
+        "theme": "dark",
+        "notifications": {
+            "email": true,
+            "sms": false,
+            "push": true
+        }
+    },
+    "createdAt": "2023-09-15T10:45:00Z"
+}

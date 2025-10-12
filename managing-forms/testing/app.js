@@ -1,7 +1,12 @@
 const form = document.querySelector('form');
 
-function handleSubmit(event) {
-    event.preventDefault();
-}
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Stop the page from reloading
 
-form.addEventListener('submit', handleSubmit);
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    console.log('Name:', name);
+    console.log('Email:', email);
+});
+    
