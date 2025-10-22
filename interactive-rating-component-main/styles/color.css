@@ -1,0 +1,26 @@
+:root {
+    /* === Brand Colors === */
+    --color-orange-500: #FC7614;
+
+    /* === Grayscale === */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-grey-950: #131518;
+    --color-grey-900: #262E38;
+    --color-grey-500: #969FAD;
+
+    /* === Gradient Colors === */
+    --gradient-1-start: #232A34;
+    --gradient-1-end: #181E27;
+
+    /* === Optional: RGB or HSL (if you use them in overlays/transparencies) */
+    --color-white-rgb: 255, 255, 255;
+    --color-black-rgb: 0, 0, 0;
+    --color-orange-500-rgb: 252, 118, 20;
+    --color-grey-950-rgb: 19, 21, 24;
+    --color-grey-900-rgb: 38, 46, 56;
+    --color-grey-500-rgb: 150, 159, 173;
+
+    --gradient-1-start-rgb: 35, 42, 52;
+    --gradient-1-end-rgb: 24, 30, 39;
+}
