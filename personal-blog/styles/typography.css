@@ -1,0 +1,72 @@
+@import url(font-face.css);
+
+:root {
+    /* -------------------------------------------------
+     Base Font Families
+  -------------------------------------------------- */
+    --font-sans: "DM Sans", sans-serif;
+    --font-mono: "Fira Code", monospace;
+
+    /* -------------------------------------------------
+     Text Presets
+  -------------------------------------------------- */
+    /* Preset 1 */
+    --text-1-size: 40px;
+    --text-1-line: 130%;
+    --text-1-weight: 800;
+    --text-1-spacing: -1px;
+
+    /* Preset 2 */
+    --text-2-size: 32px;
+    --text-2-line: 130%;
+    --text-2-weight: 800;
+    --text-2-spacing: -0.5px;
+
+    /* Preset 3 */
+    --text-3-size: 28px;
+    --text-3-line: 130%;
+    --text-3-weight: 700;
+    --text-3-spacing: -0.5px;
+
+    /* Preset 4 */
+    --text-4-size: 24px;
+    --text-4-line: 130%;
+    --text-4-weight: 600;
+    --text-4-spacing: -0.5px;
+
+    /* Preset 5 */
+    --text-5-size: 20px;
+    --text-5-line: 130%;
+    --text-5-weight: 600;
+    --text-5-spacing: -0.5px;
+
+    /* Preset 6 */
+    --text-6-size: 18px;
+    --text-6-line: 150%;
+    --text-6-weight: 500;
+    --text-6-spacing: -0.5px;
+
+    /* Preset 7 Regular */
+    --text-7-size: 18px;
+    --text-7-line: 150%;
+    --text-7-weight: 400;
+    --text-7-spacing: -0.2px;
+
+    /* Preset 7 SemiBold */
+    --text-7-semibold-weight: 600;
+
+    /* Preset 8 */
+    --text-8-size: 16px;
+    --text-8-line: 130%;
+    --text-8-weight: 400;
+    --text-8-spacing: -0.2px;
+
+    /* Preset 8 Italic */
+    --text-8-italic-style: italic;
+
+    /* Preset 9 (Code) */
+    --text-9-size: 16px;
+    --text-9-line: 146%;
+    --text-9-weight: 400;
+    --text-9-spacing: -0.4px;
+}
