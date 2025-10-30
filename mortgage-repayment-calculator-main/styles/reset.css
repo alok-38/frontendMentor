@@ -55,6 +55,10 @@ button,
 textarea,
 select {
     font-family: inherit;
+    outline: unset;
+    border: unset;
+    background: transparent;
+    cursor: pointer;
 }
 
 /* 8. Remove animations/transitions for users who prefer reduced motion */

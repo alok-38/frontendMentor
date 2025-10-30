@@ -11,6 +11,7 @@
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
   <link rel="stylesheet" href="styles/main.css">
+  <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -23,12 +24,12 @@
       </header>
 
       <form aria-describedby="form-instructions">
-        <span id="form-instructions" class="sr-only">
-          Fill in the mortgage amount, term, interest rate, and type, then click Calculate Repayments.
-        </span>
+        <article>
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <input type="number" id="mortgage-amount" name="mortgage-amount" step="0.01" min="0" inputmode="decimal"
+            aria-required="true">
 
-        <label for="mortgage-amount">Mortgage Amount</label>
-        <input type="number" name="mortgage-amount" id="mortgage-amount" aria-required="true">
+        </article>
 
         <article>
           <div>
@@ -37,17 +38,25 @@
           </div>
           <div>
             <label for="interest-rate">Interest Rate</label>
-            <input type="number" name="interest-rate" id="interest-rate" aria-required="true">
+            <input type="number" name="interest-rate" id="interest-rate" aria-required="true" step="0.01" min="0" inputmode="decimal">
           </div>
         </article>
 
         <article role="group" aria-labelledby="mortgage-type-label">
           <label id="mortgage-type-label">Mortgage Type</label>
-          <input type="radio" name="mortgage-type" id="repayment" value="repayment" aria-required="true">
-          <input type="radio" name="mortgage-type" id="interest-only" value="interest-only">
+          <label>
+            <input type="radio" name="mortgage-type" value="repayment" aria-required="true">
+            Repayment
+          </label>
+
+          <label>
+            <input type="radio" name="mortgage-type" value="interest-only">
+            Interest Only
+          </label>
+
         </article>
 
-        <button type="button" aria-label="Calculate mortgage repayments">Calculate Repayments</button>
+        <button type="submit" aria-label="Calculate mortgage repayments">Calculate Repayments</button>
       </form>
     </section>
 
