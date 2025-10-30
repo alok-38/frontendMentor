@@ -1,0 +1,6 @@
+@import url(reset.css);
+@import url(spacing.css);
+
+body {
+    background-color: var(--slate-100);
+}

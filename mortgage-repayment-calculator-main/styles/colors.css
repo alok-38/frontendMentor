@@ -1,0 +1,19 @@
+:root {
+    /* ============================
+     COLOR PALETTE
+     ============================ */
+
+    /* Brand Colors */
+    --lime: #D8DB2F;
+    --red: #D73328;
+
+    /* Neutrals / Slate Scale */
+    --slate-900: #133041;
+    --slate-700: #4E6E7E;
+    --slate-500: #6B94A8;
+    --slate-300: #9ABED5;
+    --slate-100: #E4F4FD;
+
+    /* Base */
+    --white: #FFFFFF;
+}

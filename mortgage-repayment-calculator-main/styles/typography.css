@@ -1,0 +1,36 @@
+@import url(font-face.css);
+
+:root {
+    /* Font families */
+    --font-base: 'Plus Jakarta Sans', sans-serif;
+
+    /* Preset 1 */
+    --preset-1-weight: 700;
+    --preset-1-size: 56px;
+    --preset-1-line: 125%;
+    --preset-1-spacing: -1px;
+
+    /* Preset 2 */
+    --preset-2-weight: 700;
+    --preset-2-size: 24px;
+    --preset-2-line: 125%;
+    --preset-2-spacing: -1px;
+
+    /* Preset 3 */
+    --preset-3-weight: 700;
+    --preset-3-size: 18px;
+    --preset-3-line: 125%;
+    --preset-3-spacing: -1px;
+
+    /* Preset 4 */
+    --preset-4-weight: 500;
+    --preset-4-size: 16px;
+    --preset-4-line: 150%;
+    --preset-4-spacing: 0px;
+
+    /* Preset 5 */
+    --preset-5-weight: 500;
+    --preset-5-size: 14px;
+    --preset-5-line: 150%;
+    --preset-5-spacing: 0px;
+}
