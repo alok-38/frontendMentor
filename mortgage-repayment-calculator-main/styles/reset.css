@@ -54,7 +54,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+    font-family: inherit;
 }
 
 /* 8. Remove animations/transitions for users who prefer reduced motion */

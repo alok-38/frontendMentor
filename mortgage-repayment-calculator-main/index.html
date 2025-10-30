@@ -15,42 +15,57 @@
 
 <body>
 
-  Mortgage Calculator
-  Clear All
+  <main>
+    <section aria-labelledby="mortgage-heading">
+      <header>
+        <h1 id="mortgage-heading">Mortgage Calculator</h1>
+        <button type="button" aria-label="Clear all inputs">Clear All</button>
+      </header>
 
-  Mortgage Amount
+      <form aria-describedby="form-instructions">
+        <span id="form-instructions" class="sr-only">
+          Fill in the mortgage amount, term, interest rate, and type, then click Calculate Repayments.
+        </span>
 
-  Mortgage Term
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <input type="number" name="mortgage-amount" id="mortgage-amount" aria-required="true">
 
-  Interest Rate
+        <article>
+          <div>
+            <label for="mortgage-term">Mortgage Term</label>
+            <input type="number" name="mortgage-term" id="mortgage-term" aria-required="true">
+          </div>
+          <div>
+            <label for="interest-rate">Interest Rate</label>
+            <input type="number" name="interest-rate" id="interest-rate" aria-required="true">
+          </div>
+        </article>
 
-  Mortgage Type
-  Repayment
-  Interest Only
+        <article role="group" aria-labelledby="mortgage-type-label">
+          <label id="mortgage-type-label">Mortgage Type</label>
+          <input type="radio" name="mortgage-type" id="repayment" value="repayment" aria-required="true">
+          <input type="radio" name="mortgage-type" id="interest-only" value="interest-only">
+        </article>
 
-  Calculate Repayments
+        <button type="button" aria-label="Calculate mortgage repayments">Calculate Repayments</button>
+      </form>
+    </section>
 
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided.
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
+    <section>
+      <!-- Empty results start -->
+      Results shown here
+      Complete the form and click “calculate repayments” to see what
+      your monthly repayments would be.
+      <!-- Empty results end -->
+      <!-- Completed results start -->
+      Your results
+      Your results are shown below based on the information you provided.
+      To adjust the results, edit the form and click “calculate repayments” again.
+      Your monthly repayments
+      Total you'll repay over the term
+      <!-- Completed results end -->
+    </section>
+  </main>
 
 
 </body>
