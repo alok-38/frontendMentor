@@ -1,0 +1,74 @@
+/* ===========================
+   COLOR VARIABLES
+   =========================== */
+
+:root {
+    /* ---------- Base Colors ---------- */
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+
+    /* ---------- Navy Scale ---------- */
+    --clr-navy-950: #0e1323;
+    /* hsl(226, 43%, 10%) */
+    --clr-navy-900: #1c204b;
+    /* hsl(235, 46%, 20%) */
+    --clr-navy-800: #33397a;
+    /* hsl(235, 41%, 34%) */
+    --clr-navy-200: #bbc0ff;
+    /* hsl(236, 100%, 87%) */
+
+    /* ---------- Orange ---------- */
+    --clr-orange-300: #ff8b64;
+    /* hsl(15, 100%, 70%) */
+
+    /* ---------- Purple Scale ---------- */
+    --clr-purple-700: #7335d2;
+    /* hsl(264, 64%, 52%) */
+    --clr-purple-600: #5747ea;
+    /* hsl(246, 80%, 60%) */
+    --clr-purple-500: #7078c9;
+    /* hsl(235, 45%, 61%) */
+
+    /* ---------- Blue ---------- */
+    --clr-blue-300: #55c2e6;
+    /* hsl(195, 74%, 62%) */
+
+    /* ---------- Pink ---------- */
+    --clr-pink-400: #ff5e7d;
+    /* hsl(348, 100%, 68%) */
+
+    /* ---------- Green ---------- */
+    --clr-green-400: #4bcf82;
+    /* hsl(145, 58%, 55%) */
+
+    /* ---------- Yellow ---------- */
+    --clr-yellow-300: #f1c75b;
+    /* hsl(43, 84%, 65%) */
+
+    /* ---------- Grey ---------- */
+    --clr-grey-200: #d8d8d8;
+    /* hsl(0, 0%, 85%) */
+
+
+    /* ===========================
+     THEME SEMANTIC COLORS
+     =========================== */
+
+    /* Backgrounds */
+    --clr-bg-main: var(--clr-navy-950);
+    --clr-bg-card: var(--clr-navy-900);
+    --clr-bg-highlight: var(--clr-navy-800);
+
+    /* Text */
+    --clr-text-primary: var(--clr-white);
+    --clr-text-secondary: var(--clr-navy-200);
+    --clr-text-muted: var(--clr-grey-200);
+
+    /* Accents (activity colors, for dashboard cards) */
+    --clr-accent-work: var(--clr-orange-300);
+    --clr-accent-play: var(--clr-blue-300);
+    --clr-accent-study: var(--clr-pink-400);
+    --clr-accent-exercise: var(--clr-green-400);
+    --clr-accent-social: var(--clr-purple-600);
+    --clr-accent-selfcare: var(--clr-yellow-300);
+}
