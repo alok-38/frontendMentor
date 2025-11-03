@@ -14,19 +14,104 @@ main {
     gap: var(--spacing-400);
 }
 
-section:last-of-type {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-400);
+section:first-of-type {
+    /* width: 255px; */
+    flex: 0 0 255px;
 }
 
-section:last-of-type article {
-    max-width: 255px;
-    width: 100%;
+section:last-of-type {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: var(--spacing-400);
+    /* width: 829px; */
+    flex: 1;
 }
+
+section:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: var(--spacing-400);
+    flex: 1;
+}
+
+/* Each card (article) */
+section:last-of-type article {
+    background-color: var(--clr-navy-900);
+    border-radius: var(--radius-400);
+    overflow: hidden;
+    height: 199px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top banner strip */
+.card-banner {
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: top right 1rem;
+    background-size: 60px;
+}
+
+/* Body content */
+.card-body {
+    padding: var(--spacing-400);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Activity color + icon variations */
+.work .card-banner {
+    background-color: var(--clr-orange-300);
+    background-image: url('../images/icon-work.svg');
+}
+
+.play .card-banner {
+    background-color: var(--clr-blue-300);
+    background-image: url('../images/icon-play.svg');
+}
+
+.study .card-banner {
+    background-color: var(--clr-pink-400);
+    background-image: url('../images/icon-study.svg');
+}
+
+.exercise .card-banner {
+    background-color: var(--clr-green-400);
+    background-image: url('../images/icon-exercise.svg');
+}
+
+.social .card-banner {
+    background-color: var(--clr-purple-700);
+    background-image: url('../images/icon-social.svg');
+}
+
+.self-care .card-banner {
+    background-color: var(--clr-yellow-300);
+    background-image: url('../images/icon-self-care.svg');
+}
+
 
 header {
     padding: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+    background-color: var(--clr-purple-600);
+}
+
+h1 {
+    color: #fff;
+    font-size: var(--fs-preset-2);
+    font-weight: var(--fw-light);
+}
+
+header span {
+    color: var(--clr-navy-200);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-preset-6);
 }
 
 header img {
@@ -45,4 +130,5 @@ footer {
     left: 0;
     text-align: center;
     font-size: var(--fs-preset-6);
+    font-weight: var(--fw-light);
 }
