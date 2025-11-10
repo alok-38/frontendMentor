@@ -1,0 +1,31 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Purple shades */
+    --purple-800: #393A4B;
+    --purple-700: #4D5067;
+    --purple-600: #5B5E7E;
+    --purple-300: #C8CBE7;
+    --purple-100: #E3E4F1;
+
+    /* Gray shades */
+    --gray-600: #9495A5;
+    --gray-300: #D1D2DA;
+    --gray-50: #FAFAFA;
+
+    /* Navy shades */
+    --navy-950: #171823;
+    --navy-900: #25273D;
+    --navy-850: #494C6B;
+
+    /* Blue */
+    --blue-500: #3A7CFD;
+
+    /* Gradients */
+    --gradient-1-start: #55DDFF;
+    --gradient-1-end: #C058F3;
+
+    --gradient-2-start: #3710BD;
+    --gradient-2-end: #A42395;
+}

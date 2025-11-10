@@ -2,9 +2,16 @@ const buttons = document.querySelectorAll('button');
 const currentTime = document.querySelectorAll('.current');
 const previousTime = document.querySelectorAll('.previous');
 
-fetch('../data.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
+const data = fetch('../data.json')
+    .then(response => {
+        return response.json();
     })
-    .catch(error => console.error('Error:', error));
+    .catch(error => {
+        console.error("Error:", error);
+    });
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        currentTime.textContent = ``
+    })
+})

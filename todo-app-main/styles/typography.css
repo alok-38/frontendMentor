@@ -1,0 +1,28 @@
+@import url(font-face.css);
+
+:root {
+    /* Font Family */
+    --font-primary: "Josefin Sans", sans-serif;
+
+    /* Text sizes (from design) */
+    --text-1-size: 18px;
+    /* Main text */
+    --text-2-size: 14px;
+    /* Secondary UI text */
+    --text-3-size: 12px;
+    /* Small text */
+
+    /* Line Height (100% means same as font-size — tight text) */
+    --line-tight: 1;
+
+    /* Letter Spacing (slightly negative for the design) */
+    --tracking-tight: -0.25px;
+
+    /* Font Weights */
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* Colors (you can update with dark theme later) */
+    --color-bg: #fafafa;
+    --color-text: #333333;
+}

@@ -1,0 +1,88 @@
+/* ============================= */
+/*        MODERN CSS RESET       */
+/* ============================= */
+
+/* Box sizing and border reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Remove default input styles */
+input,
+textarea,
+select {
+    font: inherit;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+/* Smooth font rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Make images responsive */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Make tables clean */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Global defaults for text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+/* Remove quotes for blockquotes and q */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}

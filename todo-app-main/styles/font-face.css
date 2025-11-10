@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("./styles/Josefin_Sans/JosefinSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 700;
+    /* supports thin → bold */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("./styles/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Optional fallback if variable fonts cause issues */
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("./styles/Josefin_Sans/static/JosefinSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
