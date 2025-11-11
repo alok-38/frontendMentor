@@ -16,21 +16,32 @@
 
 <body>
 
-  <header></header>
   <main>
-    <section>
-      <img src="./images/TODO.png" alt="logo">
-      <img src="./images/icon-moon.svg" alt="moon">
+    <section class="wrapper">
+      <header>
+        <h1>Todo</h1>
+        <button class="btn theme-btn light"><img src="images/icon-moon.svg" alt="moon svg"></button>
+      </header>
+      <form>
+        <input type="radio" name="" id="">
+        <input type="text" id="todo-input" placeholder="Create a new todo...">
+      </form>
+      <article class="todo-container">
+        <ul class="todos"></ul>
+        <div class="actions">
+          <p class="left-items"><span id="count">0</span> items left</p>
+          <a href="#" class="clear-completed-btn">Clear Completed</a>
+        </div>
+      </article>
+      <article class="filters">
+        <a href="#" class="filter-btns all active">All</a>
+        <a href="#" class="filter-btns live">Active</a>
+        <a href="#" class="filter-btns completed-btn">Completed</a>
+      </article>
+      <footer>
+        <p class="drag-help-info">Drag and drop to reorder list</p>
+      </footer>
     </section>
-    <section>
-      <label for=""></label>
-      <input type="radio" name="" id="">
-      <label for=""></label>
-      <input type="text" placeholder="Create a new todo...">
-    </section>
-    <footer>
-      <p>Drag and drop to reorder list</p>
-    </footer>
   </main>
 
 </body>
