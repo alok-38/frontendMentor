@@ -20,27 +20,27 @@
     <section class="wrapper">
       <header>
         <h1>Todo</h1>
-        <button class="btn theme-btn light"><img src="images/icon-moon.svg" alt="moon svg"></button>
+        <button class="btn theme-btn light"><img src="./images/icon-moon.svg" alt="moon svg"></button>
       </header>
       <form>
-        <input type="radio" name="" id="">
+        <span class="round"></span>
         <input type="text" id="todo-input" placeholder="Create a new todo...">
+        <button class="add-todo">+</button>
       </form>
-      <article class="todo-container">
-        <ul class="todos"></ul>
+      <div class="todo-container">
+        <ul class="todos">
+        </ul>
         <div class="actions">
           <p class="left-items"><span id="count">0</span> items left</p>
           <a href="#" class="clear-completed-btn">Clear Completed</a>
         </div>
-      </article>
-      <article class="filters">
+      </div>
+      <div class="filters">
         <a href="#" class="filter-btns all active">All</a>
         <a href="#" class="filter-btns live">Active</a>
         <a href="#" class="filter-btns completed-btn">Completed</a>
-      </article>
-      <footer>
-        <p class="drag-help-info">Drag and drop to reorder list</p>
-      </footer>
+      </div>
+      <p class="drag-help-info">Drag and drop to reorder list</p>
     </section>
   </main>
 
