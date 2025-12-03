@@ -1,0 +1,48 @@
+@import url(typography.css);
+@import url(spacing.css);
+@import url(colors.css);
+@import url(reset.css);
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-mono);
+    font-size: clamp(14px, 1rem + 0.5vw, 18px);
+    background-color: var(--grey-950);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+h1 {
+    margin-bottom: 32px;
+    font-size: var(--fs-2);
+    line-height: var(--lh-2);
+    color: var(--grey-600);
+    text-align: center;
+}
+
+header,
+main {
+    background-color: var(--grey-800);
+}
+
+header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    cursor: pointer;
+}
+
+main {
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 32px;
+}

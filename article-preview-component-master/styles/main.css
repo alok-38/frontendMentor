@@ -1,0 +1,24 @@
+@import url(typography.css);
+@import url(spacing.css);
+@import url(colors.css);
+
+body {
+    font-family: var(--font-main);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-grey-200);
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+footer {
+    font-family: inherit;
+    font-size: 12px;
+}

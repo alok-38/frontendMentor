@@ -1,0 +1,90 @@
+/* =============================
+   Font Face Setup (Manrope)
+   ============================= */
+@font-face {
+    font-family: 'Manrope';
+    src: url('../styles/Manrope/static/Manrope-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../styles/Manrope/static/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../styles/Manrope/static/Manrope-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* =============================
+   Root Typography Variables
+   ============================= */
+:root {
+    /* Font Family */
+    --font-main: 'Manrope', sans-serif;
+
+    /* Text Preset 1 (Bold) */
+    --tp1-font-weight: 700;
+    --tp1-font-size: 20px;
+    --tp1-line-height: 130%;
+    --tp1-letter-spacing: 0.25px;
+
+    /* Text Preset 2 (Bold) */
+    --tp2b-font-weight: 700;
+    --tp2b-font-size: 13px;
+    --tp2b-line-height: 140%;
+    --tp2b-letter-spacing: 0.12px;
+
+    /* Text Preset 2 (Medium) */
+    --tp2m-font-weight: 500;
+    --tp2m-font-size: 13px;
+    --tp2m-line-height: 140%;
+    --tp2m-letter-spacing: 0.12px;
+
+    /* Text Preset 3 */
+    --tp3-font-weight: 400;
+    --tp3-font-size: 13px;
+    --tp3-line-height: 140%;
+    --tp3-letter-spacing: 0.25px;
+}
+
+/* =============================
+   Utility Classes
+   ============================= */
+.text-preset-1 {
+    font-family: var(--font-main);
+    font-weight: var(--tp1-font-weight);
+    font-size: var(--tp1-font-size);
+    line-height: var(--tp1-line-height);
+    letter-spacing: var(--tp1-letter-spacing);
+}
+
+.text-preset-2-bold {
+    font-family: var(--font-main);
+    font-weight: var(--tp2b-font-weight);
+    font-size: var(--tp2b-font-size);
+    line-height: var(--tp2b-line-height);
+    letter-spacing: var(--tp2b-letter-spacing);
+}
+
+.text-preset-2-medium {
+    font-family: var(--font-main);
+    font-weight: var(--tp2m-font-weight);
+    font-size: var(--tp2m-font-size);
+    line-height: var(--tp2m-line-height);
+    letter-spacing: var(--tp2m-letter-spacing);
+}
+
+.text-preset-3 {
+    font-family: var(--font-main);
+    font-weight: var(--tp3-font-weight);
+    font-size: var(--tp3-font-size);
+    line-height: var(--tp3-line-height);
+    letter-spacing: var(--tp3-letter-spacing);
+}

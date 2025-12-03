@@ -1,0 +1,24 @@
+@import url(font-face.css);
+:root {
+    /* Font family */
+    --font-mono: "JetBrains Mono", monospace;
+
+    /* Text Preset 1 */
+    --fs-1: 32px;
+    --lh-1: 42px;
+
+    /* Text Preset 2 */
+    --fs-2: 24px;
+    --lh-2: 32px;
+
+    /* Text Preset 3 */
+    --fs-3: 18px;
+    --lh-3: 24px;
+
+    /* Text Preset 4 */
+    --fs-4: 16px;
+    --lh-4: 20px;
+
+    /* Weight */
+    --fw-bold: 700;
+}

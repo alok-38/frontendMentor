@@ -1,0 +1,92 @@
+/* 1. Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margins */
+* {
+    margin: 0;
+}
+
+/* 3. Improve text rendering */
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Allow percentage-based heights */
+html,
+body {
+    height: 100%;
+}
+
+/* 5. Prevent layout shifts during scrollbar appearance */
+html {
+    scrollbar-gutter: stable both-edges;
+}
+
+/* 6. Set core body defaults */
+body {
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/* 7. Remove built-in form input styling (safer modern options) */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* 8. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 9. Remove animations for people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 10. Remove default list styles */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* 11. Make buttons usable without resetting */
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* 12. Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 13. Tables normalizer */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
