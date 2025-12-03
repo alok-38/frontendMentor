@@ -32,10 +32,48 @@ header {
     padding: 16px;
     display: flex;
     justify-content: space-between;
+    font-size: var(--fs-1);
+    line-height: var(--lh-1);
+    color: var(--grey-200);
+}
+
+header div {
+    display: flex;
+    gap: 16px;
+    color: var(--green-200);
+    font-size: var(--fs-3);
+    line-height: var(--lh-3);
+    align-items: center;
 }
 
 header img {
     cursor: pointer;
+    transition:
+        transform 150ms ease,
+        filter 150ms ease,
+        opacity 150ms ease;
+}
+
+/* Hover (mouse only) */
+@media (hover: hover) and (pointer: fine) {
+    header img:hover {
+        transform: scale(1.04);
+        filter: brightness(1.1);
+    }
+}
+
+/* Focus-visible (keyboard tabbing) */
+header img:focus-visible {
+    outline: 3px solid var(--green-200, #a4ffaf);
+    /* use your token */
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/* Active / Press / Click */
+header img:active {
+    transform: scale(0.96);
+    opacity: 0.8;
 }
 
 main {
@@ -45,4 +83,15 @@ main {
     flex-direction: column;
     gap: 24px;
     padding: 24px 32px;
+}
+
+article:first-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+article:first-of-type div {
+    display: flex;
+    justify-content: space-between;
 }
