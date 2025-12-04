@@ -15,6 +15,10 @@ body {
     color: aliceblue;
 }
 
+.container {
+    width: clamp(320px, 90%, 540px);
+}
+
 h1 {
     margin-bottom: 32px;
     font-size: var(--fs-2);
@@ -29,12 +33,14 @@ main {
 }
 
 header {
-    padding: 16px;
+    /* padding: 16px; */
     display: flex;
     justify-content: space-between;
     font-size: var(--fs-1);
     line-height: var(--lh-1);
     color: var(--grey-200);
+    margin-bottom: 24px;
+    padding: 16px 32px;
 }
 
 header div {
@@ -77,11 +83,9 @@ header img:active {
 }
 
 main {
-    max-width: 540px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
     padding: 24px 32px;
 }
 
@@ -94,4 +98,206 @@ article:first-of-type {
 article:first-of-type div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+article:first-of-type div p {
+    font-size: var(--fs-3);
+    line-height: var(--lh-3);
+    color: var(--grey-200);
+}
+
+article:first-of-type div span {
+    font-size: var(--fs-1);
+    line-height: var(--lh-1);
+}
+
+/* TRACK (transparent because we use gradient as background) */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent;
+    /* IMPORTANT */
+    height: 8px;
+    border-radius: 6px;
+    outline: unset;
+}
+
+/* INPUT base */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background: var(--grey-850);
+    /* fallback */
+    border-radius: 6px;
+}
+
+/* THUMB */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--green-200);
+    margin-top: -10px;
+    /* centers thumb (28px-8px)/-2 */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+li {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-size: var(--fs-3);
+    line-height: var(--lh-3);
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid var(--grey-200);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* Checked state */
+input[type="checkbox"]:checked {
+    background-color: var(--green-200);
+    border-color: var(--green-200);
+}
+
+/* The checkmark (weight 3) */
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* draw checkmark using borders */
+    width: 12px;
+    height: 6px;
+    border-left: 3px solid var(--grey-900);
+    /* weight = 3 */
+    border-bottom: 3px solid var(--grey-900);
+    /* weight = 3 */
+
+    transform: translate(4px, 5px) rotate(-45deg);
+}
+
+article:nth-of-type(2) {
+    background-color: var(--grey-850);
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    align-items: center;
+}
+
+article:nth-of-type(2) p {
+    font-size: var(--fs-3);
+    line-height: var(--lh-3);
+    color: var(--grey-600);
+    text-transform: uppercase;
+}
+
+article:nth-of-type(2) div:first-of-type {
+    display: flex;
+    gap: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.indicator {
+    display: flex;
+    gap: 5px !important;
+}
+
+.indicator div {
+    height: 25px;
+    width: 10px;
+    border: 1px solid #ffffff;
+    background: transparent;
+}
+
+button {
+    padding: 24px 176px;
+    display: flex;
+    gap: 24px;
+    font-size: var(--fs-3);
+    text-transform: uppercase;
+    background-color: var(--green-200);
+    color: var(--grey-800);
+    align-items: center;
+    font-family: inherit;
+    font-weight: 700;
+    /* Smooth transitions */
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+button svg {
+    fill: currentColor;
+    /* allows color inheritance */
+    transition: fill 0.25s ease;
+}
+
+
+/* Hover effect */
+button:hover {
+    background-color: var(--orange-400);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+}
+
+/* Focus ring (keyboard accessibility) */
+button:focus-visible {
+    outline: 3px solid var(--orange-400);
+    outline-offset: 4px;
+    color: #ffffff;
+}
+
+/* Active press effect */
+button:active {
+    transform: translateY(0);
+    /* flatten on press */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    color: var(--green-200);
+    border: 2px solid var(--green-200);
+}
+
+button img {
+    width: 11.11px;
+    height: 12px;
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+    .container {
+        max-width: 375px;
+        width: 100%;
+        margin: auto;
+    }
+
+    button {
+        max-width: 311px;
+        width: 100%;
+        height: 56px;
+    }
 }

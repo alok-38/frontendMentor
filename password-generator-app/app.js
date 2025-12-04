@@ -18,4 +18,33 @@ copyEl.addEventListener('click', copyPassword);
 
 const inputRangeEl = document.querySelector('input[type="range"]');
 
+const slider = document.querySelector('input[type="range"]');
+
+function updateFill() {
+    const min = slider.min || 0;
+    const max = slider.max || 16;
+    const val = slider.value;
+
+    const percent = ((val - min) * 100) / (max - min);
+
+    slider.style.background = `linear-gradient(
+    to right,
+    var(--green-200) 0%,
+    var(--green-200) ${percent}%,
+    var(--grey-850) ${percent}%,
+    var(--grey-850) 100%
+  )`;
+}
+
+const count = document.getElementById("count");
+
+function updateCharLength() {
+    count.textContent = slider.value;
+    count.style.color = "#a4ffaf";
+}
+
+slider.addEventListener("input", updateCharLength);
+updateCharLength(); // show initial value
+
+
 

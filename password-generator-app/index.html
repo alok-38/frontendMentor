@@ -11,32 +11,46 @@
   <title>Frontend Mentor | Password generator app</title>
   <link rel="stylesheet" href="assets/main.css">
   <script src="app.js" defer></script>
+  <script src="password.js" defer></script>
 </head>
 
 <body>
 
   <div class="container">
     <h1>Password Generator</h1>
+    <header>
+      P4$5W0rD!
+      <div><img src="assets/images/icon-copy.svg" alt="copy icon"></div>
+    </header>
     <main>
-      <header>
-        P4$5W0rD!
-        <div><img src="assets/images/icon-copy.svg" alt="copy icon"></div>
-      </header>
-      <section>
-        <article>
-          <div>
-            <p>Character Length</p>
-            <span></span>
+      <article>
+        <div>
+          <p>Character Length</p>
+          <span id="count"></span>
+        </div>
+        <input type="range" min="10" max="16" value="0">
+      </article>
+      <ul>
+        <li><input id="upper" type="checkbox" name="checkbox" >Include Uppercase Letters</li>
+        <li><input id="lower" type="checkbox" name="checkbox" >Include Lowercase Letters</li>
+        <li><input id="number" type="checkbox" name="checkbox" >Include Numbers</li>
+        <li><input id="symbol" type="checkbox" name="checkbox" >Include Symbols</li>
+      </ul>
+      <article>
+        <p>Strength</p>
+        <div>
+          <span></span>
+          <div class="indicator">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
-          <input type="range" min="0" max="100" value="50">
-        </article>
-        Include Uppercase Letters
-        Include Lowercase Letters
-        Include Numbers
-        Include Symbols
-        Strength
-        Generate
-      </section>
+        </div>
+      </article>
+      <button type="button">Generate
+        <img src="assets/images/icon-arrow-right.svg" alt="arrow">
+      </button>
     </main>
   </div>
 
