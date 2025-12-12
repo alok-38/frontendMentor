@@ -1,0 +1,63 @@
+@import url(font-face.css);
+/* ===========================
+   ROOT TYPOGRAPHY VARIABLES
+   =========================== */
+:root {
+    /* Font Families */
+    --font-poppins: "Poppins", sans-serif;
+    --font-dmsans: "DM Sans", sans-serif;
+
+    /* -------------------------
+     TEXT PRESET 1
+     ------------------------- */
+    --tp1-family: var(--font-poppins);
+    --tp1-weight: 600;
+    --tp1-size: 36px;
+    --tp1-line: 140%;
+    --tp1-spacing: 0.25px;
+
+    /* -------------------------
+     TEXT PRESET 2
+     ------------------------- */
+    --tp2-family: var(--font-poppins);
+    --tp2-weight: 200;
+    --tp2-size: 36px;
+    --tp2-line: 140%;
+    --tp2-spacing: 0.25px;
+
+    /* -------------------------
+     TEXT PRESET 3
+     ------------------------- */
+    --tp3-family: var(--font-poppins);
+    --tp3-weight: 600;
+    --tp3-size: 20px;
+    --tp3-line: 135%;
+    --tp3-spacing: 0px;
+
+    /* -------------------------
+     TEXT PRESET 4
+     ------------------------- */
+    --tp4-family: var(--font-poppins);
+    --tp4-weight: 400;
+    --tp4-size: 15px;
+    --tp4-line: 140%;
+    --tp4-spacing: 0px;
+
+    /* -------------------------
+     TEXT PRESET 5 (Poppins)
+     ------------------------- */
+    --tp5-family: var(--font-poppins);
+    --tp5-weight: 400;
+    --tp5-size: 13px;
+    --tp5-line: 160%;
+    --tp5-spacing: 0px;
+
+    /* -------------------------
+     TEXT PRESET 5 (DM Sans)
+     ------------------------- */
+    --tp5b-family: var(--font-dmsans);
+    --tp5b-weight: 400;
+    --tp5b-size: 16px;
+    --tp5b-line: 18px;
+    --tp5b-spacing: 0px;
+}

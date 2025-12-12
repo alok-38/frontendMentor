@@ -1,0 +1,35 @@
+/* ===========================
+   FONT FACE DECLARATIONS
+   =========================== */
+
+/* Poppins Regular */
+@font-face {
+    font-family: "Poppins";
+    src: url("../css/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Poppins ExtraLight */
+@font-face {
+    font-family: "Poppins";
+    src: url("../css/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Poppins SemiBold */
+@font-face {
+    font-family: "Poppins";
+    src: url("../css/Poppins/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* DM Sans Regular */
+@font-face {
+    font-family: "DM Sans";
+    src: url("../css/DM_Sans/DMSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
