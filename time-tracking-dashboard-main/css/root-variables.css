@@ -1,0 +1,150 @@
+/* =======================================================
+   ROOT VARIABLES & FONT-FACE DECLARATIONS
+   ======================================================= */
+
+/* -------------------------------
+   FONT FACE DECLARATIONS
+   ------------------------------- */
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Italics (optional) */
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../css/Rubik/static/Rubik-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* -------------------------------
+   ROOT VARIABLES
+   ------------------------------- */
+:root {
+    /* -------------------------------
+     FONT FAMILY
+     ------------------------------- */
+    --font-rubik: 'Rubik', sans-serif;
+
+    /* -------------------------------
+     TYPOGRAPHY PRESETS
+     ------------------------------- */
+    --t1-size: 56px;
+    --t1-line: 66px;
+    --t1-weight: 300;
+    --t1-spacing: 0px;
+
+    --t2-size: 40px;
+    --t2-line: 47px;
+    --t2-weight: 300;
+    --t2-spacing: 0px;
+
+    --t3-size: 32px;
+    --t3-line: 38px;
+    --t3-weight: 300;
+    --t3-spacing: 0px;
+
+    --t4-size: 24px;
+    --t4-line: 28px;
+    --t4-weight: 300;
+    --t4-spacing: 0px;
+
+    --t5m-size: 18px;
+    --t5m-line: 21px;
+    --t5m-weight: 500;
+    --t5m-spacing: 0px;
+
+    --t5-size: 18px;
+    --t5-line: 21px;
+    --t5-weight: 400;
+    --t5-spacing: 0px;
+
+    --t6-size: 15px;
+    --t6-line: 18px;
+    --t6-weight: 400;
+    --t6-spacing: 0px;
+
+    /* -------------------------------
+     SPACING SCALE
+     ------------------------------- */
+    --spacing-0: 0px;
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+
+    /* -------------------------------
+     COLORS
+     ------------------------------- */
+    /* Base */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Navy scale */
+    --navy-950: #0E1323;
+    --navy-900: #1C204B;
+    --navy-800: #33397A;
+    --navy-200: #BBC0FF;
+
+    /* Orange */
+    --orange-300: #FF8B64;
+
+    /* Purple scale */
+    --purple-700: #7335D2;
+    --purple-600: #5747EA;
+    --purple-500: #7078C9;
+
+    /* Blue */
+    --blue-300: #55C2E6;
+
+    /* Pink */
+    --pink-400: #FF5E7D;
+
+    /* Green */
+    --green-400: #4BCF82;
+
+    /* Yellow */
+    --yellow-300: #F1C75B;
+
+    /* Grey */
+    --grey-200: #D8D8D8;
+}

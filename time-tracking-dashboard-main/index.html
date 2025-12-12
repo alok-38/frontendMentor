@@ -5,194 +5,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
+  <meta name="description" content="time tracker">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="scripts/theme.js" defer></script>
-  <script src="scripts/main.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
   <main>
-    <section>
-      <header>
-        <img src="images/image-jeremy.png" alt="jeremy">
-        <h1>
-          <span>Report for</span>
-          Jeremy Robson
+    <section class="report">
+      <article class="report__user">
+        <img src="images/image-jeremy.png" alt="Jeremy Johnson" class="report__avatar">
+        <h1 class="report__title">
+          Report for <span class="report__name">Jeremy Robson</span>
         </h1>
-      </header>
-      <article>
-        <div>
-          <button type="button">Daily</button>
-          <button type="button">Weekly</button>
-          <button type="button">Monthly</button>
-        </div>
+      </article>
+      <article class="report__filters">
+        <button class="report__filter-btn" type="button">Daily</button>
+        <button class="report__filter-btn report__filter-btn--active" type="button">Weekly</button>
+        <button class="report__filter-btn" type="button">Monthly</button>
       </article>
     </section>
-    <section>
-      <!-- Work -->
-      <article class="work">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Work
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">5hrs</p>
-          <p class="previous">Previous - 7hrs</p>
-        </div>
-      </article>
-
-      <!-- Play -->
-      <article class="play">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Play
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">1hr</p>
-          <p class="previous">Previous - 2hrs</p>
-        </div>
-      </article>
-
-      <!-- Study -->
-      <article class="study">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Study
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">0hrs</p>
-          <p class="previous">Previous - 1hr</p>
-        </div>
-      </article>
-
-      <!-- Exercise -->
-      <article class="exercise">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Exercise
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">1hr</p>
-          <p class="previous">Previous - 1hr</p>
-        </div>
-      </article>
-
-      <!-- Social -->
-      <article class="social">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Social
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">1hr</p>
-          <p class="previous">Previous - 3hrs</p>
-        </div>
-      </article>
-
-      <!-- Self Care -->
-      <article class="self-care">
-        <div class="card-banner"></div>
-        <div class="card-body">
-          <h3>
-            Self Care
-            <img src="images/icon-ellipsis.svg" alt="ellipsis">
-          </h3>
-          <p class="current">0hrs</p>
-          <p class="previous">Previous - 1hr</p>
-        </div>
-      </article>
-
-      <!-- <article>
-        <h3>Work</h3>
-        <p>32hrs</p>
-        <p>Previous - 36hrs</p>
-      </article>
-
-      <article>
-        <h3>Play</h3>
-        <p>10hrs</p>
-        <p>Previous - 8hrs</p>
-      </article>
-
-      <article>
-        <h3>Study</h3>
-        <p>4hrs</p>
-        <p>Previous - 7hrs</p>
-      </article>
-
-      <article>
-        <h3>Exercise</h3>
-        <p>4hrs</p>
-        <p>Previous - 5hrs</p>
-      </article>
-
-      <article>
-        <h3>Social</h3>
-        <p>5hrs</p>
-        <p>Previous - 10hrs</p>
-      </article>
-
-      <article>
-        <h3>Self Care</h3>
-        <p>2hrs</p>
-        <p>Previous - 2hrs</p>
-      </article>
-
-
-      <article>
-        <h3>Work</h3>
-        <p>103hrs</p>
-        <p>Previous - 128hrs</p>
-      </article>
-
-      <article>
-        <h3>Play</h3>
-        <p>23hrs</p>
-        <p>Previous - 29hrs</p>
-      </article>
-
-      <article>
-        <h3>Study</h3>
-        <p>13hrs</p>
-        <p>Previous - 19hrs</p>
-      </article>
-
-      <article>
-        <h3>Exercise</h3>
-        <p>11hrs</p>
-        <p>Previous - 18hrs</p>
-      </article>
-
-      <article>
-        <h3>Social</h3>
-        <p>21hrs</p>
-        <p>Previous - 23hrs</p>
-      </article>
-
-      <article>
-        <h3>Self Care</h3>
-        <p>7hrs</p>
-        <p>Previous - 11hrs</p>
-      </article> -->
-    </section>
+    <article class="card">
+      <h2 class="card__title">Work</h2>
+      <div class="card__time">
+        <span class="card__current">5hrs</span>
+        <span class="card__previous">Previous - 7hrs</span>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="card__title"></h2>
+      <div class="card__time">
+        <span class="card__current"></span>
+        <span class="card__previous"></span>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="card__title"></h2>
+      <div class="card__time">
+        <span class="card__current"></span>
+        <span class="card__previous"></span>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="card__title"></h2>
+      <div class="card__time">
+        <span class="card__current"></span>
+        <span class="card__previous"></span>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="card__title"></h2>
+      <div class="card__time">
+        <span class="card__current"></span>
+        <span class="card__previous"></span>
+      </div>
+    </article>
+    <article class="card">
+      <h2 class="card__title"></h2>
+      <div class="card__time">
+        <span class="card__current"></span>
+        <span class="card__previous"></span>
+      </div>
+    </article>
   </main>
 
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Alokananda Y</a>.
-  </footer>
+
 </body>
 
 </html>
