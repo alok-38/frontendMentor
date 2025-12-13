@@ -15,9 +15,10 @@ body {
 main {
     max-width: 1116px;
     width: 100%;
+    height: 520px;
     display: grid;
+    grid-template-columns: 255px 1fr; /* sidebar + card grid */
     gap: 32px;
-    grid-template-columns: repeat(4, 1fr);
 }
 
 
@@ -34,6 +35,7 @@ article,
     display: flex;
     flex-direction: column;
     gap: 40px;
+    height: 354px;
 }
 
 article {
@@ -42,6 +44,7 @@ article {
 
 .report {
     background-color: var(--navy-900);
+    height: 520px;
 }
 
 .report__user img {
@@ -67,10 +70,14 @@ article {
     font-weight: var(--t2-weight);
 }
 
-.report__filters {
+
+.report__button-group {
     display: flex;
     flex-direction: column;
     gap: 21px;
+    width: 68px;
+    text-align-last: left;
+    padding: 32px;
 }
 
 .report__filters button {
@@ -80,7 +87,6 @@ article {
     color: var(--purple-500);
     background-color: transparent;
     border: none;
-    padding: var(--spacing-100) var(--spacing-200);
     cursor: pointer;
 
     /* Smooth transitions */
@@ -100,5 +106,150 @@ article {
 /* Active / Click state */
 .report__filters button:active {
     transform: scale(0.97);
-     color: var(--white);
+    color: var(--white);
+}
+
+/* Grid container */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    /* responsive: fits as many 255px cards as possible */
+    gap: 32px;
+    /* space between cards */
+}
+
+/* Card container */
+.card {
+    background-color: var(--navy-900);
+    /* main card color */
+    border-radius: 15px;
+    overflow: hidden;
+    /* ensures top bar doesn't overflow */
+    display: flex;
+    flex-direction: column;
+    height: 244px;
+    box-sizing: border-box;
+}
+
+/* Top orange bar of the card */
+.card__top {
+    height: 40px;
+    /* small portion at the top */
+    background-color: orange;
+    /* change per category if needed */
+}
+
+/* Card content */
+.card__content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* space between title and time */
+    flex: 1;
+    /* fills remaining space below top bar */
+}
+
+/* Card title */
+.card__title {
+    font-size: 1.25rem;
+    color: white;
+    margin: 0 0 16px 0;
+}
+
+/* Time info */
+.card__time {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card__current {
+    font-size: 2rem;
+    color: white;
+}
+
+.card__previous {
+    font-size: 0.875rem;
+    color: var(--navy-500);
+}
+
+.card__top {
+    background-repeat: no-repeat;
+    background-position: right top;
+    /* position on the right */
+}
+
+.card--work .card__top {
+    background-image: url('../images/icon-work.svg');
+    background-color: #FF8B64;
+}
+
+.card--play .card__top {
+    background-image: url('../images/icon-play.svg');
+    background-color: #55C2E6;
+}
+
+.card--study .card__top {
+    background-image: url('../images/icon-study.svg');
+    background-color: #F04667;
+}
+
+.card--exercise .card__top {
+    background-image: url('../images/icon-exercise.svg');
+    background-color: #29BA66;
+}
+
+.card--social .card__top {
+    background-image: url('../images/icon-social.svg');
+    background-color: #5A1CBB;
+}
+
+.card--self-care .card__top {
+    background-image: url('../images/icon-self-care.svg');
+    background-color: #E6A532;
+}
+
+.card__title {
+    font-size: var(--t5-size);
+    line-height: var(--t5-line);
+    font-weight: var(--t5-weight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title img {
+    width: 21px;
+    height: 5px;
+    cursor: pointer;
+}
+
+.card__time {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card__current {
+    font-size: var(--t1-size);
+    line-height: var(--t1-line);
+    font-weight: var(--t1-weight);
+}
+
+.card__previous {
+    font-size: var(--t6-size);
+    line-height: var(--t6-line);
+    font-weight: var(--t6-weight);
+    color: var(--navy-200);
+}
+
+@media (max-width: 768px) {
+    main {
+        max-width: 612px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
 }
