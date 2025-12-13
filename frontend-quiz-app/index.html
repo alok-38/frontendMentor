@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Frontend quiz app</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+  <section class="theme-toggle">
+    <img src="./assets/images/icon-sun-dark.svg" alt="sun">
+    <label class="theme-switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider"></span>
+    </label>
+    <img src="./assets/images/icon-moon-dark.svg" alt="moon">
+  </section>
+
+  <!-- Quiz menu start -->
+
+  <main id="app">
+
+    <!-- Start Screen -->
+    <section id="start-screen">
+      <header>
+        <h1>Welcome to the <span>Frontend Quiz!</span></h1>
+        <p>Pick a subject to get started.</p>
+      </header>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Accessibility</li>
+      </ul>
+    </section>
+
+    <!-- Question Screen -->
+    <section id="quiz-screen" hidden>
+      <p>Question <span id="question-number">1</span> of 10</p>
+
+      <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+      </ul>
+
+      <button type="submit">Submit answer</button>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result-screen" hidden>
+      <h2>Quiz completed</h2>
+      <p>You scored <strong>8</strong> out of 10</p>
+    </section>
+
+  </main>
+
+
+</html>

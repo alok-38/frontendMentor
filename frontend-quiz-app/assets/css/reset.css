@@ -1,0 +1,105 @@
+/* ========================
+   Modern CSS Reset
+======================== */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Set core body defaults */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Rubik', sans-serif;
+    /* fallback to sans-serif */
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+/* Reset headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* Reset images and media */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form elements reset */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    background: none;
+    color: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Tables reset */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Global link states */
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+/* Remove quotes from blockquotes and quotes */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}

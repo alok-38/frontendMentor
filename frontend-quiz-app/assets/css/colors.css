@@ -1,0 +1,54 @@
+/* ========================
+   Color Variables
+======================== */
+:root {
+    /* Neutral Colors */
+    --color-white: #FFFFFF;
+    /* RGB: 255,255,255 | HSL: 0°, 100%, 100% */
+    --color-black: #000000;
+    /* RGB: 0,0,0 | HSL: 0°, 0%, 0% */
+
+    /* Grey Scale */
+    --color-grey-50: #F4F6FA;
+    /* RGB: 244,246,250 | HSL: 220°,38%,97% */
+    --color-grey-500: #626C7F;
+    /* RGB: 98,108,127 | HSL: 219°,13%,44% */
+
+    /* Blue Shades */
+    --color-blue-50: #EBF0FF;
+    /* RGB: 235,240,255 | HSL: 225°,100%,96% */
+    --color-blue-100: #EDF1F9;
+    /* RGB: 237,241,249 | HSL: 220°,50%,95% */
+    --color-blue-300: #ABC1E1;
+    /* RGB: 171,193,225 | HSL: 216°,47%,78% */
+    --color-blue-500: #306AFF;
+    /* RGB: 48,106,255 | HSL: 223°,100%,59% */
+    --color-blue-850: #3B4D66;
+    /* RGB: 59,77,102 | HSL: 215°,27%,32% */
+    --color-blue-900: #313E51;
+    /* RGB: 49,62,81 | HSL: 216°,25%,25% */
+    --color-blue-950: #2D3949;
+    /* RGB: 45,57,73 | HSL: 214°,24%,23% */
+
+    /* Green Shades */
+    --color-green-100: #E0FDEF;
+    /* RGB: 224,253,239 | HSL: 151°,88%,94% */
+    --color-green-500: #2FD887;
+    /* RGB: 47,216,135 | HSL: 151°,68%,52% */
+
+    /* Purple Shades */
+    --color-purple-100: #F6E7FF;
+    /* RGB: 246,231,255 | HSL: 278°,100%,95% */
+    --color-purple-600: #A729F5;
+    /* RGB: 167,41,245 | HSL: 277°,91%,56% */
+
+    /* Orange Shades */
+    --color-orange-50: #FFF5ED;
+    /* RGB: 255,245,237 | HSL: 27°,100%,96% */
+    --color-orange-400: #FF7E35;
+    /* RGB: 255,126,53 | HSL: 22°,100%,60% */
+
+    /* Red Shades */
+    --color-red-500: #EE5454;
+    /* RGB: 238,84,84 | HSL: 0°,82%,63% */
+}

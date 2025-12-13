@@ -1,0 +1,104 @@
+@import url(reset.css);
+@import url(typography.css);
+@import url(spacing.css);
+@import url(colors.css);
+
+body {
+    font-family: var(--font-rubik);
+    background-color: var(--color-grey-50);
+    background-image: url('../images/pattern-background-desktop-light.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.theme-toggle {
+    max-width: 128px;
+    width: 100%;
+    display: flex;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+/* Hide checkbox */
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--color-purple-600);
+    /* Default track */
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: background-color 0.3s;
+}
+
+/* Circle knob */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+/* Checked state */
+input:checked+.slider {
+    background-color: var(--color-purple-600);
+    /* Active track color */
+}
+
+input:checked+.slider::before {
+    transform: translateX(24px);
+    /* Move knob */
+}
+
+main {
+    max-width: 1157px;
+    width: 100%;
+    display: flex;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    gap: 128px;
+}
+
+/* ALWAYS keep this */
+[hidden] {
+    display: none !important;
+}
+
+header,#quiz-screen p {
+    max-width: 465px;
+    width: 100%;
+}

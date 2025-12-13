@@ -1,0 +1,208 @@
+/* ========================
+   Root Variables
+======================== */
+:root {
+    /* Font Families */
+    --font-rubik: 'Rubik', sans-serif;
+
+    /* Font Weights */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-light: 300;
+
+    /* Text Preset 1 */
+    --text1-desktop-size: 144px;
+    --text1-mobile-size: 88px;
+    --text1-line-height: 100%;
+    --text1-letter-spacing: 0px;
+
+    /* Text Preset 2 - Medium */
+    --text2-medium-desktop-size: 64px;
+    --text2-medium-mobile-size: 40px;
+    --text2-medium-line-height: 100%;
+    --text2-medium-letter-spacing: 0px;
+
+    /* Text Preset 2 - Light */
+    --text2-light-desktop-size: 64px;
+    --text2-light-mobile-size: 40px;
+    --text2-light-line-height: 100%;
+    --text2-light-letter-spacing: 0px;
+
+    /* Text Preset 3 */
+    --text3-desktop-size: 36px;
+    --text3-mobile-size: 20px;
+    --text3-line-height: 120%;
+    --text3-letter-spacing: 0px;
+
+    /* Text Preset 4 */
+    --text4-size: 18px;
+    --text4-line-height: 100%;
+    --text4-letter-spacing: 0px;
+
+    /* Text Preset 5 */
+    --text5-size: 24px;
+    --text5-line-height: 150%;
+    --text5-letter-spacing: 0px;
+
+    --text5-italic-desktop-size: 28px;
+    --text5-italic-mobile-size: 14px;
+    --text5-italic-line-height: 100%;
+    --text5-italic-small-line-height: 150%;
+
+    /* Text Preset 6 */
+    --text6-size: 20px;
+    --text6-line-height: 150%;
+}
+
+/* ========================
+   Font Faces
+======================== */
+@font-face {
+    font-family: var(--font-rubik);
+    src: url('../Rubik/static/Rubik-Regular.ttf') format('truetype');
+    font-weight: var(--weight-regular);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: var(--font-rubik);
+    src: url('../Rubik/static/Rubik-Medium.ttf') format('truetype');
+    font-weight: var(--weight-medium);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: var(--font-rubik);
+    src: url('../Rubik/static/Rubik-Italic.ttf') format('truetype');
+    font-weight: var(--weight-medium);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: var(--font-rubik);
+    src: url('../Rubik/static/Rubik-Light.ttf') format('truetype');
+    font-weight: var(--weight-light);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: var(--font-rubik);
+    src: url('../Rubik/static/Rubik-LightItalic.ttf') format('truetype');
+    font-weight: var(--weight-light);
+    font-style: italic;
+}
+
+/* ========================
+   Text Presets
+======================== */
+
+/* Text Preset 1 */
+.text-preset-1 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-size: var(--text1-desktop-size);
+    line-height: var(--text1-line-height);
+    letter-spacing: var(--text1-letter-spacing);
+}
+
+@media (max-width: 768px) {
+    .text-preset-1 {
+        font-size: var(--text1-mobile-size);
+    }
+}
+
+/* Text Preset 2 - Medium */
+.text-preset-2 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-size: var(--text2-medium-desktop-size);
+    line-height: var(--text2-medium-line-height);
+    letter-spacing: var(--text2-medium-letter-spacing);
+}
+
+@media (max-width: 768px) {
+    .text-preset-2 {
+        font-size: var(--text2-medium-mobile-size);
+    }
+}
+
+/* Text Preset 2 - Light */
+.text-preset-2-light {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-light);
+    font-size: var(--text2-light-desktop-size);
+    line-height: var(--text2-light-line-height);
+    letter-spacing: var(--text2-light-letter-spacing);
+}
+
+@media (max-width: 768px) {
+    .text-preset-2-light {
+        font-size: var(--text2-light-mobile-size);
+    }
+}
+
+/* Text Preset 3 */
+.text-preset-3 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-size: var(--text3-desktop-size);
+    line-height: var(--text3-line-height);
+    letter-spacing: var(--text3-letter-spacing);
+}
+
+@media (max-width: 768px) {
+    .text-preset-3 {
+        font-size: var(--text3-mobile-size);
+    }
+}
+
+/* Text Preset 4 */
+.text-preset-4 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-size: var(--text4-size);
+    line-height: var(--text4-line-height);
+    letter-spacing: var(--text4-letter-spacing);
+}
+
+/* Text Preset 5 */
+.text-preset-5 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-size: var(--text5-size);
+    line-height: var(--text5-line-height);
+    letter-spacing: var(--text5-letter-spacing);
+}
+
+.text-preset-5-regular {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-regular);
+    font-size: var(--text5-size);
+    line-height: var(--text5-line-height);
+    letter-spacing: var(--text5-letter-spacing);
+}
+
+.text-preset-5-italic {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-style: italic;
+    font-size: var(--text5-italic-desktop-size);
+    line-height: var(--text5-italic-line-height);
+}
+
+.text-preset-5-italic-small {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-style: italic;
+    font-size: var(--text5-italic-mobile-size);
+    line-height: var(--text5-italic-small-line-height);
+}
+
+/* Text Preset 6 */
+.text-preset-6 {
+    font-family: var(--font-rubik);
+    font-weight: var(--weight-medium);
+    font-style: italic;
+    font-size: var(--text6-size);
+    line-height: var(--text6-line-height);
+}
