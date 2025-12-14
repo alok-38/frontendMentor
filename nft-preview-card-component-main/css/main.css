@@ -1,0 +1,150 @@
+/* ================================
+   Imports
+   ================================ */
+@import url(reset.css);
+@import url(typography.css);
+@import url(spacing.css);
+@import url(colors.css);
+
+/* ================================
+   Page Layout
+   ================================ */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+
+    font-family: var(--font-primary);
+    background-color: var(--color-blue-950);
+    color: var(--color-white);
+}
+
+.page {
+    padding: var(--spacing-300);
+}
+
+/* ================================
+   Card Component
+   ================================ */
+
+.card {
+    max-width: 350px;
+    background-color: var(--color-blue-900);
+    border-radius: 15px;
+    padding: var(--spacing-300);
+}
+
+/* ================================
+   Media
+   ================================ */
+
+.card__media {
+    margin-bottom: var(--spacing-300);
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ================================
+   Content
+   ================================ */
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+/* ================================
+   Header
+   ================================ */
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+}
+
+.card__title {
+    font-size: var(--text-preset-1-size);
+    line-height: var(--text-preset-1-line-height);
+    font-weight: var(--text-preset-1-weight);
+}
+
+.card__description {
+    font-size: var(--text-preset-2-size);
+    line-height: var(--text-preset-2-line-height);
+    font-weight: var(--text-preset-2-weight);
+    color: var(--color-blue-500);
+}
+
+/* ================================
+   Meta
+   ================================ */
+
+.card__meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-100);
+    font-size: var(--text-preset-3-regular-size);
+}
+
+.meta-item--price {
+    color: var(--color-cyan-400);
+}
+
+.meta-item--price img {
+    width: 11px;
+    height: 18px;
+}
+
+.meta-item--time {
+    color: var(--color-blue-500);
+}
+
+.meta-item--time img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ================================
+   Divider
+   ================================ */
+
+.card__divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-blue-800);
+}
+
+/* ================================
+   Footer
+   ================================ */
+
+.card__footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+    font-size: var(--text-preset-3-regular-size);
+    color: var(--color-blue-500);
+}
+
+.card__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--color-white);
+}
+
+.card__author {
+    color: var(--color-white);
+}
