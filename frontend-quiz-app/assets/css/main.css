@@ -5,8 +5,8 @@
 
 body {
     font-family: var(--font-rubik);
-    background-color: var(--color-grey-50);
-    background-image: url('../images/pattern-background-desktop-light.svg');
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -14,7 +14,9 @@ body {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
 }
+
 
 /* ========================
    Theme Toggle Container
@@ -275,9 +277,17 @@ header p {
         font-size: 32px;
     }
 
-     section:not(.theme-toggle) {
+    section:not(.theme-toggle) {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-500);
     }
+}
+
+header h1 {
+    color: var(--header-title-color);
+}
+
+header p {
+    color: var(--header-text-color);
 }

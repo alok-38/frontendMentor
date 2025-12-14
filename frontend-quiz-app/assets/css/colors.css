@@ -51,4 +51,18 @@
     /* Red Shades */
     --color-red-500: #EE5454;
     /* RGB: 238,84,84 | HSL: 0°,82%,63% */
+
+    --bg-color: #F4F6FA;
+    --bg-image: url('../images/pattern-background-desktop-light.svg');
+
+    --header-title-color: var(--color-blue-900);
+    --header-text-color: var(--color-grey-500);
+}
+
+[data-theme="dark"] {
+    --bg-color: #313E51;
+    --bg-image: url('../images/pattern-background-desktop-dark.svg');
+
+    --header-title-color: var(--color-white);
+    --header-text-color: var(--color-blue-300);
 }
