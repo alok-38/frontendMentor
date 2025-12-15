@@ -1,0 +1,20 @@
+:root {
+    /* Color Palette */
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+
+    /* Greys */
+    --color-grey-950: #131518;
+    --color-grey-900: #262e38;
+    --color-grey-500: #969fad;
+
+
+    /* Orange */
+    --color-orange-500: #fc7614;
+
+
+    /* Gradients */
+    --gradient-1-start: #232a34;
+    --gradient-1-end: #181e27
+}

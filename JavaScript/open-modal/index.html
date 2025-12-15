@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 1rem;
+            max-width: 400px;
+            border-radius: 6px;
+        }
+
+        [hidden] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Trigger button -->
+    <button id="openModalBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="modal">
+        Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <h2 id="modalTitle">Modal Title</h2>
+            <p>This is an accessible modal.</p>
+
+            <button id="closeModalBtn">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById("openModalBtn");
+        const modal = document.getElementById("modal");
+
+        let lastFocusedElement = null;
+
+        openBtn.addEventListener("click", () => {
+            lastFocusedElement = document.activeElement;
+
+            modal.hidden = false;
+            openBtn.setAttribute("aria-expanded", "true");
+
+            const closeBtn = modal.querySelector("#closeModalBtn");
+            if (closeBtn) closeBtn.focus();
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && !modal.hidden) {
+                closeModal();
+            }
+        });
+
+        modal.addEventListener("click", (e) => {
+            if (e.target.id === "closeModalBtn") {
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.hidden = true;
+            openBtn.setAttribute("aria-expanded", "false");
+
+            if (lastFocusedElement) {
+                lastFocusedElement.focus();
+            }
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
