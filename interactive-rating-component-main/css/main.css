@@ -10,4 +10,11 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 1rem;
+    color: var(--color-white);
+}
+
+.wrapper {
+    padding: var(--spacing-400) var(--spacing-300);
+    max-width: 412px;
+    width: 100%;
 }
