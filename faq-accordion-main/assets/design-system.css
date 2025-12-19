@@ -1,0 +1,263 @@
+/* =========================================================
+   DESIGN SYSTEM — WORK SANS (SINGLE SHEET)
+   ========================================================= */
+
+
+/* =========================================================
+   Font Faces
+   ========================================================= */
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("./assets/Work_Sans/static/WorkSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("./assets/Work_Sans/static/WorkSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url("./assets/Work_Sans/static/WorkSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* =========================================================
+   Root Design Tokens
+   ========================================================= */
+
+:root {
+    /* ---------- Font Family ---------- */
+    --font-primary: "Work Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* ---------- Font Weights ---------- */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    /* ---------- Font Sizes ---------- */
+    --fs-900: 3.5rem;
+    /* 56px */
+    --fs-500: 1.125rem;
+    /* 18px */
+    --fs-400: 1rem;
+    /* 16px */
+
+    /* ---------- Line Heights ---------- */
+    --lh-900: 4.125rem;
+    /* 66px */
+    --lh-500: 1.3125rem;
+    /* 21px */
+    --lh-400: 1.5rem;
+    /* 24px */
+
+    /* ---------- Letter Spacing ---------- */
+    --ls-none: 0;
+
+    /* ---------- Neutral Colors ---------- */
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+
+    /* ---------- Purple Colors ---------- */
+    --clr-purple-950: #301534;
+    /* hsl(292, 42%, 14%) */
+    --clr-purple-600: #8b6990;
+    /* hsl(292, 16%, 49%) */
+    --clr-purple-100: #f8eeff;
+    /* hsl(275, 100%, 97%) */
+
+    /* ---------- Violet Colors ---------- */
+    --clr-violet-600: #ad28eb;
+    /* hsl(281, 83%, 54%) */
+
+    /* ---------- Semantic Color Aliases ---------- */
+    --clr-text-primary: var(--clr-purple-950);
+    --clr-text-secondary: var(--clr-purple-600);
+    --clr-text-inverse: var(--clr-white);
+
+    --clr-bg-primary: var(--clr-white);
+    --clr-bg-secondary: var(--clr-purple-100);
+
+    --clr-accent: var(--clr-violet-600);
+
+    /* ---------- Spacing Scale ---------- */
+    --spacing-100: 0.5rem;
+    /* 8px */
+    --spacing-200: 1rem;
+    /* 16px */
+    --spacing-300: 1.5rem;
+    /* 24px */
+    --spacing-400: 2rem;
+    /* 32px */
+    --spacing-500: 2.5rem;
+    /* 40px */
+}
+
+
+/* =========================================================
+   Base Styles
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-400);
+    color: var(--clr-text-primary);
+    background-color: var(--clr-bg-secondary);
+}
+
+
+/* =========================================================
+   Typography Presets
+   ========================================================= */
+
+.text-preset-1 {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-900);
+    color: var(--clr-text-primary);
+}
+
+.text-preset-2 {
+    font-size: var(--fs-500);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-500);
+    color: var(--clr-text-primary);
+}
+
+.text-preset-3 {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-400);
+    color: var(--clr-text-secondary);
+}
+
+
+/* =========================================================
+   Color Utilities
+   ========================================================= */
+
+/* Text Colors */
+.text-white {
+    color: var(--clr-white);
+}
+
+.text-black {
+    color: var(--clr-black);
+}
+
+.text-purple-950 {
+    color: var(--clr-purple-950);
+}
+
+.text-purple-600 {
+    color: var(--clr-purple-600);
+}
+
+.text-violet-600 {
+    color: var(--clr-violet-600);
+}
+
+/* Background Colors */
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.bg-black {
+    background-color: var(--clr-black);
+}
+
+.bg-purple-100 {
+    background-color: var(--clr-purple-100);
+}
+
+.bg-purple-950 {
+    background-color: var(--clr-purple-950);
+}
+
+.bg-violet-600 {
+    background-color: var(--clr-violet-600);
+}
+
+
+/* =========================================================
+   Spacing Utilities
+   ========================================================= */
+
+.mt-100 {
+    margin-top: var(--spacing-100);
+}
+
+.mt-200 {
+    margin-top: var(--spacing-200);
+}
+
+.mt-300 {
+    margin-top: var(--spacing-300);
+}
+
+.mt-400 {
+    margin-top: var(--spacing-400);
+}
+
+.mt-500 {
+    margin-top: var(--spacing-500);
+}
+
+.mb-100 {
+    margin-bottom: var(--spacing-100);
+}
+
+.mb-200 {
+    margin-bottom: var(--spacing-200);
+}
+
+.mb-300 {
+    margin-bottom: var(--spacing-300);
+}
+
+.mb-400 {
+    margin-bottom: var(--spacing-400);
+}
+
+.mb-500 {
+    margin-bottom: var(--spacing-500);
+}
+
+.p-100 {
+    padding: var(--spacing-100);
+}
+
+.p-200 {
+    padding: var(--spacing-200);
+}
+
+.p-300 {
+    padding: var(--spacing-300);
+}
+
+.p-400 {
+    padding: var(--spacing-400);
+}
+
+.p-500 {
+    padding: var(--spacing-500);
+}

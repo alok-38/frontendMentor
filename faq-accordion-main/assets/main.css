@@ -1,0 +1,127 @@
+@import url(design-system.css);
+
+body {
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    background-image: url(../assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 320px;
+    width: 100%;
+}
+
+main {
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: var(--spacing-500);
+    position: relative;
+    top: -150px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15);
+    border-radius: var(--spacing-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-400);
+}
+
+article,
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-300);
+    font-size: var(--fs-900);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-900);
+    color: var(--clr-text-primary);
+}
+
+section {
+    max-width: 520px;
+    width: 100%;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-500);
+    color: var(--clr-text-primary);
+    font-weight: 700;
+    justify-content: space-between;
+    cursor: pointer;
+    transition:
+        color 0.25s ease,
+        transform 0.2s ease;
+}
+
+h2:hover {
+    color: var(--clr-accent);
+}
+
+h2.is-open {
+    color: var(--clr-accent);
+}
+
+h2:focus-visible {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 4px;
+}
+
+h2:hover {
+    transform: translateY(-1px);
+}
+
+p {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    line-height: var(--lh-400);
+    color: var(--clr-text-secondary);
+}
+
+h2 img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.2s ease;
+}
+
+h2.is-open img {
+    transform: rotate(180deg);
+}
+
+h2:hover img {
+    opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    h2,
+    h2 img {
+        transition: none;
+    }
+}
