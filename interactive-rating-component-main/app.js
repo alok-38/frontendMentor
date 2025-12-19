@@ -1,38 +1,46 @@
-const sectionEl = document.querySelector('.rating');
+const ratingSection = document.querySelector('.rating');
+const thankYouSection = document.querySelector('.thank-you');
 const radios = document.querySelectorAll('input[name="rating"]');
 const submitBtn = document.querySelector('.submit');
+const selectedRatingEl = document.getElementById('selected-rating');
 
-// Create container ONCE
-const starsContainer = document.createElement("div");
+// Create star container once
+const starsContainer = document.createElement('div');
 starsContainer.classList.add('icon-circle');
-sectionEl.prepend(starsContainer);
+ratingSection.prepend(starsContainer);
 
 const createStar = (count) => {
-    // Clear previous stars
     starsContainer.innerHTML = '';
 
     for (let i = 0; i < count; i++) {
-        const circle = document.createElement("div");
+        const circle = document.createElement('div');
         circle.classList.add('icon-circle__item');
 
-        const img = document.createElement("img");
-        img.src = "images/icon-star.svg";
-        img.alt = "star rating icon";
+        const img = document.createElement('img');
+        img.src = 'images/icon-star.svg';
+        img.alt = 'star rating icon';
 
         circle.appendChild(img);
         starsContainer.appendChild(circle);
     }
 };
 
-// Attach listeners
+// Handle rating change
 radios.forEach(radio => {
     radio.addEventListener('change', () => {
         createStar(Number(radio.value));
+        selectedRatingEl.textContent = radio.value;
     });
 });
 
-const thankTheCustomer = () => {
-    console.log("Thank You!");
-}
+// Handle submit
+submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
 
-submitBtn.addEventListener('click', thankTheCustomer);
+    // Require a rating before submit
+    const selected = document.querySelector('input[name="rating"]:checked');
+    if (!selected) return;
+
+    ratingSection.hidden = true;
+    thankYouSection.hidden = false;
+});
