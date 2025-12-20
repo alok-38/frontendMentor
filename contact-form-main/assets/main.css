@@ -1,0 +1,311 @@
+/* ===============================
+   Imports
+   =============================== */
+@import url("reset.css");
+@import url("design-system.css");
+
+/* ===============================
+   Base Layout
+   =============================== */
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family-karla, system-ui, sans-serif);
+    font-size: 1rem;
+
+    background-color: var(--color-green-200, #E0F1E8);
+    padding-block: var(--space-1600, 128px);
+}
+
+main {
+    width: 100%;
+    max-width: 763px;
+    padding: var(--space-500, 40px);
+    border-radius: var(--space-200, 16px);
+    background-color: var(--color-white, #fff);
+}
+
+/* ===============================
+   Typography
+   =============================== */
+h1 {
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--color-grey-900, #2A4144);
+    margin-bottom: var(--space-400, 32px);
+}
+
+form label,
+legend {
+    font: 400 16px/1.5 var(--font-family-karla, system-ui, sans-serif);
+    color: var(--color-grey-900, #2A4144);
+    font-size: 12px;
+}
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ===============================
+   Form Elements
+   =============================== */
+textarea {
+    resize: none;
+}
+
+fieldset,
+button,
+input,
+textarea,
+select {
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Accessible focus styles */
+:focus-visible {
+    outline: 3px solid var(--color-green-600, #0C7D69);
+    outline-offset: 2px;
+}
+
+/* ===============================
+   Utilities
+   =============================== */
+.ast {
+    color: var(--color-green-600, #0C7D69);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+fieldset {
+    display: flex;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+form label span {
+    margin-left: .5rem;
+}
+
+/* ===============================
+   Inputs, Textareas, Selects
+   =============================== */
+input,
+textarea,
+select {
+    border: 1px solid var(--color-grey-500);
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 100%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover state */
+input:hover,
+textarea:hover,
+select:hover {
+    border-color: var(--color-green-600, #0C7D69);
+    box-shadow: 0 0 0 3px rgba(12, 125, 105, 0.2);
+}
+
+/* Focus state */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-green-600, #0C7D69);
+    box-shadow: 0 0 0 3px rgba(12, 125, 105, 0.3);
+    outline: none;
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+button {
+    width: 100%;
+    background-color: var(--color-green-600);
+    padding: 16px 40px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-green-700, #0A5D4F);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: 3px solid var(--color-green-600, #0C7D69);
+    outline-offset: 2px;
+}
+
+button:active {
+    background-color: var(--color-green-800, #08403A);
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
+   Query Type Radios
+   =============================== */
+.query-type {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    /* prevents stretching when error shows */
+}
+
+/* Stack radio + error vertically */
+.radio-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+/* Radio box styling */
+.radio-box {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.radio-box:hover {
+    border-color: var(--color-green-600, #0C7D69);
+    box-shadow: 0 0 0 3px rgba(12, 125, 105, 0.1);
+    background-color: rgba(12, 125, 105, 0.05);
+}
+
+.radio-box input {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.radio-box input:focus+label {
+    outline: 2px solid var(--color-green-600, #0C7D69);
+    outline-offset: 2px;
+}
+
+/* ===============================
+   Consent Checkboxes
+   =============================== */
+.consent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.consent input {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--color-grey-500);
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.consent input:hover,
+.consent input:focus {
+    border-color: var(--color-green-600, #0C7D69);
+    box-shadow: 0 0 0 3px rgba(12, 125, 105, 0.2);
+}
+
+/* ===============================
+   Miscellaneous
+   =============================== */
+.user-name {
+    display: flex;
+    gap: 16px;
+}
+
+.user-name div {
+    width: 100%;
+}
+
+.user-name div input {
+    width: 99%;
+}
+
+.query-type label,
+.consent label {
+    margin-bottom: 0;
+}
+
+.query-type legend {
+    margin-bottom: 8px;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 768px) {
+    body {
+        padding: 128px 0;
+    }
+
+    main {
+        max-width: 690px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    main {
+        max-width: 343px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset,
+    .query-type {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .query-type div {
+        width: 100%;
+    }
+}
+

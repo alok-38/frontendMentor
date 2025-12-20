@@ -1,0 +1,283 @@
+/* ===============================
+   Font Faces – Karla
+   =============================== */
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Optional additional weights */
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('assets/Karla/static/Karla-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+
+/* ===============================
+   Design System CSS
+   =============================== */
+
+/* --------- Colors --------- */
+:root {
+    /* Grey */
+    --color-grey-900: #2A4144;
+    --color-grey-500: #86A2A5;
+    --color-white: #FFFFFF;
+
+    /* Green */
+    --color-green-600: #0C7D69;
+    --color-green-200: #E0F1E8;
+
+    /* Red */
+    --color-red: #D73C3C;
+
+    /* Typography */
+    --font-family-karla: 'Karla', sans-serif;
+}
+
+/* --------- Typography --------- */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-karla);
+    font-weight: 700;
+    /* Bold */
+    color: var(--color-grey-900);
+    margin: 0;
+}
+
+/* Specific heading example */
+h1 {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1px;
+}
+
+/* Body Medium Bold */
+.body-md-bold {
+    font-family: var(--font-family-karla);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--color-grey-900);
+}
+
+/* Body Medium Regular */
+.body-md-regular {
+    font-family: var(--font-family-karla);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--color-grey-900);
+}
+
+/* Body Small */
+.body-sm {
+    font-family: var(--font-family-karla);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: var(--color-grey-900);
+}
+
+/* --------- Spacing Scale --------- */
+:root {
+    --space-1600: 128px;
+    --space-500: 40px;
+    --space-400: 32px;
+    --space-300: 24px;
+    --space-200: 16px;
+    --space-150: 12px;
+    --space-100: 8px;
+}
+
+/* Utility classes for spacing */
+.m-1600 {
+    margin: var(--space-1600);
+}
+
+.m-500 {
+    margin: var(--space-500);
+}
+
+.m-400 {
+    margin: var(--space-400);
+}
+
+.m-300 {
+    margin: var(--space-300);
+}
+
+.m-200 {
+    margin: var(--space-200);
+}
+
+.m-150 {
+    margin: var(--space-150);
+}
+
+.m-100 {
+    margin: var(--space-100);
+}
+
+.p-1600 {
+    padding: var(--space-1600);
+}
+
+.p-500 {
+    padding: var(--space-500);
+}
+
+.p-400 {
+    padding: var(--space-400);
+}
+
+.p-300 {
+    padding: var(--space-300);
+}
+
+.p-200 {
+    padding: var(--space-200);
+}
+
+.p-150 {
+    padding: var(--space-150);
+}
+
+.p-100 {
+    padding: var(--space-100);
+}
+
+/* --------- Buttons --------- */
+.button {
+    font-family: var(--font-family-karla);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    padding: var(--space-200) var(--space-300);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Primary button (green) */
+.button-primary {
+    background-color: var(--color-green-600);
+    color: var(--color-white);
+}
+
+.button-primary:hover {
+    background-color: #0a6558;
+    /* slightly darker */
+}
+
+/* Error button */
+.button-error {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.button-error:hover {
+    background-color: #b73232;
+}
+
+/* --------- Alerts --------- */
+.alert-success {
+    background-color: var(--color-green-200);
+    color: var(--color-green-600);
+    padding: var(--space-200);
+    border-radius: 6px;
+}
+
+.alert-error {
+    background-color: #FFD6D6;
+    color: var(--color-red);
+    padding: var(--space-200);
+    border-radius: 6px;
+}
+
+/* --------- Form Inputs --------- */
+.input {
+    font-family: var(--font-family-karla);
+    font-size: 16px;
+    padding: var(--space-150);
+    border: 1px solid var(--color-grey-500);
+    border-radius: 6px;
+    width: 100%;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-green-600);
+    box-shadow: 0 0 0 2px rgba(12, 125, 105, 0.2);
+}

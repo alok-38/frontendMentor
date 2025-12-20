@@ -2,65 +2,90 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="contact form">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact form" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Contact form</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="/assets/main.css" />
 
-  <link rel="stylesheet" href="main.css">
+  <title>Contact Us | Frontend Mentor</title>
   <script src="app.js" defer></script>
 </head>
 
 <body>
-
-  <div class="container">
+  <main id="main-content">
     <h1>Contact Us</h1>
-    <form method="post">
-      <div class="name-input">
-        <div>
-          <label for="first-name">First Name<span>&ast;</span></label>
-          <input type="text" id="first-name" autofocus required>
-        </div>
-        <div>
-          <label for="last-name">Last Name<span>&ast;</span></label>
-          <input type="text" id="last-name" autofocus required>
-        </div>
-      </div>
-      <div class="email-address">
-        <label for="email Address">Email Address<span>&ast;</span></label>
-        <input type="email" name="email" id="email" id="email" autofocus required>
-      </div>
-      <div class="query-type">
-        <label for="query Type">Query Type<span>&ast;</span></label>
-        <article>
-          <div style="display: flex;">
-            <input type="radio" name="general-enquiry" id="general-enquiry" required>
-            <p>General Enquiry</p>
+
+    <form action="#" method="post" novalidate aria-describedby="form-instructions">
+
+      <div>
+        <!-- Name -->
+        <fieldset class="user-name">
+          <legend class="visually-hidden">Your name</legend>
+          <div>
+            <label for="first-name">First Name<span>&ast;</span></label>
+            <input type="text" id="first-name" name="first-name" autocomplete="given-name" required />
+            <p id="error"></p>
           </div>
-          <div style="display: flex;">
-            <input type="radio" name="general-enquiry" id="general-enquiry" required>
-            <p>General Enquiry</p>
+          <div>
+            <label for="last-name">Last Name<span>&ast;</span></label>
+            <input type="text" id="last-name" name="last-name" autocomplete="family-name" required />
+            <p id="error"></p>
           </div>
-        </article>
+        </fieldset>
+        <!-- Email -->
+        <div>
+          <label for="email-address">Email Address<span>&ast;</span></label>
+          <input type="email" id="email-address" name="email" autocomplete="email" required />
+          <p id="error"></p>
+        </div>
+        <!-- Query Type -->
+        <fieldset class="query-type">
+          <legend>Query Type <span>&ast;</span></legend>
+
+          <!-- First radio + error -->
+          <div class="radio-wrapper">
+            <div class="radio-box">
+              <input type="radio" id="general-enquiry" name="query-type" value="general" required />
+              <label for="general-enquiry">General Enquiry</label>
+            </div>
+            <p id="error"></p>
+          </div>
+
+          <!-- Second radio -->
+          <div class="radio-box">
+            <input type="radio" id="support-request" name="query-type" value="support" />
+            <label for="support-request">Support Request</label>
+          </div>
+        </fieldset>
+
+
+        <!-- Message -->
+        <div>
+          <label for="message">Message<span>&ast;</span></label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <p id="error"></p>
+        </div>
       </div>
-      <div class="message-box">
-        <label for="message-box">Message<span>&ast;</span></label>
-        <textarea name="message-box" id="message-box" autofocus></textarea>
+
+      <!-- Consent -->
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">
+          I consent to being contacted by the team <span class="ast">&ast;</span>
+        </label>
       </div>
-      <div class="consent-box">
-        <input type="checkbox" name="consent-box" id="consent-box">
-        <p>I consent to being contacted by the team <span>&ast;</span></p>
-      </div>
+      <p id="error"></p>
       <button type="submit">Submit</button>
     </form>
-  </div>
 
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Alokananda Y</a>.
-  </footer>
+    <!-- Success Message -->
+    <section role="status" aria-live="polite" aria-atomic="true" hidden id="form-success">
+      <h2>Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </section>
+  </main>
 </body>
 
 </html>
