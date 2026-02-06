@@ -1,0 +1,84 @@
+/* =========================================
+   Modern CSS Reset
+   Inspired by: https://piccalil.li/blog/a-modern-css-reset/
+========================================= */
+
+/* Box sizing and default border/padding */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove default text decoration and inherit color */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Make images and media responsive */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Smooth font rendering */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove built-in form styles */
+button,
+input {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Reset table borders */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

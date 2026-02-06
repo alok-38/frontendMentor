@@ -1,0 +1,70 @@
+/* =========================================
+   Inter Variable Fonts
+========================================= */
+@font-face {
+    font-family: 'Inter';
+    src: url('../Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* =========================================
+   Inter Static Fonts (18pt, 24pt, 28pt)
+   You can import other sizes similarly
+========================================= */
+
+/* Extra Bold */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../static/Inter_18pt-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 800;
+    src: url('../static/Inter_18pt-ExtraBoldItalic.ttf') format('truetype');
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../static/Inter_18pt-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../static/Inter_18pt-BoldItalic.ttf') format('truetype');
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../static/Inter_18pt-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../static/Inter_18pt-Italic.ttf') format('truetype');
+}
+
+/* You can continue for SemiBold (600), Medium (500), Light (300), ExtraLight (200), Thin (100) similarly */

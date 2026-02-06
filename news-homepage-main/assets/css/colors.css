@@ -1,0 +1,23 @@
+:root {
+  /* =========================================
+     Colors
+  ========================================= */
+
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Grey Shades */
+  --color-grey-200: #D8D8D8;
+  --color-grey-300: #C5C6CE;
+
+  /* Navy Shades */
+  --color-navy-600: #5E607A;
+  --color-navy-950: #00001A;
+
+  /* Gold */
+  --color-gold-400: #E9AA52;
+
+  /* Red */
+  --color-red-500: #F15D51;
+}
