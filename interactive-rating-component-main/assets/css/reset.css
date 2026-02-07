@@ -1,0 +1,110 @@
+/* ============================= */
+/* Modern CSS Reset               */
+/* ============================= */
+
+/* Box sizing: border-box everywhere */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default list styles */
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--font-primary, system-ui, sans-serif);
+    background-color: var(--color-white, #fff);
+    color: var(--color-black, #000);
+}
+
+/* Remove default link styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images responsive */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Improve media defaults */
+video,
+canvas,
+audio,
+iframe,
+svg {
+    display: block;
+    vertical-align: middle;
+}
+
+/* Remove form element default styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Headings and paragraphs inherit font settings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+/* Table border collapse */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove all default quotes for blockquote and q */
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}

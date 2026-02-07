@@ -1,0 +1,21 @@
+@import url(fonts.css);
+
+:root {
+    /* Primary font */
+    --font-primary: 'Overpass', sans-serif;
+
+    /* Font weights */
+    --fw-thin: 100;
+    --fw-extralight: 200;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+    --fw-black: 900;
+
+    /* Font styles */
+    --fs-normal: normal;
+    --fs-italic: italic;
+}

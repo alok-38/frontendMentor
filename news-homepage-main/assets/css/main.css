@@ -37,6 +37,59 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    margin-bottom: var(--spacing-800);
+}
+
+nav ul {
+    display: flex;
+    gap: var(--spacing-500);
+    align-items: center;
+}
+
+nav ul a {
+    font-family: inherit;
+    color: var(--color-navy-600);
+    font-weight: var(--text-6-weight);
+    font-size: var(--text-6-size);
+    line-height: var(--text-6-line-height);
+    transition: all 0.3s ease;
+    padding: 0.25em 0.5em;
+}
+
+/* Hover effect */
+ul li a:hover {
+    background-color: var(--color-gold-400);
+    /* highlight background */
+    color: var(--color-white);
+    /* change text color */
+    transform: translateY(-2px);
+    /* subtle lift effect */
+}
+
+/* Focus effect (keyboard users) */
+ul li a:focus {
+    outline: 2px dashed var(--color-gold-400);
+    /* visible focus ring */
+    outline-offset: 2px;
+    background-color: var(--color-gold-400);
+    color: var(--color-white);
+}
+
+/* Active / click effect */
+ul li a:active {
+    transform: translateY(0);
+    /* remove lift when clicked */
+    opacity: 0.8;
+    /* slight pressed effect */
+}
+
+.featured-articles {
+    display: flex;
+    margin-top: var(--spacing-800);
+}
+
+.featured-articles article {
+    display: flex;
 }
 
 article img {
