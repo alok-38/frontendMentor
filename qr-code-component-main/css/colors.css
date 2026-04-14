@@ -1,0 +1,21 @@
+:root {
+  /* Slate Colors */
+  --slate-900: #1F314F;
+  --slate-500: #68778D;
+  --slate-300: #D5E1EF;
+
+  /* White */
+  --white: #FFFFFF;
+
+  /* Optional RGB (useful for rgba/opacity cases) */
+  --slate-900-rgb: 31, 49, 79;
+  --slate-500-rgb: 104, 119, 141;
+  --slate-300-rgb: 213, 225, 239;
+  --white-rgb: 255, 255, 255;
+
+  /* Optional HSL (useful for theming adjustments) */
+  --slate-900-hsl: 218, 44%, 22%;
+  --slate-500-hsl: 216, 15%, 48%;
+  --slate-300-hsl: 212, 45%, 89%;
+  --white-hsl: 0, 0%, 100%;
+}
