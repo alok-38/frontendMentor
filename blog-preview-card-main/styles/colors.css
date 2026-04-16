@@ -1,0 +1,11 @@
+:root {
+  /* Primary */
+  --color-yellow: #F4D04E;
+
+  /* Grayscale */
+  --color-gray-950: #111111;
+  --color-gray-500: #6B6B6B;
+
+  /* Base */
+  --color-white: #FFFFFF;
+}

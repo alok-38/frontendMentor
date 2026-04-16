@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+:root {
+  /* Font family */
+  --font-primary: "Figtree", sans-serif;
+
+  /* Font weights */
+  --fw-medium: 500;
+  --fw-extra-bold: 800;
+
+  /* Font sizes */
+  --fs-lg: 24px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+
+  /* Line height */
+  --lh-default: 1.5;
+
+  /* Letter spacing */
+  --ls-default: 0px;
+}
