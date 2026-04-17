@@ -1,0 +1,12 @@
+:root {
+  /* Neutral Colors */
+  --color-grey-900: #141414;
+  --color-grey-800: #1f1f1f;
+  --color-grey-700: #333333;
+
+  /* Primary Accent */
+  --color-green: #c4f82a;
+
+  /* Base */
+  --color-white: #ffffff;
+}

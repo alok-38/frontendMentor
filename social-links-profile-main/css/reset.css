@@ -1,0 +1,31 @@
+/* 1. Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Base body settings */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 8. Remove link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. Improve button usability */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

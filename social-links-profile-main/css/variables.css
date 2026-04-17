@@ -1,0 +1,22 @@
+@import url(typography.css);
+
+:root {
+  /* Font Family */
+  --font-primary: 'Inter', sans-serif;
+
+  /* Font Sizes */
+  --fs-heading: 24px;
+  --fs-body: 14px;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Line Height */
+  --lh-default: 1.5;
+
+  /* Letter Spacing */
+  --ls-default: 0px;
+}
+

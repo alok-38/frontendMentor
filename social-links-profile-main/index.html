@@ -1,30 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Social links profile</title>
+    <!-- Primary SEO -->
+    <title>Social Links Profile | Frontend Mentor Challenge</title>
+    <meta
+      name="description"
+      content="A responsive social links profile built with HTML and CSS as part of a Frontend Mentor challenge."
+    />
+    <meta name="author" content="Alok" />
 
-  
-</head>
-<body>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="Social Links Profile" />
+    <meta
+      property="og:description"
+      content="A clean and responsive social links profile page built with modern CSS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./preview.jpg" />
+    <meta property="og:url" content="https://your-site-url.com" />
 
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Alokananda Y</a>.
-  </footer>
-</body>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Social Links Profile" />
+    <meta
+      name="twitter:description"
+      content="A responsive profile page built with HTML and CSS."
+    />
+    <meta name="twitter:image" content="./preview.jpg" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <main role="main" aria-labelledby="profile-name">
+      <header role="banner">
+        <img
+          src="assets/images/avatar-jessica.jpeg"
+          alt="Portrait of Jessica Randall"
+        />
+        <div class="name-and-location">
+          <h1 id="profile-name">Jessica Randall</h1>
+          <p aria-label="Location">London, United Kingdom</p>
+        </div>
+      </header>
+
+      <section aria-labelledby="bio-heading">
+        <p id="bio-heading">"Front-end developer and avid reader."</p>
+      </section>
+
+      <section aria-label="Social media links">
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jessica Randall on GitHub"
+          >GitHub</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jessica Randall on Frontend Mentor"
+          >Frontend Mentor</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jessica Randall on LinkedIn"
+          >LinkedIn</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jessica Randall on Twitter"
+          >Twitter</a
+        >
+        <a
+          href="#"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Jessica Randall on Instagram"
+          >Instagram</a
+        >
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
 </html>

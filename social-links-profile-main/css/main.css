@@ -1,0 +1,162 @@
+@import url(reset.css);
+@import url(variables.css);
+@import url(colors.css);
+@import url(spacing.css);
+@import url(spacing.css);
+
+body {
+  background-color: var(--color-grey-900);
+  padding: var(--space-500);
+  border-radius: var(--space-150);
+  color: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-primary);
+}
+
+main {
+  background-color: var(--color-grey-800);
+  max-width: 384px;
+  width: 100%;
+  margin: auto 0;
+  border-radius: var(--space-150);
+  padding: var(--space-500);
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+header p {
+  font-size: 14px;
+  color: var(--color-green);
+  font-weight: 600;
+}
+
+img {
+  border-radius: 999px;
+  height: 88px;
+  width: 88px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+section[aria-label="Social media links"] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-200);
+}
+
+section[aria-labelledby="bio-heading"] {
+  margin-bottom: 24px;
+  font-size: 14px;
+  text-align: center;
+  font-style: italic;
+}
+
+section[aria-label="Social media links"] a {
+  background-color: var(--color-grey-700);
+  border-radius: var(--space-100);
+  padding: var(--space-150);
+  width: 304px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* transition */
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+  font-weight: 800;
+  font-family: inherit;
+}
+
+/* hover */
+section[aria-label="Social media links"] a:hover {
+  background-color: var(--color-green);
+  color: var(--color-grey-700);
+  cursor: pointer;
+}
+
+/* focus (keyboard accessibility) */
+section[aria-label="Social media links"] a:focus {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+/* better focus for modern browsers */
+section[aria-label="Social media links"] a:focus-visible {
+  outline: 2px solid var(--color-green);
+  outline-offset: 2px;
+}
+
+/* press / active */
+section[aria-label="Social media links"] a:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+section[aria-label="Social media links"] a footer {
+  margin-top: auto;
+}
+
+.name-and-location {
+  margin: var(--space-300) 0 var(--space-300) 0;
+}
+
+.attribution {
+  font-size: 12px;
+}
+
+.attribution a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-green);
+  text-decoration-thickness: 2px;
+  font-family: inherit;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 32px;
+  }
+
+  main {
+    max-width: 384px;
+    width: 100%;
+    padding: 32px;
+  }
+
+  section[aria-label="Social media links"] {
+    max-width: 304px;
+    width: 100%;
+    margin: 0 auto; /* centers it */
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+  body {
+    padding: 0 24px;
+  }
+
+  main {
+    max-width: 327px;
+    width: 100%;
+    padding: 24px;
+  }
+
+  section[aria-label="Social media links"] {
+    max-width: 100%; /* better than fixed 279px */
+    width: 100%;
+  }
+}
