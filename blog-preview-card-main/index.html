@@ -3,8 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
+    <!-- Primary SEO -->
+    <title>HTML & CSS Foundations | Blog Preview Card</title>
+    <meta
+      name="description"
+      content="Learn the fundamentals of HTML and CSS, the backbone of every website. A quick preview of structure, content, and presentation concepts."
+    />
+    <meta name="author" content="Alokananda Y" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="HTML & CSS Foundations" />
+    <meta
+      property="og:description"
+      content="Explore the basics of HTML and CSS and how they shape modern web development."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://your-site-url.com/" />
+    <meta
+      property="og:image"
+      content="https://your-site-url.com/assets/images/illustration-article.svg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HTML & CSS Foundations" />
+    <meta
+      name="twitter:description"
+      content="Learn the core building blocks of the web: HTML and CSS."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-site-url.com/assets/images/illustration-article.svg"
+    />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -12,35 +46,58 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Blog preview card</title>
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-site-url.com/" />
+
+    <!-- Styles & Scripts -->
     <link rel="stylesheet" href="styles/main.css" />
     <script src="script.js" defer></script>
   </head>
+
   <body>
     <main>
-      <figure id="blog-image"></figure>
-      <section>
-        <h1>Learning</h1>
-        <p>Published 21 Dec 2023</p>
-        <h2>HTML & CSS foundations</h2>
-        <p>
-          These languages are the backbone of every website, defining structure,
-          content, and presentation.
-        </p>
-      </section>
-      <section>
-        <img
-          src="assets/images/image-avatar.webp"
-          alt="Potrait of Greg Hooper"
-        />
-        <h3>Greg Hooper</h3>
-      </section>
+      <article class="blog-card" aria-labelledby="blog-title">
+        <!-- Blog Image -->
+        <figure>
+          <img
+            src="assets/images/illustration-article.svg"
+            alt="Illustration representing HTML and CSS concepts"
+          />
+        </figure>
+
+        <section>
+          <!-- Content -->
+          <header>
+            <p class="category" aria-label="Category">Learning</p>
+            <p class="publish-date">
+              <time datetime="2023-12-21">Published 21 Dec 2023</time>
+            </p>
+            <h1 id="blog-title">HTML & CSS foundations</h1>
+          </header>
+          <p class="description">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </section>
+
+        <!-- Author -->
+        <footer class="author">
+          <img
+            src="assets/images/image-avatar.webp"
+            alt="Portrait of Greg Hooper"
+          />
+          <p class="author-name">Greg Hooper</p>
+        </footer>
+      </article>
     </main>
 
     <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Alokananda Y</a>.
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor </a
+        >. Coded by <a href="#">Alokananda Y</a>.
+      </p>
     </footer>
   </body>
 </html>

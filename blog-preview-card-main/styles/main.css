@@ -9,51 +9,157 @@
 }
 
 body {
+  min-height: 100vh;
   background-color: var(--color-yellow);
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  font-family: var(--font-primary);
+  line-height: var(--lh-default);
 }
 
+/* Card container */
 main {
   max-width: 384px;
   width: 100%;
+  height: 522px;
   padding: var(--space-300);
   border-radius: 20px;
   background-color: var(--color-white);
+
   display: flex;
   flex-direction: column;
   gap: var(--space-300);
+
+  margin: auto 0;
+  cursor: pointer;
+
+  box-shadow: 8px 8px 0 0 #000000;
+
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+    overflow: hidden;
 }
 
-section {
+/* Active / click state */
+main:active {
+  transform: translateY(4px);
+  box-shadow: 4px 4px 0 0 #000000;
+}
+
+/* Accessibility: keyboard focus */
+main:focus-visible {
+  outline: 3px solid black;
+  outline-offset: 4px;
+}
+
+/* Image */
+main figure img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Header grouping */
+main header {
   display: flex;
   flex-direction: column;
   gap: var(--space-150);
 }
 
-section:last-of-type {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* Category badge */
+.category {
+  background-color: var(--color-yellow);
+  color: var(--color-gray-950);
+  padding: var(--space-50) var(--space-150);
+  border-radius: 4px;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-extra-bold);
+
+  /* Better sizing than fixed width/height */
+  display: inline-block;
+  width: fit-content;
 }
 
-section:last-of-type img {
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
+/* Publish date */
+.publish-date {
+  font-size: var(--fs-sm);
+  color: var(--color-gray-500);
 }
 
-figure img {
-  border-radius: 10px;
-  max-width: 336px;
-  width: 100%;
-  height: 200px;
+/* Title */
+main h1 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-extra-bold);
+  cursor: pointer;
+}
+
+/* Optional hover effect */
+main h1:hover {
+  color: var(--color-yellow);
+}
+
+/* Description */
+.description {
+  color: var(--color-gray-500);
+  font-size: var(--fs-md);
+}
+
+section {
+  margin: var(--space-300) 0 var(--space-300) 0;
+}
+
+/* Author section */
+.author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-150);
+}
+
+/* Avatar */
+.author img {
+  width: 32px;
+  height: 32px;
   object-fit: cover;
 }
 
-footer {
+/* Author name */
+.author-name {
+  font-weight: var(--fw-extra-bold);
+  font-size: var(--fs-sm);
+}
+
+/* Attribution footer */
+.attribution {
   font-size: 14px;
+  margin-top: auto;
+}
+
+.attribution a {
+  color: inherit;
+  font-weight: 800;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  main {
+    max-width: 90%;
+    padding: var(--space-150);
+  }
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  body {
+    padding: var(--space-300);
+  }
+  main {
+    max-width: 100%;
+    padding: var(--space-150);
+    /* border-radius: 16px; */
+    overflow: hidden;
+  }
 }
