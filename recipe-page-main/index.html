@@ -1,10 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
+    <!-- SEO Meta -->
+    <title>Easy Recipe Page | Simple & Delicious Homemade Recipes</title>
+    <meta
+      name="description"
+      content="Discover easy and delicious homemade recipes with step-by-step instructions. Perfect for beginners and food lovers looking for quick meals."
+    />
+    <meta
+      name="keywords"
+      content="recipes, easy recipes, homemade food, cooking, simple meals, food blog"
+    />
+    <meta name="author" content="Your Name or Brand" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -12,47 +25,158 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Recipe page</title>
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Easy Recipe Page | Simple & Delicious Recipes"
+    />
+    <meta
+      property="og:description"
+      content="Explore tasty and easy-to-make recipes with clear instructions. Perfect for everyday cooking."
+    />
+    <meta property="og:image" content="./assets/images/recipe-preview.jpg" />
+    <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Easy Recipe Page | Simple & Delicious Recipes"
+    />
+    <meta
+      name="twitter:description"
+      content="Find quick and tasty recipes anyone can cook at home."
+    />
+    <meta name="twitter:image" content="./assets/images/recipe-preview.jpg" />
+
+    <!-- Performance -->
+    <link
+      rel="preload"
+      href="css/main.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="css/main.css" />
+    </noscript>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com/recipe-page" />
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <img
-          src="assets/images/image-omelette.jpeg"
-          alt="Header image of an omelette"
-        />
+        <figure>
+          <img
+            src="assets/images/image-omelette.jpeg"
+            alt="Omelette served on a plate with herbs"
+          />
+        </figure>
       </header>
+
       <main>
-        <h1>Simple Omelette Recipe</h1>
-        <p>
-          An easy and quick dish, perfect for any meal. This classic omelette
-          combines beaten eggs cooked to perfection, optionally filled with your
-          choice of cheese, vegetables, or meats.
-        </p>
-        <h2>Preparation time</h2>
-        <ul>
-          <li>Total: Approximately 10 minutes</li>
-          <li>Preparation: 5 minutes</li>
-          <li>Cooking: 5 minutes</li>
-        </ul>
-        <h2>Ingredients </h2>2-3 large eggs Salt, to taste Pepper, to taste 1 tablespoon
-        of butter or oil Optional fillings: cheese, diced vegetables, cooked
-        meats, herbs Instructions Beat the eggs: In a bowl, beat the eggs with a
-        pinch of salt and pepper until they are well mixed. You can add a
-        tablespoon of water or milk for a fluffier texture. Heat the pan: Place
-        a non-stick frying pan over medium heat and add butter or oil. Cook the
-        omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt
-        the pan to ensure the eggs evenly coat the surface. Add fillings
-        (optional): When the eggs begin to set at the edges but are still
-        slightly runny in the middle, sprinkle your chosen fillings over one
-        half of the omelette. Fold and serve: As the omelette continues to cook,
-        carefully lift one edge and fold it over the fillings. Let it cook for
-        another minute, then slide it onto a plate. Enjoy: Serve hot, with
-        additional salt and pepper if needed. Nutrition The table below shows
-        nutritional values per serving without the additional fillings. Calories
-        277kcal Carbs 0g Protein 20g Fat 22g
+        <article>
+          <h1>Simple Omelette Recipe</h1>
+          <p>
+            An easy and quick dish, perfect for any meal. This classic omelette
+            combines beaten eggs cooked to perfection, optionally filled with
+            your choice of cheese, vegetables, or meats.
+          </p>
+
+          <section aria-labelledby="prep-time">
+            <h2 id="prep-time">Preparation time</h2>
+            <ul>
+              <li><strong>Total:</strong> Approximately 10 minutes</li>
+              <li><strong>Preparation:</strong> 5 minutes</li>
+              <li><strong>Cooking:</strong> 5 minutes</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="ingredients">
+            <h2 id="ingredients">Ingredients</h2>
+            <ul>
+              <li>2-3 large eggs</li>
+              <li>Salt, to taste</li>
+              <li>Pepper, to taste</li>
+              <li>1 tablespoon of butter or oil</li>
+              <li>
+                Optional fillings: cheese, diced vegetables, cooked meats, herbs
+              </li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="instructions">
+            <h2 id="instructions">Instructions</h2>
+            <ol>
+              <li>
+                <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a
+                pinch of salt and pepper until they are well mixed. You can add
+                a tablespoon of water or milk for a fluffier texture.
+              </li>
+              <li>
+                <strong>Heat the pan:</strong> Place a non-stick frying pan over
+                medium heat and add butter or oil.
+              </li>
+              <li>
+                <strong>Cook the omelette:</strong> Once the butter is melted
+                and bubbling, pour in the eggs. Tilt the pan to ensure the eggs
+                evenly coat the surface.
+              </li>
+              <li>
+                <strong>Add fillings (optional):</strong> When the eggs begin to
+                set at the edges but are still slightly runny in the middle,
+                sprinkle your chosen fillings over one half of the omelette.
+              </li>
+              <li>
+                <strong>Fold and serve:</strong> Carefully lift one edge and
+                fold it over the fillings. Let it cook for another minute, then
+                slide it onto a plate.
+              </li>
+              <li>
+                <strong>Enjoy:</strong> Serve hot, with additional salt and
+                pepper if needed.
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="nutrition">
+            <h2 id="nutrition">Nutrition</h2>
+            <p>
+              The table below shows nutritional values per serving without the
+              additional fillings.
+            </p>
+
+            <table>
+              <caption class="visually-hidden">
+                Nutrition per serving
+              </caption>
+              <thead class="visually-hidden">
+                <tr>
+                  <th scope="col">Nutrient</th>
+                  <th scope="col">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Calories</th>
+                  <td>277kcal</td>
+                </tr>
+                <tr>
+                  <th scope="row">Carbs</th>
+                  <td>0g</td>
+                </tr>
+                <tr>
+                  <th scope="row">Protein</th>
+                  <td>20g</td>
+                </tr>
+                <tr>
+                  <th scope="row">Fat</th>
+                  <td>22g</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </article>
       </main>
     </div>
 
