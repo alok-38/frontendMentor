@@ -53,3 +53,159 @@ figure img {
   width: 100%;
   object-fit: cover;
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+}
+
+h1 {
+  color: var(--stone-900);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-normal);
+  margin-bottom: var(--space-300);
+}
+
+#prep-time {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  color: var(--rose-800);
+  margin-bottom: 16px;
+}
+
+#ingredients,
+#instructions,
+#nutrition {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-normal);
+  color: var(--brown-800);
+  margin-bottom: var(--space-300);
+}
+
+p,
+tr th,
+ol,
+ul {
+  color: var(--stone-600);
+}
+
+section:nth-of-type(2) {
+  padding: var(--space-300);
+  background-color: var(--rose-50);
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ul:first-of-type {
+  padding-left: 1rem;
+}
+
+ul li::marker {
+  color: var(--brown-800);
+}
+
+ul li:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+ul li {
+  padding-left: 1rem;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--stone-150);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr {
+  text-align: left;
+}
+
+tr:not(:last-of-type) {
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  padding: 10px;
+}
+
+th[scope="row"] {
+  font-weight: normal;
+  font-family: var(--font-body);
+}
+
+td {
+  color: var(--brown-800);
+  font-weight: var(--fw-bold);
+  margin-left: 5rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 128px 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  figure img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 0;
+  }
+
+  .wrapper,
+  img,
+  header {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    overflow: hidden;
+  }
+
+  .wrapper {
+    padding: 40px 32px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr {
+    width: 100%;
+  }
+
+  td {
+    text-align: right;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
