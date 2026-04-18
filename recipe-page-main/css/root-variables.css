@@ -1,0 +1,51 @@
+@import url(font-face.css);
+
+:root {
+  /* Font Families */
+  --font-heading: "Young Serif", serif;
+  --font-body: "Outfit", sans-serif;
+
+  /* Font Sizes */
+  --fs-xl: 40px;
+  --fs-lg: 28px;
+  --fs-md: 20px;
+  --fs-base: 16px;
+
+  /* Line Heights */
+  --lh-tight: 1;
+  --lh-normal: 1.5;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Letter Spacing */
+  --ls-normal: 0px;
+
+  /* 🌹 Rose */
+  --rose-800: #7a284e;
+  --rose-50: #fff7fb;
+
+  /* 🪨 Stone */
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+
+  /* 🤎 Brown */
+  --brown-800: #854632;
+
+  /* ⚪ White */
+  --white: #ffffff;
+
+  /* Spacing Scale */
+  --space-1600: 128px;
+  --space-600: 48px;
+  --space-500: 40px;
+  --space-400: 32px;
+  --space-300: 24px;
+  --space-200: 16px;
+  --space-150: 12px;
+  --space-100: 8px;
+}

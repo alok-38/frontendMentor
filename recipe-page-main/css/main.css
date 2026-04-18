@@ -1,0 +1,21 @@
+@import url(root-variables.css);
+@import url(reset.css);
+
+/* Set base font styles */
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  background-color: var(--stone-100);
+  padding: var(--space-1600) 0;
+}
+
+/* Headings default */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+main {
+    background-color: var(--white);
+}
