@@ -1,36 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+    <!-- Primary SEO -->
+    <title>Product Preview Card Component | Responsive UI Design</title>
+    <meta
+      name="description"
+      content="A responsive product preview card component built with modern HTML and CSS. Clean UI design, mobile-friendly layout, and optimized performance."
+    />
+    <meta
+      name="keywords"
+      content="product card, frontend component, responsive design, HTML CSS UI, web development, frontend mentor challenge"
+    />
+    <meta name="author" content="Alokananda Y" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Perfume
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Product Preview Card Component" />
+    <meta
+      property="og:description"
+      content="Modern responsive product card UI built with HTML & CSS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta
+      property="og:image"
+      content="https://yourwebsite.com/images/preview.jpg"
+    />
 
-  Gabrielle Essence Eau De Parfum
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Product Preview Card Component" />
+    <meta
+      name="twitter:description"
+      content="Clean and responsive product preview UI design."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/images/preview.jpg"
+    />
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+    <!-- Performance -->
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <figure>
+        <img
+          src="images/image-product-desktop.jpg"
+          alt="Gabrielle Essence Perfume Bottle on a Table"
+        />
+      </figure>
+      <section>
+        <h1>Perfume</h1>
+        <h2>Gabrielle Essence Eau De Parfum</h2>
+        <p>
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <p>$149.99 <span>$169.99 </span></p>
+        <button>
+          <img src="images/icon-cart.svg" alt="Add to cart icon" />Add to Cart
+        </button>
+      </section>
+    </main>
 
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
 </html>
