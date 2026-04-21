@@ -1,0 +1,105 @@
+/* =========================
+   Spacing Tokens
+========================= */
+:root {
+  --space-500: 2.5rem; /* 40px */
+  --space-400: 2rem; /* 32px */
+  --space-300: 1.5rem; /* 24px */
+  --space-200: 1rem; /* 16px */
+  --space-100: 0.5rem; /* 8px */
+  --space-50: 0.25rem; /* 4px */
+}
+
+/* =========================
+   Margin Utilities
+========================= */
+.m-500 {
+  margin: var(--space-500);
+}
+.m-400 {
+  margin: var(--space-400);
+}
+.m-300 {
+  margin: var(--space-300);
+}
+.m-200 {
+  margin: var(--space-200);
+}
+.m-100 {
+  margin: var(--space-100);
+}
+.m-50 {
+  margin: var(--space-50);
+}
+
+.mt-500 {
+  margin-top: var(--space-500);
+}
+.mb-500 {
+  margin-bottom: var(--space-500);
+}
+.ml-500 {
+  margin-left: var(--space-500);
+}
+.mr-500 {
+  margin-right: var(--space-500);
+}
+
+/* (Repeat pattern for 400, 300, 200, 100, 50 as needed) */
+
+/* =========================
+   Padding Utilities
+========================= */
+.p-500 {
+  padding: var(--space-500);
+}
+.p-400 {
+  padding: var(--space-400);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-100 {
+  padding: var(--space-100);
+}
+.p-50 {
+  padding: var(--space-50);
+}
+
+.pt-200 {
+  padding-top: var(--space-200);
+}
+.pb-200 {
+  padding-bottom: var(--space-200);
+}
+.pl-200 {
+  padding-left: var(--space-200);
+}
+.pr-200 {
+  padding-right: var(--space-200);
+}
+
+/* =========================
+   Gap Utilities (for flex/grid)
+========================= */
+.gap-500 {
+  gap: var(--space-500);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-50 {
+  gap: var(--space-50);
+}

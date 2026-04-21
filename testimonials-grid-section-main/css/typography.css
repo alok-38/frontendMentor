@@ -1,0 +1,84 @@
+/* typography.css */
+
+/* =========================
+   1. Design Tokens
+========================= */
+:root {
+  /* Font Families */
+  --font-barlow: "Barlow Semi Condensed", sans-serif;
+  --font-dm-sans: "DM Sans", sans-serif;
+
+  /* Preset 1 */
+  --tp1-size: 1.25rem; /* 20px */
+  --tp1-line: 1.2;
+  --tp1-weight: 600;
+
+  /* Preset 2 */
+  --tp2-size: 0.8125rem; /* 13px */
+  --tp2-line: 1.1;
+  --tp2-weight: 500;
+
+  /* Preset 3 */
+  --tp3-size: 0.8125rem;
+  --tp3-line: 1.4;
+  --tp3-weight: 500;
+
+  /* Preset 4 */
+  --tp4-size: 0.6875rem; /* 11px */
+  --tp4-line: 1.1;
+  --tp4-weight: 500;
+
+  /* Preset 5 */
+  --tp5-size: 1rem; /* 16px */
+  --tp5-line: 1.125rem; /* 18px */
+  --tp5-weight: 400;
+}
+
+/* =========================
+   2. Utility Classes
+========================= */
+
+/* Preset 1 */
+.text-preset-1 {
+  font-family: var(--font-barlow);
+  font-size: var(--tp1-size);
+  line-height: var(--tp1-line);
+  font-weight: var(--tp1-weight);
+  letter-spacing: 0;
+}
+
+/* Preset 2 */
+.text-preset-2 {
+  font-family: var(--font-barlow);
+  font-size: var(--tp2-size);
+  line-height: var(--tp2-line);
+  font-weight: var(--tp2-weight);
+  letter-spacing: 0;
+}
+
+/* Preset 3 */
+.text-preset-3 {
+  font-family: var(--font-barlow);
+  font-size: var(--tp3-size);
+  line-height: var(--tp3-line);
+  font-weight: var(--tp3-weight);
+  letter-spacing: 0;
+}
+
+/* Preset 4 */
+.text-preset-4 {
+  font-family: var(--font-barlow);
+  font-size: var(--tp4-size);
+  line-height: var(--tp4-line);
+  font-weight: var(--tp4-weight);
+  letter-spacing: 0;
+}
+
+/* Preset 5 */
+.text-preset-5 {
+  font-family: var(--font-dm-sans);
+  font-size: var(--tp5-size);
+  line-height: var(--tp5-line);
+  font-weight: var(--tp5-weight);
+  letter-spacing: 0;
+}

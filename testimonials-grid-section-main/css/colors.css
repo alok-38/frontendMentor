@@ -1,0 +1,115 @@
+/* =========================
+   Color Tokens
+========================= */
+:root {
+  /* Base Colors */
+  --color-black: #121212;
+  --color-dark-blue: #19202d;
+  --color-white: #ffffff;
+
+  /* Grey Scale */
+  --color-grey-100: #e7eaee;
+  --color-grey-200: #cfcfcf;
+  --color-grey-400: #676d7e;
+  --color-grey-500: #48556a;
+
+  /* Purple Scale */
+  --color-purple-50: #ede4ff;
+  --color-purple-300: #a775f1;
+  --color-purple-500: #733fc8;
+}
+
+/* =========================
+   Text Colors
+========================= */
+.text-black {
+  color: var(--color-black);
+}
+.text-dark-blue {
+  color: var(--color-dark-blue);
+}
+.text-white {
+  color: var(--color-white);
+}
+
+.text-grey-100 {
+  color: var(--color-grey-100);
+}
+.text-grey-200 {
+  color: var(--color-grey-200);
+}
+.text-grey-400 {
+  color: var(--color-grey-400);
+}
+.text-grey-500 {
+  color: var(--color-grey-500);
+}
+
+.text-purple-50 {
+  color: var(--color-purple-50);
+}
+.text-purple-300 {
+  color: var(--color-purple-300);
+}
+.text-purple-500 {
+  color: var(--color-purple-500);
+}
+
+/* =========================
+   Background Colors
+========================= */
+.bg-black {
+  background-color: var(--color-black);
+}
+.bg-dark-blue {
+  background-color: var(--color-dark-blue);
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-grey-100 {
+  background-color: var(--color-grey-100);
+}
+.bg-grey-200 {
+  background-color: var(--color-grey-200);
+}
+.bg-grey-400 {
+  background-color: var(--color-grey-400);
+}
+.bg-grey-500 {
+  background-color: var(--color-grey-500);
+}
+
+.bg-purple-50 {
+  background-color: var(--color-purple-50);
+}
+.bg-purple-300 {
+  background-color: var(--color-purple-300);
+}
+.bg-purple-500 {
+  background-color: var(--color-purple-500);
+}
+
+/* =========================
+   Border Colors
+========================= */
+.border-grey-100 {
+  border-color: var(--color-grey-100);
+}
+.border-grey-200 {
+  border-color: var(--color-grey-200);
+}
+.border-grey-400 {
+  border-color: var(--color-grey-400);
+}
+.border-grey-500 {
+  border-color: var(--color-grey-500);
+}
+
+.border-purple-300 {
+  border-color: var(--color-purple-300);
+}
+.border-purple-500 {
+  border-color: var(--color-purple-500);
+}

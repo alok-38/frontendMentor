@@ -1,1 +1,48 @@
-@import url(reset.css);
+/* 1. Reset (lowest level) */
+@import url("reset.css");
+
+/* 2. Design tokens */
+@import url("colors.css");
+@import url("spacing.css");
+@import url("typography.css");
+
+/* 3. Base styles */
+body {
+  font-family: var(--font-barlow);
+  background-color: #f6f5f6;
+}
+
+img {
+  height: 28px;
+  width: 28px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.main {
+  display: flex;
+}
+
+.testimonials {
+  border-radius: var(--space-100);
+  overflow: hidden;
+}
+
+.testimonial {
+  width: 100%;
+}
+
+.testimonials--main {
+  display: grid;
+}
+
+.testimonial--purple {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.testimonial--purple,
+.testimonial--dark-blue {
+  max-width: 540px;
+}
