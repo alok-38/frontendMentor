@@ -14,6 +14,8 @@ body {
   font-family: var(--font-primary);
   align-items: center;
   justify-content: center;
+  color: var(--color-grey-500);
+  background-color: #fafafa;
 }
 
 .feature {
@@ -21,39 +23,92 @@ body {
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  gap: 74px;
 }
 
 .feature__header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--space-200);
+  background-color: var(--color-white);
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
+/* Grid container */
 .feature__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    ". team ."
+    "supervisor team calculator"
+    ". karma .";
+
+  gap: var(--space-400);
+  align-items: center;
+  justify-items: center;
+  max-width: 1114px;
+  width: 100%;
 }
 
-/* Left column (middle) */
+/* Base card */
+.feature__card {
+  max-width: 350px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: var(--space-100);
+  box-shadow: 0 15px 30px rgba(131, 166, 210, 0.15);
+  padding: var(--space-400);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-300);
+}
+
+/* Assign areas */
 .feature__card--supervisor {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: supervisor;
 }
 
-/* Center top */
 .feature__card--team {
-  grid-column: 2;
-  grid-row: 1;
+  grid-area: team;
 }
 
-/* Center bottom */
 .feature__card--karma {
-  grid-column: 2;
-  grid-row: 3;
+  grid-area: karma;
 }
 
-/* Right column (middle) */
 .feature__card--calculator {
-  grid-column: 3;
-  grid-row: 2;
+  grid-area: calculator;
+}
+
+.feature__card--supervisor {
+  border-top: 4px solid #14b8a6;
+} /* teal */
+.feature__card--team {
+  border-top: 4px solid #ef4444;
+} /* red */
+.feature__card--karma {
+  border-top: 4px solid #f59e0b;
+} /* orange */
+.feature__card--calculator {
+  border-top: 4px solid #3b82f6;
+} /* blue */
+
+.feature__card:hover {
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.08),
+    0 15px 25px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  margin-left: auto;
 }
