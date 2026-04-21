@@ -1,0 +1,59 @@
+@import url(reset.css);
+@import url(typography.css);
+@import url(colors.css);
+@import url(spacing.css);
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-primary);
+  align-items: center;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.feature__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Left column (middle) */
+.feature__card--supervisor {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Center top */
+.feature__card--team {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* Center bottom */
+.feature__card--karma {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Right column (middle) */
+.feature__card--calculator {
+  grid-column: 3;
+  grid-row: 2;
+}

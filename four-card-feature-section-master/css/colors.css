@@ -1,0 +1,16 @@
+:root {
+  /* =========================
+     NEUTRAL COLORS
+  ========================= */
+  --color-grey-500: #4d4f62;
+  --color-grey-400: #6a7178;
+  --color-white: #ffffff;
+
+  /* =========================
+     ACCENT COLORS
+  ========================= */
+  --color-red: #ea5454;
+  --color-cyan: #44d3d2;
+  --color-blue: #549ef2;
+  --color-orange: #fcae4a;
+}

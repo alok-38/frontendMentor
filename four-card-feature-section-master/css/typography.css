@@ -1,0 +1,80 @@
+/* =========================
+   1. DESIGN TOKENS
+========================= */
+:root {
+  /* Fonts */
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "DM Sans", sans-serif;
+
+  /* Font Sizes */
+  --fs-1: 2.25rem; /* 36px */
+  --fs-2: 2.25rem;
+  --fs-3: 1.25rem; /* 20px */
+  --fs-4: 0.9375rem; /* 15px */
+  --fs-5: 0.8125rem; /* 13px */
+  --fs-6: 1rem; /* 16px */
+
+  /* Line Heights */
+  --lh-1: 1.4;
+  --lh-2: 1.35;
+  --lh-3: 1.6;
+  --lh-tight: 1.125;
+
+  /* Letter Spacing */
+  --ls-wide: 0.0156rem; /* 0.25px */
+  --ls-normal: 0;
+
+  /* Font Weights */
+  --fw-extralight: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  /* =========================
+     2. TEXT PRESETS
+  ========================= */
+
+  --text-1: var(--fw-semibold) var(--fs-1) / var(--lh-1) var(--font-primary);
+  --text-2: var(--fw-extralight) var(--fs-2) / var(--lh-1) var(--font-primary);
+  --text-3: var(--fw-semibold) var(--fs-3) / var(--lh-2) var(--font-primary);
+  --text-4: var(--fw-regular) var(--fs-4) / var(--lh-1) var(--font-primary);
+  --text-5: var(--fw-regular) var(--fs-5) / var(--lh-3) var(--font-primary);
+  --text-5-alt: var(--fw-regular) var(--fs-6) / var(--lh-tight)
+    var(--font-secondary);
+}
+
+/* =========================
+   3. BASE TYPOGRAPHY
+========================= */
+body {
+  font-family: var(--font-primary);
+}
+
+/* =========================
+   4. UTILITY CLASSES
+========================= */
+
+.text-1 {
+  font: var(--text-1);
+  letter-spacing: var(--ls-wide);
+}
+
+.text-2 {
+  font: var(--text-2);
+  letter-spacing: var(--ls-wide);
+}
+
+.text-3 {
+  font: var(--text-3);
+}
+
+.text-4 {
+  font: var(--text-4);
+}
+
+.text-5 {
+  font: var(--text-5);
+}
+
+.text-5-alt {
+  font: var(--text-5-alt);
+}
