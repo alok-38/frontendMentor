@@ -52,6 +52,10 @@ img {
   height: 288px;
 }
 
+.testimonials--aside {
+  width: 100%;
+}
+
 .jonathan--walters,
 .jeanette--harmon {
   max-width: 255px;
@@ -74,6 +78,10 @@ img {
   background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: right 4rem top 5px;
+}
+
+.testimonial--dark {
+  margin-left: auto;
 }
 
 .attribution {
