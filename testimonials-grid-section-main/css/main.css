@@ -8,8 +8,12 @@
 
 /* 3. Base styles */
 body {
+  min-height: 100vh;
   font-family: var(--font-barlow);
   background-color: #f6f5f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
@@ -21,6 +25,9 @@ img {
 
 .main {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   max-width: 1114px;
   width: 100%;
 }
@@ -38,6 +45,17 @@ img {
 
 .testimonials--main {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.testimonials--main .testimonial {
+  height: 288px;
+}
+
+.jonathan--walters,
+.jeanette--harmon {
+  max-width: 255px;
+  width: 100%;
 }
 
 .testimonial__header {
@@ -47,18 +65,17 @@ img {
 
 .testimonial__title {
   position: relative;
-  z-index: 2  ;
+  z-index: 2;
 }
 
 .testimonial--purple {
   position: relative;
-   z-index: 1;
+  z-index: 1;
   background-image: url("../images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: right 4rem top 5px;
 }
 
-.testimonial--purple,
-.testimonial--dark-blue {
-  max-width: 540px;
+.attribution {
+  margin-top: auto;
 }
