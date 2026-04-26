@@ -69,29 +69,76 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://yourwebsite.com/" />
   </head>
-  <body class="font-primary">
-    <figure>
-      <img src="../starter-code/assets/logo.svg" alt="Meet landing page logo" />
-      <figcaption>Meet landing page logo</figcaption>
+  <body class="font-primary page">
+    <figure class="logo">
+      <img
+        class="logo__image"
+        src="../starter-code/assets/logo.svg"
+        alt="Meet landing page logo"
+      />
+      <figcaption class="logo__caption">Meet landing page logo</figcaption>
     </figure>
-    <header>
-      <h1>Group Chat for Everyone</h1>
-      <p>
+
+    <header class="hero" role="banner" aria-label="Hero section">
+      <h1 class="hero__title">Group Chat for Everyone</h1>
+
+      <p class="hero__description">
         Meet makes it easy to connect with others face-to-face virtually and
         collaborate across any device.
       </p>
-      <button>Download v1.3</button>
-      <button>What is it?</button>
+
+      <button
+        class="hero__button hero__button--primary"
+        type="button"
+        aria-label="Download Meet version 1.3"
+      >
+        Download v1.3
+      </button>
+
+      <button
+        class="hero__button hero__button--secondary"
+        type="button"
+        aria-label="Learn what Meet is"
+      >
+        What is it?
+      </button>
     </header>
-    <main>
-      01 Built for modern use Smarter meetings, all in one place Send messages,
-      share files, show your screen, and record your meetings — all in one
-      workspace. Control who can join with invite-only team access, data
-      encryption, and data export. 02
+
+    <main class="content" role="main" aria-label="Product features">
+      <section class="feature">
+        <div class="feature__number" aria-hidden="true">01</div>
+
+        <h2 class="feature__title">Built for modern use</h2>
+
+        <h3 class="feature__subtitle">Smarter meetings, all in one place</h3>
+
+        <p class="feature__description">
+          Send messages, share files, show your screen, and record your meetings
+          — all in one workspace. Control who can join with invite-only team
+          access, data encryption, and data export.
+        </p>
+      </section>
+
+      <section class="feature">
+        <div class="feature__number" aria-hidden="true">02</div>
+      </section>
     </main>
-    <footer>
-      Experience more together Stay connected with reliable HD meetings and
-      unlimited one-on-one and group video sessions. Download v1.3
+
+    <footer class="footer" role="contentinfo" aria-label="Page footer">
+      <h4 class="footer__title">Experience more together</h4>
+
+      <p class="footer__description">
+        Stay connected with reliable HD meetings and unlimited one-on-one and
+        group video sessions.
+      </p>
+
+      <button
+        class="footer__button"
+        type="button"
+        aria-label="Download Meet version 1.3 from footer"
+      >
+        Download v1.3
+      </button>
     </footer>
   </body>
 </html>
