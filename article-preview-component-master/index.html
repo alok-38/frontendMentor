@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>
+      Article Preview Component | Frontend Mentor Challenge Solution
+    </title>
+    <meta
+      name="description"
+      content="A responsive article preview component built as part of the Frontend Mentor challenge. Features clean UI, mobile-first design, and modern CSS techniques."
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://your-site.com/article-preview-component"
+    />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#ecf2f8" />
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Article Preview Component | Frontend Mentor Solution"
+    />
+    <meta
+      property="og:description"
+      content="Responsive article preview component built with modern HTML and CSS. Frontend Mentor challenge solution."
+    />
+    <meta
+      property="og:url"
+      content="https://your-site.com/article-preview-component"
+    />
+    <meta
+      property="og:image"
+      content="https://your-site.com/images/preview.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Article Preview Component | Frontend Mentor Solution"
+    />
+    <meta
+      name="twitter:description"
+      content="Responsive article preview component built with modern HTML and CSS."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-site.com/images/preview.jpg"
+    />
+
+    <!-- Preload critical font -->
+    <link
+      rel="preload"
+      href="fonts/Manrope-Variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main class="article-preview" role="main">
+      <figure class="article-preview__media">
+        <img
+          class="article-preview__image"
+          src="images/drawers.jpg"
+          alt="Wooden drawers with a decorative vase placed on top"
+        />
+      </figure>
+      <article class="article-preview__content">
+        <h1 class="article-preview__title">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="article-preview__text">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I've got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <section>
+          <div
+            class="article-preview__author"
+            itemscope
+            itemtype="https://schema.org/Person"
+          >
+            <h2 class="article-preview__author-name" itemprop="name">
+              Michelle Appleton
+            </h2>
+            <time class="article-preview__date" datetime="2020-06-28">
+              28 Jun 2020
+            </time>
+          </div>
+          <button
+            class="article-preview__share-button"
+            aria-label="Share article"
+            type="button"
+          >
+            <img
+              class="article-preview__share-icon"
+              src="images/icon-share.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
+        </section>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
+</html>

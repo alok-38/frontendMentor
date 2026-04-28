@@ -1,0 +1,26 @@
+@import url(reset.css);
+@import url(variables.css);
+
+body {
+  font-family: var(--font-manrope);
+  font-weight: var(--font-regular);
+  background-color: var(--color-grey-200);
+}
+
+/* main */
+main {
+  max-width: 730px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #979797;
+  background-color: var(--color-white);
+}
+
+/* footer */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
