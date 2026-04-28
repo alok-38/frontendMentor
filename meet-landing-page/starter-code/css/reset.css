@@ -1,0 +1,98 @@
+/* 1. Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/* 5. Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: unset;
+  border: unset;
+  background: transparent;
+}
+
+
+/* 6. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 7. Remove list styles */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* 8. Anchor defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 10. Set default cursor for buttons */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* 11. Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 12. Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

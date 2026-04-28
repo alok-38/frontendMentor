@@ -1,0 +1,294 @@
+:root {
+  /* Font Family */
+  --font-primary: "Red Hat Display", sans-serif;
+
+  /* =========================
+     TEXT PRESET 1
+     ========================= */
+  --text-preset-1-font-family: var(--font-primary);
+  --text-preset-1-font-weight: 900; /* Black */
+  --text-preset-1-font-size: 64px;
+  --text-preset-1-line-height: 110%;
+  --text-preset-1-letter-spacing: 0px;
+
+  /* =========================
+     TEXT PRESET 2
+     ========================= */
+  --text-preset-2-font-family: var(--font-primary);
+  --text-preset-2-font-weight: 900; /* Black */
+  --text-preset-2-font-size: 40px;
+  --text-preset-2-line-height: 110%;
+  --text-preset-2-letter-spacing: 0px;
+
+  /* =========================
+     TEXT PRESET 3
+     ========================= */
+  --text-preset-3-font-family: var(--font-primary);
+  --text-preset-3-font-weight: 900; /* Black */
+  --text-preset-3-font-size: 16px;
+  --text-preset-3-line-height: 110%;
+  --text-preset-3-letter-spacing: 4px;
+
+  /* =========================
+     TEXT PRESET 4
+     ========================= */
+  --text-preset-4-font-family: var(--font-primary);
+  --text-preset-4-font-weight: 500; /* Medium */
+  --text-preset-4-font-size: 18px;
+  --text-preset-4-line-height: 110%;
+  --text-preset-4-letter-spacing: 0px;
+
+  /* =========================
+     TEXT PRESET 5
+     ========================= */
+  --text-preset-5-font-family: var(--font-primary);
+  --text-preset-5-font-weight: 900; /* Black */
+  --text-preset-5-font-size: 16px;
+  --text-preset-5-line-height: 150%;
+  --text-preset-5-letter-spacing: 0px;
+
+  /* Cyan */
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+
+  /* Purple */
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+
+  /* Slate */
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+
+  /* White */
+  --white: #fafafa;
+
+  --space-1400: 112px;
+  --space-1000: 80px;
+  --space-900: 72px;
+  --space-800: 64px;
+  --space-700: 56px;
+  --space-500: 40px;
+  --space-400: 32px;
+  --space-300: 24px;
+  --space-200: 16px;
+  --space-100: 8px;
+  --space-50: 4px;
+}
+
+/* Font Family */
+.font-primary {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* =========================
+   TEXT PRESET 1
+   ========================= */
+.text-preset-1 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+/* =========================
+   TEXT PRESET 2
+   ========================= */
+.text-preset-2 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+/* =========================
+   TEXT PRESET 3
+   ========================= */
+.text-preset-3 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: 4px;
+}
+
+/* =========================
+   TEXT PRESET 4
+   ========================= */
+.text-preset-4 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 110%;
+  letter-spacing: 0px;
+}
+
+/* =========================
+   TEXT PRESET 5
+   ========================= */
+.text-preset-5 {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+/* Text colors */
+.text-cyan-600 {
+  color: var(--cyan-600);
+}
+.text-cyan-300 {
+  color: var(--cyan-300);
+}
+
+.text-purple-600 {
+  color: var(--purple-600);
+}
+.text-purple-300 {
+  color: var(--purple-300);
+}
+
+.text-slate-900 {
+  color: var(--slate-900);
+}
+.text-slate-600 {
+  color: var(--slate-600);
+}
+.text-slate-300 {
+  color: var(--slate-300);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+/* Background colors */
+.bg-cyan-600 {
+  background-color: var(--cyan-600);
+}
+.bg-cyan-300 {
+  background-color: var(--cyan-300);
+}
+
+.bg-purple-600 {
+  background-color: var(--purple-600);
+}
+.bg-purple-300 {
+  background-color: var(--purple-300);
+}
+
+.bg-slate-900 {
+  background-color: var(--slate-900);
+}
+.bg-slate-600 {
+  background-color: var(--slate-600);
+}
+.bg-slate-300 {
+  background-color: var(--slate-300);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+/* Border colors */
+.border-cyan-600 {
+  border-color: var(--cyan-600);
+}
+.border-cyan-300 {
+  border-color: var(--cyan-300);
+}
+
+.border-purple-600 {
+  border-color: var(--purple-600);
+}
+.border-purple-300 {
+  border-color: var(--purple-300);
+}
+
+.border-slate-900 {
+  border-color: var(--slate-900);
+}
+.border-slate-600 {
+  border-color: var(--slate-600);
+}
+.border-slate-300 {
+  border-color: var(--slate-300);
+}
+
+.border-white {
+  border-color: var(--white);
+}
+
+/* Margin */
+.m-1400 {
+  margin: var(--space-1400);
+}
+.m-1000 {
+  margin: var(--space-1000);
+}
+.m-900 {
+  margin: var(--space-900);
+}
+.m-800 {
+  margin: var(--space-800);
+}
+.m-700 {
+  margin: var(--space-700);
+}
+.m-500 {
+  margin: var(--space-500);
+}
+.m-400 {
+  margin: var(--space-400);
+}
+.m-300 {
+  margin: var(--space-300);
+}
+.m-200 {
+  margin: var(--space-200);
+}
+.m-100 {
+  margin: var(--space-100);
+}
+.m-50 {
+  margin: var(--space-50);
+}
+
+/* Padding */
+.p-1400 {
+  padding: var(--space-1400);
+}
+.p-1000 {
+  padding: var(--space-1000);
+}
+.p-900 {
+  padding: var(--space-900);
+}
+.p-800 {
+  padding: var(--space-800);
+}
+.p-700 {
+  padding: var(--space-700);
+}
+.p-500 {
+  padding: var(--space-500);
+}
+.p-400 {
+  padding: var(--space-400);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-100 {
+  padding: var(--space-100);
+}
+.p-50 {
+  padding: var(--space-50);
+}
