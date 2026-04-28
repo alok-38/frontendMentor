@@ -70,101 +70,90 @@
     <link rel="canonical" href="https://yourwebsite.com/" />
   </head>
   <body class="font-primary page">
-    <figure class="logo p-800">
-      <img
-        class="logo__image"
-        src="../starter-code/assets/logo.svg"
-        alt="Meet landing page logo"
-      />
-      <figcaption class="logo__caption">Meet landing page logo</figcaption>
-    </figure>
-
-    <header class="hero" role="banner" aria-label="Main product introduction">
-      <div class="hero__bg hero__bg--left" aria-hidden="true"></div>
-
-      <section class="hero__content" aria-label="Hero content">
-        <h1 class="hero__title text-slate-900 text-preset-1">
-          Group Chat for Everyone
-        </h1>
-
-        <p class="hero__description text-slate-600">
-          Meet makes it easy to connect with others face-to-face virtually and
-          collaborate across any device.
+    <div class="wrapper">
+      <figure class="logo">
+        <img
+          class="logo__image"
+          src="../starter-code/assets/logo.svg"
+          alt="Meet landing page logo"
+        />
+        <figcaption class="logo__caption">Meet landing page logo</figcaption>
+      </figure>
+      <header class="hero" role="banner" aria-label="Main product introduction">
+        <div class="hero__bg hero__bg--left" aria-hidden="true"></div>
+        <section class="hero__content" aria-label="Hero content">
+          <h1 class="hero__title text-slate-900 text-preset-1">
+            Group Chat for Everyone
+          </h1>
+          <p class="hero__description text-slate-600">
+            Meet makes it easy to connect with others face-to-face virtually and
+            collaborate across any device.
+          </p>
+          <div class="hero__buttons">
+            <button
+              class="hero__button hero__button--primary bg-cyan-600 text-white"
+              type="button"
+              aria-label="Download Meet version 1.3"
+            >
+              Download v1.3
+            </button>
+            <button
+              class="hero__button hero__button--secondary bg-purple-600 text-white"
+              type="button"
+              aria-label="Learn what Meet is"
+            >
+              What is it?
+            </button>
+          </div>
+        </section>
+        <div class="hero__bg hero__bg--right" aria-hidden="true"></div>
+      </header>
+      <main class="content" role="main" aria-label="Product features">
+        <section class="feature">
+          <div class="feature__number" aria-hidden="true">01</div>
+          <figure>
+            <img
+              src="assets/desktop/image-men-in-meeting.jpg"
+              alt="Men collaborating in a meeting"
+            />
+            <img
+              src="assets/desktop/image-woman-in-videocall.jpg"
+              alt="Woman participating in a video call"
+            />
+            <img
+              src="assets/desktop/image-women-videochatting.jpg"
+              alt="Women video chatting using a smartphone"
+            />
+            <img
+              src="assets/desktop/image-man-texting.jpg"
+              alt="Man texting on his phone"
+            />
+            <figcaption>A set of four related images</figcaption>
+          </figure>
+          <h2 class="feature__title">Built for modern use</h2>
+          <h3 class="feature__subtitle">Smarter meetings, all in one place</h3>
+          <p class="feature__description">
+            Send messages, share files, show your screen, and record your
+            meetings — all in one workspace. Control who can join with
+            invite-only team access, data encryption, and data export.
+          </p>
+          <div class="feature__number" aria-hidden="true">02</div>
+        </section>
+      </main>
+      <footer class="footer" role="contentinfo" aria-label="Page footer">
+        <h4 class="footer__title">Experience more together</h4>
+        <p class="footer__description">
+          Stay connected with reliable HD meetings and unlimited one-on-one and
+          group video sessions.
         </p>
-
-        <div class="hero__buttons">
-          <button
-            class="hero__button hero__button--primary bg-cyan-600 text-white"
-            type="button"
-            aria-label="Download Meet version 1.3"
-          >
-            Download v1.3
-          </button>
-          <button
-            class="hero__button hero__button--secondary bg-purple-600 text-white"
-            type="button"
-            aria-label="Learn what Meet is"
-          >
-            What is it?
-          </button>
-        </div>
-      </section>
-
-      <div class="hero__bg hero__bg--right" aria-hidden="true"></div>
-    </header>
-
-    <main class="content" role="main" aria-label="Product features">
-      <section class="feature">
-        <div class="feature__number" aria-hidden="true">01</div>
-
-        <figure>
-          <img
-            src="assets/desktop/image-men-in-meeting.jpg"
-            alt="Men collaborating in a meeting"
-          />
-          <img
-            src="assets/desktop/image-woman-in-videocall.jpg"
-            alt="Woman participating in a video call"
-          />
-          <img
-            src="assets/desktop/image-women-videochatting.jpg"
-            alt="Women video chatting using a smartphone"
-          />
-          <img
-            src="assets/desktop/image-man-texting.jpg"
-            alt="Man texting on his phone"
-          />
-          <figcaption>A set of four related images</figcaption>
-        </figure>
-
-        <h2 class="feature__title">Built for modern use</h2>
-
-        <h3 class="feature__subtitle">Smarter meetings, all in one place</h3>
-
-        <p class="feature__description">
-          Send messages, share files, show your screen, and record your meetings
-          — all in one workspace. Control who can join with invite-only team
-          access, data encryption, and data export.
-        </p>
-        <div class="feature__number" aria-hidden="true">02</div>
-      </section>
-    </main>
-
-    <footer class="footer" role="contentinfo" aria-label="Page footer">
-      <h4 class="footer__title">Experience more together</h4>
-
-      <p class="footer__description">
-        Stay connected with reliable HD meetings and unlimited one-on-one and
-        group video sessions.
-      </p>
-
-      <button
-        class="footer__button bg-purple-600 text-white"
-        type="button"
-        aria-label="Download Meet version 1.3 from footer"
-      >
-        Download v1.3
-      </button>
-    </footer>
+        <button
+          class="footer__button bg-purple-600 text-white"
+          type="button"
+          aria-label="Download Meet version 1.3 from footer"
+        >
+          Download v1.3
+        </button>
+      </footer>
+    </div>
   </body>
 </html>
