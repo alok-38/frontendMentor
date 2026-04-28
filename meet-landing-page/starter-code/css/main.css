@@ -120,7 +120,7 @@ button {
   padding: 112px 80px;
   background-image:
     linear-gradient(rgba(0, 184, 212, 0.6), rgba(0, 184, 212, 0.6)),
-    url(../assets/desktop/image-footer.jpg);
+    url("../assets/desktop/image-footer.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
