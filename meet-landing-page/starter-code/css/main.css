@@ -35,11 +35,11 @@ figcaption {
 }
 
 .hero__bg--left {
-  background-image: url("../starter-code/assets/desktop/image-hero-left.png");
+  background-image: url("../assets/desktop/image-hero-left.png");
 }
 
 .hero__bg--right {
-  background-image: url("../starter-code/assets/desktop/image-hero-right.png");
+  background-image: url("../assets/desktop/image-hero-right.png");
 }
 
 .hero__buttons {
@@ -120,7 +120,7 @@ button {
   padding: 112px 80px;
   background-image:
     linear-gradient(rgba(0, 184, 212, 0.6), rgba(0, 184, 212, 0.6)),
-    url(../starter-code/assets/desktop/image-footer.jpg);
+    url(../assets/desktop/image-footer.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
