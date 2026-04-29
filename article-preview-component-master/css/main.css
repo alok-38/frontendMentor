@@ -2,10 +2,10 @@
 @import url(variables.css);
 
 body {
+  min-height: 100vh;
   font-family: var(--font-manrope);
   font-weight: var(--font-regular);
   background-color: var(--color-grey-200);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +20,13 @@ body {
   border: 1px solid #979797;
   background-color: var(--color-white);
   display: flex;
+  margin: auto 0;
+}
+
+button {
+  cursor: pointer;
+  outline: unset;
+  border: unset;
 }
 
 /* footer */
