@@ -74,6 +74,9 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="article-preview" role="main">
@@ -94,20 +97,29 @@
           felt slightly bare and uninviting. I've got some simple tips to help
           you make any room feel complete.
         </p>
-        <section>
+        <section class="footer-preview__content">
           <div
             class="article-preview__author"
             itemscope
             itemtype="https://schema.org/Person"
           >
-            <h2 class="article-preview__author-name" itemprop="name">
-              Michelle Appleton
-            </h2>
-            <time class="article-preview__date" datetime="2020-06-28">
-              28 Jun 2020
-            </time>
+            <img
+              class="article-preview__avatar"
+              src="images/avatar-michelle.jpg"
+              alt="Avatar of Michelle Appleton"
+            />
+            <div class="article-preview__author-info">
+              <h2 class="article-preview__author-name" itemprop="name">
+                Michelle Appleton
+              </h2>
+              <time class="article-preview__date" datetime="2020-06-28">
+                28 Jun 2020
+              </time>
+            </div>
           </div>
+
           <button
+            id="shareButton"
             class="article-preview__share-button"
             aria-label="Share article"
             type="button"
