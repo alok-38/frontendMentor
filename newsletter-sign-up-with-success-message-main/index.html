@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta -->
+    <title>Newsletter Sign-Up Form | Responsive UI with Success Message</title>
+    <meta
+      name="description"
+      content="A responsive newsletter sign-up form with validation and success message. Built with modern HTML and CSS, optimized for accessibility and performance."
+    />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Newsletter Sign-Up Form UI" />
+    <meta
+      property="og:description"
+      content="Modern responsive newsletter form with validation and success state."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-site.com" />
+    <meta property="og:image" content="https://your-site.com/preview.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Newsletter Sign-Up Form UI" />
+    <meta
+      name="twitter:description"
+      content="Responsive newsletter form built with modern CSS."
+    />
+    <meta name="twitter:image" content="https://your-site.com/preview.jpg" />
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-dark-light">
+    <main class="layout layout--main" role="main">
+      <section
+        class="signup signup--form"
+        role="region"
+        aria-labelledby="signup-title"
+      >
+        <!-- Sign-up form start -->
+
+        <h1 id="signup-title" class="signup__title">Stay updated!</h1>
+
+        <p class="signup__description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+
+        <ul class="signup__list" aria-label="Newsletter benefits">
+          <li class="signup__list-item">
+            Product discovery and building what matters
+          </li>
+          <li class="signup__list-item">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="signup__list-item">And much more!</li>
+        </ul>
+
+        <form
+          class="signup__form"
+          aria-label="Subscribe to newsletter form"
+          novalidate
+        >
+          <label class="signup__label" for="email"> Email address </label>
+
+          <input
+            class="signup__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="email@company.com"
+            required
+            aria-required="true"
+            autocomplete="email"
+          />
+
+          <button
+            class="signup__button signup__button--primary"
+            type="submit"
+            aria-label="Subscribe to monthly newsletter"
+          >
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+
+        <figure class="signup__figure" aria-hidden="true">
+          <img
+            class="signup__image"
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="Illustration showing sign up form"
+          />
+        </figure>
+
+        <!-- Sign-up form end -->
+      </section>
+
+      <section
+        class="signup signup--success"
+        role="status"
+        aria-live="polite"
+        aria-labelledby="success-title"
+        hidden
+      >
+        <!-- Success message start -->
+
+        <h2 id="success-title" class="signup__title signup__title--success">
+          Thanks for subscribing!
+        </h2>
+
+        <p class="signup__message">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+
+        <button
+          class="signup__button signup__button--secondary"
+          type="button"
+          aria-label="Dismiss success message"
+        >
+          Dismiss message
+        </button>
+
+        <!-- Success message end -->
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
+</html>

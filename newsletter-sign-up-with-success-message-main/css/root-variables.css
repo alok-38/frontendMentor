@@ -1,0 +1,212 @@
+@import url(font-face.css);
+/* =========================
+   DESIGN SYSTEM (TOKENS)
+========================= */
+
+:root {
+  /* Typography */
+  --font-primary: "Roboto", sans-serif;
+
+  /* Font sizes (rem for accessibility) */
+  --fs-xl: 3.5rem; /* 56px */
+  --fs-xl-mobile: 2.5rem; /* 40px */
+  --fs-md: 1rem; /* 16px */
+  --fs-sm: 0.75rem; /* 12px */
+
+  /* Line heights */
+  --lh-tight: 1;
+  --lh-normal: 1.5;
+
+  /* Font weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Colors (base) */
+  --color-white: #ffffff;
+  --color-grey: #949494;
+
+  --color-blue-800: #242742;
+  --color-blue-700: #36384d;
+
+  --color-red: #ff6155;
+
+  /* Semantic colors */
+  --color-primary: var(--color-red);
+  --color-text-main: var(--color-blue-800);
+  --color-text-muted: var(--color-grey);
+  --color-bg-dark: var(--color-blue-800);
+  --color-bg-dark-light: var(--color-blue-700);
+
+  /* Gradient */
+  --gradient-primary: linear-gradient(to right, var(--color-red), #ff527b);
+
+  /* Spacing scale (rem-based) */
+  --spacing-1: 0.5rem; /* 8px */
+  --spacing-2: 1rem; /* 16px */
+  --spacing-3: 1.5rem; /* 24px */
+  --spacing-4: 2rem; /* 32px */
+  --spacing-5: 2.5rem; /* 40px */
+  --spacing-6: 3rem; /* 48px */
+  --spacing-8: 4rem; /* 64px */
+  --spacing-9: 4.5rem; /* 72px */
+  --spacing-13: 6.5rem; /* 104px */
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+/* =========================
+   TYPOGRAPHY PRESETS
+========================= */
+
+.text-xl {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+@media (max-width: 608px) {
+  .text-xl {
+    font-size: var(--fs-xl-mobile);
+  }
+}
+
+.text-md {
+  font-size: var(--fs-md);
+  line-height: var(--lh-normal);
+}
+
+.text-sm {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-normal);
+}
+
+.text-bold {
+  font-weight: var(--fw-bold);
+}
+
+.text-regular {
+  font-weight: var(--fw-regular);
+}
+
+/* =========================
+   COLOR UTILITIES
+========================= */
+
+.text-main {
+  color: var(--color-text-main);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.bg-dark-light {
+  background-color: var(--color-bg-dark-light);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-gradient {
+  background: var(--gradient-primary);
+}
+
+/* =========================
+   SPACING UTILITIES
+========================= */
+
+/* Margin Top */
+.mt-1 {
+  margin-top: var(--spacing-1);
+}
+.mt-2 {
+  margin-top: var(--spacing-2);
+}
+.mt-3 {
+  margin-top: var(--spacing-3);
+}
+.mt-4 {
+  margin-top: var(--spacing-4);
+}
+
+/* Padding */
+.p-2 {
+  padding: var(--spacing-2);
+}
+.p-3 {
+  padding: var(--spacing-3);
+}
+.p-4 {
+  padding: var(--spacing-4);
+}
+
+/* Gap */
+.gap-2 {
+  gap: var(--spacing-2);
+}
+.gap-3 {
+  gap: var(--spacing-3);
+}
+.gap-4 {
+  gap: var(--spacing-4);
+}
+
+/* =========================
+   LAYOUT UTILITIES
+========================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* =========================
+   BORDER / RADIUS
+========================= */
+
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
