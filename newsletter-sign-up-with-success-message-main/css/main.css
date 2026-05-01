@@ -7,13 +7,29 @@ body {
 }
 
 body {
+  font-family: var(--font-primary);
   display: flex;
   flex-direction: column;
   color: white;
+  align-items: center;
 }
 
 main {
   flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.signup--form {
+  display: flex;
+}
+
+.signup__input,
+.signup__button {
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+  padding: var(--spacing-2) var(--spacing-3);
 }
 
 /* footer */
