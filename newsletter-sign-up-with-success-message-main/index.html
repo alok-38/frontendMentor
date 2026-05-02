@@ -47,10 +47,13 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- script -->
+    <script src="script.js" defer></script>
   </head>
   <body class="bg-dark-light text-regular">
-    <main class="layout layout--main p-4 rounded-lg text-main" role="main">
+    <main id="mainContent" class="layout layout--main p-4 rounded-lg text-main" role="main">
       <section
+        id="formSection"
         class="signup signup--form gap-5"
         role="region"
         aria-labelledby="signup-title"
@@ -83,23 +86,26 @@
             </li>
           </ul>
           <form
+            id="signupForm"
             class="signup__form"
             aria-label="Subscribe to newsletter form"
             novalidate
           >
-            <label class="signup__label text-sm" for="email">
-              Email address
-            </label>
-            <input
-              class="signup__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="email@company.com"
-              required
-              aria-required="true"
-              autocomplete="email"
-            />
+            <div>
+              <label class="signup__label text-sm" for="email">
+                Email address
+              </label>
+              <input
+                class="signup__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="email@company.com"
+                required
+                aria-required="true"
+                autocomplete="email"
+              />
+            </div>
             <button
               class="signup__button signup__button--primary"
               type="submit"
@@ -122,6 +128,7 @@
       </section>
 
       <section
+        id="successSection"
         class="signup signup--success"
         role="status"
         aria-live="polite"
@@ -140,6 +147,7 @@
         </p>
 
         <button
+        id="dismissBtn"
           class="signup__button signup__button--secondary"
           type="button"
           aria-label="Dismiss success message"
