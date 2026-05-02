@@ -48,8 +48,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body class="bg-dark-light">
-    <main class="layout layout--main" role="main">
+  <body class="bg-dark-light text-regular">
+    <main class="layout layout--main p-4 rounded-lg text-main" role="main">
       <section
         class="signup signup--form gap-5"
         role="region"
@@ -59,24 +59,37 @@
 
         <div>
           <h1 id="signup-title" class="signup__title">Stay updated!</h1>
-          <p class="signup__description">
+          <p class="signup__description text-md">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
           <ul class="signup__list" aria-label="Newsletter benefits">
             <li class="signup__list-item">
+              <div class="bg-primary">
+                <img src="assets/images/check.png" alt="checkmark" />
+              </div>
               Product discovery and building what matters
             </li>
             <li class="signup__list-item">
+              <div class="bg-primary">
+                <img src="assets/images/check.png" alt="checkmark" />
+              </div>
               Measuring to ensure updates are a success
             </li>
-            <li class="signup__list-item">And much more!</li>
+            <li class="signup__list-item">
+              <div class="bg-primary">
+                <img src="assets/images/check.png" alt="checkmark" />
+              </div>
+              And much more!
+            </li>
           </ul>
           <form
             class="signup__form"
             aria-label="Subscribe to newsletter form"
             novalidate
           >
-            <label class="signup__label" for="email"> Email address </label>
+            <label class="signup__label text-sm" for="email">
+              Email address
+            </label>
             <input
               class="signup__input"
               type="email"
