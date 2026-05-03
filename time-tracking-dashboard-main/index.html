@@ -64,83 +64,64 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-navy-950">
-    Report for Jeremy Robson Daily Weekly Monthly Work 5hrs
-    <!-- daily -->
-    Previous - 7hrs
-    <!-- daily -->
-    32hrs
-    <!-- weekly -->
-    Previous - 36hrs
-    <!-- weekly -->
-    103hrs
-    <!-- monthly -->
-    Previous - 128hrs
-    <!-- monthly -->
+    <main aria-label="Time tracking dashboard">
+      <section aria-labelledby="profile-title">
+        <img
+          src="images/image-jeremy.png"
+          alt="Jeremy Robson"
+          class="dashboard__avatar"
+        />
+        <h1 id="profile-title" class="dashboard__title">
+          Report for Jeremy Robson
+        </h1>
 
-    Play 1hr
-    <!-- daily -->
-    Previous - 2hrs
-    <!-- daily -->
-    10hrs
-    <!-- weekly -->
-    Previous - 8hrs
-    <!-- weekly -->
-    23hrs
-    <!-- monthly -->
-    Previous - 29hrs
-    <!-- monthly -->
+        <nav aria-label="Timeframe" class="dashboard__filters">
+          <button class="dashboard__filter dashboard__filter--active">
+            Daily
+          </button>
+          <button class="dashboard__filter">Weekly</button>
+          <button class="dashboard__filter">Monthly</button>
+        </nav>
+      </section>
 
-    Study 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 7hrs
-    <!-- weekly -->
-    13hrs
-    <!-- monthly -->
-    Previous - 19hrs
-    <!-- monthly -->
+      <section aria-label="Activity data" class="dashboard__cards">
+        <article class="card card--work">
+          <h2 class="card__title">Work</h2>
+          <p class="card__current">32hrs</p>
+          <p class="card__previous">Last Week - 36hrs</p>
+        </article>
 
-    Exercise 1hr
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    4hrs
-    <!-- weekly -->
-    Previous - 5hrs
-    <!-- weekly -->
-    11hrs
-    <!-- monthly -->
-    Previous - 18hrs
-    <!-- monthly -->
+        <article class="card card--play">
+          <h2 class="card__title">Play</h2>
+          <p class="card__current">10hrs</p>
+          <p class="card__previous">Last Week - 8hrs</p>
+        </article>
 
-    Social 1hr
-    <!-- daily -->
-    Previous - 3hrs
-    <!-- daily -->
-    5hrs
-    <!-- weekly -->
-    Previous - 10hrs
-    <!-- weekly -->
-    21hrs
-    <!-- monthly -->
-    Previous - 23hrs
-    <!-- monthly -->
+        <article class="card card--study">
+          <h2 class="card__title">Study</h2>
+          <p class="card__current">4hrs</p>
+          <p class="card__previous">Last Week - 7hrs</p>
+        </article>
 
-    Self Care 0hrs
-    <!-- daily -->
-    Previous - 1hr
-    <!-- daily -->
-    2hrs
-    <!-- weekly -->
-    Previous - 2hrs
-    <!-- weekly -->
-    7hrs
-    <!-- monthly -->
-    Previous - 11hrs
-    <!-- monthly -->
+        <article class="card card--exercise">
+          <h2 class="card__title">Exercise</h2>
+          <p class="card__current">4hrs</p>
+          <p class="card__previous">Last Week - 5hrs</p>
+        </article>
+
+        <article class="card card--social">
+          <h2 class="card__title">Social</h2>
+          <p class="card__current">5hrs</p>
+          <p class="card__previous">Last Week - 10hrs</p>
+        </article>
+
+        <article class="card card--self-care">
+          <h2 class="card__title">Self Care</h2>
+          <p class="card__current">2hrs</p>
+          <p class="card__previous">Last Week - 2hrs</p>
+        </article>
+      </section>
+    </main>
 
     <footer class="attribution">
       Challenge by
