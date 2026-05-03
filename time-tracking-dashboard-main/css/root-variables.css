@@ -1,0 +1,280 @@
+:root {
+  /* Font family */
+  --font-primary: "Rubik", sans-serif;
+
+  /* ===== Typography Scale ===== */
+
+  /* Preset 1 */
+  --fs-1: clamp(2.5rem, 4vw, 3.5rem); /* 40px → 56px */
+  --lh-1: 1.18;
+
+  /* Preset 2 */
+  --fs-2: clamp(2rem, 3vw, 2.5rem); /* 32px → 40px */
+  --lh-2: 1.175;
+
+  /* Preset 3 */
+  --fs-3: clamp(1.75rem, 2.5vw, 2rem); /* 28px → 32px */
+  --lh-3: 1.1875;
+
+  /* Preset 4 */
+  --fs-4: clamp(1.375rem, 2vw, 1.5rem); /* 22px → 24px */
+  --lh-4: 1.166;
+
+  /* Preset 5 */
+  --fs-5: 1.125rem; /* 18px */
+  --lh-5: 1.166;
+
+  /* Preset 6 */
+  --fs-6: 0.9375rem; /* 15px */
+  --lh-6: 1.2;
+
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* Colors */
+  /* ===== Base ===== */
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  /* ===== Navy ===== */
+  --clr-navy-950: #0e1323;
+  --clr-navy-900: #1c204b;
+  --clr-navy-800: #33397a;
+  --clr-navy-200: #bbc0ff;
+
+  /* ===== Accent Colors ===== */
+  --clr-orange-300: #ff8b64;
+  --clr-purple-700: #7335d2;
+  --clr-purple-600: #5747ea;
+  --clr-purple-500: #7078c9;
+
+  --clr-blue-300: #55c2e6;
+  --clr-pink-400: #ff5e7d;
+  --clr-green-400: #4bcf82;
+  --clr-yellow-300: #f1c75b;
+
+  /* ===== Neutral ===== */
+  --clr-grey-200: #d8d8d8;
+
+  /* ===== Spacing Scale ===== */
+  --space-0: 0rem; /* 0px */
+  --space-100: 0.5rem; /* 8px */
+  --space-200: 1rem; /* 16px */
+  --space-300: 1.5rem; /* 24px */
+  --space-400: 2rem; /* 32px */
+  --space-500: 2.5rem; /* 40px */
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+}
+
+/* Utility classes */
+
+/* Preset 1 */
+.text-1 {
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  font-weight: var(--fw-light);
+}
+
+/* Preset 2 */
+.text-2 {
+  font-size: var(--fs-2);
+  line-height: var(--lh-2);
+  font-weight: var(--fw-light);
+}
+
+/* Preset 3 */
+.text-3 {
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-light);
+}
+
+/* Preset 4 */
+.text-4 {
+  font-size: var(--fs-4);
+  line-height: var(--lh-4);
+  font-weight: var(--fw-light);
+}
+
+/* Preset 5 (Medium) */
+.text-5-medium {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  font-weight: var(--fw-medium);
+}
+
+/* Preset 5 (Regular) */
+.text-5 {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  font-weight: var(--fw-regular);
+}
+
+/* Preset 6 */
+.text-6 {
+  font-size: var(--fs-6);
+  line-height: var(--lh-6);
+  font-weight: var(--fw-regular);
+}
+
+/* Background utilities */
+.bg-white {
+  background-color: var(--clr-white);
+}
+.bg-black {
+  background-color: var(--clr-black);
+}
+
+.bg-navy-950 {
+  background-color: var(--clr-navy-950);
+}
+.bg-navy-900 {
+  background-color: var(--clr-navy-900);
+}
+.bg-navy-800 {
+  background-color: var(--clr-navy-800);
+}
+.bg-navy-200 {
+  background-color: var(--clr-navy-200);
+}
+
+.bg-orange {
+  background-color: var(--clr-orange-300);
+}
+.bg-purple {
+  background-color: var(--clr-purple-600);
+}
+.bg-blue {
+  background-color: var(--clr-blue-300);
+}
+.bg-pink {
+  background-color: var(--clr-pink-400);
+}
+.bg-green {
+  background-color: var(--clr-green-400);
+}
+.bg-yellow {
+  background-color: var(--clr-yellow-300);
+}
+
+/* Text color utilities */
+.text-white {
+  color: var(--clr-white);
+}
+.text-black {
+  color: var(--clr-black);
+}
+
+.text-navy-200 {
+  color: var(--clr-navy-200);
+}
+.text-navy-800 {
+  color: var(--clr-navy-800);
+}
+
+.text-purple {
+  color: var(--clr-purple-600);
+}
+.text-grey {
+  color: var(--clr-grey-200);
+}
+
+/* Border utilities (optional but useful) */
+.border-grey {
+  border-color: var(--clr-grey-200);
+}
+.border-navy {
+  border-color: var(--clr-navy-800);
+}
+
+/* Margin utilities */
+/* All sides */
+.m-0 {
+  margin: var(--space-0);
+}
+.m-100 {
+  margin: var(--space-100);
+}
+.m-200 {
+  margin: var(--space-200);
+}
+.m-300 {
+  margin: var(--space-300);
+}
+.m-400 {
+  margin: var(--space-400);
+}
+.m-500 {
+  margin: var(--space-500);
+}
+
+/* Top */
+.mt-100 {
+  margin-top: var(--space-100);
+}
+.mt-200 {
+  margin-top: var(--space-200);
+}
+.mt-300 {
+  margin-top: var(--space-300);
+}
+
+/* Bottom */
+.mb-100 {
+  margin-bottom: var(--space-100);
+}
+.mb-200 {
+  margin-bottom: var(--space-200);
+}
+.mb-300 {
+  margin-bottom: var(--space-300);
+}
+
+/* Padding utilities */
+/* All sides */
+.p-100 {
+  padding: var(--space-100);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+.p-400 {
+  padding: var(--space-400);
+}
+
+/* X axis */
+.px-200 {
+  padding-left: var(--space-200);
+  padding-right: var(--space-200);
+}
+
+/* Y axis */
+.py-200 {
+  padding-top: var(--space-200);
+  padding-bottom: var(--space-200);
+}
+
+/* Gap utilities (VERY useful for flex/grid) */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
