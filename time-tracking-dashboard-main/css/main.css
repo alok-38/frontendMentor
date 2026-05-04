@@ -28,12 +28,8 @@ main {
 }
 
 nav,
-.dashboard__cards div {
+.dashboard__cards .card-wrapper {
   background-color: var(--clr-navy-900);
-}
-
-div {
-  border-radius: 15px;
 }
 
 .dashboard__profile-header {
@@ -57,7 +53,7 @@ div {
   padding-left: 32px;
 }
 
-img {
+.dashboard__avatar {
   height: 78px;
   width: 78px;
   object-fit: cover;
@@ -75,6 +71,57 @@ span {
   display: grid;
   grid-gap: var(--space-400);
   grid-template-columns: repeat(3, 1fr);
+  max-width: 829px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card__header,
+.card__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: var(--fs-5);
+  line-height: var(--lh-5);
+  font-weight: 500;
+}
+
+.card__menu {
+  gap: 3px;
+  cursor: pointer;
+}
+
+.card__current {
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  font-weight: var(--fw-light);
+  margin-bottom: 8px;
+}
+
+.card__previous {
+  font-size: var(--fs-6);
+  line-height: var(--lh-6);
+  font-weight: var(--fw-regular);
+}
+
+.dashboard__cards .card-wrapper {
+  padding: 32px;
+  max-width: 255px;
+  width: 100%;
+}
+
+.ellipsis__icon {
+  height: 5px;
+  width: 5px;
+  object-fit: cover;
 }
 
 /* footer */
@@ -84,4 +131,38 @@ span {
 }
 .attribution a {
   color: hsl(0, 0%, 100%);
+}
+
+/* Background images and overlay */
+.card-wrapper {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden; /* important for rounded corners */
+}
+
+/* Background layer */
+.card--bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* slightly taller than visible area */
+
+  background-color: orange;
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top right 15px;
+
+  z-index: 0;
+}
+
+/* Card sits on top */
+.card {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 25px; /* THIS creates the "peek" effect */
+  background: #1c1f4a; /* dark card color */
+  border-radius: 15px;
+  padding: 20px;
 }

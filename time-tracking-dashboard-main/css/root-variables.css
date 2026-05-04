@@ -183,6 +183,11 @@ body {
 .text-purple {
   color: var(--clr-purple-600);
 }
+
+.text-purple--500 {
+  color: var(--clr-purple-500);
+}
+
 .text-grey {
   color: var(--clr-grey-200);
 }
