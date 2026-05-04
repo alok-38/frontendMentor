@@ -20,6 +20,43 @@ main {
   margin: 0 auto;
 }
 
+.dashboard__profile {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 32px;
+}
+
+nav,
+.dashboard__cards div {
+  background-color: var(--clr-navy-900);
+}
+
+div {
+  border-radius: 15px;
+}
+
+.dashboard__profile-header {
+  max-width: 255px;
+}
+
+.dashboard__filters {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding-top: 32px;
+}
+
+.dashboard__filters button {
+  background: transparent;
+  outline: unset;
+  border: unset;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 32px;
+}
+
 img {
   height: 78px;
   width: 78px;
