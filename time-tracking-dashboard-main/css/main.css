@@ -12,6 +12,32 @@ body {
 main {
   display: flex;
   flex: 1; /* This pushes footer down */
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-400);
+  max-width: 1116px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+img {
+  height: 78px;
+  width: 78px;
+  object-fit: cover;
+  border: 3px solid var(--clr-grey-200);
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+span {
+  display: block;
+}
+
+/* dashboard__cards */
+.dashboard__cards {
+  display: grid;
+  grid-gap: var(--space-400);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* footer */
@@ -20,5 +46,5 @@ main {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(0, 0%, 100%);
 }
