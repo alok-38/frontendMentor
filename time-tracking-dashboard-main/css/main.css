@@ -21,8 +21,7 @@ main {
 }
 
 .dashboard__profile {
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 15px;
   overflow: hidden;
   padding-bottom: 32px;
 }
@@ -34,6 +33,8 @@ nav,
 
 .dashboard__profile-header {
   max-width: 255px;
+  height: 354px;
+  border-radius: 15px;
 }
 
 .dashboard__filters {
@@ -168,26 +169,35 @@ span {
 }
 
 .card-wrapper--play .card--bg {
-  background-color: #55C2E6;
+  background-color: #55c2e6;
   background-image: url("../images/icon-play.svg");
 }
 
 .card-wrapper--study .card--bg {
-  background-color: #F04667;
+  background-color: #f04667;
   background-image: url("../images/icon-study.svg");
 }
 
 .card-wrapper--exercise .card--bg {
-  background-color: #29BA66;
+  background-color: #29ba66;
   background-image: url("../images/icon-exercise.svg");
 }
 
 .card-wrapper--social .card--bg {
-  background-color: #7335D2;
+  background-color: #7335d2;
   background-image: url("../images/icon-social.svg");
 }
 
 .card-wrapper--self-care .card--bg {
-  background-color: #F1C75B;
+  background-color: #f1c75b;
   background-image: url("../images/icon-self-care.svg");
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    max-width: 612px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
