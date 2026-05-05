@@ -137,7 +137,7 @@ span {
 .card-wrapper {
   position: relative;
   border-radius: 15px;
-  overflow: hidden; /* important for rounded corners */
+  overflow: hidden;
 }
 
 /* Background layer */
@@ -146,13 +146,10 @@ span {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px; /* slightly taller than visible area */
+  height: 50px;
 
-  background-color: orange;
-  background-image: url("../images/icon-work.svg");
   background-repeat: no-repeat;
   background-position: top right 15px;
-
   z-index: 0;
 }
 
@@ -160,9 +157,37 @@ span {
 .card {
   position: relative;
   z-index: 1;
+  margin-top: 25px;
+  background: #1c1f4a;
+  padding-top: 25px;
+}
 
-  margin-top: 25px; /* THIS creates the "peek" effect */
-  background: #1c1f4a; /* dark card color */
-  border-radius: 15px;
-  padding: 20px;
+.card-wrapper--work .card--bg {
+  background-color: #ff8b64;
+  background-image: url("../images/icon-work.svg");
+}
+
+.card-wrapper--play .card--bg {
+  background-color: #55C2E6;
+  background-image: url("../images/icon-play.svg");
+}
+
+.card-wrapper--study .card--bg {
+  background-color: #F04667;
+  background-image: url("../images/icon-study.svg");
+}
+
+.card-wrapper--exercise .card--bg {
+  background-color: #29BA66;
+  background-image: url("../images/icon-exercise.svg");
+}
+
+.card-wrapper--social .card--bg {
+  background-color: #7335D2;
+  background-image: url("../images/icon-social.svg");
+}
+
+.card-wrapper--self-care .card--bg {
+  background-color: #F1C75B;
+  background-image: url("../images/icon-self-care.svg");
 }
