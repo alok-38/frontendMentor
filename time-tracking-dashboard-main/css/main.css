@@ -44,6 +44,7 @@ nav,
   padding-top: 32px;
 }
 
+/* Button styling */
 .dashboard__filters button {
   background: transparent;
   outline: unset;
@@ -52,7 +53,29 @@ nav,
   cursor: pointer;
   text-align: left;
   padding-left: 32px;
+
+  /* Transition */
+  transition: all 0.25s ease;
 }
+
+/* Hover */
+.dashboard__filters button:hover {
+  transform: translateX(4px);
+  opacity: 0.85;
+}
+
+/* Focus (keyboard accessibility) */
+.dashboard__filters button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+/* Active / Click */
+.dashboard__filters button:active {
+  transform: translateX(2px) scale(0.98);
+  opacity: 0.7;
+}
+/* Button styling ends here */
 
 .dashboard__avatar {
   height: 78px;
@@ -193,11 +216,80 @@ span {
   background-image: url("../images/icon-self-care.svg");
 }
 
+/* Responsive rule set */
 @media screen and (max-width: 768px) {
   main {
     max-width: 612px;
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .dashboard__profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .dashboard__profile-header {
+    display: flex;
+    gap: 24px;
+    flex: 1;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+  .dashboard__profile-header img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: auto;
+  }
+
+  .dashboard__title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .dashboard__filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__previous {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    max-width: 327px;
+  }
+
+  .dashboard__cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard__cards .card-wrapper {
+    max-width: none;
+    width: 100%;
+  }
+
+  .card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  button {
+    padding: 0;
+  }
+
+  footer {
+    display: none;
   }
 }
