@@ -3,78 +3,94 @@ body {
   height: 100%;
 }
 
-body {
+body,
+.wrapper,
+.splitter-form,
+.splitter-form__section--input,
+.splitter-form__field,
+.splitter-form__results,
+.splitter-form__section--result {
   display: flex;
+}
+
+body,
+.wrapper,
+.splitter-form__section--input,
+.splitter-form__field,
+.splitter-form__results,
+.splitter-form__section--result {
   flex-direction: column;
 }
 
+/* Layout */
 .wrapper {
   flex: 1;
-  display: flex;
-  flex-direction: column;
   gap: 88px;
   align-items: center;
+  margin-top: 15vh;
 }
 
-/* main */
+.wrapper__title {
+  letter-spacing: 5px;
+}
+
+.wrapper__title span,
+.splitter-form__label > span {
+  display: block;
+}
+
+/* Main */
 .wrapper__main {
+  width: min(100%, 920px);
   border-radius: 25px;
 }
 
-.splitter-form {
-  display: flex;
-}
-
-/* left */
-.splitter-form__section {
-  display: flex;
-  flex-direction: column;
+.splitter-form__section--input {
   gap: 40px;
 }
 
 .splitter-form__field {
-  display: flex;
-  flex-direction: column;
   gap: 8px;
 }
 
-/* labels */
+/* Labels */
 .splitter-form__label {
   font-size: var(--text-5-size);
   line-height: var(--text-5-line);
   font-weight: 600;
 }
 
-/* Remove the up and down arrow */
-/* Chrome, Safari, Edge */
+.splitter-form__section--input .splitter-form__label {
+  color: var(--color-grey-500);
+}
+
+/* Remove number input arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox (legacy but still required) */
 input[type="number"] {
   -moz-appearance: textfield;
-}
-
-/* Buttons and Input */
-input[type="number"],
-.splitter-form__button--reset {
-  padding: 8px 16px;
-  cursor: pointer;
-  outline: unset;
-  border: unset;
-  background: transparent;
-  font-family: inherit;
-  border-radius: 5px;
-}
-
-input[type="number"] {
   background-color: var(--color-grey-50);
   position: relative;
 }
 
+/* Shared control styles */
+input[type="number"],
+.splitter-form__button--reset,
+.splitter-form__tip-group--grid button {
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+  font-family: inherit;
+  border-radius: 5px;
+  height: 48px;
+}
+
+/* Icons */
 .splitter-form__people,
 .splitter-form__dollar {
   width: 13px;
@@ -85,7 +101,7 @@ input[type="number"] {
   z-index: 1;
 }
 
-/* Button group */
+/* Button grid */
 .splitter-form__tip-group--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -94,17 +110,52 @@ input[type="number"] {
 
 .splitter-form__tip-group--grid button {
   width: 116px;
-  padding: 8px 16px;
-  background: transparent;
   background-color: var(--color-green-800);
-  cursor: pointer;
-  outline: unset;
-  border: unset;
   font-size: var(--text-3-size);
   line-height: var(--text-3-line);
   font-weight: 800;
   color: #fff;
-  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splitter-form__tip-group .splitter-form__button--custom {
+  background-color: var(--color-grey-50);
+  color: var(--color-grey-550);
+}
+
+/* Results */
+.splitter-form__result-item {
+  display: flex;
+  gap: 96px;
+}
+
+.splitter-form__results {
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.splitter-form__value {
+  margin-left: auto;
+  color: var(--color-green-400);
+}
+
+.splitter-form__section--result {
+  gap: 128px;
+  padding: 24px 32px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+/* Reset button */
+.splitter-form__button--reset {
+  background-color: var(--color-green-400);
+  font-size: var(--text-4-size);
+  line-height: var(--text-4-line);
+  color: var(--color-green-900);
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 /* Footer */
@@ -112,6 +163,7 @@ input[type="number"] {
   font-size: 0.6875rem;
   text-align: center;
 }
+
 .attribution a {
   color: inherit;
 }
