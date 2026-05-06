@@ -324,6 +324,10 @@ body {
   padding-bottom: var(--space-200);
 }
 
+.p-400 {
+  padding: var(--space-400);
+}
+
 /* Gap (for flex/grid) */
 .gap-100 {
   gap: var(--space-100);

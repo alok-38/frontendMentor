@@ -8,8 +8,20 @@ body {
   flex-direction: column;
 }
 
-main {
+.wrapper {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  align-items: center;
+}
+
+.splitter-form {
+  display: flex;
+}
+
+.splitter-form__section--result {
+  
 }
 
 /* Footer */

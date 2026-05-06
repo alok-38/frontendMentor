@@ -55,13 +55,121 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body class="bg-body">
-    <header>
-      <h1>SPLI<span>TTER</span></h1>
-    </header>
-    <main>
-      Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-      person Total / person Reset
-    </main>
+    <div class="wrapper wrapper--layout">
+      <header class="wrapper__header" role="banner">
+        <h1 class="wrapper__title">SPLI<span>TTER</span></h1>
+      </header>
+
+      <main class="wrapper__main bg-white p-400" role="main">
+        <form class="splitter-form" aria-label="Tip calculator form">
+          <section class="splitter-form__section splitter-form__section--input">
+            <label>Bill</label>
+            <input
+              type="number"
+              aria-label="Bill amount"
+              class="splitter-form__input splitter-form__input--bill"
+            />
+
+            <label>Select Tip %</label>
+
+            <!-- Keyboard-accessible radio group -->
+            <div
+              class="splitter-form__tip-group"
+              role="radiogroup"
+              aria-label="Tip percentage selection"
+            >
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--tip"
+              >
+                5%
+              </button>
+
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--tip"
+              >
+                10%
+              </button>
+
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--tip"
+              >
+                15%
+              </button>
+
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--tip"
+              >
+                25%
+              </button>
+
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--tip"
+              >
+                50%
+              </button>
+
+              <!-- Custom acts like a special radio option -->
+              <button
+                type="button"
+                role="radio"
+                aria-checked="false"
+                tabindex="0"
+                class="splitter-form__button splitter-form__button--custom"
+              >
+                Custom
+              </button>
+            </div>
+
+            <label>Number of People</label>
+            <input
+              type="number"
+              aria-label="Number of people"
+              class="splitter-form__input splitter-form__input--people"
+            />
+          </section>
+
+          <section
+            class="splitter-form__section splitter-form__section--result bg-green-900"
+          >
+            <label class="splitter-form__label">
+              Tip Amount <span>/ person</span>
+            </label>
+
+            <label class="splitter-form__label">
+              Total <span>/ person</span>
+            </label>
+
+            <button
+              type="button"
+              aria-label="Reset calculator"
+              class="splitter-form__button splitter-form__button--reset"
+            >
+              Reset
+            </button>
+          </section>
+        </form>
+      </main>
+    </div>
 
     <footer class="attribution">
       Challenge by
