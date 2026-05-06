@@ -64,6 +64,13 @@ body,
   color: var(--color-grey-500);
 }
 
+/* Smooth transitions for all interactive elements */
+input[type="number"],
+.splitter-form__button--reset,
+.splitter-form__tip-group--grid button {
+  transition: all 0.2s ease;
+}
+
 /* Remove number input arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -75,6 +82,11 @@ input[type="number"] {
   -moz-appearance: textfield;
   background-color: var(--color-grey-50);
   position: relative;
+  display: flex;
+  font-size: var(--text-3-size);
+  line-height: var(--text-3-line);
+  color: var(--color-green-800);
+  font-weight: 600;
 }
 
 /* Shared control styles */
@@ -158,6 +170,47 @@ input[type="number"],
   font-weight: 800;
 }
 
+/* Hover effects/* Input hover */
+input[type="number"]:hover {
+  background-color: var(--color-grey-100);
+}
+
+/* Tip buttons hover */
+.splitter-form__tip-group--grid button:hover {
+  background-color: var(--color-green-400);
+  color: var(--color-green-900);
+}
+
+/* Reset button hover */
+.splitter-form__button--reset:hover {
+  filter: brightness(1.1);
+}
+
+/* Focus states */
+input[type="number"]:focus {
+  outline: 2px solid var(--color-green-400);
+  outline-offset: 2px;
+}
+
+/* Optional: keyboard focus for buttons */
+.splitter-form__tip-group--grid button:focus-visible,
+.splitter-form__button--reset:focus-visible {
+  outline: 2px solid var(--color-green-400);
+  outline-offset: 2px;
+}
+
+/* Active / press (click feedback) */
+/* Press effect for buttons */
+.splitter-form__tip-group--grid button:active,
+.splitter-form__button--reset:active {
+  transform: scale(0.96);
+}
+
+/* Optional subtle press for input */
+input[type="number"]:active {
+  transform: scale(0.99);
+}
+
 /* Footer */
 .attribution {
   font-size: 0.6875rem;
@@ -166,4 +219,48 @@ input[type="number"],
 
 .attribution a {
   color: inherit;
+}
+
+/* Media query for tablet */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin-top: 15px;
+  }
+  header {
+    display: none;
+  }
+  .wrapper__main {
+    max-width: 608px;
+    width: 100%;
+    padding: 48px 80px;
+  }
+  .splitter-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .wrapper__main {
+    max-width: none;
+    width: 100%;
+    border: 0;
+  }
+
+  .splitter-form {
+    max-width: none;
+    width: 100%;
+  }
+
+  .splitter-form__section {
+    max-width: none;
+    width: 100%;
+  }
 }

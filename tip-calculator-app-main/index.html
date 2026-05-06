@@ -52,7 +52,8 @@
     <!-- CSS (order matters) -->
     <link rel="stylesheet" href="/css/font-face.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/refactored.css" />
+    <script src="app.js" defer></script>
   </head>
   <body class="bg-body">
     <div class="wrapper wrapper--layout">
@@ -60,84 +61,97 @@
         <h1 class="wrapper__title text-4">SPLI<span>TTER</span></h1>
       </header>
 
-      <main class="wrapper__main bg-white p-400" role="main">
-        <form class="splitter-form gap-600" aria-label="Tip calculator form">
+      <main id="main" class="wrapper__main bg-white p-400" role="main">
+        <form
+          id="tip-form"
+          class="splitter-form gap-600"
+          aria-label="Tip calculator form"
+        >
           <section
+            id="input-section"
             class="splitter-form__section splitter-form__section--input splitter-form__section--grid"
           >
+            <!-- Bill -->
             <div class="splitter-form__field">
-              <label class="splitter-form__label">Bill</label>
+              <label for="bill-input" class="splitter-form__label">Bill</label>
               <img
                 class="splitter-form__dollar"
                 src="images/icon-dollar.svg"
                 alt="US dollar icon"
               />
               <input
+                id="bill-input"
                 type="number"
                 aria-label="Bill amount"
                 class="splitter-form__input splitter-form__input--bill splitter-form__input--number"
               />
             </div>
 
+            <!-- Tip Selection -->
             <div class="splitter-form__field">
               <label class="splitter-form__label">Select Tip %</label>
-              <!-- Keyboard-accessible radio group -->
+
               <div
+                id="tip-group"
                 class="splitter-form__tip-group splitter-form__tip-group--grid"
                 role="radiogroup"
                 aria-label="Tip percentage selection"
               >
                 <button
+                  data-tip="5"
+                  id="tip-5"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--tip splitter-form__radio"
                 >
                   5%
                 </button>
                 <button
+                  data-tip="10"
+                  id="tip-10"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--tip splitter-form__radio"
                 >
                   10%
                 </button>
                 <button
+                  data-tip="15"
+                  id="tip-15"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--tip splitter-form__radio"
                 >
                   15%
                 </button>
                 <button
+                  data-tip="25"
+                  id="tip-25"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--tip splitter-form__radio"
                 >
                   25%
                 </button>
                 <button
+                  data-tip="50"
+                  id="tip-50"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--tip splitter-form__radio"
                 >
                   50%
                 </button>
-                <!-- Custom acts like a special radio option -->
                 <button
+                  id="tip-custom"
                   type="button"
                   role="radio"
                   aria-checked="false"
-                  tabindex="0"
                   class="splitter-form__button splitter-form__button--custom splitter-form__radio"
                 >
                   Custom
@@ -145,14 +159,18 @@
               </div>
             </div>
 
+            <!-- People -->
             <div class="splitter-form__field">
-              <label class="splitter-form__label">Number of People</label>
+              <label for="people-input" class="splitter-form__label"
+                >Number of People</label
+              >
               <img
                 class="splitter-form__people"
                 src="images/icon-person.svg"
                 alt="Icon representing people"
               />
               <input
+                id="people-input"
                 type="number"
                 aria-label="Number of people"
                 class="splitter-form__input splitter-form__input--people splitter-form__input--number"
@@ -160,7 +178,9 @@
             </div>
           </section>
 
+          <!-- Results -->
           <section
+            id="result-section"
             class="splitter-form__section splitter-form__section--result bg-green-900"
           >
             <div class="splitter-form__results">
@@ -168,18 +188,25 @@
                 <label class="splitter-form__label text-white text-5">
                   Tip Amount <span class="text-grey-400 text-6">/ person</span>
                 </label>
-                <span class="splitter-form__value text-1">$4.27</span>
+                <span
+                  id="tip-amount"
+                  class="splitter-form__value text-1"
+                ></span>
               </div>
 
               <div class="splitter-form__result-item">
                 <label class="splitter-form__label text-white text-5">
                   Total <span class="text-grey-400 text-6">/ person</span>
                 </label>
-                <span class="splitter-form__value text-1">$4.27</span>
+                <span
+                  id="total-amount"
+                  class="splitter-form__value text-1"
+                ></span>
               </div>
             </div>
 
             <button
+              id="reset-btn"
               type="button"
               aria-label="Reset calculator"
               class="splitter-form__button splitter-form__button--reset"
