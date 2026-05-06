@@ -16,12 +16,95 @@ body {
   align-items: center;
 }
 
+/* main */
+.wrapper__main {
+  border-radius: 25px;
+}
+
 .splitter-form {
   display: flex;
 }
 
-.splitter-form__section--result {
-  
+/* left */
+.splitter-form__section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.splitter-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* labels */
+.splitter-form__label {
+  font-size: var(--text-5-size);
+  line-height: var(--text-5-line);
+  font-weight: 600;
+}
+
+/* Remove the up and down arrow */
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox (legacy but still required) */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Buttons and Input */
+input[type="number"],
+.splitter-form__button--reset {
+  padding: 8px 16px;
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+  background: transparent;
+  font-family: inherit;
+  border-radius: 5px;
+}
+
+input[type="number"] {
+  background-color: var(--color-grey-50);
+  position: relative;
+}
+
+.splitter-form__people,
+.splitter-form__dollar {
+  width: 13px;
+  height: 16px;
+  object-fit: cover;
+  position: absolute;
+  transform: translate(15px, 42px);
+  z-index: 1;
+}
+
+/* Button group */
+.splitter-form__tip-group--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.splitter-form__tip-group--grid button {
+  width: 116px;
+  padding: 8px 16px;
+  background: transparent;
+  background-color: var(--color-green-800);
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+  font-size: var(--text-3-size);
+  line-height: var(--text-3-line);
+  font-weight: 800;
+  color: #fff;
+  border-radius: 5px;
 }
 
 /* Footer */

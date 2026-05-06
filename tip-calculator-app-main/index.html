@@ -61,91 +61,103 @@
       </header>
 
       <main class="wrapper__main bg-white p-400" role="main">
-        <form class="splitter-form" aria-label="Tip calculator form">
-          <section class="splitter-form__section splitter-form__section--input">
-            <label>Bill</label>
-            <input
-              type="number"
-              aria-label="Bill amount"
-              class="splitter-form__input splitter-form__input--bill"
-            />
-
-            <label>Select Tip %</label>
-
-            <!-- Keyboard-accessible radio group -->
-            <div
-              class="splitter-form__tip-group"
-              role="radiogroup"
-              aria-label="Tip percentage selection"
-            >
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--tip"
-              >
-                5%
-              </button>
-
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--tip"
-              >
-                10%
-              </button>
-
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--tip"
-              >
-                15%
-              </button>
-
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--tip"
-              >
-                25%
-              </button>
-
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--tip"
-              >
-                50%
-              </button>
-
-              <!-- Custom acts like a special radio option -->
-              <button
-                type="button"
-                role="radio"
-                aria-checked="false"
-                tabindex="0"
-                class="splitter-form__button splitter-form__button--custom"
-              >
-                Custom
-              </button>
+        <form class="splitter-form gap-600" aria-label="Tip calculator form">
+          <section
+            class="splitter-form__section splitter-form__section--input splitter-form__section--grid"
+          >
+            <div class="splitter-form__field">
+              <label class="splitter-form__label">Bill</label>
+              <img
+                class="splitter-form__dollar"
+                src="images/icon-dollar.svg"
+                alt="US dollar icon"
+              />
+              <input
+                type="number"
+                aria-label="Bill amount"
+                class="splitter-form__input splitter-form__input--bill splitter-form__input--number"
+              />
             </div>
 
-            <label>Number of People</label>
-            <input
-              type="number"
-              aria-label="Number of people"
-              class="splitter-form__input splitter-form__input--people"
-            />
+            <div class="splitter-form__field">
+              <label class="splitter-form__label">Select Tip %</label>
+              <!-- Keyboard-accessible radio group -->
+              <div
+                class="splitter-form__tip-group splitter-form__tip-group--grid"
+                role="radiogroup"
+                aria-label="Tip percentage selection"
+              >
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--tip splitter-form__radio"
+                >
+                  5%
+                </button>
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--tip splitter-form__radio"
+                >
+                  10%
+                </button>
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--tip splitter-form__radio"
+                >
+                  15%
+                </button>
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--tip splitter-form__radio"
+                >
+                  25%
+                </button>
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--tip splitter-form__radio"
+                >
+                  50%
+                </button>
+                <!-- Custom acts like a special radio option -->
+                <button
+                  type="button"
+                  role="radio"
+                  aria-checked="false"
+                  tabindex="0"
+                  class="splitter-form__button splitter-form__button--custom splitter-form__radio"
+                >
+                  Custom
+                </button>
+              </div>
+            </div>
+
+            <div class="splitter-form__field">
+              <label class="splitter-form__label">Number of People</label>
+              <img
+                class="splitter-form__people"
+                src="images/icon-person.svg"
+                alt="Icon representing people"
+              />
+              <input
+                type="number"
+                aria-label="Number of people"
+                class="splitter-form__input splitter-form__input--people splitter-form__input--number"
+              />
+            </div>
           </section>
 
           <section
