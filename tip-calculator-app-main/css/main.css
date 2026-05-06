@@ -1,37 +1,35 @@
+/* Base Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
-}
-
-body,
-.wrapper,
-.splitter-form,
-.splitter-form__section--input,
-.splitter-form__field,
-.splitter-form__results,
-.splitter-form__section--result {
-  display: flex;
-}
-
-body,
-.wrapper,
-.splitter-form__section--input,
-.splitter-form__field,
-.splitter-form__results,
-.splitter-form__section--result {
-  flex-direction: column;
+  margin: 0;
 }
 
 /* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: inherit;
+}
+
 .wrapper {
   flex: 1;
-  gap: 88px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-top: 15vh;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
 .wrapper__title {
   letter-spacing: 5px;
+  text-align: center;
 }
 
 .wrapper__title span,
@@ -39,24 +37,39 @@ body,
   display: block;
 }
 
-/* Main */
+/* Main Container */
 .wrapper__main {
-  width: min(100%, 920px);
+  width: 100%;
+  max-width: 920px;
   border-radius: 25px;
+  overflow: hidden;
 }
 
-.splitter-form__section--input {
-  gap: 40px;
+/* Form Layout */
+.splitter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
+/* Sections */
+.splitter-form__section--input,
+.splitter-form__section--result {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Fields */
 .splitter-form__field {
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* Labels */
 .splitter-form__label {
   font-size: var(--text-5-size);
-  line-height: var(--text-5-line);
   font-weight: 600;
 }
 
@@ -64,14 +77,19 @@ body,
   color: var(--color-grey-500);
 }
 
-/* Smooth transitions for all interactive elements */
-input[type="number"],
-.splitter-form__button--reset,
-.splitter-form__tip-group--grid button {
-  transition: all 0.2s ease;
+/* Inputs */
+input[type="number"] {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  font-size: var(--text-3-size);
+  font-weight: 600;
+  color: var(--color-green-800);
+  background-color: var(--color-grey-50);
+  border-radius: 5px;
+  border: none;
 }
 
-/* Remove number input arrows */
+/* Remove arrows */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -80,187 +98,148 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
-  background-color: var(--color-grey-50);
+}
+
+/* Input Icons */
+.splitter-form__field {
   position: relative;
-  display: flex;
-  font-size: var(--text-3-size);
-  line-height: var(--text-3-line);
-  color: var(--color-green-800);
-  font-weight: 600;
 }
 
-/* Shared control styles */
-input[type="number"],
-.splitter-form__button--reset,
-.splitter-form__tip-group--grid button {
-  padding: 8px 16px;
-  cursor: pointer;
-  outline: unset;
-  border: unset;
-  font-family: inherit;
-  border-radius: 5px;
-  height: 48px;
-}
-
-/* Icons */
 .splitter-form__people,
 .splitter-form__dollar {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 13px;
   height: 16px;
-  object-fit: cover;
-  position: absolute;
-  transform: translate(15px, 42px);
-  z-index: 1;
 }
 
-/* Button grid */
+/* Buttons shared */
+.splitter-form__tip-group--grid button,
+.splitter-form__button--reset {
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Tip Grid */
 .splitter-form__tip-group--grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
 .splitter-form__tip-group--grid button {
-  width: 116px;
   background-color: var(--color-green-800);
-  font-size: var(--text-3-size);
-  line-height: var(--text-3-line);
-  font-weight: 800;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: 800;
 }
 
-.splitter-form__tip-group .splitter-form__button--custom {
+/* Custom button */
+.splitter-form__button--custom {
   background-color: var(--color-grey-50);
   color: var(--color-grey-550);
 }
 
 /* Results */
-.splitter-form__result-item {
+.splitter-form__results {
   display: flex;
-  gap: 96px;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.splitter-form__results {
-  gap: 24px;
+.splitter-form__result-item {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .splitter-form__value {
-  margin-left: auto;
   color: var(--color-green-400);
 }
 
+/* Result section */
 .splitter-form__section--result {
-  gap: 128px;
-  padding: 24px 32px;
+  padding: 1.5rem;
   border-radius: 15px;
-  width: 100%;
 }
 
 /* Reset button */
 .splitter-form__button--reset {
   background-color: var(--color-green-400);
-  font-size: var(--text-4-size);
-  line-height: var(--text-4-line);
   color: var(--color-green-900);
   text-transform: uppercase;
   font-weight: 800;
 }
 
-/* Hover effects/* Input hover */
-input[type="number"]:hover {
+/* Hover / Focus */
+input:hover {
   background-color: var(--color-grey-100);
 }
 
-/* Tip buttons hover */
-.splitter-form__tip-group--grid button:hover {
-  background-color: var(--color-green-400);
-  color: var(--color-green-900);
+input:focus {
+  outline: 2px solid var(--color-green-400);
 }
 
-/* Reset button hover */
-.splitter-form__button--reset:hover {
+button:hover {
   filter: brightness(1.1);
 }
 
-/* Focus states */
-input[type="number"]:focus {
-  outline: 2px solid var(--color-green-400);
-  outline-offset: 2px;
-}
-
-/* Optional: keyboard focus for buttons */
-.splitter-form__tip-group--grid button:focus-visible,
-.splitter-form__button--reset:focus-visible {
-  outline: 2px solid var(--color-green-400);
-  outline-offset: 2px;
-}
-
-/* Active / press (click feedback) */
-/* Press effect for buttons */
-.splitter-form__tip-group--grid button:active,
-.splitter-form__button--reset:active {
+button:active {
   transform: scale(0.96);
-}
-
-/* Optional subtle press for input */
-input[type="number"]:active {
-  transform: scale(0.99);
 }
 
 /* Footer */
 .attribution {
-  font-size: 0.6875rem;
+  font-size: 0.7rem;
   text-align: center;
 }
 
-.attribution a {
-  color: inherit;
-}
-
-/* Media query for tablet */
-@media screen and (max-width: 768px) {
+/* ========================= */
+/* 📱 Tablet (≥ 768px) */
+/* ========================= */
+@media (min-width: 768px) {
   .wrapper {
-    margin-top: 15px;
-  }
-  header {
-    display: none;
-  }
-  .wrapper__main {
-    max-width: 608px;
-    width: 100%;
-    padding: 48px 80px;
-  }
-  .splitter-form {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .wrapper {
-    margin: 0;
-    padding: 0;
-    max-width: none;
-    width: 100%;
-  }
-
-  .wrapper__main {
-    max-width: none;
-    width: 100%;
-    border: 0;
+    gap: 3rem;
+    padding: 2rem;
   }
 
   .splitter-form {
-    max-width: none;
-    width: 100%;
+    flex-direction: row;
   }
 
-  .splitter-form__section {
-    max-width: none;
-    width: 100%;
+  .splitter-form__section--input,
+  .splitter-form__section--result {
+    flex: 1;
+  }
+
+  .splitter-form__tip-group--grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .splitter-form__section--result {
+    justify-content: space-between;
+  }
+}
+
+/* ========================= */
+/* 💻 Desktop (≥ 1024px) */
+/* ========================= */
+@media (min-width: 1024px) {
+  .wrapper {
+    gap: 4rem;
+  }
+
+  .wrapper__main {
+    border-radius: 25px;
+  }
+
+  .splitter-form__section--result {
+    padding: 2rem;
   }
 }
