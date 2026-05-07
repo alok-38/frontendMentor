@@ -1,0 +1,195 @@
+:root {
+  /* =========================
+     🔤 TYPOGRAPHY
+     ========================= */
+
+  --font-mono: "JetBrains Mono", monospace;
+
+  --fs-1: clamp(1.75rem, 1.2rem + 2vw, 2rem);
+  --lh-1: clamp(2.25rem, 1.8rem + 2vw, 2.625rem);
+
+  --fs-2: clamp(1.25rem, 1rem + 1.2vw, 1.5rem);
+  --lh-2: clamp(1.75rem, 1.4rem + 1.2vw, 2rem);
+
+  --fs-3: clamp(1rem, 0.9rem + 0.6vw, 1.125rem);
+  --lh-3: clamp(1.4rem, 1.2rem + 0.6vw, 1.5rem);
+
+  --fs-4: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+  --lh-4: clamp(1.2rem, 1rem + 0.4vw, 1.25rem);
+
+  /* =========================
+     🎨 COLORS
+     ========================= */
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --grey-950: #08070b;
+  --grey-900: #14131b;
+  --grey-850: #18171f;
+  --grey-800: #24232c;
+  --grey-700: #54535b;
+  --grey-600: #817d92;
+  --grey-200: #e6e5ea;
+
+  --green-200: #a4ffaf;
+  --yellow-300: #f8cd65;
+  --orange-400: #fb7c58;
+  --red-500: #f64a4a;
+
+  /* Semantic colors */
+  --bg-main: var(--grey-950);
+  --bg-card: var(--grey-900);
+  --bg-muted: var(--grey-850);
+
+  --text-main: var(--grey-200);
+  --text-muted: var(--grey-600);
+
+  --border: var(--grey-800);
+
+  --accent: var(--green-200);
+  --accent-contrast: var(--black);
+
+  --strength-weak: var(--red-500);
+  --strength-medium: var(--orange-400);
+  --strength-good: var(--yellow-300);
+  --strength-strong: var(--green-200);
+
+  --bg-gradient: linear-gradient(to bottom, var(--grey-900), var(--grey-950));
+
+  /* =========================
+     📏 SPACING SCALE
+     ========================= */
+
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+
+  --space-700: 56px;
+  --space-1000: 80px;
+  --space-1300: 104px;
+  --space-1600: 128px;
+  --space-2000: 160px;
+  --space-2200: 176px;
+  --space-2300: 184px;
+}
+
+/* =========================
+   🔤 TYPOGRAPHY CLASSES
+   ========================= */
+
+.text-1 {
+  font: 700 var(--fs-1)/var(--lh-1) var(--font-mono);
+}
+
+.text-2 {
+  font: 700 var(--fs-2)/var(--lh-2) var(--font-mono);
+}
+
+.text-3 {
+  font: 700 var(--fs-3)/var(--lh-3) var(--font-mono);
+}
+
+.text-4 {
+  font: 700 var(--fs-4)/var(--lh-4) var(--font-mono);
+}
+
+/* =========================
+   🌍 BASE STYLES
+   ========================= */
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: var(--font-mono);
+}
+
+/* =========================
+   🎨 COLOR UTILITIES
+   ========================= */
+
+/* Backgrounds */
+.bg-main {
+  background: var(--bg-main);
+}
+.bg-card {
+  background: var(--bg-card);
+}
+.bg-muted {
+  background: var(--bg-muted);
+}
+
+.bg-accent {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* Text */
+.text-main {
+  color: var(--text-main);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-success {
+  color: var(--strength-strong);
+}
+.text-warning {
+  color: var(--strength-medium);
+}
+.text-error {
+  color: var(--strength-weak);
+}
+
+/* Borders */
+.border {
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   📏 SPACING UTILITIES
+   ========================= */
+
+/* Padding */
+.p-100 {
+  padding: var(--space-100);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+.p-400 {
+  padding: var(--space-400);
+}
+
+/* Margin */
+.m-100 {
+  margin: var(--space-100);
+}
+.m-200 {
+  margin: var(--space-200);
+}
+.m-300 {
+  margin: var(--space-300);
+}
+.m-400 {
+  margin: var(--space-400);
+}
+
+/* Gap (for flex/grid) */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
