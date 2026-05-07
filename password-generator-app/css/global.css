@@ -1,3 +1,7 @@
+/* =========================================================
+   🌍 ROOT TOKENS
+   ========================================================= */
+
 :root {
   /* =========================
      🔤 TYPOGRAPHY
@@ -18,7 +22,7 @@
   --lh-4: clamp(1.2rem, 1rem + 0.4vw, 1.25rem);
 
   /* =========================
-     🎨 COLORS
+     🎨 COLOR PALETTE
      ========================= */
 
   --white: #ffffff;
@@ -37,7 +41,10 @@
   --orange-400: #fb7c58;
   --red-500: #f64a4a;
 
-  /* Semantic colors */
+  /* =========================
+     🎨 SEMANTIC COLORS
+     ========================= */
+
   --bg-main: var(--grey-950);
   --bg-card: var(--grey-900);
   --bg-muted: var(--grey-850);
@@ -58,6 +65,16 @@
   --bg-gradient: linear-gradient(to bottom, var(--grey-900), var(--grey-950));
 
   /* =========================
+     🎨 ALPHA COLORS
+     ========================= */
+
+  --green-200-10: rgb(164 255 175 / 0.1);
+  --green-200-20: rgb(164 255 175 / 0.2);
+
+  --red-500-10: rgb(246 74 74 / 0.1);
+  --yellow-300-10: rgb(248 205 101 / 0.1);
+
+  /* =========================
      📏 SPACING SCALE
      ========================= */
 
@@ -73,123 +90,466 @@
   --space-2000: 160px;
   --space-2200: 176px;
   --space-2300: 184px;
+
+  /* =========================
+     🟦 RADIUS
+     ========================= */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* =========================
+     🌫 SHADOWS
+     ========================= */
+
+  --shadow-sm: 0 2px 4px rgb(0 0 0 / 0.2);
+  --shadow-md: 0 6px 16px rgb(0 0 0 / 0.25);
+  --shadow-lg: 0 12px 24px rgb(0 0 0 / 0.3);
+
+  /* =========================
+     ⚡ TRANSITIONS
+     ========================= */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
 }
 
-/* =========================
-   🔤 TYPOGRAPHY CLASSES
-   ========================= */
+/* =========================================================
+   🔄 RESET
+   ========================================================= */
 
-.text-1 {
-  font: 700 var(--fs-1)/var(--lh-1) var(--font-mono);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.text-2 {
-  font: 700 var(--fs-2)/var(--lh-2) var(--font-mono);
+* {
+  margin: 0;
 }
 
-.text-3 {
-  font: 700 var(--fs-3)/var(--lh-3) var(--font-mono);
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
 
-.text-4 {
-  font: 700 var(--fs-4)/var(--lh-4) var(--font-mono);
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-/* =========================
+/* =========================================================
    🌍 BASE STYLES
-   ========================= */
+   ========================================================= */
+
+html {
+  color-scheme: dark;
+}
 
 body {
+  min-height: 100vh;
   background: var(--bg-gradient);
   color: var(--text-main);
   font-family: var(--font-mono);
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
 }
 
-/* =========================
-   🎨 COLOR UTILITIES
-   ========================= */
+/* =========================================================
+   🔤 TYPOGRAPHY UTILITIES
+   ========================================================= */
 
-/* Backgrounds */
-.bg-main {
-  background: var(--bg-main);
-}
-.bg-card {
-  background: var(--bg-card);
-}
-.bg-muted {
-  background: var(--bg-muted);
+.text-1 {
+  font: 700 var(--fs-1) / var(--lh-1) var(--font-mono);
 }
 
-.bg-accent {
-  background: var(--accent);
-  color: var(--accent-contrast);
+.text-2 {
+  font: 700 var(--fs-2) / var(--lh-2) var(--font-mono);
 }
 
-/* Text */
+.text-3 {
+  font: 700 var(--fs-3) / var(--lh-3) var(--font-mono);
+}
+
+.text-4 {
+  font: 700 var(--fs-4) / var(--lh-4) var(--font-mono);
+}
+
+/* =========================================================
+   🎨 TEXT COLORS
+   ========================================================= */
+
 .text-main {
   color: var(--text-main);
 }
+
 .text-muted {
   color: var(--text-muted);
+}
+
+.text-accent {
+  color: var(--accent);
 }
 
 .text-success {
   color: var(--strength-strong);
 }
+
 .text-warning {
   color: var(--strength-medium);
 }
+
 .text-error {
   color: var(--strength-weak);
 }
 
-/* Borders */
+/* Raw palette */
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-grey-200 {
+  color: var(--grey-200);
+}
+
+.text-grey-600 {
+  color: var(--grey-600);
+}
+
+.text-grey-700 {
+  color: var(--grey-700);
+}
+
+.text-green-200 {
+  color: var(--green-200);
+}
+
+.text-yellow-300 {
+  color: var(--yellow-300);
+}
+
+.text-orange-400 {
+  color: var(--orange-400);
+}
+
+.text-red-500 {
+  color: var(--red-500);
+}
+
+/* =========================================================
+   🎨 BACKGROUND UTILITIES
+   ========================================================= */
+
+.bg-main {
+  background-color: var(--bg-main);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+.bg-muted {
+  background-color: var(--bg-muted);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.bg-success {
+  background-color: var(--strength-strong);
+  color: var(--black);
+}
+
+.bg-warning {
+  background-color: var(--strength-medium);
+  color: var(--black);
+}
+
+.bg-error {
+  background-color: var(--strength-weak);
+  color: var(--white);
+}
+
+/* Raw palette */
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-grey-800 {
+  background-color: var(--grey-800);
+}
+
+.bg-grey-850 {
+  background-color: var(--grey-850);
+}
+
+.bg-grey-900 {
+  background-color: var(--grey-900);
+}
+
+.bg-green-200 {
+  background-color: var(--green-200);
+}
+
+.bg-yellow-300 {
+  background-color: var(--yellow-300);
+}
+
+.bg-orange-400 {
+  background-color: var(--orange-400);
+}
+
+.bg-red-500 {
+  background-color: var(--red-500);
+}
+
+/* Soft backgrounds */
+
+.bg-accent-soft {
+  background-color: var(--green-200-10);
+}
+
+.bg-warning-soft {
+  background-color: var(--yellow-300-10);
+}
+
+.bg-error-soft {
+  background-color: var(--red-500-10);
+}
+
+/* =========================================================
+   🪟 BORDER UTILITIES
+   ========================================================= */
+
 .border {
   border: 1px solid var(--border);
 }
 
-/* =========================
+.border-muted {
+  border: 1px solid var(--grey-700);
+}
+
+.border-accent {
+  border: 1px solid var(--accent);
+}
+
+.border-success {
+  border: 1px solid var(--strength-strong);
+}
+
+.border-warning {
+  border: 1px solid var(--strength-medium);
+}
+
+.border-error {
+  border: 1px solid var(--strength-weak);
+}
+
+/* =========================================================
    📏 SPACING UTILITIES
-   ========================= */
+   ========================================================= */
 
 /* Padding */
+
 .p-100 {
   padding: var(--space-100);
 }
+
 .p-200 {
   padding: var(--space-200);
 }
+
 .p-300 {
   padding: var(--space-300);
 }
+
 .p-400 {
   padding: var(--space-400);
 }
 
 /* Margin */
+
 .m-100 {
   margin: var(--space-100);
 }
+
 .m-200 {
   margin: var(--space-200);
 }
+
 .m-300 {
   margin: var(--space-300);
 }
+
 .m-400 {
   margin: var(--space-400);
 }
 
-/* Gap (for flex/grid) */
+/* Gap */
+
 .gap-100 {
   gap: var(--space-100);
 }
+
 .gap-200 {
   gap: var(--space-200);
 }
+
 .gap-300 {
   gap: var(--space-300);
 }
+
 .gap-400 {
   gap: var(--space-400);
+}
+
+/* =========================================================
+   📦 LAYOUT UTILITIES
+   ========================================================= */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* =========================================================
+   📐 WIDTH UTILITIES
+   ========================================================= */
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* =========================================================
+   🔲 RADIUS UTILITIES
+   ========================================================= */
+
+.radius-sm {
+  border-radius: var(--radius-sm);
+}
+
+.radius-md {
+  border-radius: var(--radius-md);
+}
+
+.radius-lg {
+  border-radius: var(--radius-lg);
+}
+
+.radius-xl {
+  border-radius: var(--radius-xl);
+}
+
+/* =========================================================
+   🌫 SHADOW UTILITIES
+   ========================================================= */
+
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* =========================================================
+   ⚡ INTERACTION UTILITIES
+   ========================================================= */
+
+.transition {
+  transition: all var(--transition-base);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-bg-accent:hover {
+  background-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.hover-text-accent:hover {
+  color: var(--accent);
+}
+
+.hover-opacity:hover {
+  opacity: 0.8;
+}
+
+/* Focus ring */
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   ♿ ACCESSIBILITY
+   ========================================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

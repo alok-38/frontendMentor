@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: min(100%, 540px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper__input {
+  outline: unset;
+  border: unset;
+  pointer-events: none;
+  background: transparent;
+}
+
+.wrapper__icon {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease,
+    filter 150ms ease;
+}
+
+/* 🔥 Hover (desktop) */
+.wrapper__icon:hover {
+  transform: translateY(-2px) scale(1.05);
+  opacity: 0.9;
+}
+
+/* 🎯 Focus (keyboard accessibility) */
+.wrapper__icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* 👇 Press / Click effect */
+.wrapper__icon:active {
+  transform: translateY(0) scale(0.95);
+  opacity: 0.8;
+}
+
+/* ✨ Optional: smoother feel */
+.wrapper__icon {
+  will-change: transform;
+}
