@@ -85,18 +85,21 @@
         class="wrapper__header wrapper__header--primary"
         id="password-generator-header"
       >
-        <h1 class="wrapper__title text-2 text-grey-600" id="password-generator-title">
+        <h1
+          class="wrapper__title text-2 text-grey-600"
+          id="password-generator-title"
+        >
           Password Generator
         </h1>
       </header>
 
       <section
-        class="wrapper__output wrapper__output--password flex p-200 bg-grey-800"
+        class="wrapper__output wrapper__output--password flex bg-grey-800"
         id="password-output-section"
         aria-labelledby="generated-password-label"
       >
         <input
-          class="wrapper__input wrapper__input--password"
+          class="wrapper__input wrapper__input--password text-1"
           type="text"
           name="generated-password"
           id="generated-password"
@@ -117,25 +120,24 @@
           tabindex="0"
           aria-label="Copy password to clipboard"
         />
-
       </section>
 
       <section
-        class="wrapper__controls wrapper__controls--generator"
+        class="wrapper__controls wrapper__controls--generator bg-grey-800 flex"
         id="password-generator-controls"
         aria-labelledby="generator-controls-title"
       >
         <div
-          class="wrapper__length wrapper__length--control"
+          class="wrapper__length wrapper__length--control flex gap-200"
           id="character-length-control"
         >
-          <div class="wrapper__length-header" id="character-length-header">
-            <h2 class="wrapper__subtitle" id="character-length-title">
+          <div class="wrapper__length-header flex" id="character-length-header">
+            <h2 class="wrapper__subtitle text-3" id="character-length-title">
               Character Length
             </h2>
 
             <span
-              class="wrapper__length-value"
+              class="wrapper__length-value text-1 text-green-200"
               id="character-length-value"
               aria-live="polite"
               aria-atomic="true"
@@ -146,91 +148,98 @@
 
           <input
             class="wrapper__slider wrapper__slider--length"
-            id="character-length-slider"
+            id="character-length-wrapper__slider"
             type="range"
             min="0"
             max="20"
             value="0"
-            aria-labelledby="character-length-title"
-            aria-describedby="character-length-value"
           />
         </div>
 
+
         <div
-          class="wrapper__options wrapper__options--checkboxes"
+          class="wrapper__options wrapper__options--checkboxes flex"
           id="password-options"
           role="group"
           aria-labelledby="password-options-title"
         >
-          <span class="wrapper__sr-only" id="password-options-title">
-            Password generation options
-          </span>
+          <div class="wrapper__option wrapper__option--uppercase flex flex gap-300">
+            <input
+              class="wrapper__checkbox wrapper__checkbox--uppercase"
+              type="checkbox"
+              name="include-uppercase"
+              id="include-uppercase"
+            />
+            <label
+              class="wrapper__checkbox-label wrapper__checkbox-label--uppercase text-3 text-grey-200"
+              for="include-uppercase"
+              id="include-uppercase-label"
+            >
+              Include Uppercase Letters
+            </label>
+          </div>
 
-          <input
-            class="wrapper__checkbox wrapper__checkbox--uppercase"
-            type="checkbox"
-            name="include-uppercase"
-            id="include-uppercase"
-          />
-          <p
-            class="wrapper__checkbox-label wrapper__checkbox-label--uppercase"
-            id="include-uppercase-label"
-          >
-            Include Uppercase Letters
-          </p>
+          <div class="wrapper__option wrapper__option--lowercase flex gap-300">
+            <input
+              class="wrapper__checkbox wrapper__checkbox--lowercase"
+              type="checkbox"
+              name="include-lowercase"
+              id="include-lowercase"
+            />
+            <label
+              class="wrapper__checkbox-label wrapper__checkbox-label--lowercase text-3 text-grey-200"
+              for="include-lowercase"
+              id="include-lowercase-label"
+            >
+              Include Lowercase Letters
+            </label>
+          </div>
 
-          <input
-            class="wrapper__checkbox wrapper__checkbox--lowercase"
-            type="checkbox"
-            name="include-lowercase"
-            id="include-lowercase"
-          />
-          <p
-            class="wrapper__checkbox-label wrapper__checkbox-label--lowercase"
-            id="include-lowercase-label"
-          >
-            Include Lowercase Letters
-          </p>
+          <div class="wrapper__option wrapper__option--numbers flex gap-300">
+            <input
+              class="wrapper__checkbox wrapper__checkbox--numbers"
+              type="checkbox"
+              name="include-numbers"
+              id="include-numbers"
+            />
+            <label
+              class="wrapper__checkbox-label wrapper__checkbox-label--numbers text-3 text-grey-200"
+              for="include-numbers"
+              id="include-numbers-label"
+            >
+              Include Numbers
+            </label>
+          </div>
 
-          <input
-            class="wrapper__checkbox wrapper__checkbox--numbers"
-            type="checkbox"
-            name="include-numbers"
-            id="include-numbers"
-          />
-          <p
-            class="wrapper__checkbox-label wrapper__checkbox-label--numbers"
-            id="include-numbers-label"
-          >
-            Include Numbers
-          </p>
-
-          <input
-            class="wrapper__checkbox wrapper__checkbox--symbols"
-            type="checkbox"
-            name="include-symbols"
-            id="include-symbols"
-          />
-          <p
-            class="wrapper__checkbox-label wrapper__checkbox-label--symbols"
-            id="include-symbols-label"
-          >
-            Include Symbols
-          </p>
+          <div class="wrapper__option wrapper__option--symbols flex gap-300">
+            <input
+              class="wrapper__checkbox wrapper__checkbox--symbols"
+              type="checkbox"
+              name="include-symbols"
+              id="include-symbols"
+            />
+            <label
+              class="wrapper__checkbox-label wrapper__checkbox-label--symbols text-3 text-grey-200"
+              for="include-symbols"
+              id="include-symbols-label"
+            >
+              Include Symbols
+            </label>
+          </div>
         </div>
 
         <div
-          class="wrapper__strength wrapper__strength--indicator"
+          class="wrapper__strength wrapper__strength--indicator bg-grey-850 flex"
           id="password-strength"
           aria-labelledby="password-strength-title"
           aria-live="polite"
         >
-          <h3 class="wrapper__strength-title" id="password-strength-title">
+          <h3 class="wrapper__strength-title text-grey-600" id="password-strength-title text-3">
             Strength
           </h3>
 
           <div
-            class="wrapper__strength-bars"
+            class="wrapper__strength-bars flex gap-100"
             id="password-strength-bars"
             role="img"
             aria-label="Password strength indicator"
@@ -262,14 +271,14 @@
         </div>
 
         <button
-          class="wrapper__button wrapper__button--generate"
+          class="wrapper__button wrapper__button--generate bg-green-200 text-3 text-grey-800 flex gap-300"
           id="generate-password-button"
           type="button"
           aria-label="Generate password"
         >
           Generate
+          <img src="assets/images/icon-arrow-right.svg" alt="right arrow icon on a button">
         </button>
-
       </section>
     </div>
   </body>

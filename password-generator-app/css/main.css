@@ -9,7 +9,11 @@ body {
   width: min(100%, 540px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+}
+
+.wrapper__title {
+  text-align: center;
 }
 
 .wrapper__input {
@@ -17,18 +21,18 @@ body {
   border: unset;
   pointer-events: none;
   background: transparent;
+  height: 42px;
 }
 
 .wrapper__icon {
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
   transition:
     transform 150ms ease,
     opacity 150ms ease,
     filter 150ms ease;
+  width: 21px;
+  height: 24px;
+  object-fit: cover;
 }
 
 /* 🔥 Hover (desktop) */
@@ -52,4 +56,176 @@ body {
 /* ✨ Optional: smoother feel */
 .wrapper__icon {
   will-change: transform;
+}
+
+.wrapper__output {
+  padding: var(--space-200) var(--space-400);
+  align-items: center;
+}
+
+.wrapper__controls {
+  padding: var(--space-300) var(--space-400);
+  flex-direction: column;
+  gap: var(--space-400);
+}
+
+.wrapper__length {
+  flex-direction: column;
+}
+
+.wrapper__length-header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Base slider */
+.wrapper__slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+  background: linear-gradient(to right, #a4ffaf 0%, #18171f 0%);
+}
+
+/* ===================== */
+/* WEBKIT (Chrome, Edge) */
+/* ===================== */
+
+/* Track */
+.wrapper__slider::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 5px;
+}
+
+/* Thumb */
+.wrapper__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #4caf50;
+  border-radius: 50%;
+  margin-top: -11px;
+  transition: 0.2s ease;
+}
+
+/* Hover thumb */
+.wrapper__slider:hover::-webkit-slider-thumb {
+  background: #18171f;
+}
+
+/* Active thumb */
+.wrapper__slider:active::-webkit-slider-thumb {
+  background: #18171f;
+  transform: scale(1.2);
+}
+
+/* Track ONLY when dragging */
+.wrapper__slider:active {
+  background: #a4ffaf;
+}
+
+/* ===================== */
+/* FIREFOX */
+/* ===================== */
+
+/* Default track */
+.wrapper__slider::-moz-range-track {
+  height: 8px;
+  border-radius: 5px;
+  background: #18171f;
+}
+
+/* Thumb */
+.wrapper__slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  background: var(--grey-200);
+  border-radius: 50%;
+  border: none;
+  transition: 0.2s ease;
+}
+
+/* Hover thumb */
+.wrapper__slider:hover::-moz-range-thumb {
+  background: #18171f;
+}
+
+/* Active thumb */
+.wrapper__slider:active::-moz-range-thumb {
+  background: #18171f;
+  transform: scale(1.2);
+}
+
+/* Track ONLY while dragging */
+.wrapper__slider:active::-moz-range-track {
+  background: #a4ffaf;
+}
+
+.wrapper__options {
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wrapper__checkbox {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--grey-200);
+  cursor: pointer;
+}
+
+.wrapper__checkbox {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--grey-200);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Checked state */
+.wrapper__checkbox:checked {
+  border-color: #a4ffaf;
+  background-color: #a4ffaf;
+}
+
+.wrapper__checkbox:checked::after {
+  content: "✔";
+  color: var(--grey-850);
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.wrapper__strength {
+  padding: var(--space-300) var(--space-400);
+  justify-content: space-between;
+}
+
+.wrapper__strength-title {
+  text-transform: uppercase;
+}
+
+.wrapper__strength-bar {
+  width: 10px;
+  height: 28px;
+  border: 2px solid var(--grey-200);
+}
+
+.wrapper__button {
+  align-items: center;
+  justify-content: center;
+  padding: 24px clamp(16px, 8vw, 176px);
+}
+
+.wrapper__button img {
+  width: 11.11px;
+  height: 12px;
+  object-fit: cover;
 }

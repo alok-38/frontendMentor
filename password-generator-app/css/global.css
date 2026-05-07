@@ -232,6 +232,10 @@ body {
   color: var(--grey-700);
 }
 
+.text-grey-800 {
+  color: var(--grey-800);
+}
+
 .text-green-200 {
   color: var(--green-200);
 }
