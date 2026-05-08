@@ -73,6 +73,9 @@
     <link rel="stylesheet" href="css/font-face.css" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- script -->
+    <script src="app.js" defer></script>
   </head>
   <body>
     <div
@@ -142,7 +145,6 @@
               aria-live="polite"
               aria-atomic="true"
             >
-              
             </span>
           </div>
 
@@ -156,14 +158,15 @@
           />
         </div>
 
-
         <div
           class="wrapper__options wrapper__options--checkboxes flex"
           id="password-options"
           role="group"
           aria-labelledby="password-options-title"
         >
-          <div class="wrapper__option wrapper__option--uppercase flex flex gap-300">
+          <div
+            class="wrapper__option wrapper__option--uppercase flex flex gap-300"
+          >
             <input
               class="wrapper__checkbox wrapper__checkbox--uppercase"
               type="checkbox"
@@ -234,50 +237,58 @@
           aria-labelledby="password-strength-title"
           aria-live="polite"
         >
-          <h3 class="wrapper__strength-title text-grey-600" id="password-strength-title text-3">
+          <h3
+            class="wrapper__strength-title text-grey-600 text-3"
+            id="password-strength-title"
+          >
             Strength
           </h3>
-
-          <div
-            class="wrapper__strength-bars flex gap-100"
-            id="password-strength-bars"
-            role="img"
-            aria-label="Password strength indicator"
-          >
+          <div class="wrapper__strength-label-group">
+            <span
+              class="wrapper__strength-label"
+              id="password-strength-text"
+            ></span>
             <div
-              class="wrapper__strength-bar wrapper__strength-bar--1"
-              id="strength-bar-1"
-              aria-hidden="true"
-            ></div>
-
-            <div
-              class="wrapper__strength-bar wrapper__strength-bar--2"
-              id="strength-bar-2"
-              aria-hidden="true"
-            ></div>
-
-            <div
-              class="wrapper__strength-bar wrapper__strength-bar--3"
-              id="strength-bar-3"
-              aria-hidden="true"
-            ></div>
-
-            <div
-              class="wrapper__strength-bar wrapper__strength-bar--4"
-              id="strength-bar-4"
-              aria-hidden="true"
-            ></div>
+              class="wrapper__strength-bars flex gap-100"
+              id="password-strength-bars"
+              role="img"
+              aria-label="Password strength indicator"
+            >
+              <div
+                class="wrapper__strength-bar wrapper__strength-bar--1"
+                id="strength-bar-1"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="wrapper__strength-bar wrapper__strength-bar--2"
+                id="strength-bar-2"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="wrapper__strength-bar wrapper__strength-bar--3"
+                id="strength-bar-3"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="wrapper__strength-bar wrapper__strength-bar--4"
+                id="strength-bar-4"
+                aria-hidden="true"
+              ></div>
+            </div>
           </div>
         </div>
 
         <button
-          class="wrapper__button wrapper__button--generate bg-green-200 text-3 text-grey-800 flex "
+          class="wrapper__button wrapper__button--generate bg-green-200 text-3 text-grey-800 flex"
           id="generate-password-button"
           type="button"
           aria-label="Generate password"
         >
           Generate
-          <img src="assets/images/icon-arrow-right.svg" alt="right arrow icon on a button">
+          <img
+            src="assets/images/icon-arrow-right.svg"
+            alt="right arrow icon on a button"
+          />
         </button>
       </section>
     </div>
