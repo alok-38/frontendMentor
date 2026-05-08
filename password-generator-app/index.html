@@ -114,15 +114,23 @@
           spellcheck="false"
         />
 
-        <img
-          class="wrapper__icon wrapper__icon--copy"
-          id="copy-password-button"
-          src="assets/images/icon-copy.svg"
-          alt="Copy generated password"
-          role="button"
-          tabindex="0"
-          aria-label="Copy password to clipboard"
-        />
+        <div class="wrapper__copy-container flex gap-200" id="copy-container">
+          <span
+            class="wrapper__copy-message text-4"
+            id="copy-message"
+            aria-live="polite"
+          ></span>
+
+          <img
+            class="wrapper__icon wrapper__icon--copy"
+            id="copy-password-button"
+            src="assets/images/icon-copy.svg"
+            alt="Copy generated password"
+            role="button"
+            tabindex="0"
+            aria-label="Copy password to clipboard"
+          />
+        </div>
       </section>
 
       <section

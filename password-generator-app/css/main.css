@@ -6,6 +6,7 @@ body {
   padding: 2rem;
   overflow-y: auto;
 }
+
 /* =====================
    LAYOUT
 ===================== */
@@ -31,6 +32,10 @@ body {
   pointer-events: none;
   background: transparent;
   height: 42px;
+
+  /* ✅ added (safe) */
+  flex: 1;
+  min-width: 0;
 }
 
 .wrapper__icon {
@@ -67,7 +72,10 @@ body {
 ===================== */
 
 .wrapper__output {
+  display: flex; /* ✅ ensure flex */
   align-items: center;
+  gap: 1rem; /* ✅ safe spacing */
+
   padding: var(--space-200) var(--space-400);
   min-height: clamp(56px, 8vw, 80px);
 }
@@ -275,6 +283,10 @@ body {
   }
 }
 
+/* =====================
+   RESPONSIVE (cleaned)
+===================== */
+
 @media screen and (max-width: 768px) {
   .wrapper__length {
     margin-bottom: 1rem;
@@ -286,10 +298,7 @@ body {
     max-width: none;
   }
 
-  .wrapper__output img {
-    position: absolute;
-    right: 50px;
-  }
+  /* ❌ removed broken absolute positioning */
 
   .wrapper__options label {
     font-size: 1rem;
@@ -298,4 +307,41 @@ body {
   .wrapper__strength-label {
     display: none;
   }
+}
+
+/* =====================
+   COPY ANIMATION
+===================== */
+
+.wrapper__copy-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.wrapper__icon--copy {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.wrapper__copy-message {
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  color: #a4ffaf;
+  pointer-events: none;
+}
+
+.wrapper__copy-container--active .wrapper__icon--copy {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.wrapper__copy-container--active .wrapper__copy-message {
+  opacity: 1;
+  transform: translateY(0);
 }

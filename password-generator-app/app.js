@@ -7,10 +7,10 @@ charLengthSlider.addEventListener("input", () => {
   characterLength.textContent = charLengthSlider.value;
 });
 
-const includeUpperCase = document.getElementById("include-uppercase").checked;
-const includeLowerCase = document.getElementById("include-lowercase").checked;
-const includeNumbers = document.getElementById("include-numbers").checked;
-const includeSymbols = document.getElementById("include-symbols").checked;
+const includeUpperCaseEl = document.getElementById("include-uppercase");
+const includeLowerCaseEl = document.getElementById("include-lowercase");
+const includeNumbersEl = document.getElementById("include-numbers");
+const includeSymbolsEl = document.getElementById("include-symbols");
 
 const passwordStrengthLabel = document.getElementById("password-strength-text");
 
@@ -51,7 +51,7 @@ const checkAndDisplayPasswordStrength = (password) => {
   if (strength <= 2) {
     passwordStrengthLabel.textContent = "WEAK";
 
-    strengthBars[0].style.backgroundColor = "#f64a4a"; 
+    strengthBars[0].style.backgroundColor = "#f64a4a";
     strengthBars[0].style.border = "none";
   }
 
@@ -75,3 +75,49 @@ const checkAndDisplayPasswordStrength = (password) => {
     }
   }
 };
+
+function generatePassword() {
+  const password = Math.random().toString(36).slice(-10);
+  return password;
+}
+
+const passwordGenerateBtn = document.getElementById("generate-password-button");
+const passwordDisplay = document.getElementById("generated-password");
+
+passwordGenerateBtn.addEventListener("click", () => {
+  const password = generatePassword();
+
+  passwordDisplay.value = password;
+
+  checkAndDisplayPasswordStrength(password);
+});
+
+const copyBtn = document.getElementById("copy-password-button");
+const copyMessage = document.getElementById("copy-message");
+
+const copyContainer = document.getElementById("copy-container");
+
+copyBtn.addEventListener("click", () => {
+  const password = passwordDisplay.value;
+
+  if (!password) return;
+
+  navigator.clipboard
+    .writeText(password)
+    .then(() => {
+      copyMessage.textContent = "COPIED";
+      copyContainer.classList.add("wrapper__copy-container--active");
+
+      setTimeout(() => {
+        copyContainer.classList.remove("wrapper__copy-container--active");
+
+        // clear text after fade-out
+        setTimeout(() => {
+          copyMessage.textContent = "";
+        }, 250);
+      }, 1200);
+    })
+    .catch((err) => {
+      console.error("Copy failed:", err);
+    });
+});
