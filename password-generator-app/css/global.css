@@ -78,18 +78,18 @@
      📏 SPACING SCALE
      ========================= */
 
-  --space-100: 8px;
-  --space-200: 16px;
-  --space-300: 24px;
-  --space-400: 32px;
+  --space-100: clamp(4px, 0.5vw, 8px);
+  --space-200: clamp(8px, 1vw, 16px);
+  --space-300: clamp(12px, 1.5vw, 24px);
+  --space-400: clamp(16px, 2vw, 32px);
 
-  --space-700: 56px;
-  --space-1000: 80px;
-  --space-1300: 104px;
-  --space-1600: 128px;
-  --space-2000: 160px;
-  --space-2200: 176px;
-  --space-2300: 184px;
+  --space-700: clamp(28px, 3.5vw, 56px);
+  --space-1000: clamp(40px, 5vw, 80px);
+  --space-1300: clamp(52px, 6.5vw, 104px);
+  --space-1600: clamp(64px, 8vw, 128px);
+  --space-2000: clamp(80px, 10vw, 160px);
+  --space-2200: clamp(88px, 11vw, 176px);
+  --space-2300: clamp(92px, 11.5vw, 184px);
 
   /* =========================
      🟦 RADIUS
