@@ -1,0 +1,24 @@
+/* Rubik Variable - Normal */
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../assets/fonts/converted/Rubik-VariableFont_wght.woff2")
+      format("woff2"),
+    url("../assets/fonts/converted/Rubik-VariableFont_wght.woff") format("woff");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Rubik Variable - Italic */
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../assets/fonts/converted/Rubik-Italic-VariableFont_wght.woff2")
+      format("woff2"),
+    url("../assets/fonts/converted/Rubik-Italic-VariableFont_wght.woff")
+      format("woff");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}

@@ -1,0 +1,383 @@
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   FONTS
+========================= */
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../assets/fonts/converted/Rubik-VariableFont_wght.woff2")
+      format("woff2"),
+    url("../assets/fonts/converted/Rubik-VariableFont_wght.woff") format("woff");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src:
+    url("../assets/fonts/converted/Rubik-Italic-VariableFont_wght.woff2")
+      format("woff2"),
+    url("../assets/fonts/converted/Rubik-Italic-VariableFont_wght.woff")
+      format("woff");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* =========================
+   COLORS (TOKENS)
+========================= */
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-500: #626c7f;
+  --color-grey-50: #f4f6fa;
+
+  --color-blue-950: #2d3949;
+  --color-blue-900: #313e51;
+  --color-blue-850: #3b4d66;
+
+  --color-blue-500: #306aff;
+  --color-blue-300: #abc1e1;
+  --color-blue-100: #edf1f9;
+  --color-blue-50: #ebf0ff;
+
+  --color-green-500: #2fd887;
+  --color-green-100: #e0fdef;
+
+  --color-purple-600: #a729f5;
+  --color-purple-100: #f6e7ff;
+
+  --color-orange-400: #ff7e35;
+  --color-orange-50: #fff5ed;
+
+  --color-red-500: #ee5454;
+}
+
+/* Semantic */
+:root {
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-grey-50);
+  --bg-dark: var(--color-blue-950);
+
+  --text-primary: var(--color-blue-900);
+  --text-secondary: var(--color-grey-500);
+  --text-inverse: var(--color-white);
+
+  --accent-primary: var(--color-blue-500);
+
+  --success: var(--color-green-500);
+  --success-bg: var(--color-green-100);
+
+  --error: var(--color-red-500);
+
+  --warning: var(--color-orange-400);
+  --warning-bg: var(--color-orange-50);
+
+  --highlight: var(--color-purple-600);
+  --highlight-bg: var(--color-purple-100);
+}
+
+/* =========================
+   SPACING
+========================= */
+:root {
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-800: 64px;
+  --spacing-1600: 128px;
+  --spacing-1800: 144px;
+  --spacing-2300: 184px;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+  font-family:
+    "Rubik",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+.text-1 {
+  font-weight: 500;
+  font-size: 144px;
+  line-height: 1;
+}
+
+.text-1-mobile {
+  font-size: 88px;
+}
+
+.text-2 {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1;
+}
+
+.text-2-mobile {
+  font-size: 40px;
+}
+
+.text-2-light {
+  font-weight: 300;
+}
+
+.text-3 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.text-4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.text-5 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.text-5-medium {
+  font-weight: 500;
+}
+
+.text-5-regular {
+  font-weight: 400;
+}
+
+.text-6 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+/* Spacing - Margin */
+.mt-100 {
+  margin-top: var(--spacing-100);
+}
+.mt-200 {
+  margin-top: var(--spacing-200);
+}
+.mt-300 {
+  margin-top: var(--spacing-300);
+}
+.mt-400 {
+  margin-top: var(--spacing-400);
+}
+
+.mb-100 {
+  margin-bottom: var(--spacing-100);
+}
+.mb-200 {
+  margin-bottom: var(--spacing-200);
+}
+.mb-300 {
+  margin-bottom: var(--spacing-300);
+}
+.mb-400 {
+  margin-bottom: var(--spacing-400);
+}
+
+/* Padding */
+.p-100 {
+  padding: var(--spacing-100);
+}
+.p-200 {
+  padding: var(--spacing-200);
+}
+.p-300 {
+  padding: var(--spacing-300);
+}
+.p-400 {
+  padding: var(--spacing-400);
+}
+
+/* Gap */
+.gap-100 {
+  gap: var(--spacing-100);
+}
+.gap-200 {
+  gap: var(--spacing-200);
+}
+.gap-300 {
+  gap: var(--spacing-300);
+}
+
+/* Flex helpers */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+/* Colors */
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-inverse {
+  color: var(--text-inverse);
+}
+
+/* States */
+.success {
+  color: var(--success);
+}
+
+.error {
+  color: var(--error);
+}
+
+.warning {
+  color: var(--warning);
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
