@@ -20,6 +20,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 img,
@@ -29,6 +30,10 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  height: auto;
 }
 
 input,
@@ -147,19 +152,19 @@ h6 {
 }
 
 /* =========================
-   SPACING
+   SPACING (FLUID)
 ========================= */
 :root {
-  --spacing-100: 8px;
-  --spacing-200: 16px;
-  --spacing-300: 24px;
-  --spacing-400: 32px;
-  --spacing-500: 40px;
-  --spacing-600: 48px;
-  --spacing-800: 64px;
-  --spacing-1600: 128px;
-  --spacing-1800: 144px;
-  --spacing-2300: 184px;
+  --spacing-100: clamp(6px, 1vw, 8px);
+  --spacing-200: clamp(12px, 2vw, 16px);
+  --spacing-300: clamp(16px, 3vw, 24px);
+  --spacing-400: clamp(24px, 4vw, 32px);
+  --spacing-500: clamp(32px, 5vw, 40px);
+  --spacing-600: clamp(40px, 6vw, 48px);
+  --spacing-800: clamp(56px, 8vw, 64px);
+  --spacing-1600: clamp(96px, 12vw, 128px);
+  --spacing-1800: clamp(112px, 14vw, 144px);
+  --spacing-2300: clamp(140px, 18vw, 184px);
 }
 
 /* =========================
@@ -181,26 +186,18 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY
+   TYPOGRAPHY (FLUID)
 ========================= */
 .text-1 {
   font-weight: 500;
-  font-size: 144px;
+  font-size: clamp(64px, 10vw, 144px);
   line-height: 1;
-}
-
-.text-1-mobile {
-  font-size: 88px;
 }
 
 .text-2 {
   font-weight: 500;
-  font-size: 64px;
+  font-size: clamp(32px, 6vw, 64px);
   line-height: 1;
-}
-
-.text-2-mobile {
-  font-size: 40px;
 }
 
 .text-2-light {
@@ -209,18 +206,18 @@ body {
 
 .text-3 {
   font-weight: 500;
-  font-size: 36px;
+  font-size: clamp(24px, 4vw, 36px);
   line-height: 1.2;
 }
 
 .text-4 {
   font-weight: 500;
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   line-height: 1;
 }
 
 .text-5 {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   line-height: 1.5;
 }
 
@@ -233,7 +230,7 @@ body {
 }
 
 .text-6 {
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.5;
 }
 
@@ -244,6 +241,12 @@ body {
 /* =========================
    UTILITIES
 ========================= */
+
+/* Container */
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
 
 /* Spacing - Margin */
 .mt-100 {
@@ -297,23 +300,44 @@ body {
   gap: var(--spacing-300);
 }
 
+.gap-400 {
+  gap: var(--spacing-400);
+}
+
+.gap-500 {
+  gap: var(--spacing-500);
+}
+
+.gap-600 {
+  gap: var(--spacing-600);
+}
+
+.gap-800 {
+  gap: var(--spacing-800);
+}
+
+.gap-1600 {
+  gap: var(--spacing-1600);
+}
+
 /* Flex helpers */
 .flex {
   display: flex;
 }
-
 .flex-col {
   flex-direction: column;
+}
+
+.flex-responsive {
+  display: flex;
 }
 
 .items-center {
   align-items: center;
 }
-
 .justify-center {
   justify-content: center;
 }
-
 .justify-between {
   justify-content: space-between;
 }
@@ -322,28 +346,30 @@ body {
 .text-center {
   text-align: center;
 }
-
-.text-muted {
-  color: var(--text-secondary);
+@media (max-width: 768px) {
+  .text-center-mobile {
+    text-align: center;
+  }
 }
 
 /* Colors */
 .bg-primary {
   background-color: var(--bg-primary);
 }
-
 .bg-secondary {
   background-color: var(--bg-secondary);
 }
-
 .bg-dark {
   background-color: var(--bg-dark);
+}
+
+.bg-header-img {
+  background-color: var(--color-purple-100);
 }
 
 .text-primary {
   color: var(--text-primary);
 }
-
 .text-inverse {
   color: var(--text-inverse);
 }
@@ -352,11 +378,9 @@ body {
 .success {
   color: var(--success);
 }
-
 .error {
   color: var(--error);
 }
-
 .warning {
   color: var(--warning);
 }
@@ -379,5 +403,38 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   BREAKPOINTS
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .text-1 {
+    line-height: 1.1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .flex-responsive {
+    flex-direction: column;
+  }
+
+  .text-center-mobile {
+    text-align: center;
+  }
+
+  .text-4 {
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .text-5 {
+    line-height: 1.4;
   }
 }

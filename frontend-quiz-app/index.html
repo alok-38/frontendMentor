@@ -46,7 +46,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Open Graph (for sharing) -->
     <meta property="og:title" content="Frontend Quiz App" />
@@ -61,22 +61,24 @@
     <meta name="twitter:card" content="summary_large_image" />
   </head>
 
-  <body>
-    <div class="wrapper">
+  <body class="flex items-center justify-center">
+    <div class="wrapper flex flex-col gap-800">
       <!-- ================= HEADER ================= -->
-      <header class="header" id="app-header">
-        <div class="header__title">
-          <img
-            class="header__icon"
-            src="assets/images/icon-accessibility.svg"
-            alt=""
-            aria-hidden="true"
-          />
+      <header class="header flex justify-between" id="app-header">
+        <div class="header__title flex gap-300 items-center">
+          <div class="bg-header-img flex items-center justify-center">
+            <img
+              class="header__icon"
+              src="assets/images/icon-accessibility.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
           <span class="header__text">Accessibility</span>
         </div>
 
         <div
-          class="header__theme-toggle"
+          class="header__theme-toggle flex"
           role="group"
           aria-label="Theme switcher"
         >
@@ -115,7 +117,7 @@
       <main class="quiz" id="quiz-app" aria-label="Frontend quiz application">
         <!-- ===== MENU ===== -->
         <div
-          class="quiz__screen quiz__screen--menu"
+          class="quiz__screen quiz__screen--menu flex"
           id="quiz-menu"
           role="region"
           aria-labelledby="quiz-menu-title"
