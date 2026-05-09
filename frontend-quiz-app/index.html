@@ -46,6 +46,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Open Graph (for sharing) -->
     <meta property="og:title" content="Frontend Quiz App" />
@@ -59,29 +60,196 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
   </head>
+
   <body>
-    <!-- Quiz menu start -->
+    <div class="wrapper">
+      <!-- ================= HEADER ================= -->
+      <header class="header" id="app-header">
+        <div class="header__title">
+          <img
+            class="header__icon"
+            src="assets/images/icon-accessibility.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <span class="header__text">Accessibility</span>
+        </div>
 
-    Welcome to the Frontend Quiz! Pick a subject to get started. HTML CSS
-    JavaScript Accessibility
+        <div
+          class="header__theme-toggle"
+          role="group"
+          aria-label="Theme switcher"
+        >
+          <span id="theme-toggle-label" class="visually-hidden">
+            Toggle dark mode
+          </span>
 
-    <!-- Quiz menu end -->
+          <img
+            class="header__theme-icon"
+            src="assets/images/icon-sun-dark.svg"
+            alt=""
+            aria-hidden="true"
+          />
 
-    <!-- Quiz question start -->
+          <button
+            id="theme-toggle"
+            class="toggle toggle--theme"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-labelledby="theme-toggle-label"
+          >
+            <span class="toggle__thumb"></span>
+          </button>
 
-    Question
-    <!-- number -->
-    of 10 A B C D Submit answer
+          <img
+            class="header__theme-icon"
+            src="assets/images/icon-moon-dark.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </header>
 
-    <!-- Quiz question end -->
+      <!-- ================= MAIN ================= -->
+      <main class="quiz" id="quiz-app" aria-label="Frontend quiz application">
+        <!-- ===== MENU ===== -->
+        <div
+          class="quiz__screen quiz__screen--menu"
+          id="quiz-menu"
+          role="region"
+          aria-labelledby="quiz-menu-title"
+        >
+          <section class="quiz__intro" aria-labelledby="quiz-menu-title">
+            <h1 id="quiz-menu-title" class="quiz__title">
+              Welcome to the Frontend Quiz!
+            </h1>
+            <p class="quiz__subtitle">Pick a subject to get started.</p>
+          </section>
 
-    <!-- Quiz completed start -->
+          <section class="quiz__topics-section">
+            <ul class="quiz__topics" role="list">
+              <li class="quiz__topic">
+                <button
+                  class="quiz__topic-btn"
+                  type="button"
+                  aria-label="Start HTML quiz"
+                >
+                  HTML
+                </button>
+              </li>
+              <li class="quiz__topic">
+                <button
+                  class="quiz__topic-btn"
+                  type="button"
+                  aria-label="Start CSS quiz"
+                >
+                  CSS
+                </button>
+              </li>
+              <li class="quiz__topic">
+                <button
+                  class="quiz__topic-btn"
+                  type="button"
+                  aria-label="Start JavaScript quiz"
+                >
+                  JavaScript
+                </button>
+              </li>
+              <li class="quiz__topic">
+                <button
+                  class="quiz__topic-btn"
+                  type="button"
+                  aria-label="Start Accessibility quiz"
+                >
+                  Accessibility
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
 
-    Quiz completed You scored...
+        <!-- ===== QUESTION ===== -->
+        <div
+          class="quiz__screen quiz__screen--question"
+          id="quiz-question"
+          hidden
+          role="region"
+          aria-labelledby="question-text"
+        >
+          <section
+            class="quiz__question-section"
+            aria-labelledby="question-text"
+          >
+            <h2 id="question-text" class="quiz__question" tabindex="-1">
+              Question
+            </h2>
+          </section>
 
-    <!-- score -->
-    out of 10
+          <section class="quiz__answers-section">
+            <p class="quiz__progress" role="status">
+              Question <span id="question-number">1</span> of
+              <span id="total-questions">10</span>
+            </p>
 
-    <!-- Quiz completed end -->
+            <form class="quiz__form">
+              <fieldset class="quiz__options">
+                <legend class="visually-hidden">Choose an answer</legend>
+
+                <label class="quiz__option" for="answer-a">
+                  <input id="answer-a" type="radio" name="answer" value="A" />
+                  <span>A</span>
+                </label>
+
+                <label class="quiz__option" for="answer-b">
+                  <input id="answer-b" type="radio" name="answer" value="B" />
+                  <span>B</span>
+                </label>
+
+                <label class="quiz__option" for="answer-c">
+                  <input id="answer-c" type="radio" name="answer" value="C" />
+                  <span>C</span>
+                </label>
+
+                <label class="quiz__option" for="answer-d">
+                  <input id="answer-d" type="radio" name="answer" value="D" />
+                  <span>D</span>
+                </label>
+              </fieldset>
+
+              <button type="submit" class="quiz__submit" disabled>
+                Submit answer
+              </button>
+            </form>
+          </section>
+        </div>
+
+        <!-- ===== RESULT ===== -->
+        <div
+          class="quiz__screen quiz__screen--result"
+          id="quiz-result"
+          hidden
+          role="region"
+          aria-labelledby="result-title"
+        >
+          <section class="quiz__result-section" aria-labelledby="result-title">
+            <h2 id="result-title" class="quiz__title">Quiz completed</h2>
+
+            <p class="quiz__score-text">
+              You scored
+              <strong id="score" class="quiz__score">0</strong>
+            </p>
+          </section>
+
+          <section class="quiz__score-section">
+            <p class="quiz__score-total">
+              out of <span id="score-total">10</span>
+            </p>
+
+            <button class="quiz__restart" type="button">Play again</button>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
