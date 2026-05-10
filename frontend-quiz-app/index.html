@@ -61,10 +61,13 @@
     <meta name="twitter:card" content="summary_large_image" />
   </head>
 
-  <body class="flex items-center justify-center">
+  <body class="flex items-center justify-center bg">
     <div class="wrapper flex flex-col gap-800">
       <!-- ================= HEADER ================= -->
-      <header class="header flex justify-between" id="app-header">
+      <header
+        class="header flex justify-between items-center text-4"
+        id="app-header"
+      >
         <div class="header__title flex gap-300 items-center">
           <div class="bg-header-img flex items-center justify-center">
             <img
@@ -78,7 +81,7 @@
         </div>
 
         <div
-          class="header__theme-toggle flex"
+          class="header__theme-toggle flex items-center gap-200"
           role="group"
           aria-label="Theme switcher"
         >
@@ -117,50 +120,63 @@
       <main class="quiz" id="quiz-app" aria-label="Frontend quiz application">
         <!-- ===== MENU ===== -->
         <div
-          class="quiz__screen quiz__screen--menu flex"
+          class="quiz__screen quiz__screen--menu flex gap-1600 items-start"
           id="quiz-menu"
           role="region"
           aria-labelledby="quiz-menu-title"
         >
-          <section class="quiz__intro" aria-labelledby="quiz-menu-title">
-            <h1 id="quiz-menu-title" class="quiz__title">
-              Welcome to the Frontend Quiz!
+          <section
+            class="quiz__intro flex flex-col gap-600"
+            aria-labelledby="quiz-menu-title"
+          >
+            <h1
+              id="quiz-menu-title"
+              class="quiz__title text-2-light flex flex-col gap-100"
+            >
+              Welcome to the <span class="text-2">Frontend Quiz!</span>
             </h1>
-            <p class="quiz__subtitle">Pick a subject to get started.</p>
+            <p class="quiz__subtitle text-6">Pick a subject to get started.</p>
           </section>
 
-          <section class="quiz__topics-section">
-            <ul class="quiz__topics" role="list">
-              <li class="quiz__topic">
+           <section class="quiz__topics-section flex">
+            <ul class="quiz__topics flex flex-col gap-200" role="list">
+              <li class="quiz__topic flex p-400 gap-500">
+                <img src="assets/images/icon-html.svg" alt="HTML icon" />
                 <button
-                  class="quiz__topic-btn"
+                  class="quiz__topic-btn text-4"
                   type="button"
                   aria-label="Start HTML quiz"
                 >
                   HTML
-                </button>
+                 </button>
               </li>
-              <li class="quiz__topic">
+              <li class="quiz__topic flex p-400 gap-500">
+                <img src="assets/images/icon-css.svg" alt="CSS icon" />
                 <button
-                  class="quiz__topic-btn"
+                  class="quiz__topic-btn text-4"
                   type="button"
                   aria-label="Start CSS quiz"
                 >
                   CSS
-                </button>
+                 </button>
               </li>
-              <li class="quiz__topic">
+              <li class="quiz__topic flex p-400 gap-500">
+                <img src="assets/images/icon-js.svg" alt="JavaScript icon" />
                 <button
-                  class="quiz__topic-btn"
+                  class="quiz__topic-btn text-4"
                   type="button"
                   aria-label="Start JavaScript quiz"
                 >
                   JavaScript
                 </button>
               </li>
-              <li class="quiz__topic">
+              <li class="quiz__topic flex p-400 gap-500">
+                <img
+                  src="assets/images/icon-accessibility.svg"
+                  alt="Accessibility ico"
+                />
                 <button
-                  class="quiz__topic-btn"
+                  class="quiz__topic-btn text-4"
                   type="button"
                   aria-label="Start Accessibility quiz"
                 >
