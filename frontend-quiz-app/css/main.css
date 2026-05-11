@@ -1,7 +1,14 @@
 /* Base */
 body {
   background-color: var(--color-grey-50);
+  background-image: url("../assets/images/pattern-background-desktop-light.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
+/* Dark mode */
+
 
 .wrapper {
   width: 100%;
@@ -122,6 +129,7 @@ body {
   all: unset;
   width: 100%;
   cursor: pointer;
+  font-weight: 600;
 }
 
 /* Subtitle */
