@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const sunIcon = document.getElementById("sun");
   const moonIcon = document.getElementById("moon");
   const toggleThumb = document.querySelector(".toggle__thumb");
+  const quizMenuScreen = document.getElementById("quiz-menu");
+  const quizQestionsScreen = document.getElementById("quiz-question");
 
   let isDark = false;
 
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Quiz Implementation
   let quizTopicsData = {};
 
-  fetch("data.json") 
+  fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
       quizTopicsData = data;
@@ -86,6 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (headerText) {
             headerText.textContent = selected?.title || "Unknown Topic";
+          }
+          // Switch screens
+          if (quizMenuScreen && quizQestionsScreen) {
+            quizMenuScreen.style.display = "none";
+            quizQestionsScreen.style.display = "flex";
           }
         });
       });

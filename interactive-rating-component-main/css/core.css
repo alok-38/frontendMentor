@@ -1,0 +1,203 @@
+/* ======================================== */
+/* 🔤 1. FONT FACE */
+/* ======================================== */
+
+@font-face {
+  font-family: "Overpass";
+  src:
+    url("../fonts/Overpass-VariableFont_wght.woff2") format("woff2"),
+    url("../fonts/Overpass-VariableFont_wght.woff") format("woff"),
+    url("../fonts/Overpass-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Overpass";
+  src:
+    url("../fonts/Overpass-Italic-VariableFont_wght.woff2") format("woff2"),
+    url("../fonts/Overpass-Italic-VariableFont_wght.woff") format("woff"),
+    url("../fonts/Overpass-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ======================================== */
+/* 🎨 2. DESIGN TOKENS */
+/* ======================================== */
+
+:root {
+  /* ================= COLORS (PRIMITIVE) ================= */
+  --white: #ffffff;
+  --black: #000000;
+
+  --grey-950: #131518;
+  --grey-900: #262e38;
+  --grey-500: #969fad;
+
+  --orange-500: #fc7614;
+
+  --gradient-start: #232a34;
+  --gradient-end: #181e27;
+
+  /* ================= COLORS (SEMANTIC) ================= */
+  --color-bg: var(--grey-950);
+  --color-surface: var(--grey-900);
+
+  --color-text-primary: var(--white);
+  --color-text-secondary: var(--grey-500);
+
+  --color-accent: var(--orange-500);
+
+  --color-interactive-bg: var(--orange-500);
+  --color-interactive-text: var(--grey-950);
+
+  --color-rating-bg: rgba(255, 255, 255, 0.05);
+
+  /* Gradient */
+  --gradient-card: linear-gradient(
+    to bottom,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+
+  /* ================= TYPOGRAPHY ================= */
+  --font-family: "Overpass", system-ui, -apple-system, sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Fluid font sizes */
+  --fs-1: clamp(1.75rem, 1.2rem + 2vw, 2rem);
+  --fs-2: clamp(1.5rem, 1.1rem + 1.5vw, 1.75rem);
+  --fs-3: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --fs-4: 0.9375rem;
+  --fs-5: 0.875rem;
+
+  /* Line heights */
+  --lh-tight: 1.2;
+  --lh-normal: 1.5;
+
+  /* Letter spacing */
+  --ls-wide: 2px;
+  --ls-normal: 0;
+
+  /* ================= SPACING (FLUID) ================= */
+  --space-0: 0;
+
+  --space-100: clamp(0.4rem, 0.5vw, 0.5rem);
+  --space-200: clamp(0.75rem, 1vw, 1rem);
+  --space-300: clamp(1rem, 1.5vw, 1.5rem);
+  --space-400: clamp(1.5rem, 2vw, 2rem);
+  --space-500: clamp(2rem, 3vw, 2.5rem);
+
+  --space-1300: clamp(4rem, 6vw, 6.5rem);
+  --space-1700: clamp(5rem, 8vw, 8.5rem);
+
+  /* Semantic spacing */
+  --space-xs: var(--space-100);
+  --space-sm: var(--space-200);
+  --space-md: var(--space-300);
+  --space-lg: var(--space-400);
+  --space-xl: var(--space-500);
+
+  /* ================= RADIUS ================= */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-full: 999px;
+}
+
+/* ======================================== */
+/* 🔄 3. RESET */
+/* ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* ======================================== */
+/* 🌍 4. BASE */
+/* ======================================== */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+
+  min-height: 100vh;
+
+  display: grid;
+  place-items: center;
+
+  padding: var(--space-md);
+}
+
+/* ======================================== */
+/* 🔤 5. TYPOGRAPHY UTILITIES */
+/* ======================================== */
+
+.text-1 {
+  font-size: var(--fs-1);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+.text-2 {
+  font-size: var(--fs-2);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+.text-3 {
+  font-size: var(--fs-3);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-bold);
+}
+
+.text-4 {
+  font-size: var(--fs-4);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+}
+
+.text-5 {
+  font-size: var(--fs-5);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+}
+
+.text-5-semibold {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-semibold);
+}
+
+.text-5-bold {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-bold);
+  letter-spacing: 1.5px;
+}
