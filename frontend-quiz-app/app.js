@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Quiz Implementation
   let quizTopicsData = {};
 
-  fetch("data.json") // ✅ FIXED PATH
+  fetch("data.json") 
     .then((response) => response.json())
     .then((data) => {
       quizTopicsData = data;
