@@ -43,38 +43,41 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- script -->
+     <script src="app.js" defer></script>
   </head>
 
   <body>
     <!-- Skip Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <main class="faq" id="main-content">
-      <div class="faq__card">
+    <main class="faq container" id="main-content">
+      <div class="faq__card card flex flex-col gap-400">
         <!-- Header -->
-        <header class="faq__header">
+        <header class="faq__header flex gap-200 items-center">
           <img
             src="assets/images/icon-star.svg"
             alt=""
             aria-hidden="true"
             class="faq__icon"
           />
-          <h1 class="faq__title text-preset-1">FAQs</h1>
+          <h1 class="faq__title text-preset-1 text-purple-950">FAQs</h1>
         </header>
 
         <!-- FAQ List -->
         <section class="faq__content">
           <!-- Item 1 -->
           <div class="faq__item">
-            <h2 class="faq__question-heading">
+            <h2 class="faq__question-heading text-purple-950">
               <button
-                class="faq__question"
+                class="faq__question flex gap-200 text-preset-2 text-purple-950"
                 id="faq-question-1"
                 aria-expanded="false"
                 aria-controls="faq-answer-1"
               >
                 What is Frontend Mentor, and how will it help me?
-                <span class="faq__indicator" aria-hidden="true">+</span>
+                <span class="faq__indicator" aria-hidden="true"></span>
               </button>
             </h2>
 
@@ -85,7 +88,7 @@
               aria-labelledby="faq-question-1"
               hidden
             >
-              <p class="faq__text">
+              <p class="faq__text text-preset-3 text-purple-600">
                 Frontend Mentor offers realistic coding challenges to help
                 developers improve their frontend coding skills with projects in
                 HTML, CSS, and JavaScript. It's suitable for all levels and
@@ -96,15 +99,15 @@
 
           <!-- Item 2 -->
           <div class="faq__item mt-300">
-            <h2 class="faq__question-heading">
+            <h2 class="faq__question-heading text-purple-950">
               <button
-                class="faq__question flex gap-200"
+                class="faq__question flex gap-200 text-preset-2 text-purple-950"
                 id="faq-question-2"
                 aria-expanded="false"
                 aria-controls="faq-answer-2"
               >
                 Is Frontend Mentor free?
-                <span class="faq__indicator" aria-hidden="true">+</span>
+                <span class="faq__indicator" aria-hidden="true"></span>
               </button>
             </h2>
 
@@ -125,15 +128,15 @@
 
           <!-- Item 3 -->
           <div class="faq__item mt-300">
-            <h2 class="faq__question-heading">
+            <h2 class="faq__question-heading text-purple-950">
               <button
-                class="faq__question flex gap-200"
+                class="faq__question flex gap-200 text-preset-2 text-purple-950"
                 id="faq-question-3"
                 aria-expanded="false"
                 aria-controls="faq-answer-3"
               >
                 Can I use Frontend Mentor projects in my portfolio?
-                <span class="faq__indicator" aria-hidden="true">+</span>
+                <span class="faq__indicator" aria-hidden="true"></span>
               </button>
             </h2>
 
@@ -154,15 +157,15 @@
 
           <!-- Item 4 -->
           <div class="faq__item mt-300">
-            <h2 class="faq__question-heading">
+            <h2 class="faq__question-heading text-purple-950">
               <button
-                class="faq__question flex gap-200"
+                class="faq__question flex gap-200 text-preset-2 text-purple-950"
                 id="faq-question-4"
                 aria-expanded="false"
                 aria-controls="faq-answer-4"
               >
                 How can I get help if I'm stuck on a challenge?
-                <span class="faq__indicator" aria-hidden="true">+</span>
+                <span class="faq__indicator" aria-hidden="true"></span>
               </button>
             </h2>
 

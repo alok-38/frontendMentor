@@ -1,3 +1,30 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  outline: unset;
+  border: unset;
+}
+
+/* main */
+.faq {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq__icon {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+}
+
 /* footer */
 .attribution {
   font-size: 0.6875rem;
@@ -5,11 +32,4 @@
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-button {
-    background: transparent;
-    cursor: pointer;
-    outline: unset;
-    border: unset;
 }

@@ -70,13 +70,25 @@
   padding: 0;
 }
 
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font: inherit;
+}
+
 body {
+  min-height: 100vh;
   font-family: var(--font-primary);
   font-size: var(--fs-3);
   line-height: var(--lh-3);
   background-color: var(--color-purple-100);
   color: var(--color-purple-950);
   -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
 }
 
 /* =========================================
@@ -112,6 +124,42 @@ body {
 
 .flex {
   display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .grid {
@@ -169,7 +217,7 @@ body {
   padding: var(--spacing-500);
 }
 
-/* Gap (Flex + Grid) */
+/* Gap */
 .gap-100 {
   gap: var(--spacing-100);
 }
@@ -197,7 +245,6 @@ body {
    7. Color Utilities
    ========================================= */
 
-/* Background */
 .bg-white {
   background-color: var(--color-white);
 }
@@ -205,7 +252,6 @@ body {
   background-color: var(--color-purple-100);
 }
 
-/* Text */
 .text-purple-950 {
   color: var(--color-purple-950);
 }
@@ -216,7 +262,6 @@ body {
   color: var(--color-white);
 }
 
-/* Accent */
 .text-accent {
   color: var(--color-violet-600);
 }
