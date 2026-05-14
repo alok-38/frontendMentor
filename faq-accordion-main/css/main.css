@@ -6,3 +6,10 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+button {
+    background: transparent;
+    cursor: pointer;
+    outline: unset;
+    border: unset;
+}
