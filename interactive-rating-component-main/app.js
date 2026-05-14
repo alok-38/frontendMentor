@@ -1,6 +1,14 @@
 const ratingGroup = document.querySelector(".rating-group");
 const iconContainer = document.querySelector(".icon__container");
 
+const submitButton = document.querySelector(".button--primary");
+submitButton.disabled = true;
+
+const ratingStateSection = document.getElementById("rating-state");
+const thankYouStateSection = document.getElementById("thank-you-state");
+
+const selectedRating = document.getElementById("selected-rating");
+
 ratingGroup.addEventListener("click", (event) => {
   const rating = Number(event.target.id.split("-")[1]);
   if (!rating) return;
@@ -20,5 +28,12 @@ ratingGroup.addEventListener("click", (event) => {
 
     div.appendChild(img);
     iconContainer.appendChild(div);
+    submitButton.disabled = false;
+
+    submitButton.addEventListener("click", () => {
+      ratingStateSection.style.display = "none";
+      thankYouStateSection.removeAttribute("hidden");
+      selectedRating.textContent = rating;
+    });
   }
 });

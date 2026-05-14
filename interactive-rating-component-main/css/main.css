@@ -171,3 +171,44 @@ body {
   font-family: inherit;
   color: inherit;
 }
+
+@media screen and (max-width: 375px) {
+  .app {
+    max-width: 327px;
+    width: 100%;
+  }
+
+  .icon__container {
+    gap: 8px;
+  }
+
+  .card__icon {
+    background-color: var(--grey-900);
+    height: 48px;
+    width: 48px;
+  }
+}
+
+
+.card--thank-you {
+  text-align: center;
+  width: 100%;
+}
+
+.card__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__selection {
+  margin: 25px 0;
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+.card__description {
+  text-align: center;
+}
