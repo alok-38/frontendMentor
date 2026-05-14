@@ -9,6 +9,155 @@ body {
 .app {
   background: var(--gradient-card);
   border-radius: var(--radius-md);
+  padding: var(--space-400);
+  max-width: min(100%, 412px);
+}
+
+.icon__container {
+  display: flex;
+  gap: 2rem;
+}
+
+.card--rating {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 4vw, 32px);
+}
+
+.card__icon {
+  padding: 16px;
+  background-color: var(--grey-900);
+  border-radius: 24px;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 2vw, 16px);
+}
+
+.card__description {
+  color: var(--grey-500);
+}
+
+.rating-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-group__item {
+  width: 51px;
+  height: 51px;
+  padding: clamp(8px, 2vw, 16px);
+  border-radius: 50%;
+  background-color: var(--grey-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey-500);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+/* =========================
+   Hover & Focus (Preview)
+   ========================= */
+.rating-group__item:hover,
+.rating-group__item:focus-visible {
+  background-color: var(--white);
+  color: var(--grey-900);
+  outline: none;
+}
+
+/* =========================
+   Active (Press / Click)
+   ========================= */
+.rating-group__item:active {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Selected (Persistent)
+   ========================= */
+.rating-group__item--selected {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+}
+
+/* Optional: keep selected stable even on hover */
+.rating-group__item--selected:hover,
+.rating-group__item--selected:focus-visible {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+}
+
+/* =========================
+   Accessibility (Keyboard)
+   ========================= */
+.rating-group__item:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.button--primary {
+  background-color: #fff;
+  color: var(--grey-950);
+  padding: 12px clamp(16px, 5vw, 32px);
+  border-radius: 22.5px;
+  height: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+  user-select: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================
+   Hover (mouse users)
+   ========================= */
+.button--primary:hover {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+}
+
+/* =========================
+   Focus (keyboard users)
+   ========================= */
+.button--primary:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* =========================
+   Active (press/click)
+   ========================= */
+.button--primary:active {
+  transform: scale(0.96);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   Disabled (optional)
+   ========================= */
+.button--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Footer */

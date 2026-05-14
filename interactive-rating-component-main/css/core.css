@@ -134,6 +134,9 @@ button,
 input,
 textarea {
   font: inherit;
+  background: transparent;
+  outline: unset;
+  border: unset;
 }
 
 /* ======================================== */
