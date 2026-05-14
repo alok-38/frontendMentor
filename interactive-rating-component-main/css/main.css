@@ -1,3 +1,16 @@
+button {
+  cursor: pointer;
+}
+
+body {
+  grid-template-rows: 1fr auto;
+}
+
+.app {
+  background: var(--gradient-card);
+  border-radius: var(--radius-md);
+}
+
 /* Footer */
 .attribution {
   font-size: 0.6875rem;

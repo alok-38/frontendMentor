@@ -53,22 +53,123 @@
     <meta name="theme-color" content="#131518" />
   </head>
   <body>
-    <!-- Rating state start -->
+    <main class="app">
+      <!-- ================= RATING STATE ================= -->
+      <section
+        class="card card--rating"
+        id="rating-state"
+        aria-labelledby="rating-state__title"
+      >
+        <!-- Icon -->
+        <div class="card__icon" aria-hidden="true"></div>
 
-    How did we do? Please let us know how we did with your support request. All
-    feedback is appreciated to help us improve our offering! 1 2 3 4 5 Submit
+        <h1 class="card__title text-2" id="rating-state__title">
+          How did we do?
+        </h1>
 
-    <!-- Rating state end -->
+        <p class="card__description text-4">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
 
-    <!-- Thank you state start -->
+        <!-- Rating group -->
+        <div
+          class="rating-group"
+          role="radiogroup"
+          aria-labelledby="rating-state__title"
+        >
+          <button
+            class="rating-group__item"
+            id="rating-1"
+            role="radio"
+            aria-checked="false"
+            value="1"
+          >
+            1
+          </button>
 
-    You selected
-    <!-- Add rating here -->
-    out of 5 Thank you! We appreciate you taking the time to give a rating. If
-    you ever need more support, don't hesitate to get in touch!
+          <button
+            class="rating-group__item"
+            id="rating-2"
+            role="radio"
+            aria-checked="false"
+            value="2"
+          >
+            2
+          </button>
 
-    <!-- Thank you state end -->
+          <button
+            class="rating-group__item"
+            id="rating-3"
+            role="radio"
+            aria-checked="false"
+            value="3"
+          >
+            3
+          </button>
 
+          <button
+            class="rating-group__item"
+            id="rating-4"
+            role="radio"
+            aria-checked="false"
+            value="4"
+          >
+            4
+          </button>
+
+          <button
+            class="rating-group__item"
+            id="rating-5"
+            role="radio"
+            aria-checked="false"
+            value="5"
+          >
+            5
+          </button>
+        </div>
+
+        <!-- Submit -->
+        <button
+          class="button button--primary card__submit"
+          id="submit-btn"
+          type="button"
+          aria-disabled="true"
+        >
+          Submit
+        </button>
+      </section>
+
+      <!-- ================= THANK YOU STATE ================= -->
+      <section
+        class="card card--thank-you"
+        id="thank-you-state"
+        hidden
+        aria-live="polite"
+        aria-labelledby="thank-you__title"
+      >
+        <figure class="card__figure">
+          <img
+            class="card__image"
+            src="./images/illustration-thank-you.svg"
+            alt=""
+          />
+        </figure>
+
+        <p class="card__selection text-5">
+          You selected
+          <span id="selected-rating">0</span>
+          out of 5
+        </p>
+
+        <h2 class="card__title text-2" id="thank-you__title">Thank you!</h2>
+
+        <p class="card__description text-4">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </section>
+    </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
