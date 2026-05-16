@@ -169,6 +169,22 @@ fieldset {
   accent-color: var(--color-green-600);
 }
 
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  cursor: pointer;
+}
+
+.form-group__options {
+  width: 100%;
+  gap: var(--space-200);
+}
+
 /* =========================
    8. ERRORS
    ========================= */
@@ -179,10 +195,24 @@ fieldset {
   font-size: var(--fs-body-sm);
 }
 
-/* show only when invalid */
-.form-group input:invalid + .form-group__error,
-.form-group textarea:invalid + .form-group__error {
+/* Show error only after user interaction (not on page load) */
+.form-group input:user-invalid + .form-group__error,
+.form-group textarea:user-invalid + .form-group__error {
   display: block;
+}
+
+/* JS / ARIA-driven state (more reliable) */
+.form-group input[aria-invalid="true"] + .form-group__error,
+.form-group textarea[aria-invalid="true"] + .form-group__error {
+  display: block;
+}
+
+/* Optional: error styling on field */
+.form-group input:user-invalid,
+.form-group textarea:user-invalid,
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: var(--color-red-600);
 }
 
 /* =========================
@@ -246,6 +276,10 @@ fieldset {
   margin-bottom: var(--space-100);
 }
 
+.form-group__textarea {
+  resize: none;
+}
+
 /* =========================
    11. FOOTER
    ========================= */
@@ -253,10 +287,12 @@ fieldset {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  color: inherit;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  color: inherit;
 }
 
 /* =========================
@@ -264,7 +300,8 @@ fieldset {
    ========================= */
 
 @media (max-width: 600px) {
-  .contact__name-row {
+  .contact__name-row,
+  .form-group__options {
     flex-direction: column;
   }
 }
