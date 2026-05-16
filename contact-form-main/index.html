@@ -1,52 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <!-- ✅ Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
+    <!-- 🧠 SEO -->
+    <title>Contact Form | Get in Touch Easily</title>
+    <meta
+      name="description"
+      content="Simple and accessible contact form built with modern HTML and CSS. Reach out quickly and easily."
+    />
+    <meta name="robots" content="index, follow" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- 🎨 Theme -->
+    <meta name="theme-color" content="#0C7D69" />
 
-  Contact Us
+    <!-- 📱 Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  First Name
-  This field is required
+    <!-- ⚡ Performance (Fonts) -->
+    <link
+      rel="preload"
+      href="./assets/fonts/Karla-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./assets/fonts/Karla-Italic-VariableFont_wght.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
-  Last Name
-  This field is required
+    <!-- ⚡ CSS (render blocking optimized) -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <!-- 🌐 Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Contact Form" />
+    <meta
+      property="og:description"
+      content="Clean and responsive contact form built with modern CSS."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-site-url.com" />
+    <meta property="og:image" content="https://your-site-url.com/preview.jpg" />
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <!-- 🐦 Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Form" />
+    <meta
+      name="twitter:description"
+      content="Modern responsive contact form UI."
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-site-url.com/preview.jpg"
+    />
+    <!-- Script -->
+     <script src="app.js" defer></script>
+  </head>
+  <body class="bg-success-light">
+    <main class="contact bg-white">
+      <form class="contact__form p-400 flex flex-col gap-300" novalidate>
+        <!-- HEADER -->
+        <header class="contact__header">
+          <h1 class="contact__title">Contact Us</h1>
+        </header>
 
-  Message
-  This field is required
+        <!-- INPUTS -->
+        <div class="contact__inputs">
+          <div class="contact__fields flex flex-col gap-200">
+            <!-- FIRST NAME -->
+            <div class="flex gap-200 contact__name-row">
+              <div
+                class="form-group form-group--required flex flex-col gap-100"
+              >
+                <label for="first-name" class="form-group__label u-body-sm">
+                  First Name
+                </label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="firstName"
+                  class="form-group__input"
+                  required
+                  aria-describedby="first-name-error"
+                />
+                <span
+                  id="first-name-error"
+                  class="form-group__error"
+                  aria-live="polite"
+                >
+                  This field is required
+                </span>
+              </div>
+              <!-- LAST NAME -->
+              <div
+                class="form-group form-group--required flex flex-col gap-100"
+              >
+                <label for="last-name" class="form-group__label u-body-sm">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="lastName"
+                  class="form-group__input"
+                  required
+                  aria-describedby="last-name-error"
+                />
+                <span
+                  id="last-name-error"
+                  class="form-group__error"
+                  aria-live="polite"
+                >
+                  This field is required
+                </span>
+              </div>
+            </div>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+            <!-- EMAIL -->
+            <div class="form-group form-group--required flex flex-col gap-100">
+              <label for="email" class="form-group__label u-body-sm">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-group__input"
+                required
+                aria-describedby="email-error"
+              />
+              <span
+                id="email-error"
+                class="form-group__error"
+                aria-live="polite"
+              >
+                Please enter a valid email address
+              </span>
+            </div>
 
-  Submit
+            <!-- QUERY TYPE -->
+            <fieldset class="form-group form-group--required">
+              <legend class="form-group__legend">Query Type</legend>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+              <div class="flex flex-col gap-100">
+                <div>
+                  <label class="form-group__option">
+                    <input
+                      type="radio"
+                      name="queryType"
+                      value="general"
+                      required
+                    />
+                    <span>General Enquiry</span>
+                  </label>
+                  <label class="form-group__option">
+                    <input type="radio" name="queryType" value="support" />
+                    <span>Support Request</span>
+                  </label>
+                </div>
+                <span class="form-group__error" aria-live="polite">
+                  Please select a query type
+                </span>
+              </div>
+            </fieldset>
+
+            <!-- MESSAGE -->
+            <div class="form-group form-group--required flex flex-col gap-100">
+              <label for="message" class="form-group__label"> Message </label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-group__textarea"
+                required
+                aria-describedby="message-error"
+              ></textarea>
+              <span
+                id="message-error"
+                class="form-group__error"
+                aria-live="polite"
+              >
+                This field is required
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="contact__actions">
+          <!-- CONSENT -->
+          <div
+            class="form-group form-group--checkbox form-group--required flex flex-col gap-100"
+          >
+            <label class="form-group__checkbox-label u-body-sm">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>I consent to being contacted by the team</span>
+            </label>
+
+            <span class="form-group__error" aria-live="polite">
+              To submit this form, please consent to being contacted
+            </span>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="contact__submit mt-200 bg-success-dark text-submit">Submit</button>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div class="contact__success" role="status" aria-live="polite" hidden>
+          <p class="contact__success-title">Message Sent!</p>
+          <p>Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+      </form>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
 </html>
