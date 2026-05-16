@@ -1,3 +1,7 @@
+/* =========================
+   1. PAGE LAYOUT
+   ========================= */
+
 body {
   display: flex;
   flex-direction: column;
@@ -9,21 +13,36 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   max-width: 736px;
   width: 100%;
-  padding: var(--space-100);
   margin-inline: auto;
   padding: 0;
+  border-radius: 1rem;
 }
+
+.contact__form {
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   2. HEADER
+   ========================= */
+
+.contact__title {
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  letter-spacing: var(--ls-heading);
+}
+
+/* =========================
+   3. FORM LAYOUT
+   ========================= */
 
 .contact__name-row > .form-group {
   flex: 1;
   min-width: 0;
-}
-
-.form-group__error {
-  color: var(--color-red-600);
-  font-size: var(--fs-body-sm);
 }
 
 fieldset {
@@ -32,45 +51,178 @@ fieldset {
   padding: 0;
 }
 
-.contact__submit {
-  padding: var(--space-200) var(--space-400);
+/* =========================
+   4. LABELS
+   ========================= */
+
+.form-group__label,
+.form-group__legend {
+  font-weight: 600;
+}
+
+/* spacing below Query Type */
+.form-group__legend {
+  display: block;
+  margin-bottom: var(--space-200);
+}
+
+/* =========================
+   5. INPUTS & TEXTAREA
+   ========================= */
+
+.form-group__input,
+.form-group__textarea {
   width: 100%;
+  padding: var(--space-150) var(--space-200);
+
+  border: 1px solid var(--color-grey-500);
   border-radius: 0.5rem;
-  margin-top: clamp(1.5rem, 2vw, 2.5rem);
+  background-color: var(--color-white);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* textarea */
+.form-group__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* hover (subtle green hint, NOT red) */
+.form-group__input:hover,
+.form-group__textarea:hover {
+  border-color: var(--color-green-600);
+}
+
+/* focus (primary interaction state) */
+.form-group__input:focus,
+.form-group__textarea:focus {
+  outline: none;
+  border-color: var(--color-green-600);
+  box-shadow: 0 0 0 3px rgba(12, 125, 105, 0.15);
+}
+
+/* =========================
+   6. RADIO BUTTONS (QUERY TYPE)
+   ========================= */
+
+/* flex layout for options */
+.form-group fieldset > div > div {
+  display: flex;
+  gap: var(--space-200);
+  flex-wrap: wrap;
+}
+
+.form-group__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-150);
+
+  flex: 1;
+  min-width: 200px;
+
+  padding: var(--space-150) var(--space-200);
+  border: 1px solid var(--color-grey-500);
+  border-radius: 0.5rem;
 
   cursor: pointer;
 
-  /* 🎬 Smooth transitions */
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-group__option input {
+  accent-color: var(--color-green-600);
+}
+
+/* hover */
+.form-group__option:hover {
+  border-color: var(--color-green-600);
+}
+
+/* selected */
+.form-group__option:has(input:checked) {
+  border-color: var(--color-green-600);
+  background-color: var(--color-green-200);
+}
+
+.form-group__option input:checked + span {
+  font-weight: 600;
+}
+
+/* =========================
+   7. CHECKBOX
+   ========================= */
+
+.form-group__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-150);
+  cursor: pointer;
+}
+
+.form-group__checkbox-label input {
+  accent-color: var(--color-green-600);
+}
+
+/* =========================
+   8. ERRORS
+   ========================= */
+
+.form-group__error {
+  display: none;
+  color: var(--color-red-600);
+  font-size: var(--fs-body-sm);
+}
+
+/* show only when invalid */
+.form-group input:invalid + .form-group__error,
+.form-group textarea:invalid + .form-group__error {
+  display: block;
+}
+
+/* =========================
+   9. SUBMIT BUTTON
+   ========================= */
+
+.contact__submit {
+  width: 100%;
+  padding: var(--space-200) var(--space-400);
+  margin-top: clamp(1.5rem, 2vw, 2.5rem);
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+
   transition:
     background-color 0.2s ease,
     transform 0.1s ease,
     box-shadow 0.2s ease;
 }
 
-/* =========================
-   INTERACTION STATES
-   ========================= */
-
-/* HOVER (desktop users) */
+/* hover */
 .contact__submit:hover {
-  background-color: #0a6b5a; /* slightly darker green */
+  background-color: #0a6b5a;
   box-shadow: 0 6px 12px rgba(12, 125, 105, 0.25);
   transform: translateY(-1px);
 }
 
-/* FOCUS (keyboard accessibility) */
+/* focus */
 .contact__submit:focus-visible {
   outline: 3px solid var(--color-green-200);
   outline-offset: 3px;
 }
 
-/* ACTIVE (click / press) */
+/* active */
 .contact__submit:active {
   transform: translateY(1px) scale(0.98);
   box-shadow: 0 2px 6px rgba(12, 125, 105, 0.2);
 }
 
-/* DISABLED (optional but recommended) */
+/* disabled */
 .contact__submit:disabled {
   opacity: 0.6;
   cursor: not-allowed;
@@ -78,11 +230,41 @@ fieldset {
   box-shadow: none;
 }
 
-/* footer */
+/* =========================
+   10. SUCCESS MESSAGE
+   ========================= */
+
+.contact__success {
+  background-color: var(--color-green-200);
+  border-left: 4px solid var(--color-green-600);
+  padding: var(--space-300);
+  border-radius: 0.5rem;
+}
+
+.contact__success-title {
+  font-weight: 700;
+  margin-bottom: var(--space-100);
+}
+
+/* =========================
+   11. FOOTER
+   ========================= */
+
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* =========================
+   12. RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+  .contact__name-row {
+    flex-direction: column;
+  }
 }
