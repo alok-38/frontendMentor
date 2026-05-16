@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================
+       BASIC META
+  ========================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO: Description -->
+    <meta
+      name="description"
+      content="Explore the latest news on Web 3.0, AI, technology trends, and innovation. Stay updated with insights on the future of the web."
+    />
+
+    <!-- SEO: Keywords (optional but harmless) -->
+    <meta
+      name="keywords"
+      content="Web 3.0, AI news, tech trends, future web, blockchain, startups, technology news"
+    />
+
+    <!-- SEO: Author -->
+    <meta name="author" content="Your Name" />
+
+    <!-- =========================
+       OPEN GRAPH (Social Sharing)
+  ========================== -->
+    <meta
+      property="og:title"
+      content="News Homepage | Web 3.0 & Tech Insights"
+    />
+    <meta
+      property="og:description"
+      content="Discover the future of Web 3.0, AI advancements, and trending tech stories."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta
+      property="og:image"
+      content="https://yourdomain.com/assets/images/image-web-3-desktop.jpg"
+    />
+
+    <!-- =========================
+       TWITTER CARD
+  ========================== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="News Homepage | Web 3.0 & Tech Insights"
+    />
+    <meta
+      name="twitter:description"
+      content="Latest updates on Web 3.0, AI, and tech innovations."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.com/assets/images/image-web-3-desktop.jpg"
+    />
+
+    <!-- =========================
+       FAVICON
+  ========================== -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- =========================
+       TITLE (VERY IMPORTANT)
+  ========================== -->
+    <title>Web 3.0 News, AI Trends & Tech Insights | News Homepage</title>
+
+    <!-- =========================
+       PERFORMANCE (CSS)
+  ========================== -->
+    <link rel="preload" href="css/global.css" as="style" />
+    <link rel="preload" href="css/main.css" as="style" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- =========================
+       FONTS (if using local Inter)
+  ========================== -->
+    <link
+      rel="preload"
+      href="./assets/fonts/Inter.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <!-- =========================
+       CANONICAL URL
+  ========================== -->
+    <link rel="canonical" href="https://yourdomain.com/" />
+  </head>
+  <body>
+    <div class="wrapper layout" id="layout-root">
+      <div class="header layout__header" id="site-header">
+        <div class="logo layout__logo" id="site-logo">
+          <a href="index.html" class="logo__link" aria-label="Go to homepage">
+            <img
+              src="assets/images/logo.svg"
+              alt="Website logo"
+              class="logo__image"
+              id="logo-image"
+            />
+          </a>
+        </div>
+
+        <nav
+          class="nav layout__nav"
+          id="main-navigation"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <ul class="nav__list nav" id="nav-list" role="list">
+            <li class="nav__item" id="nav-item-home">
+              <a
+                class="nav__link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                id="nav-link-home"
+              >
+                Home
+              </a>
+            </li>
+
+            <li class="nav__item" id="nav-item-new">
+              <a
+                class="nav__link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                id="nav-link-new"
+              >
+                New
+              </a>
+            </li>
+
+            <li class="nav__item" id="nav-item-popular">
+              <a
+                class="nav__link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                id="nav-link-popular"
+              >
+                Popular
+              </a>
+            </li>
+
+            <li class="nav__item" id="nav-item-trending">
+              <a
+                class="nav__link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                id="nav-link-trending"
+              >
+                Trending
+              </a>
+            </li>
+
+            <li class="nav__item" id="nav-item-categories">
+              <a
+                class="nav__link"
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                id="nav-link-categories"
+              >
+                Categories
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="layout__content" id="main-content-wrapper">
+        <main
+          class="main"
+          id="primary-content"
+          role="main"
+          aria-labelledby="main-heading"
+        >
+          <figure class="main__figure">
+            <img
+              src="assets/images/image-web-3-desktop.jpg"
+              alt="Abstract illustration representing the future of Web 3.0"
+              class="main__image"
+            />
+          </figure>
+
+          <div class="main__intro">
+            <h1 class="main__title" id="main-heading">
+              The Bright Future of Web 3.0?
+            </h1>
+
+            <div class="main__text-block">
+              <p class="main__description">
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noreferrer"
+                class="main__cta"
+                aria-label="Read more about the future of Web 3.0"
+              >
+                Read more
+              </a>
+            </div>
+          </div>
+        </main>
+
+        <aside
+          class="sidebar"
+          id="sidebar"
+          role="complementary"
+          aria-labelledby="sidebar-heading"
+        >
+          <article class="sidebar__article sidebar__article--featured">
+            <h2 class="sidebar__title" id="sidebar-heading">New</h2>
+
+            <h3 class="sidebar__headline">Hydrogen VS Electric Cars</h3>
+            <p class="sidebar__text">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </article>
+
+          <article class="sidebar__article">
+            <h3 class="sidebar__headline">The Downsides of AI Artistry</h3>
+            <p class="sidebar__text">
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+
+          <article class="sidebar__article">
+            <h3 class="sidebar__headline">Is VC Funding Drying Up?</h3>
+            <p class="sidebar__text">
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </aside>
+      </div>
+
+      <section
+        class="highlights"
+        id="highlights"
+        aria-labelledby="highlights-heading"
+      >
+        <h2 id="highlights-heading" class="visually-hidden">
+          Featured articles
+        </h2>
+
+        <article class="highlights__item" id="highlight-1">
+          <img
+            src="assets/images/image-retro-pcs.jpg"
+            alt="Retro desktop computer setup"
+            class="highlights__image"
+            id="highlight-image-1"
+          />
+
+          <div class="highlights__content" id="highlight-content-1">
+            <span class="highlights__number" id="highlight-number-1">01</span>
+
+            <h4 class="highlights__title" id="highlight-title-1">
+              Reviving Retro PCs
+            </h4>
+
+            <p class="highlights__text" id="highlight-text-1">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+
+        <article class="highlights__item" id="highlight-2">
+          <img
+            src="assets/images/image-top-laptops.jpg"
+            alt="Modern laptops displayed on a desk"
+            class="highlights__image"
+            id="highlight-image-2"
+          />
+
+          <div class="highlights__content" id="highlight-content-2">
+            <span class="highlights__number" id="highlight-number-2">02</span>
+
+            <h4 class="highlights__title" id="highlight-title-2">
+              Top 10 Laptops of 2022
+            </h4>
+
+            <p class="highlights__text" id="highlight-text-2">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+
+        <article class="highlights__item" id="highlight-3">
+          <img
+            src="assets/images/image-gaming-growth.jpg"
+            alt="Gaming setup with RGB lighting"
+            class="highlights__image"
+            id="highlight-image-3"
+          />
+
+          <div class="highlights__content" id="highlight-content-3">
+            <span class="highlights__number" id="highlight-number-3">03</span>
+
+            <h4 class="highlights__title" id="highlight-title-3">
+              The Growth of Gaming
+            </h4>
+
+            <p class="highlights__text" id="highlight-text-3">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Alokananda Y</a>.
+    </footer>
+  </body>
+</html>
