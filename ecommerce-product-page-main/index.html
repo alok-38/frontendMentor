@@ -83,41 +83,184 @@
     <meta name="theme-color" content="#FFFFFF" />
   </head>
   <body>
-    <div>
-      <nav>
-        <div>
-          <a href="index.html"><img src="images/logo.svg" alt="" /></a>
+    <div id="app" class="app">
+      <nav id="site-nav" class="nav" aria-label="Primary navigation">
+        <div class="nav__logo">
+          <a
+            href="index.html"
+            class="nav__logo-link"
+            aria-label="Go to homepage"
+          >
+            <img
+              src="images/logo.svg"
+              alt="Sneaker Company logo"
+              class="nav__logo-image"
+            />
+          </a>
         </div>
-        <ul>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer"
+
+        <ul class="nav__list" role="list">
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               >Collections</a
             >
           </li>
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Men</a></li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Women</a>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Men</a
+            >
           </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">About</a>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Women</a
+            >
           </li>
-          <li>
-            <a href="#" target="_blank" rel="noopener noreferrer">Contact</a>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >About</a
+            >
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact</a
+            >
           </li>
         </ul>
-        <div>
-          <img src="images/icon-cart.svg" alt="" />
-          <img src="images/image-avatar.png" alt="" />
+
+        <div class="nav__actions" aria-label="User actions">
+          <button class="nav__cart-button" type="button" aria-label="View cart">
+            <img src="images/icon-cart.svg" alt="Shopping cart icon" />
+          </button>
+
+          <button
+            class="nav__avatar-button"
+            type="button"
+            aria-label="User account"
+          >
+            <img
+              src="images/image-avatar.png"
+              alt="User avatar"
+              class="nav__avatar"
+            />
+          </button>
         </div>
       </nav>
-      <main>
-        <figure>
-          <img src="" alt="">
-        </figure>
-        Sneaker Company Fall Limited Edition Sneakers These low-profile sneakers
-        are your perfect casual wear companion. Featuring a durable rubber outer
-        sole, they'll withstand everything the weather can offer. $125.00 50%
-        $250.00 0 Add to cart
+
+      <main id="main-content" class="main">
+        <section id="product-gallery" class="product">
+          <figure class="product__hero" aria-label="Main product image">
+            <img
+              src=""
+              alt="Sneaker product main view"
+              class="product__image"
+            />
+          </figure>
+
+          <div
+            class="product__thumbnails"
+            aria-label="Product image thumbnails"
+          >
+            <div class="product__thumbnail">
+              <img
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Sneaker thumbnail view 1"
+              />
+            </div>
+            <div class="product__thumbnail">
+              <img
+                src="images/image-product-2-thumbnail.jpg"
+                alt="Sneaker thumbnail view 2"
+              />
+            </div>
+            <div class="product__thumbnail">
+              <img
+                src="images/image-product-3-thumbnail.jpg"
+                alt="Sneaker thumbnail view 3"
+              />
+            </div>
+            <div class="product__thumbnail">
+              <img
+                src="images/image-product-4-thumbnail.jpg"
+                alt="Sneaker thumbnail view 4"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section id="product-details" class="product-info">
+          <h1 class="product-info__brand">Sneaker Company</h1>
+          <h2 class="product-info__title">Fall Limited Edition Sneakers</h2>
+
+          <p class="product-info__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+
+          <div class="price" aria-label="Product pricing">
+            <div class="price__top">
+              <span class="price__current" aria-label="Current price"
+                >$125.00</span
+              >
+              <span class="price__discount" aria-label="Discount percentage"
+                >50%</span
+              >
+            </div>
+
+            <div class="price__old">
+              <s aria-label="Original price">$250.00</s>
+            </div>
+          </div>
+
+          <div class="product-info__actions">
+            <div class="quantity" role="group" aria-label="Quantity selector">
+              <button
+                type="button"
+                class="quantity__decrease"
+                aria-label="Decrease quantity"
+              >
+                -
+              </button>
+              <span class="quantity__value" aria-live="polite">0</span>
+              <button
+                type="button"
+                class="quantity__increase"
+                aria-label="Increase quantity"
+              >
+                +
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="button button--add-to-cart"
+              aria-label="Add product to cart"
+            >
+              <img src="images/icon-cart.svg" alt="" aria-hidden="true" />
+              Add to cart
+            </button>
+          </div>
+        </section>
       </main>
     </div>
 
