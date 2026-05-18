@@ -1,5 +1,269 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app {
+  gap: var(--space-900);
+  max-width: 1110px;
+  width: 100%;
+  margin-top: 5vh;
+}
+
+/* nav */
+/* Avatar Button */
+.nav {
+  position: relative;
+}
+
+.nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -32px;
+  border-bottom: 1px solid var(--grey-100);
+}
+
+.nav__avatar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+
+  padding: 0;
+  cursor: pointer;
+
+  inline-size: clamp(2.5rem, 5vw, 3.125rem);
+  block-size: clamp(2.5rem, 5vw, 3.125rem);
+
+  outline: none;
+
+  /* NEW: smooth interactions */
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Hover */
+.nav__avatar-button:hover {
+  box-shadow: 0 0 0 2px var(--orange-300);
+}
+
+/* Click / press */
+.nav__avatar-button:active {
+  transform: scale(0.95);
+}
+
+/* Focus (already good, slightly enhanced) */
+.nav__avatar-button:focus-visible {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 2px;
+}
+
+/* ===================== */
+
+.nav__cart-button {
+  background: transparent;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+
+  /* NEW */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* Hover */
+.nav__cart-button:hover {
+  filter: brightness(0.8);
+}
+
+/* Press */
+.nav__cart-button:active {
+  transform: scale(0.9);
+}
+
+/* Focus */
+.nav__cart-button:focus-visible {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ===================== */
+
+/* Avatar Image */
+.nav__avatar {
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* subtle polish */
+  transition: transform 0.2s ease;
+}
+
+/* Optional micro interaction */
+.nav__avatar-button:hover .nav__avatar {
+  transform: scale(1.05);
+}
+
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3rem);
+}
+
+.nav__group {
+  gap: clamp(1rem, 5vw, 3.5rem);
+}
+
+.nav__list {
+  gap: clamp(0.75rem, 3vw, 2rem);
+}
+
+.nav__logo {
+  max-inline-size: clamp(120px, 20vw, 180px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav__logo-link:hover {
+  opacity: 0.8;
+}
+
+.nav__logo-link:active {
+  transform: scale(0.97);
+}
+
+.nav__logo-link:focus-visible {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--grey-500);
+
+  /* Smooth color transition */
+  transition: color 0.25s ease;
+}
+
+/* Underline (your base, improved) */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+
+  height: 4px;
+  background-color: var(--orange-500);
+
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.2s ease;
+}
+
+.nav__link:hover {
+  color: var(--grey-950); /* darker text */
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav__link:focus-visible {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.nav__link:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.nav__link:active {
+  transform: translateY(1px);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+/* main */
+.main {
+  width: 100%;
+  max-width: 1021px;
+  margin-inline: auto;
+  gap: clamp(2rem, 6vw, 8rem);
+}
+
+.product {
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.product__hero {
+  margin-bottom: auto;
+}
+
+/* Main product image */
+.product__image {
+  inline-size: 100%;
+  max-inline-size: 28rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.9375rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.product__thumbnails img {
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;
+}
+
+/* Product details section */
+.button--add-to-cart {
+}
+
 /* Footer */
 .attribution {
+  margin-top: auto;
   font-size: 0.6875rem;
   text-align: center;
 }
