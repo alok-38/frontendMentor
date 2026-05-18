@@ -213,57 +213,105 @@
         </section>
 
         <section id="product-details" class="product-info flex flex-column">
-          <div>
-            <h1 class="product-info__brand">Sneaker Company</h1>
-            <h2 class="product-info__title">Fall Limited Edition Sneakers</h2>
+          <div class="product-info__header flex flex-column">
+            <h1 id="product-brand" class="product-info__brand text-preset-6">
+              Sneaker Company
+            </h1>
+            <h2 id="product-title" class="product-info__title text-preset-1">
+              Fall Limited Edition Sneakers
+            </h2>
           </div>
 
-          <p class="product-info__description">
+          <p
+            id="product-description"
+            class="product-info__description text-preset-3"
+          >
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
 
-          <div class="price" aria-label="Product pricing">
-            <div class="price__top">
-              <span class="price__current" aria-label="Current price"
-                >$125.00</span
+          <div
+            id="product-price"
+            class="price flex-column"
+            aria-label="Product pricing"
+          >
+            <div class="price__top flex">
+              <span
+                id="current-price"
+                class="price__current text-preset-2"
+                aria-label="Current price"
               >
-              <span class="price__discount" aria-label="Discount percentage"
-                >50%</span
+                $125.00
+              </span>
+              <span
+                id="discount"
+                class="price__discount text-preset-3-bold flex flex-center"
+                aria-label="Discount percentage"
               >
+                50%
+              </span>
             </div>
 
             <div class="price__old">
-              <s aria-label="Original price">$250.00</s>
+              <span
+                class="text-preset-3-bold"
+                id="original-price"
+                aria-label="Original price"
+                >$250.00</span
+              >
             </div>
           </div>
 
-          <div class="product-info__actions flex flex-between">
-            <div class="quantity" role="group" aria-label="Quantity selector">
+          <div
+            id="product-actions"
+            class="product-info__actions flex flex-between"
+          >
+            <div
+              id="quantity-selector"
+              class="quantity flex-between"
+              role="group"
+              aria-label="Quantity selector"
+            >
               <button
+                id="decrease-qty"
                 type="button"
                 class="quantity__decrease"
                 aria-label="Decrease quantity"
               >
-                -
+                <img src="images/icon-minus.svg" alt="decrease icon" />
               </button>
-              <span class="quantity__value" aria-live="polite">0</span>
+
+              <span
+                id="quantity-value"
+                class="quantity__value text-preset-3-bold"
+                aria-live="polite"
+              >
+                0
+              </span>
+
               <button
+                id="increase-qty"
                 type="button"
                 class="quantity__increase"
                 aria-label="Increase quantity"
               >
-                +
+                <img src="images/icon-plus.svg" alt="increase icon" />
               </button>
             </div>
 
             <button
+              id="add-to-cart"
               type="button"
-              class="button button--add-to-cart"
+              class="button button--add-to-cart flex"
               aria-label="Add product to cart"
             >
-              <img src="images/icon-cart.svg" alt="" aria-hidden="true" />
+              <img
+                class="cart"
+                src="images/icon-cart.svg"
+                alt=""
+                aria-hidden="true"
+              />
               Add to cart
             </button>
           </div>

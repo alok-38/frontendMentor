@@ -28,6 +28,10 @@ video {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /* =========================
    CSS VARIABLES
 ========================= */
@@ -208,6 +212,23 @@ video {
   padding: var(--space-300);
   border-radius: 0.75rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   INTERACTION BASE (SAFE)
+========================= */
+
+button,
+a,
+[role="button"] {
+  transition: all 0.2s ease;
+}
+
+/* Better keyboard accessibility without affecting mouse users */
+:focus-visible {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 3px;
+  border-radius: 0.5rem;
 }
 
 .button {
