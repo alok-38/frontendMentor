@@ -81,6 +81,8 @@
 
     <!-- Theme Color (Mobile UI) -->
     <meta name="theme-color" content="#FFFFFF" />
+    <!-- Hamburger script -->
+     <script src="hamburger.js" defer></script>
   </head>
   <body>
     <div id="app" class="app flex flex-column">
@@ -89,88 +91,50 @@
         class="nav flex-between"
         aria-label="Primary navigation"
       >
-        <div class="nav__group flex-center" id="nav-group">
+        <div class="nav__group flex-center">
+          <!-- Hamburger -->
+          <button
+            class="nav__menu-toggle"
+            id="menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="nav-list"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <!-- Logo -->
           <div class="nav__logo">
-            <a
-              href="index.html"
-              class="nav__logo-link"
-              aria-label="Go to homepage"
-            >
-              <img
-                src="images/logo.svg"
-                alt="Sneaker Company logo"
-                class="nav__logo-image"
-              />
+            <a href="index.html" class="nav__logo-link">
+              <img src="images/logo.svg" alt="Sneaker Company logo" />
             </a>
           </div>
 
+          <!-- Nav -->
           <ul class="nav__list flex" role="list" id="nav-list">
-            <li class="nav__item">
-              <a
-                class="nav__link text-preset-6"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Collections</a
-              >
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link text-preset-6"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Men</a
-              >
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link text-preset-6"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Women</a
-              >
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link text-preset-6"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >About</a
-              >
-            </li>
-            <li class="nav__item">
-              <a
-                class="nav__link text-preset-6"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Contact</a
-              >
-            </li>
+            <li><a href="#" class="nav__link">Collections</a></li>
+            <li><a href="#" class="nav__link">Men</a></li>
+            <li><a href="#" class="nav__link">Women</a></li>
+            <li><a href="#" class="nav__link">About</a></li>
+            <li><a href="#" class="nav__link">Contact</a></li>
           </ul>
         </div>
 
-        <div class="nav__actions flex" aria-label="User actions">
-          <button class="nav__cart-button" type="button" aria-label="View cart">
-            <img src="images/icon-cart.svg" alt="Shopping cart icon" />
+        <div class="nav__actions flex">
+          <button class="nav__cart-button">
+            <img src="images/icon-cart.svg" alt="Cart" />
           </button>
 
-          <button
-            class="nav__avatar-button"
-            type="button"
-            aria-label="User account"
-          >
-            <img
-              src="images/image-avatar.png"
-              alt="User avatar"
-              class="nav__avatar"
-            />
+          <button class="nav__avatar-button">
+            <img src="images/image-avatar.png" alt="User avatar" />
           </button>
         </div>
       </nav>
+
+      <!-- Overlay -->
+      <div class="nav__overlay" id="nav-overlay"></div>
       <main id="main-content" class="main flex">
         <section id="product-gallery" class="product flex-column">
           <figure class="product__hero" aria-label="Main product image">
