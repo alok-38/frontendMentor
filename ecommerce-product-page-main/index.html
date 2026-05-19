@@ -82,7 +82,8 @@
     <!-- Theme Color (Mobile UI) -->
     <meta name="theme-color" content="#FFFFFF" />
     <!-- Hamburger script -->
-     <script src="hamburger.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+    <script src="scripts/cart.js" defer></script>
   </head>
   <body>
     <div id="app" class="app flex flex-column">
@@ -121,11 +122,15 @@
             <li><a href="#" class="nav__link">Contact</a></li>
           </ul>
         </div>
-
         <div class="nav__actions flex">
           <button class="nav__cart-button">
             <img src="images/icon-cart.svg" alt="Cart" />
           </button>
+
+          <div class="cart-dropdown" id="cart-dropdown" hidden>
+            <p id="cart-empty">Your cart is empty.</p>
+            <div id="cart-items"></div>
+          </div>
 
           <button class="nav__avatar-button">
             <img src="images/image-avatar.png" alt="User avatar" />
