@@ -312,6 +312,12 @@ body {
   color: var(--grey-500);
 }
 
+.product-info {
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* =========================
    PRICE
 ========================= */
@@ -409,4 +415,12 @@ body {
 
 .attribution a {
   color: inherit;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .app {
+    max-width: 608px;
+    width: 100%;
+  }
 }
