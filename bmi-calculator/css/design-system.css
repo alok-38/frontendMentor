@@ -1,0 +1,281 @@
+/* =========================
+   🎨 COLOR TOKENS
+========================= */
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-500: #5e6e85;
+  --color-grey-300: #acc1de;
+
+  --color-blue-900: #253347;
+  --color-blue-500: #345ff6;
+  --color-blue-300: #b3d3f1;
+  --color-blue-100: #e1e7fe;
+
+  --gradient-1: linear-gradient(135deg, #d6fcfe, #d6e6fe);
+}
+
+/* =========================
+   📏 SPACING SCALE
+========================= */
+:root {
+  --space-0: 0;
+  --space-100: 0.5rem; /* 8px */
+  --space-200: 1rem; /* 16px */
+  --space-300: 1.5rem; /* 24px */
+  --space-400: 2rem; /* 32px */
+  --space-500: 2.5rem; /* 40px */
+  --space-600: 3rem; /* 48px */
+  --space-700: 3.5rem; /* 56px */
+  --space-900: 4.5rem; /* 72px */
+  --space-1100: 5.5rem; /* 88px */
+  --space-1200: 6rem; /* 96px */
+  --space-1300: 6.5rem; /* 104px */
+  --space-1600: 8rem; /* 128px */
+  --space-1800: 9rem; /* 144px */
+}
+
+/* =========================
+   🔤 TYPOGRAPHY (FLUID)
+========================= */
+:root {
+  --text-1: clamp(2.5rem, 5vw, 4rem);
+  --text-2: clamp(2rem, 4vw, 3rem);
+  --text-3: clamp(6rem, 15vw, 20rem);
+  --text-4: clamp(1.25rem, 2vw, 1.5rem);
+  --text-5: clamp(1.125rem, 1.8vw, 1.25rem);
+  --text-6: 1rem;
+  --text-7: 0.875rem;
+}
+
+/* =========================
+   🧱 TEXT PRESETS
+========================= */
+.text-1 {
+  font: 600 var(--text-1)/1.1 "Inter";
+  letter-spacing: -0.05em;
+  color: var(--color-blue-900);
+}
+.text-2 {
+  font: 600 var(--text-2)/1.1 "Inter";
+  letter-spacing: -0.05em;
+  color: var(--color-blue-900);
+}
+.text-3 {
+  font: 600 var(--text-3)/1.1 "Inter";
+  letter-spacing: -0.05em;
+  color: var(--color-blue-500);
+}
+.text-4 {
+  font: 600 var(--text-4)/1.2 "Inter";
+  letter-spacing: -0.05em;
+  color: var(--color-grey-500);
+}
+.text-5 {
+  font: 600 var(--text-5)/1.2 "Inter";
+  letter-spacing: -0.05em;
+  color: var(--color-grey-500);
+}
+
+.text-6 {
+  font: 400 var(--text-6)/1.5 "Inter";
+}
+.text-6-semibold {
+  font: 600 var(--text-6)/1.5 "Inter";
+}
+
+.text-7 {
+  font: 400 var(--text-7)/1.5 "Inter";
+}
+.text-7-bold {
+  font: 700 var(--text-7)/1.5 "Inter";
+}
+
+/* =========================
+   📦 FLEX UTILITIES
+========================= */
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* =========================
+   🧩 GRID UTILITIES
+========================= */
+.grid {
+  display: grid;
+}
+
+/* Responsive auto grid */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+}
+
+/* Fixed column grids */
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   🔲 GAP UTILITIES
+========================= */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
+.gap-500 {
+  gap: var(--space-500);
+}
+
+/* Row gap */
+.row-gap-200 {
+  row-gap: var(--space-200);
+}
+.row-gap-400 {
+  row-gap: var(--space-400);
+}
+
+/* Column gap */
+.col-gap-200 {
+  column-gap: var(--space-200);
+}
+.col-gap-400 {
+  column-gap: var(--space-400);
+}
+
+/* =========================
+   📐 SPACING UTILITIES
+========================= */
+
+/* Padding */
+.p-200 {
+  padding: var(--space-200);
+}
+.p-400 {
+  padding: var(--space-400);
+}
+.p-600 {
+  padding: var(--space-600);
+}
+
+/* Margin */
+.m-200 {
+  margin: var(--space-200);
+}
+.m-400 {
+  margin: var(--space-400);
+}
+
+/* Stack spacing (vertical rhythm) */
+.stack > * + * {
+  margin-top: var(--space-300);
+}
+
+/* =========================
+   🌍 LAYOUT HELPERS
+========================= */
+
+/* Container */
+.container {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+/* Section spacing */
+.section {
+  padding-block: var(--space-700);
+}
+
+/* =========================
+   🎯 UTILITIES
+========================= */
+
+.text-center {
+  text-align: center;
+}
+.text-white {
+  color: var(--color-white);
+}
+.bg-gradient {
+  background: var(--gradient-1);
+}
+
+/* =========================
+   🧼 RESET (light)
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--color-grey-500);
+  background: var(--color-white);
+}
