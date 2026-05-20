@@ -77,86 +77,202 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div>
-      <section>
-        <div>
-          <h1>Body Mass Index Calculator</h1>
-          <p>
+    <main id="main-content" class="bmi">
+      <!-- HERO / INTRO -->
+      <section class="bmi__intro bg-gradient" aria-labelledby="bmi-title">
+        <div class="bmi__intro-content">
+          <h1 id="bmi-title" class="bmi__title">Body Mass Index Calculator</h1>
+          <p class="bmi__description">
             Better understand your weight in relation to your height using our
-            body mass index (BM) calculator. While BMI is not the sole
+            body mass index (BMI) calculator. While BMI is not the sole
             determinant of a healthy weight, it offers a valuable starting point
             to evaluate your overall health and well-being.
           </p>
         </div>
-        <div>
-          <h2>Enter your details below</h2>
-          <div>
-            <input type="radio" name="" id="" />
-            <span for="">Metric</span>
-          </div>
-          <div>
-            <input type="radio" name="" id="" />
-            <span for="">Imperial</span>
-          </div>
-          <div>
-            <div>
-              <label for="">Height</label>
-              <input type="number" name="" id="" />
+
+        <!-- CALCULATOR -->
+        <form
+          id="bmi-form"
+          class="bmi__form"
+          aria-labelledby="form-title"
+          novalidate
+        >
+          <h2 id="form-title" class="bmi__form-title">
+            Enter your details below
+          </h2>
+
+          <!-- UNIT SELECTION -->
+          <fieldset class="bmi__fieldset bmi__fieldset--units">
+            <legend class="bmi__legend">Measurement system</legend>
+
+            <label class="bmi__radio">
+              <input
+                type="radio"
+                name="unit"
+                id="unit-metric"
+                value="metric"
+                checked
+              />
+              <span>Metric</span>
+            </label>
+
+            <label class="bmi__radio">
+              <input
+                type="radio"
+                name="unit"
+                id="unit-imperial"
+                value="imperial"
+              />
+              <span>Imperial</span>
+            </label>
+          </fieldset>
+
+          <!-- INPUTS -->
+          <fieldset class="bmi__fieldset bmi__fieldset--inputs">
+            <legend class="bmi__legend">Your measurements</legend>
+
+            <div class="bmi__input-group">
+              <label for="height" class="bmi__label">Height</label>
+              <input
+                type="number"
+                id="height"
+                name="height"
+                class="bmi__input"
+                placeholder="e.g. 175"
+                required
+                aria-describedby="height-help"
+              />
+              <small id="height-help" class="bmi__help">
+                Enter height in centimeters
+              </small>
             </div>
-            <div>
-              <label for="">Weight </label>
-              <input type="number" name="" id="" />
+
+            <div class="bmi__input-group">
+              <label for="weight" class="bmi__label">Weight</label>
+              <input
+                type="number"
+                id="weight"
+                name="weight"
+                class="bmi__input"
+                placeholder="e.g. 70"
+                required
+                aria-describedby="weight-help"
+              />
+              <small id="weight-help" class="bmi__help">
+                Enter weight in kilograms
+              </small>
             </div>
-          </div>
-          <div>Your BMI is...</div>
-          <!-- add score -->
-          <div>
-            <div>
-              <p>
-                Your BMI suggests you're
-                <!-- add classification -->. Your ideal weight is between
-                <!-- add range -->.
-              </p>
-            </div>
-          </div>
+          </fieldset>
+
+          <!-- RESULT -->
+          <section
+            id="bmi-result"
+            class="bmi__result"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-labelledby="result-title"
+          >
+            <h3 id="result-title" class="bmi__result-title">Your BMI</h3>
+
+            <p class="bmi__score" id="bmi-score">--</p>
+
+            <p class="bmi__interpretation" id="bmi-interpretation">
+              Your BMI suggests you're <span id="bmi-category">--</span>. Your
+              ideal weight is between <span id="bmi-range">--</span>.
+            </p>
+          </section>
+        </form>
+      </section>
+
+      <!-- IMAGE -->
+      <figure class="bmi__figure">
+        <img
+          src="assets/images/image-man-eating.webp"
+          alt="Man eating a healthy meal"
+          class="bmi__image"
+          loading="lazy"
+        />
+        <figcaption class="bmi__caption">
+          Balanced nutrition supports a healthy lifestyle
+        </figcaption>
+      </figure>
+
+      <!-- EXPLANATION -->
+      <section class="bmi__info" aria-labelledby="info-title">
+        <h2 id="info-title" class="bmi__heading">What your BMI result means</h2>
+        <p class="bmi__text">
+          A BMI range of 18.5 to 24.9 is considered a healthy weight.
+          Maintaining a healthy weight may lower your chances of health issues
+          such as obesity and type 2 diabetes.
+        </p>
+      </section>
+
+      <!-- BENEFITS -->
+      <section class="bmi__benefits" aria-label="Health benefits">
+        <article class="bmi__card">
+          <h3 class="bmi__card-title">Healthy eating</h3>
+          <p class="bmi__card-text">
+            Promotes weight control, disease prevention, and improved digestion.
+          </p>
+        </article>
+
+        <article class="bmi__card">
+          <h3 class="bmi__card-title">Regular exercise</h3>
+          <p class="bmi__card-text">
+            Improves fitness, mood, and reduces disease risk.
+          </p>
+        </article>
+
+        <article class="bmi__card">
+          <h3 class="bmi__card-title">Adequate sleep</h3>
+          <p class="bmi__card-text">
+            Enhances recovery, mental clarity, and overall wellness.
+          </p>
+        </article>
+      </section>
+
+      <!-- LIMITATIONS -->
+      <section class="bmi__limitations" aria-labelledby="limitations-title">
+        <h2 id="limitations-title" class="bmi__heading">Limitations of BMI</h2>
+
+        <p class="bmi__text">
+          BMI is a useful guideline but may not apply equally to all
+          individuals.
+        </p>
+
+        <div class="bmi__limitations-list">
+          <article class="bmi__card">
+            <h3 class="bmi__card-title">Gender</h3>
+            <p class="bmi__card-text">
+              Body composition differs across genders and ages.
+            </p>
+          </article>
+
+          <article class="bmi__card">
+            <h3 class="bmi__card-title">Age</h3>
+            <p class="bmi__card-text">
+              Older adults may have more body fat despite normal BMI.
+            </p>
+          </article>
+
+          <article class="bmi__card">
+            <h3 class="bmi__card-title">Muscle</h3>
+            <p class="bmi__card-text">High muscle mass can skew BMI results.</p>
+          </article>
+
+          <article class="bmi__card">
+            <h3 class="bmi__card-title">Pregnancy</h3>
+            <p class="bmi__card-text">BMI is not suitable during pregnancy.</p>
+          </article>
+
+          <article class="bmi__card">
+            <h3 class="bmi__card-title">Race</h3>
+            <p class="bmi__card-text">
+              Health risks may vary across ethnic groups.
+            </p>
+          </article>
         </div>
       </section>
-    </div>
-
-    <figure>
-      <img src="assets/images/image-man-eating.webp" alt="" />
-      <figcaption>eating</figcaption>
-    </figure>
-    <div>
-      <h2>What your BMI result means</h2>
-      <p>
-        A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
-        Maintaining a healthy weight may lower your chances of experiencing
-        health issues later on, such as obesity and type 2 diabetes. Aim for a
-        nutritious diet with reduced fat and sugar content, incorporating ample
-        fruits and vegetables. Additionally, strive for regular physical
-        activity, ideally about 30 minutes daily for five days a week.
-      </p>
-    </div>
-    Healthy eating Healthy eating promotes weight control, disease prevention,
-    better digestion, immunity, mental clarity, and mood. Regular exercise
-    Exercise improves fitness, aids weight control, elevates mood, and reduces
-    disease risk, fostering wellness and longevity. Adequate sleep Sleep
-    enhances mental clarity, emotional stability, and physical wellness,
-    promoting overall restoration and rejuvenation. Limitations of BMI Although
-    BMI is often a practical indicator of healthy weight, it is not suited for
-    every person. Specific groups should carefully consider their BMI outcomes,
-    and in certain cases, the measurement may not be beneficial to use. Gender
-    The development and body fat composition of girls and boys vary with age.
-    Consequently, a child's age and gender are considered when evaluating their
-    BMI. Age In aging individuals, increased body fat and muscle loss may cause
-    BMI to underestimate body fat content. Muscle BMI may misclassify muscular
-    individuals as overweight or obese, as it doesn't differentiate muscle from
-    fat. Pregnancy Expectant mothers experience weight gain due to their growing
-    baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise
-    health risks for both mother and child. Race Certain health concerns may
-    affect individuals of some Black and Asian origins at lower BMIs than
-    others. To learn more, it is advised to discuss this with your GP or
-    practice nurse.
+    </main>
   </body>
 </html>
