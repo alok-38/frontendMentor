@@ -222,6 +222,11 @@
   padding: var(--space-600);
 }
 
+/* Top & Bottom → 88px,Left & Right → 144px */
+.p-custom {
+  padding: var(--space-1100) var(--space-1800);
+}
+
 /* Margin */
 .m-200 {
   margin: var(--space-200);
@@ -262,6 +267,10 @@
 }
 .bg-gradient {
   background: var(--gradient-1);
+}
+
+.bg-white {
+  background: var(--color-white);
 }
 
 /* =========================

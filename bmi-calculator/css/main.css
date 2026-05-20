@@ -1,4 +1,9 @@
+.bmi {
+  width: 100%;
+}
 .bmi__intro {
-  background-size: 50% 100%;
+  max-width: 1160px;
+  width: 100%;
+  background-size: 70% 100%;
   background-repeat: no-repeat;
 }
