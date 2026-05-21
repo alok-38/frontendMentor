@@ -1,0 +1,112 @@
+/* =========================
+   🧱 INTRO BACKGROUND
+========================= */
+
+.bmi__intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.bmi__intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 65%;
+  background: var(--gradient-1);
+  border-bottom-right-radius: var(--space-900);
+  z-index: 0;
+}
+
+.bmi__intro > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bmi__intro-content {
+  padding-top: var(--space-900);
+  width: 70%;
+}
+
+/* =========================
+   🧾 FORM RESET
+========================= */
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.bmi__result {
+  --radius-left: var(--space-200);
+  --radius-right: 10rem;
+
+  border-radius: var(--radius-left) var(--radius-right) var(--radius-right)
+    var(--radius-left);
+}
+
+/* =========================
+   🔘 RADIO (BASE)
+========================= */
+
+input[type="radio"] {
+  --radio-size: 31px;
+  --radio-dot-size: 14px;
+
+  appearance: none;
+  inline-size: var(--radio-size);
+  block-size: var(--radio-size);
+
+  display: grid;
+  place-content: center;
+
+  border-radius: 50%;
+  border: 2px solid var(--color-grey-500);
+
+  cursor: pointer;
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+/* inner dot */
+input[type="radio"]::before {
+  content: "";
+  inline-size: var(--radio-dot-size);
+  block-size: var(--radio-dot-size);
+
+  border-radius: 50%;
+  background: var(--color-blue-500);
+
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+/* =========================
+   🎯 STATES
+========================= */
+
+/* checked */
+input[type="radio"]:checked {
+  border-color: var(--color-blue-500);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* hover */
+input[type="radio"]:hover {
+  border-color: var(--color-blue-500);
+}
+
+/* focus (accessible) */
+input[type="radio"]:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-blue-100);
+}
+
+/* active (press feedback) */
+input[type="radio"]:active {
+  transform: scale(0.95);
+}

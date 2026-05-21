@@ -50,6 +50,71 @@
 }
 
 /* =========================
+   Global Transition System
+========================= */
+
+:root {
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  transition: all var(--transition-base);
+}
+
+button:hover,
+.bg-blue:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-blue-500);
+  outline-offset: 2px;
+}
+
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-blue-100);
+}
+
+button:active,
+.press:active {
+  transform: scale(0.97);
+}
+
+.press-deep:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--color-grey-300);
+  padding: var(--space-200);
+  border-radius: var(--space-100);
+  transition: all var(--transition-base);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-blue-500);
+  box-shadow: 0 0 0 3px var(--color-blue-100);
+  outline: none;
+}
+
+/* =========================
    🧱 TEXT PRESETS
 ========================= */
 .text-1 {
@@ -240,6 +305,11 @@
   margin-top: var(--space-300);
 }
 
+/* Border radius */
+.b-16 {
+  border-radius: var(--space-200);
+}
+
 /* =========================
    🌍 LAYOUT HELPERS
 ========================= */
@@ -271,6 +341,10 @@
 
 .bg-white {
   background: var(--color-white);
+}
+
+.bg-blue {
+  background: var(--color-blue-500);
 }
 
 /* =========================

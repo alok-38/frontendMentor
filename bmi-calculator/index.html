@@ -74,120 +74,126 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/design-system.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
     <main id="main-content" class="bmi">
-      <!-- HERO / INTRO -->
-      <section
-        class="bmi__intro bg-gradient flex p-custom"
-        aria-labelledby="bmi-title"
-      >
-        <div class="bmi__intro-content flex flex-col gap-400">
-          <h1 id="bmi-title" class="bmi__title text-1">
-            Body Mass Index Calculator
-          </h1>
-          <p class="bmi__description text-6">
-            Better understand your weight in relation to your height using our
-            body mass index (BMI) calculator. While BMI is not the sole
-            determinant of a healthy weight, it offers a valuable starting point
-            to evaluate your overall health and well-being.
-          </p>
+      <div class="bmi__intro bg-gradient p-custom flex flex-col gap-200">
+        <!-- LOGO -->
+        <div>
+          <img src="assets/images/logo.svg" alt="BMI logo" />
         </div>
-
-        <!-- CALCULATOR -->
-        <form
-          id="bmi-form"
-          class="bmi__form"
-          aria-labelledby="form-title"
-          novalidate
+        <!-- HERO / INTRO -->
+        <section
+          class="flex gap-400"
+          aria-labelledby="bmi-title"
         >
-          <h2 id="form-title" class="bmi__form-title text-4">
-            Enter your details below
-          </h2>
-
-          <!-- UNIT SELECTION -->
-          <fieldset class="bmi__fieldset bmi__fieldset--units">
-            <legend class="bmi__legend">Measurement system</legend>
-
-            <label class="bmi__radio">
-              <input
-                type="radio"
-                name="unit"
-                id="unit-metric"
-                value="metric"
-                checked
-              />
-              <span>Metric</span>
-            </label>
-
-            <label class="bmi__radio">
-              <input
-                type="radio"
-                name="unit"
-                id="unit-imperial"
-                value="imperial"
-              />
-              <span>Imperial</span>
-            </label>
-          </fieldset>
-
-          <!-- INPUTS -->
-          <fieldset class="bmi__fieldset bmi__fieldset--inputs">
-            <legend class="bmi__legend">Your measurements</legend>
-
-            <div class="bmi__input-group">
-              <label for="height" class="bmi__label">Height</label>
-              <input
-                type="number"
-                id="height"
-                name="height"
-                class="bmi__input"
-                placeholder="e.g. 175"
-                required
-                aria-describedby="height-help"
-              />
-              <small id="height-help" class="bmi__help">
-                Enter height in centimeters
-              </small>
-            </div>
-
-            <div class="bmi__input-group">
-              <label for="weight" class="bmi__label">Weight</label>
-              <input
-                type="number"
-                id="weight"
-                name="weight"
-                class="bmi__input"
-                placeholder="e.g. 70"
-                required
-                aria-describedby="weight-help"
-              />
-              <small id="weight-help" class="bmi__help">
-                Enter weight in kilograms
-              </small>
-            </div>
-          </fieldset>
-
-          <!-- RESULT -->
-          <section
-            id="bmi-result"
-            class="bmi__result"
-            aria-live="polite"
-            aria-atomic="true"
-            aria-labelledby="result-title"
-          >
-            <h3 id="result-title" class="bmi__result-title">Your BMI</h3>
-
-            <p class="bmi__score" id="bmi-score">--</p>
-
-            <p class="bmi__interpretation" id="bmi-interpretation">
-              Your BMI suggests you're <span id="bmi-category">--</span>. Your
-              ideal weight is between <span id="bmi-range">--</span>.
+          <div class="bmi__intro-content flex flex-col gap-400">
+            <h1 id="bmi-title" class="bmi__title text-1">
+              Body Mass Index Calculator
+            </h1>
+            <p class="bmi__description text-6">
+              Better understand your weight in relation to your height using our
+              body mass index (BMI) calculator. While BMI is not the sole
+              determinant of a healthy weight, it offers a valuable starting
+              point to evaluate your overall health and well-being.
             </p>
-          </section>
-        </form>
-      </section>
+          </div>
+          <!-- CALCULATOR -->
+          <form
+            id="bmi-form"
+            class="bmi__form bg-white p-400 b-16 flex flex-col gap-400"
+            aria-labelledby="form-title"
+            novalidate
+          >
+            <h2 id="form-title" class="bmi__form-title text-4">
+              Enter your details below
+            </h2>
+            <!-- UNIT SELECTION -->
+            <fieldset class="bmi__fieldset bmi__fieldset--units">
+              <legend hidden class="bmi__legend">Measurement system</legend>
+              <div class="flex">
+                <label class="bmi__radio flex items-center gap-200">
+                  <input
+                    type="radio"
+                    name="unit"
+                    id="unit-metric"
+                    value="metric"
+                    checked
+                  />
+                  <span>Metric</span>
+                </label>
+                <label class="bmi__radio flex items-center gap-200">
+                  <input
+                    type="radio"
+                    name="unit"
+                    id="unit-imperial"
+                    value="imperial"
+                  />
+                  <span>Imperial</span>
+                </label>
+              </div>
+            </fieldset>
+            <!-- INPUTS -->
+            <fieldset class="bmi__fieldset bmi__fieldset--inputs">
+              <legend hidden class="bmi__legend">Your measurements</legend>
+              <div class="flex">
+                <div class="bmi__input-group">
+                  <label for="height" class="bmi__label">Height</label>
+                  <input
+                    type="number"
+                    id="height"
+                    name="height"
+                    class="bmi__input"
+                    placeholder="e.g. 175"
+                    required
+                    aria-describedby="height-help"
+                  />
+                  <small hidden id="height-help" class="bmi__help">
+                    Enter height in centimeters
+                  </small>
+                </div>
+                <div class="bmi__input-group">
+                  <label for="weight" class="bmi__label">Weight</label>
+                  <input
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    class="bmi__input"
+                    placeholder="e.g. 70"
+                    required
+                    aria-describedby="weight-help"
+                  />
+                  <small hidden id="weight-help" class="bmi__help">
+                    Enter weight in kilograms
+                  </small>
+                </div>
+              </div>
+            </fieldset>
+            <!-- RESULT -->
+            <section
+              id="bmi-result"
+              class="bmi__result bg-blue flex text-white p-400"
+              aria-live="polite"
+              aria-atomic="true"
+              aria-labelledby="result-title"
+            >
+              <div class="flex flex-col gap-100">
+                <h3 id="result-title" class="bmi__result-title text-6">
+                  Your BMI is
+                </h3>
+                <p class="bmi__score text-1 text-white" id="bmi-score">--</p>
+              </div>
+              <div>
+                <p class="bmi__interpretation text-6" id="bmi-interpretation">
+                  Your BMI suggests you're <span id="bmi-category">--</span>.
+                  Your ideal weight is between <span id="bmi-range">--</span>.
+                </p>
+              </div>
+            </section>
+          </form>
+        </section>
+      </div>
 
       <!-- IMAGE -->
       <figure class="bmi__figure">
@@ -197,7 +203,7 @@
           class="bmi__image"
           loading="lazy"
         />
-        <figcaption class="bmi__caption">
+        <figcaption hidden class="bmi__caption">
           Balanced nutrition supports a healthy lifestyle
         </figcaption>
       </figure>
