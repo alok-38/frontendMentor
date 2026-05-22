@@ -5,16 +5,23 @@
 .bmi__intro {
   position: relative;
   overflow: hidden;
+  padding-inline: clamp(16px, 5vw, 120px);
 }
 
 .bmi__intro::before {
   content: "";
   position: absolute;
   inset: 0;
-  width: 65%;
+  width: 100%;
   background: var(--gradient-1);
-  border-bottom-right-radius: var(--space-900);
+  border-bottom-right-radius: clamp(80px, 10vw, 160px);
   z-index: 0;
+}
+
+@media (min-width: 1024px) {
+  .bmi__intro::before {
+    width: 65%;
+  }
 }
 
 .bmi__intro > * {
@@ -23,135 +30,218 @@
 }
 
 .bmi__intro-content {
-  padding-top: var(--space-900);
+  padding-top: clamp(40px, 8vw, 120px);
+}
+
+/* =========================
+   🧠 HERO LAYOUT
+========================= */
+
+.bmi__intro section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+@media (min-width: 1024px) {
+  .bmi__intro section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bmi__intro-content {
+    flex: 1;
+  }
+
+  .bmi__form {
+    flex: 1;
+    max-width: 500px;
+  }
+}
+
+/* =========================
+   🧾 FORM
+========================= */
+
+.bmi__form {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.bmi__fieldset--inputs > div {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .bmi__fieldset--inputs > div {
+    flex-direction: row;
+  }
+}
+
+.bmi__input {
+  width: 100%;
+}
+
+/* =========================
+   📊 RESULT
+========================= */
+
+.bmi__result {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border-radius: 16px;
+}
+
+@media (min-width: 600px) {
+  .bmi__result {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 16px 80px 80px 16px;
+  }
+}
+
+/* =========================
+   🖼️ INFO SECTION
+========================= */
+
+.bmi__info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 6vw, 80px);
+  padding: clamp(40px, 8vw, 120px) clamp(16px, 5vw, 120px);
+}
+
+.bmi__figure {
+  width: 100%;
+}
+
+.bmi__image {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+}
+
+@media (min-width: 1024px) {
+  .bmi__info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bmi__figure {
+    flex: 1;
+  }
+
+  .bmi__info-answer {
+    flex: 1;
+  }
+}
+
+/* =========================
+   🧩 BENEFITS
+========================= */
+
+.bmi__benefits {
+  display: grid;
+  gap: 32px;
+  padding: clamp(40px, 8vw, 120px) clamp(16px, 5vw, 120px);
+}
+
+@media (min-width: 600px) {
+  .bmi__benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .bmi__benefits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   📉 LIMITATIONS
+========================= */
+
+.bmi__limitations {
+  display: grid;
+  gap: clamp(32px, 5vw, 64px);
+  padding: clamp(40px, 8vw, 120px) clamp(16px, 5vw, 120px);
+}
+
+@media (min-width: 1024px) {
+  .bmi__limitations {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+}
+
+.bmi__limitations-list {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 600px) {
+  .bmi__limitations-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   🎯 DESKTOP STAGGER (SAFE)
+========================= */
+
+@media (min-width: 1024px) {
+  .bmi__limitations-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bmi__limitations .bmi__card:nth-child(even) {
+    transform: translateY(40px);
+  }
+}
+
+/* =========================
+   🧩 CARD POLISH
+========================= */
+
+.bmi__card {
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.bmi__limitations .bmi__card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.bmi__limitations .bmi__card:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   🔘 RADIO FIX
+========================= */
+
+.bmi__radio--container {
+  display: flex;
+  gap: 24px;
+}
+
+/* =========================
+   🧼 SMALL FIXES
+========================= */
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .bmi__description {
-  width: 80%;
+  max-width: 60ch;
 }
-
-/* =========================
-   🧾 FORM RESET
-========================= */
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-.bmi__form-title {
-  color: var(--color-blue-900);
-}
-
-.bmi__radio--container {
-  gap: 30%;
-}
-
-/* Remove arrows in Chrome, Safari, Edge */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Remove arrows in Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-/* Cross browser */
-input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.bmi__result {
-  --radius-left: var(--space-200);
-  --radius-right: 10rem;
-
-  border-radius: var(--radius-left) var(--radius-right) var(--radius-right)
-    var(--radius-left);
-}
-
-/* =========================
-   🔘 RADIO (BASE)
-========================= */
-
-input[type="radio"] {
-  --radio-size: 31px;
-  --radio-dot-size: 14px;
-
-  appearance: none;
-  inline-size: var(--radio-size);
-  block-size: var(--radio-size);
-
-  display: grid;
-  place-content: center;
-
-  border-radius: 50%;
-  border: 2px solid var(--color-grey-500);
-
-  cursor: pointer;
-  transition:
-    border-color var(--transition-base),
-    box-shadow var(--transition-base),
-    transform var(--transition-fast);
-}
-
-/* inner dot */
-input[type="radio"]::before {
-  content: "";
-  inline-size: var(--radio-dot-size);
-  block-size: var(--radio-dot-size);
-
-  border-radius: 50%;
-  background: var(--color-blue-500);
-
-  transform: scale(0);
-  transition: transform var(--transition-fast);
-}
-
-/* =========================
-   🎯 STATES
-========================= */
-
-/* checked */
-input[type="radio"]:checked {
-  border-color: var(--color-blue-500);
-}
-
-input[type="radio"]:checked::before {
-  transform: scale(1);
-}
-
-/* hover */
-input[type="radio"]:hover {
-  border-color: var(--color-blue-500);
-}
-
-/* focus (accessible) */
-input[type="radio"]:focus-visible {
-  box-shadow: 0 0 0 3px var(--color-blue-100);
-}
-
-/* active (press feedback) */
-input[type="radio"]:active {
-  transform: scale(0.95);
-}
-
-/* BMI Image */
-.bmi__image {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 2rem;
-}
-
-.bmi__info {
-  padding: var(--space-900) var(--space-1800);
-}
-
