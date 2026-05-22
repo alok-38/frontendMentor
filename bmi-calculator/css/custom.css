@@ -24,16 +24,49 @@
 
 .bmi__intro-content {
   padding-top: var(--space-900);
-  width: 70%;
+}
+
+.bmi__description {
+  width: 80%;
 }
 
 /* =========================
    🧾 FORM RESET
 ========================= */
-
 fieldset {
   border: 0;
   padding: 0;
+  margin: 0;
+}
+
+.bmi__form-title {
+  color: var(--color-blue-900);
+}
+
+.bmi__radio--container {
+  gap: 30%;
+}
+
+/* Remove arrows in Chrome, Safari, Edge */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Cross browser */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
 }
 
@@ -110,3 +143,15 @@ input[type="radio"]:focus-visible {
 input[type="radio"]:active {
   transform: scale(0.95);
 }
+
+/* BMI Image */
+.bmi__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+.bmi__info {
+  padding: var(--space-900) var(--space-1800);
+}
+

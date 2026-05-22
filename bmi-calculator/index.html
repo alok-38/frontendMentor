@@ -84,10 +84,7 @@
           <img src="assets/images/logo.svg" alt="BMI logo" />
         </div>
         <!-- HERO / INTRO -->
-        <section
-          class="flex gap-400"
-          aria-labelledby="bmi-title"
-        >
+        <section class="flex gap-400" aria-labelledby="bmi-title">
           <div class="bmi__intro-content flex flex-col gap-400">
             <h1 id="bmi-title" class="bmi__title text-1">
               Body Mass Index Calculator
@@ -112,7 +109,7 @@
             <!-- UNIT SELECTION -->
             <fieldset class="bmi__fieldset bmi__fieldset--units">
               <legend hidden class="bmi__legend">Measurement system</legend>
-              <div class="flex">
+              <div class="bmi__radio--container flex">
                 <label class="bmi__radio flex items-center gap-200">
                   <input
                     type="radio"
@@ -137,8 +134,8 @@
             <!-- INPUTS -->
             <fieldset class="bmi__fieldset bmi__fieldset--inputs">
               <legend hidden class="bmi__legend">Your measurements</legend>
-              <div class="flex">
-                <div class="bmi__input-group">
+              <div class="flex gap-200">
+                <div class="bmi__input-group flex flex-col gap-100">
                   <label for="height" class="bmi__label">Height</label>
                   <input
                     type="number"
@@ -153,7 +150,7 @@
                     Enter height in centimeters
                   </small>
                 </div>
-                <div class="bmi__input-group">
+                <div class="bmi__input-group flex flex-col gap-100">
                   <label for="weight" class="bmi__label">Weight</label>
                   <input
                     type="number"
@@ -195,32 +192,39 @@
         </section>
       </div>
 
-      <!-- IMAGE -->
-      <figure class="bmi__figure">
-        <img
-          src="assets/images/image-man-eating.webp"
-          alt="Man eating a healthy meal"
-          class="bmi__image"
-          loading="lazy"
-        />
-        <figcaption hidden class="bmi__caption">
-          Balanced nutrition supports a healthy lifestyle
-        </figcaption>
-      </figure>
-
       <!-- EXPLANATION -->
-      <section class="bmi__info" aria-labelledby="info-title">
-        <h2 id="info-title" class="bmi__heading">What your BMI result means</h2>
-        <p class="bmi__text">
-          A BMI range of 18.5 to 24.9 is considered a healthy weight.
-          Maintaining a healthy weight may lower your chances of health issues
-          such as obesity and type 2 diabetes.
-        </p>
+      <section
+        class="bmi__info flex items-center justify-between"
+        aria-labelledby="info-title"
+      >
+        <!-- IMAGE -->
+        <figure class="bmi__figure">
+          <img
+            src="assets/images/image-man-eating.webp"
+            alt="Man eating a healthy meal"
+            class="bmi__image"
+            loading="lazy"
+          />
+          <figcaption hidden class="bmi__caption">
+            Balanced nutrition supports a healthy lifestyle
+          </figcaption>
+        </figure>
+        <div class="flex flex-col gap-400 bmi__info-answer">
+          <h2 id="info-title" class="bmi__heading text-2">
+            What your BMI result means
+          </h2>
+          <p class="bmi__text text-6">
+            A BMI range of 18.5 to 24.9 is considered a healthy weight.
+            Maintaining a healthy weight may lower your chances of health issues
+            such as obesity and type 2 diabetes.
+          </p>
+        </div>
       </section>
 
       <!-- BENEFITS -->
-      <section class="bmi__benefits" aria-label="Health benefits">
+      <section class="bmi__benefits flex" aria-label="Health benefits">
         <article class="bmi__card">
+          <div><img src="assets/images/icon-eating.svg" alt="" /></div>
           <h3 class="bmi__card-title">Healthy eating</h3>
           <p class="bmi__card-text">
             Promotes weight control, disease prevention, and improved digestion.
@@ -228,6 +232,7 @@
         </article>
 
         <article class="bmi__card">
+          <div><img src="assets/images/icon-exercise.svg" alt="" /></div>
           <h3 class="bmi__card-title">Regular exercise</h3>
           <p class="bmi__card-text">
             Improves fitness, mood, and reduces disease risk.
@@ -235,6 +240,7 @@
         </article>
 
         <article class="bmi__card">
+          <div><img src="assets/images/icon-sleep.svg" alt="" /></div>
           <h3 class="bmi__card-title">Adequate sleep</h3>
           <p class="bmi__card-text">
             Enhances recovery, mental clarity, and overall wellness.
