@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =========================
+       🔤 BASIC META
+  ========================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- SEO -->
+    <title>Tic Tac Toe Game | Play Online</title>
+    <meta
+      name="description"
+      content="Play Tic Tac Toe online. Challenge yourself or a friend with this fast, responsive game built with modern frontend technologies."
+    />
+
+    <!-- =========================
+       🎯 FAVICON
+  ========================= -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <!-- =========================
+       ⚡ PERFORMANCE
+  ========================= -->
+
+    <!-- Preload critical font -->
+    <link
+      rel="preload"
+      href="./fonts/Outfit-subset.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- Preload main CSS -->
+    <link rel="preload" href="css/global.css" as="style" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- =========================
+       🌐 SOCIAL SHARING (SEO++)
+  ========================= -->
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tic Tac Toe Game" />
+    <meta
+      property="og:description"
+      content="Play Tic Tac Toe online in a fast and responsive interface."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/preview.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tic Tac Toe Game" />
+    <meta
+      name="twitter:description"
+      content="Play Tic Tac Toe online in a fast and responsive interface."
+    />
+    <meta name="twitter:image" content="./assets/preview.png" />
+
+    <!-- =========================
+       🎨 THEME COLOR
+  ========================= -->
+    <meta name="theme-color" content="#1A2A33" />
+
+    <!-- =========================
+       📜 SCRIPT
+  ========================= -->
+    <script src="script.js" defer></script>
+  </head>
+  <body class="app">
+    <!-- =========================
+        NEW GAME MENU
+  ========================= -->
+    <main class="menu flex flex-col gap-500" id="menu">
+      <!-- Logo -->
+      <header class="menu__header">
+        <div class="menu__logo flex justify-center gap-100" aria-hidden="true">
+          <img src="assets/icon-x.svg" alt="" />
+          <img src="assets/icon-o.svg" alt="" />
+        </div>
+      </header>
+
+      <!-- Player selection -->
+      <section class="menu__player" aria-labelledby="player-title">
+        <fieldset
+          class="player-choice flex flex-col gap-300"
+          role="radiogroup"
+          aria-describedby="player-hint"
+        >
+          <legend id="player-title" class="player-choice__title text-4">
+            Pick Player 1's Mark
+          </legend>
+
+          <div>
+            <!-- X -->
+            <label class="player-choice__option" for="player-x">
+              <input
+                id="player-x"
+                class="player-choice__input"
+                type="radio"
+                name="player-mark"
+                value="x"
+                checked
+              />
+              <span class="player-choice__mark" aria-hidden="true">X</span>
+              <span class="sr-only">Choose X</span>
+            </label>
+            <!-- O -->
+            <label class="player-choice__option" for="player-o">
+              <input
+                id="player-o"
+                class="player-choice__input"
+                type="radio"
+                name="player-mark"
+                value="o"
+              />
+              <span class="player-choice__mark" aria-hidden="true">O</span>
+              <span class="sr-only">Choose O</span>
+            </label>
+          </div>
+
+          <p id="player-hint" class="player-choice__hint text-4">
+            Remember: X goes first
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Actions -->
+      <section class="menu__actions" aria-label="Start game">
+        <button id="btn-cpu" class="button button--primary" type="button">
+          New Game (vs CPU)
+        </button>
+
+        <button id="btn-player" class="button button--secondary" type="button">
+          New Game (vs Player)
+        </button>
+      </section>
+    </main>
+
+    <!-- =========================
+        GAME BOARD
+  ========================= -->
+    <section class="game" id="game" hidden aria-hidden="true">
+      <!-- Status / Turn -->
+      <header class="game__status" aria-live="polite" id="game-status">
+        <span class="sr-only">Current turn:</span>
+        <span id="turn-indicator">X (You)</span>
+      </header>
+
+      <!-- Board -->
+      <div class="game__board" role="grid" aria-label="Tic Tac Toe Board">
+        <!-- 9 cells -->
+        <!-- Example cell -->
+        <button
+          class="game__cell"
+          role="gridcell"
+          aria-label="Row 1 Column 1"
+          data-cell="0"
+        ></button>
+
+        <!-- Repeat up to 9 -->
+      </div>
+
+      <!-- Scoreboard -->
+      <section class="game__score" aria-label="Scoreboard">
+        <div class="score score--player">
+          <span>X (You)</span>
+          <strong id="score-player">0</strong>
+        </div>
+
+        <div class="score score--ties">
+          <span>Ties</span>
+          <strong id="score-ties">0</strong>
+        </div>
+
+        <div class="score score--cpu">
+          <span>O (CPU)</span>
+          <strong id="score-cpu">0</strong>
+        </div>
+      </section>
+    </section>
+
+    <!-- =========================
+        RESULT MODAL
+  ========================= -->
+    <div
+      class="modal modal--result"
+      id="modal-result"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="result-title"
+      hidden
+    >
+      <p id="result-subtitle" class="text-6"></p>
+
+      <h2 id="result-title" class="text-2">You won!</h2>
+
+      <div class="modal__actions">
+        <button id="next-round" class="button">Next round</button>
+        <button id="quit-game" class="button button--secondary">Quit</button>
+      </div>
+    </div>
+
+    <!-- =========================
+        RESTART MODAL
+  ========================= -->
+    <div
+      class="modal modal--restart"
+      id="modal-restart"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="restart-title"
+      hidden
+    >
+      <h2 id="restart-title" class="text-2">Restart game?</h2>
+
+      <div class="modal__actions">
+        <button id="cancel-restart" class="button button--secondary">
+          No, cancel
+        </button>
+
+        <button id="confirm-restart" class="button button--primary">
+          Yes, restart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

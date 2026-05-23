@@ -1,0 +1,328 @@
+/* =========================
+   🔁 CSS RESET (modern)
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   🎨 DESIGN TOKENS
+========================= */
+
+:root {
+  /* Font */
+  --font-primary: "Outfit", sans-serif;
+
+  /* Neutral */
+  --neutral-950: #000000;
+  --neutral-0: #ffffff;
+
+  /* Slate */
+  --slate-900: #1a2a33;
+  --slate-850: #21313b;
+  --slate-800: #1f3641;
+  --slate-300: #a8bfc9;
+  --slate-100: #dbe8ed;
+
+  /* Amber */
+  --amber-400: #f2b137;
+  --amber-300: #ffc860;
+
+  /* Teal */
+  --teal-400: #31c3bd;
+  --teal-300: #65e9e4;
+
+  /* =========================
+     📏 SPACING
+  ========================= */
+  --space-0: 0px;
+  --space-100: 8px;
+  --space-150: 12px;
+  --space-200: 16px;
+  --space-250: 20px;
+  --space-300: 24px;
+  --space-375: 30px;
+  --space-500: 40px;
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-10: 10px;
+  --radius-16: 16px;
+
+  /* =========================
+     🔤 FLUID TYPE SCALE
+  ========================= */
+  --fs-1: clamp(2rem, 1.6rem + 1.5vw, 2.5rem);
+  --fs-2: clamp(1.25rem, 1.1rem + 0.8vw, 1.5rem);
+  --fs-3: clamp(1.125rem, 1rem + 0.6vw, 1.25rem);
+  --fs-4: clamp(0.95rem, 0.9rem + 0.4vw, 1rem);
+  --fs-5: clamp(0.8rem, 0.75rem + 0.3vw, 0.875rem);
+  --fs-6: clamp(0.7rem, 0.65rem + 0.2vw, 0.75rem);
+}
+
+/* =========================
+   🧱 BASE STYLES
+========================= */
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--slate-900);
+  color: var(--neutral-0);
+  line-height: 1.5;
+}
+
+/* =========================
+   🔤 TYPOGRAPHY PRESETS
+========================= */
+
+.text-1 {
+  font-size: var(--fs-1);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 2.5px;
+  color: var(--neutral-0);
+}
+
+.text-2 {
+  font-size: var(--fs-2);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  color: var(--neutral-0);
+}
+
+.text-3 {
+  font-size: var(--fs-3);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 1.25px;
+  color: var(--neutral-0);
+}
+
+.text-4 {
+  font-size: var(--fs-4);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 1px;
+  color: var(--slate-300);
+}
+
+.text-5-bold {
+  font-size: var(--fs-5);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.9px;
+  color: var(--slate-300);
+}
+
+.text-5-medium {
+  font-size: var(--fs-5);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.9px;
+  color: var(--slate-300);
+}
+
+.text-6 {
+  font-size: var(--fs-6);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.75px;
+  color: var(--slate-100);
+}
+
+/* =========================
+   🧩 LAYOUT UTILITIES
+========================= */
+
+/* Flex */
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.place-center {
+  place-items: center;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* =========================
+   📏 SPACING UTILITIES
+========================= */
+
+/* Gap */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-500 {
+  gap: var(--space-500);
+}
+
+/* Padding */
+.p-100 {
+  padding: var(--space-100);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+
+/* Margin */
+.m-100 {
+  margin: var(--space-100);
+}
+.m-200 {
+  margin: var(--space-200);
+}
+
+/* =========================
+   🔘 RADIUS
+========================= */
+
+.rounded-4 {
+  border-radius: var(--radius-4);
+}
+.rounded-6 {
+  border-radius: var(--radius-6);
+}
+.rounded-10 {
+  border-radius: var(--radius-10);
+}
+.rounded-16 {
+  border-radius: var(--radius-16);
+}
+
+/* =========================
+   🎨 COLOR UTILITIES
+========================= */
+
+.text-primary {
+  color: var(--neutral-0);
+}
+.text-secondary {
+  color: var(--slate-300);
+}
+.text-muted {
+  color: var(--slate-100);
+}
+
+.text-amber {
+  color: var(--amber-400);
+}
+.text-teal {
+  color: var(--teal-400);
+}
+
+.bg-primary {
+  background: var(--slate-900);
+}
+.bg-secondary {
+  background: var(--slate-800);
+}
+
+.bg-amber {
+  background: var(--amber-400);
+}
+.bg-teal {
+  background: var(--teal-400);
+}
+
+/* =========================
+   📐 CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-200);
+}
