@@ -92,7 +92,7 @@
       </header>
 
       <!-- Player selection -->
-      <section class="menu__player" aria-labelledby="player-title">
+      <section class="menu__player bg-secondary" aria-labelledby="player-title">
         <fieldset
           class="player-choice flex flex-col gap-300"
           role="radiogroup"
@@ -102,7 +102,7 @@
             Pick Player 1's Mark
           </legend>
 
-          <div>
+          <div class="p-100 bg-primary flex">
             <!-- X -->
             <label class="player-choice__option" for="player-x">
               <input
@@ -113,7 +113,9 @@
                 value="x"
                 checked
               />
-              <span class="player-choice__mark" aria-hidden="true">X</span>
+              <span class="player-choice__mark" aria-hidden="true">
+                <img src="assets/icon-x.svg" alt="">
+              </span>
               <span class="sr-only">Choose X</span>
             </label>
             <!-- O -->
@@ -125,7 +127,9 @@
                 name="player-mark"
                 value="o"
               />
-              <span class="player-choice__mark" aria-hidden="true">O</span>
+              <span class="player-choice__mark" aria-hidden="true">
+                <img src="assets/icon-o.svg" alt="">
+              </span>
               <span class="sr-only">Choose O</span>
             </label>
           </div>

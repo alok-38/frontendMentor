@@ -1,10 +1,16 @@
 /* body */
 .app {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.menu {
+  max-width: 460px;
+  width: 100%;
+}
+
 /* Menu images */
 .menu__logo img {
   height: 30.49px;
@@ -13,11 +19,46 @@
 }
 
 fieldset {
-    border: none;
+  border: none;
 }
 
 .player-choice__title {
-    margin-bottom: var(--space-300);
+  margin-bottom: var(--space-300);
+}
+
+.menu__player {
+  padding: var(--space-250) var(--space-300);
+}
+
+/* Hide the default radio input */
+.player-choice__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Style the X and O visually */
+.player-choice__option {
+  cursor: pointer;
+}
+
+.player-choice__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(48px, 6vw, 54px);
+  width: clamp(120px, 40vw, 196px);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: bold;
+  border-radius: var(--radius-10);
+  transition: all 0.2s ease;
+  background-color: var(--slate-300);
+}
+
+.player-choice__mark img {
+  height: 32px;
+  width: 32px;
+  object-fit: cover;
 }
 
 .sr-only {
