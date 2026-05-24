@@ -114,7 +114,7 @@
                 checked
               />
               <span class="player-choice__mark" aria-hidden="true">
-                <img src="assets/icon-x.svg" alt="">
+                <img src="assets/icon-x.svg" alt="" />
               </span>
               <span class="sr-only">Choose X</span>
             </label>
@@ -128,7 +128,7 @@
                 value="o"
               />
               <span class="player-choice__mark" aria-hidden="true">
-                <img src="assets/icon-o.svg" alt="">
+                <img src="assets/icon-o.svg" alt="" />
               </span>
               <span class="sr-only">Choose O</span>
             </label>
@@ -141,12 +141,23 @@
       </section>
 
       <!-- Actions -->
-      <section class="menu__actions" aria-label="Start game">
-        <button id="btn-cpu" class="button button--primary" type="button">
+      <section
+        class="menu__actions flex flex-col gap-200"
+        aria-label="Start game"
+      >
+        <button
+          id="btn-cpu"
+          class="button button--primary bg-amber text-3 rounded-16"
+          type="button"
+        >
           New Game (vs CPU)
         </button>
 
-        <button id="btn-player" class="button button--secondary" type="button">
+        <button
+          id="btn-player"
+          class="button button--secondary bg-teal text-3 rounded-16"
+          type="button"
+        >
           New Game (vs Player)
         </button>
       </section>

@@ -61,6 +61,61 @@ fieldset {
   object-fit: cover;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: var(--space-200);
+  width: 100%;
+  font-size: var(--fs-3);
+  font-weight: 700;
+  letter-spacing: 1.25px;
+  color: var(--slate-900);
+  background-color: var(--amber-400);
+  border-radius: 999px;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background-color 0.15s ease;
+}
+
+.button--primary {
+  box-shadow: 0 6px 0 #cc8f1f;
+}
+
+.button--primary:hover {
+  background-color: var(--amber-300);
+}
+
+.button--primary:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 #cc8f1f;
+}
+
+.button--secondary {
+  background-color: var(--teal-400);
+  color: var(--slate-900);
+  box-shadow: 0 6px 0 var(--teal-300);
+}
+
+.button--secondary:hover {
+  background-color: var(--teal-400);
+}
+
+.button--secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 3px 0 var(--teal-300);
+}
+
+button:focus-visible {
+  outline: 3px solid var(--neutral-0);
+  outline-offset: 3px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
