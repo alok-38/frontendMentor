@@ -1,0 +1,203 @@
+/* =========================
+   1. CORE TOKENS
+========================= */
+:root {
+  /* COLORS */
+  --white: #ffffff;
+  --black: #000000;
+
+  --blue-950: #0d192c;
+  --blue-900: #15263f;
+  --blue-800: #2e405a;
+  --blue-500: #8bacd9;
+
+  --cyan-400: #00fff8;
+
+  /* SEMANTIC */
+  --bg-primary: var(--blue-950);
+  --bg-secondary: var(--blue-900);
+  --surface: var(--blue-800);
+
+  --text-primary: var(--white);
+  --text-secondary: var(--blue-500);
+
+  --accent: var(--cyan-400);
+
+  /* TYPOGRAPHY */
+  --font-base: "Outfit", sans-serif;
+
+  --text-1: clamp(20px, 2vw, 22px);
+  --text-2: clamp(16px, 1.8vw, 18px);
+  --text-3: clamp(14px, 1.6vw, 16px);
+
+  --lh-tight: 1.25;
+  --lh-relaxed: 1.45;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+
+  /* SPACING (8px SYSTEM) */
+  --space-0: 0px;
+  --space-100: clamp(6px, 1vw, 8px);
+  --space-200: clamp(12px, 1.5vw, 16px);
+  --space-300: clamp(20px, 2vw, 24px);
+
+  /* RADIUS */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* CONTAINER */
+  --container-max: 1200px;
+}
+
+/* =========================
+   2. BASE
+========================= */
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* =========================
+   3. TYPOGRAPHY
+========================= */
+.text-1 {
+  font-size: var(--text-1);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+}
+
+.text-2 {
+  font-size: var(--text-2);
+  line-height: var(--lh-relaxed);
+  font-weight: var(--fw-light);
+}
+
+.text-3-semibold {
+  font-size: var(--text-3);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+}
+
+.text-3-regular {
+  font-size: var(--text-3);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-regular);
+}
+
+/* =========================
+   4. LAYOUT
+========================= */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-200);
+}
+
+/* FLEX */
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: var(--space-200);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* =========================
+   5. SPACING UTILITIES
+========================= */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+
+.p-100 {
+  padding: var(--space-100);
+}
+.p-200 {
+  padding: var(--space-200);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+
+/* =========================
+   6. COMPONENT TOKENS
+========================= */
+.card {
+  background: var(--surface);
+  padding: var(--space-200);
+  border-radius: var(--radius-md);
+}
+
+.button {
+  background: var(--accent);
+  color: var(--blue-950);
+  padding: var(--space-100) var(--space-200);
+  border-radius: var(--radius-sm);
+  font-weight: var(--fw-semibold);
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   7. SECTIONS
+========================= */
+.section {
+  padding-block: var(--space-300);
+}
+
+/* =========================
+   8. RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
