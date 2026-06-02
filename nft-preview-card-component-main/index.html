@@ -57,11 +57,11 @@
     <meta property="og:type" content="website" />
   </head>
 
-  <body>
+  <body class="flex flex-col items-center justify-center">
     <!-- =========================
        MAIN CARD
   ========================== -->
-    <main id="main" class="nft-card" aria-label="NFT preview card">
+    <main id="main" class="nft-card flex flex-col card gap-300" aria-label="NFT preview card">
       <!-- IMAGE -->
       <figure class="nft-card__media">
         <img
@@ -76,7 +76,7 @@
       <!-- CONTENT -->
       <section class="nft-card__content" aria-labelledby="nft-title">
         <article class="nft-card__body">
-          <h1 id="nft-title" class="nft-card__title">Equilibrium #3429</h1>
+          <h1 id="nft-title" class="nft-card__title text-1">Equilibrium #3429</h1>
 
           <p class="nft-card__description">
             Our Equilibrium collection promotes balance and calm.
@@ -86,7 +86,7 @@
           <dl class="nft-card__meta">
             <div class="nft-card__meta-item nft-card__meta-item--price">
               <dt class="sr-only">Price</dt>
-              <dd class="nft-card__price">
+              <dd class="nft-card__price flex">
                 <img src="images/icon-ethereum.svg" alt="" aria-hidden="true" />
                 <span>0.041 ETH</span>
               </dd>

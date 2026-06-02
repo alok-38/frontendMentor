@@ -1,8 +1,42 @@
+/* Body */
+body {
+  min-height: 100vh;
+}
+
+/* Main */
+.nft-card {
+  margin-top: auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Figure */
+.nft-card__image {
+  max-width: 302px;
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
 /* Footer */
 .attribution {
+  margin-top: auto;
   font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: inherit;
+}
+
+@media screen and (max-width: 375px) {
+  .nft-card {
+    max-width: 350px;
+    border-radius: var(--radius-sm);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nft-card {
+    max-width: 350px;
+    border-radius: var(--radius-md);
+  }
 }

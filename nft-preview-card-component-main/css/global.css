@@ -92,10 +92,15 @@ body {
    4. LAYOUT
 ========================= */
 .container {
-  width: 100%;
+  width: 100%; 
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--space-200);
+}
+
+/* Padding */
+.p-32 {
+  padding: var(--space-300);
 }
 
 /* FLEX */
@@ -170,8 +175,8 @@ body {
    6. COMPONENT TOKENS
 ========================= */
 .card {
-  background: var(--surface);
-  padding: var(--space-200);
+  background: var(--bg-secondary);
+  padding: var(--space-300);
   border-radius: var(--radius-md);
 }
 
