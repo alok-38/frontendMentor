@@ -61,7 +61,11 @@
     <!-- =========================
        MAIN CARD
   ========================== -->
-    <main id="main" class="nft-card flex flex-col card gap-300" aria-label="NFT preview card">
+    <main
+      id="main"
+      class="nft-card flex flex-col card gap-300"
+      aria-label="NFT preview card"
+    >
       <!-- IMAGE -->
       <figure class="nft-card__media">
         <img
@@ -75,27 +79,41 @@
 
       <!-- CONTENT -->
       <section class="nft-card__content" aria-labelledby="nft-title">
-        <article class="nft-card__body">
-          <h1 id="nft-title" class="nft-card__title text-1">Equilibrium #3429</h1>
+        <article class="nft-card__body flex flex-col gap-200">
+          <h1 id="nft-title" class="nft-card__title text-1">
+            Equilibrium #3429
+          </h1>
 
-          <p class="nft-card__description">
+          <p class="nft-card__description text-2">
             Our Equilibrium collection promotes balance and calm.
           </p>
 
           <!-- META -->
-          <dl class="nft-card__meta">
-            <div class="nft-card__meta-item nft-card__meta-item--price">
-              <dt class="sr-only">Price</dt>
-              <dd class="nft-card__price flex">
-                <img src="images/icon-ethereum.svg" alt="" aria-hidden="true" />
+          <dl class="nft-card__meta flex justify-between">
+            <div
+              class="nft-card__meta-item nft-card__meta-item--price justify-between"
+            >
+              <dt hidden class="sr-only">Price</dt>
+              <dd class="nft-card__price flex gap-100">
+                <img
+                  class="nft-card__meta-etherium"
+                  src="images/icon-ethereum.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
                 <span>0.041 ETH</span>
               </dd>
             </div>
 
             <div class="nft-card__meta-item nft-card__meta-item--time">
-              <dt class="sr-only">Time remaining</dt>
-              <dd class="nft-card__time">
-                <img src="images/icon-clock.svg" alt="" aria-hidden="true" />
+              <dt hidden class="sr-only">Time remaining</dt>
+              <dd class="nft-card__time flex gap-100">
+                <img
+                  class="nft-card__meta-img-clock"
+                  src="images/icon-clock.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
                 <span>3 days left</span>
               </dd>
             </div>
@@ -103,7 +121,7 @@
         </article>
 
         <!-- CREATOR -->
-        <footer class="nft-card__footer">
+        <footer class="nft-card__footer flex items-center gap-200">
           <img
             class="nft-card__avatar"
             src="images/image-avatar.png"
@@ -112,7 +130,7 @@
             loading="lazy"
           />
 
-          <p class="nft-card__creator">
+          <p class="nft-card__creator text-3">
             <span class="nft-card__creator-label">Creation of</span>
             <span class="nft-card__creator-name">Jules Wyvern</span>
           </p>

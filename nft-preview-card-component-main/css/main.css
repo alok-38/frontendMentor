@@ -17,6 +17,30 @@ body {
   border-radius: var(--radius-md);
 }
 
+.nft-card__meta img {
+  object-fit: cover;
+}
+
+.nft-card__meta-etherium {
+  height: 18px;
+  width: 11px;
+}
+
+.nft-card__meta-clock {
+  height: 16px;
+  width: 16px;
+}
+
+.nft-card__avatar {
+  width: 33px;
+  height: 33px;
+  object-fit: cover;
+}
+
+.nft-card__footer {
+  margin-top: var(--space-300);
+}
+
 /* Footer */
 .attribution {
   margin-top: auto;
