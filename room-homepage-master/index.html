@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body>
+    <header class="header">
+      <img width="840" height="534" class="header__heroImage" src="images/desktop-image-hero-1.jpg" alt="" />
+      <nav class="nav">
+        <button class="nav__hamburger nav__hamburger--desktopNav">
+          <img class="nav__btn" src="./images/icon-hamburger.svg" alt="" />
+        </button>
+        <img
+          width="62"
+          height="14"
+          class="nav__logo nav__logo--desktopNav"
+          src="./images/logo.svg"
+          alt=""
+        />
+        <ul class="nav__menu nav__menu--desktopNav">
+          <li class="nav__item nav__item--desktopNav"><a href="#">home</a></li>
+          <li class="nav__item nav__item--desktopNav"><a href="#">shop</a></li>
+          <li class="nav__item nav__item--desktopNav"><a href="#">about</a></li>
+          <li class="nav__item nav__item--desktopNav">
+            <a href="#">contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <article class="article article--slider">
+        <h1 class="article__header">discover innovative ways to decorate</h1>
+        <p class="article__text article__text--slider">
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <div class="article__sliderBtn">
+          <img
+            class="article__arrowBtn left-arrow"
+            src="./images/icon-angle-left.svg"
+            alt=""
+          />
+          <img
+            class="article__arrowBtn right-arrow"
+            src="./images/icon-angle-right.svg"
+            alt=""
+          />
+        </div>
+        <button class="article__btn">
+          shop now
+          <svg
+            class="article__btnArrow"
+            width="40"
+            height="12"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+              fill="#000"
+              fill-rule="nonzero"
+            />
+          </svg>
+        </button>
+      </article>
+    </header>
+
+    <main>
+      <section class="about">
+        <img class="about__image" src="./images/image-about-dark.jpg" alt="" />
+        <article class="article--about">
+          <h1 class="article__header article__header--about">
+            about our furniture
+          </h1>
+          <p class="article__text">
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </article>
+        <img class="about__image" src="./images/image-about-light.jpg" alt="" />
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io/profile/MonikaCyprys"
+          >Alokananda Y</a
+        >.
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
