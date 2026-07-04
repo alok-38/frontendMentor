@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Bookmark landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/mobile.css">
+</head>
+<body>
+  <div class="overlay">
+    <img class="logo" src="images/logo-bookmark-light.svg" alt="Logo">
+    <a aria-label="Close" class="close-icon" href="#">
+      <img src="images/icon-close.svg" alt="Close icon"> 
+    </a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="pricing">Pricing</a></li>
+      <li><a href="contact">Contact</a></li>
+      <li><a class="mobile-nav-btn" href="#">Login</a></li>
+    </ul>
+  </div>
+  <nav class="main-nav">
+    <div class="container">
+      <img src="images/logo-bookmark.svg" alt="Bookmark Logo">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a class="btn-red" href="#">Login</a></li>
+      </ul>
+      <div class="mobile-nav">
+        <a aria-label="Hamburger Icon" id="mobile-icon" href="#">
+          <img src="images/icon-hamburger.svg" alt="Icon">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="showcase">
+    <div class="container">
+      <div class="info">
+        <h1>A Simple Bookmark Manager</h1>
+        <p class="opacity-6">
+          A clean and simple interface to organize your favourite websites. Open a new 
+          browser tab and see your sites load instantly. Try it for free.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="#">Get it on Chrome</a>
+          <a class="btn" href="#">Get it on Firefox</a>
+        </div>
+      </div>
+      <div class="image">
+        <img src="images/illustration-hero.svg" alt="Feature">
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="features">
+    <div class="container">
+      <div class="feature-info py-8">
+        <h2>Features</h2>
+        <p class="opacity-6">
+          Our aim is to make it quick and easy for you to access your favourite websites. 
+          Your bookmarks sync between your devices so you can access them on the go.
+        </p>
+      </div>
+      <div class="feature-tabs">
+        <a id='bookmarking'>Simple Bookmarking</a>
+        <a id='searching'>Speedy Searching</a>
+        <a id='sharing'>Easy Sharing</a>
+      </div>
+      <div class="bookmark">
+        <div class="left-side">
+          <img src="images/illustration-features-tab-1.svg" alt="Feature">
+        </div>
+        <div class="right-side">
+          <h2>Bookmark in one click</h2>
+          <p class="opacity-6">
+            Organize your bookmarks however you like. Our simple drag-and-drop interface 
+            gives you complete control over how you manage your favourite sites.
+          </p>
+          <a class="btn "href="#">More Info</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="download" class="download">
+    <div class="container">
+      <div class="download-info">
+        <h2>Download the extension</h2>
+        <p class="opacity-6">
+          We’ve got more browsers in the pipeline. Please do let us know if you’ve 
+          got a favourite you’d like us to prioritize.
+        </p>
+      </div>
+      <div class="download-cards">
+        <div class="card">
+          <img src="images/logo-chrome.svg" alt="Chrome Logo">
+          <div>
+            <p>Add to Chrome</p>
+            <p>Minimum version 62</p>  
+          </div>
+          <img src="images/bg-dots.svg" alt="Dots">
+          <a class="btn" href="#">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <img src="images/logo-firefox.svg" alt="Firefox Logo">
+          <div>
+            <p>Add to Firefox</p>
+            <p>Minimum version 55</p>  
+          </div>
+          <img src="images/bg-dots.svg" alt="Dots">
+          <a class="btn" href="#">Add & Install Extension</a>
+        </div>
+        <div class="card">
+          <img src="images/logo-opera.svg" alt="Opera Logo">
+          <div>
+            <p>Add to Opera</p>
+            <p>Minimum version 46</p>  
+          </div>
+          <img src="images/bg-dots.svg" alt="Dots">
+          <a class="btn" href="#">Add & Install Extension</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container py-10">
+      <div class="faq-info">
+        <h2>Frequently Asked Questions</h2>
+        <p class="opacity-6">
+          Here are some of our FAQs. If you have any other questions you’d like 
+          answered please feel free to email us.
+        </p>
+      </div>
+      <div class="faq-questions">
+        <ul>
+          <li>
+            <a href="#">What is Bookmark?</a>
+            <a aria-label="down arrow" href="#"><img src="images/icon-arrow.svg"></a>
+          </li>
+          <li>
+            <a href="#">How can I request a new browser?</a>
+            <a href="#"><img src="images/icon-arrow.svg"></a>
+          </li>
+          <li>
+            <a href="#">Is there a mobile app?</a>
+            <a href="#"><img src="images/icon-arrow.svg"></a>
+          </li>
+          <li>
+            <a href="#">What about other Chromium browsers</a>
+            <a href="#"><img src="images/icon-arrow.svg"></a>
+          </li>
+        </ul>
+      </div>
+      <a class="btn btn-center" href="#">More Info</a>
+    </div>
+  </section>
+
+  <section class="join">
+    <p>35,000+ already joined</p>
+    <h2>Stay up-to-date with what we’re doing</h2>
+    <div class="input">
+      <input aria-label="Email" type="text" placeholder="Enter you email address">
+      <a class="btn-red" href="#">Contact Us</a> 
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <img class="logo" src="images/logo-bookmark-light.svg" alt="Logo">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icons">
+        <a aria-label="Facebook" href="#">
+          <img src="images/icon-facebook.svg" alt="Facebook">
+        </a>
+        <a aria-label="Twitter" href="#">
+          <img src="images/icon-twitter.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  
