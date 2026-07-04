@@ -1,0 +1,225 @@
+@import url(font-face.css);
+/* =========================
+   1. CSS RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   2. ROOT DESIGN TOKENS
+========================= */
+
+:root {
+  /* COLORS */
+  --clr-blue-900: #0b0d17;
+  --clr-blue-300: #d0d6f9;
+  --clr-white: #ffffff;
+
+  /* TYPOGRAPHY */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans: "Barlow", sans-serif;
+  --ff-condensed: "Barlow Condensed", sans-serif;
+
+  --fs-900: 9rem; /* 144px */
+  --fs-800: 6.25rem; /* 100px */
+  --fs-700: 3.5rem; /* 56px */
+  --fs-600: 2rem; /* 32px */
+  --fs-500: 1.75rem; /* 28px */
+  --fs-400: 1.125rem; /* 18px */
+  --fs-300: 1rem; /* 16px */
+  --fs-200: 0.875rem; /* 14px */
+
+  --ls-1: 2px;
+  --ls-2: 4px;
+
+  /* SPACING */
+  --space-1600: 8rem;
+  --space-1200: 6rem;
+  --space-1000: 5rem;
+  --space-800: 4rem;
+  --space-600: 3rem;
+  --space-500: 2.5rem;
+  --space-400: 2rem;
+  --space-300: 1.5rem;
+  --space-200: 1rem;
+  --space-150: 0.75rem;
+  --space-100: 0.5rem;
+  --space-50: 0.25rem;
+  --space-25: 0.125rem;
+}
+
+/* =========================
+   3. BASE STYLES
+========================= */
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  color: var(--clr-white);
+  background-color: var(--clr-blue-900);
+  min-height: 100vh;
+}
+
+/* =========================
+   4. TYPOGRAPHY PRESETS
+========================= */
+
+/* Headings */
+.text-preset-1 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-900);
+  line-height: 1.7;
+}
+
+.text-preset-2 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-800);
+  line-height: 1.15;
+}
+
+.text-preset-3 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-700);
+  line-height: 1.14;
+}
+
+.text-preset-4 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-600);
+  line-height: 1.15;
+}
+
+.text-preset-6 {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-500);
+}
+
+/* Condensed UI */
+.text-preset-5,
+.text-preset-7,
+.text-preset-8 {
+  font-family: var(--ff-condensed);
+  text-transform: uppercase;
+}
+
+.text-preset-5 {
+  font-size: var(--fs-500);
+  letter-spacing: var(--ls-2);
+}
+
+.text-preset-7 {
+  font-size: var(--fs-200);
+  letter-spacing: var(--ls-1);
+}
+
+.text-preset-8 {
+  font-size: var(--fs-300);
+  letter-spacing: var(--ls-1);
+}
+
+/* Body */
+.text-preset-9 {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-400);
+  line-height: 1.8;
+  color: var(--clr-blue-300);
+}
+
+/* =========================
+   5. LAYOUT UTILITIES
+========================= */
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+/* Gap system (works for BOTH flex + grid) */
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
+.gap-600 {
+  gap: var(--space-600);
+}
+
+/* =========================
+   6. SPACING UTILITIES
+========================= */
+
+.p-400 {
+  padding: var(--space-400);
+}
+.p-300 {
+  padding: var(--space-300);
+}
+
+.mt-400 {
+  margin-top: var(--space-400);
+}
+.mb-400 {
+  margin-bottom: var(--space-400);
+}
+
+/* =========================
+   7. COLORS
+========================= */
+
+.text-white {
+  color: var(--clr-white);
+}
+.text-light {
+  color: var(--clr-blue-300);
+}
+
+.bg-dark {
+  background-color: var(--clr-blue-900);
+}
