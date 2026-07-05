@@ -1,17 +1,92 @@
-
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
+/* =========================
+   🎨 DESIGN TOKENS
+========================= */
+@theme {
+  /* Colors */
+  --color-blue-900: #0B0D17;
+  --color-blue-300: #D0D6F9;
+  --color-white: #FFFFFF;
+
+  /* Fonts */
+  --font-bellefair: "Bellefair", serif;
+  --font-barlow: "Barlow", sans-serif;
+  --font-barlow-condensed: "Barlow Condensed", sans-serif;
+
+  /* 🌊 Fluid Typography */
+  --text-preset-1: clamp(80px, 10vw, 144px);
+  --text-preset-2: clamp(56px, 8vw, 100px);
+  --text-preset-3: clamp(32px, 5vw, 56px);
+  --text-preset-4: clamp(20px, 3vw, 32px);
+
+  /* Fixed text */
+  --text-preset-5: 28px;
+  --text-preset-6: 28px;
+  --text-preset-7: 14px;
+  --text-preset-8: 16px;
+  --text-preset-9: 18px;
+
+  /* Spacing */
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-600: 48px;
+  --space-800: 64px;
 }
 
-html,
-body,
-#app {
-  min-height: 100%;
-}
+/* =========================
+   🔤 TEXT PRESETS
+========================= */
+@layer utilities {
+  .text-preset-1 {
+    font-family: var(--font-bellefair);
+    font-size: var(--text-preset-1);
+    line-height: 1.7;
+  }
 
-body {
-  margin: 0;
-}
+  .text-preset-2 {
+    font-family: var(--font-bellefair);
+    font-size: var(--text-preset-2);
+  }
 
+  .text-preset-3 {
+    font-family: var(--font-bellefair);
+    font-size: var(--text-preset-3);
+  }
+
+  .text-preset-4 {
+    font-family: var(--font-bellefair);
+    font-size: var(--text-preset-4);
+  }
+
+  .text-preset-5 {
+    font-family: var(--font-barlow-condensed);
+    font-size: var(--text-preset-5);
+    letter-spacing: 0.25em;
+  }
+
+  .text-preset-6 {
+    font-family: var(--font-bellefair);
+    font-size: var(--text-preset-6);
+  }
+
+  .text-preset-7 {
+    font-family: var(--font-barlow-condensed);
+    font-size: var(--text-preset-7);
+    letter-spacing: 0.125em;
+  }
+
+  .text-preset-8 {
+    font-family: var(--font-barlow-condensed);
+    font-size: var(--text-preset-8);
+    letter-spacing: 0.125em;
+  }
+
+  .text-preset-9 {
+    font-family: var(--font-barlow);
+    font-size: var(--text-preset-9);
+    line-height: 1.8;
+  }
+}
