@@ -1,0 +1,35 @@
+/* =========================
+   COLOR TOKENS
+========================= */
+:root {
+  /* Base */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Greys */
+  --color-grey-400: #7D7D7D;
+  --color-grey-200: #D8D8D8;
+  --color-grey-150: #E5E5E5;
+  --color-grey-100: #F3F3F3;
+
+  /* Text */
+  --color-text-primary: var(--color-black);
+  --color-text-secondary: var(--color-grey-400);
+  --color-text-inverse: var(--color-white);
+
+  /* Backgrounds */
+  --color-bg-primary: var(--color-white);
+  --color-bg-secondary: var(--color-grey-100);
+  --color-bg-dark: var(--color-black);
+
+  /* Borders */
+  --color-border-light: var(--color-grey-150);
+  --color-border-medium: var(--color-grey-200);
+
+  /* Gradient */
+  --gradient-overlay: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.84) 84%
+  );
+}
