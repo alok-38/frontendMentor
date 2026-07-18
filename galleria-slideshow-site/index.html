@@ -74,119 +74,150 @@
 
     <!-- Theme Color (Mobile Browser UI) -->
     <meta name="theme-color" content="#ffffff" />
+    <!-- Script -->
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
-      <nav>
-        <a href="index.html"><img src="assets/galleria..png" alt="logo" /></a>
-        <button id="start-slideshow">Start Slideshow</button>
+    <div class="layout">
+      <!-- Navigation -->
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo-link">
+          <img
+            src="assets/galleria..png"
+            alt="Galleria logo"
+            class="nav__logo"
+          />
+        </a>
+
+        <button
+          id="slideshow-toggle"
+          class="nav__button"
+          aria-pressed="false"
+          aria-controls="gallery"
+        >
+          Start Slideshow
+        </button>
       </nav>
-      <main>
-        <h1 class="visually-hidden">Famous Paintings Gallery</h1>
-        <article>
-          <div>
-            <h2>Starry Night</h2>
-            <p>Vincent Van Gogh</p>
-          </div>
-        </article>
 
-        <article>
-          <div>
-            <h2>Girl with a Pearl Earring</h2>
-            <p>Johannes Vermeer</p>
-          </div>
-        </article>
+      <!-- Main Content -->
+      <main
+        id="gallery"
+        class="gallery"
+        role="region"
+        aria-labelledby="gallery-title"
+      >
+        <h1 id="gallery-title" class="visually-hidden">
+          Famous Paintings Gallery
+        </h1>
 
-        <article>
-          <div>
-            <h2>Guernica</h2>
-            <p>Pablo Picasso</p>
-          </div>
-        </article>
+        <!-- Gallery List -->
+        <div class="gallery__list" role="list">
+          <!-- Item -->
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Starry Night</h2>
+              <p class="gallery__artist">Vincent Van Gogh</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>Penitent Magdalene</h2>
-            <p>Artemisia Gentileschi</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Girl with a Pearl Earring</h2>
+              <p class="gallery__artist">Johannes Vermeer</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Storm on the Sea of Galilee</h2>
-            <p>Rembrandt</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Guernica</h2>
+              <p class="gallery__artist">Pablo Picasso</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Great Wave off Kanagawa</h2>
-            <p>Hokusai</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Penitent Magdalene</h2>
+              <p class="gallery__artist">Artemisia Gentileschi</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>Self-portrait</h2>
-            <p>Vincent Van Gogh</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Storm on the Sea of Galilee</h2>
+              <p class="gallery__artist">Rembrandt</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Sleeping Gypsy</h2>
-            <p>Henri Rousseau</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Great Wave off Kanagawa</h2>
+              <p class="gallery__artist">Hokusai</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>Lady with an Ermine</h2>
-            <p>Leonardo da Vinci</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Self-portrait</h2>
+              <p class="gallery__artist">Vincent Van Gogh</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Night Café</h2>
-            <p>Vincent Van Gogh</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Sleeping Gypsy</h2>
+              <p class="gallery__artist">Henri Rousseau</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Basket of Apples</h2>
-            <p>Paul Cézanne</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Lady with an Ermine</h2>
+              <p class="gallery__artist">Leonardo da Vinci</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Boy in the Red Vest</h2>
-            <p>Paul Cézanne</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Night Café</h2>
+              <p class="gallery__artist">Vincent Van Gogh</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>Arnolfini Portrait</h2>
-            <p>Jan van Eyck</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Basket of Apples</h2>
+              <p class="gallery__artist">Paul Cézanne</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>Mona Lisa</h2>
-            <p>Leonardo da Vinci</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Boy in the Red Vest</h2>
+              <p class="gallery__artist">Paul Cézanne</p>
+            </div>
+          </article>
 
-        <article>
-          <div>
-            <h2>The Swing</h2>
-            <p>Jean-Honoré Fragonard</p>
-          </div>
-        </article>
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Arnolfini Portrait</h2>
+              <p class="gallery__artist">Jan van Eyck</p>
+            </div>
+          </article>
+
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">Mona Lisa</h2>
+              <p class="gallery__artist">Leonardo da Vinci</p>
+            </div>
+          </article>
+
+          <article class="gallery__item" role="listitem">
+            <div class="gallery__content">
+              <h2 class="gallery__title">The Swing</h2>
+              <p class="gallery__artist">Jean-Honoré Fragonard</p>
+            </div>
+          </article>
+        </div>
       </main>
     </div>
   </body>
