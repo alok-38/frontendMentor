@@ -16,10 +16,13 @@ async function loadData() {
       if (!item) return;
 
       card.innerHTML = `
-        <img src="${item.images.thumbnail}" alt="${item.name}" />
-        <h3>${item.name}</h3>
-        <p>${item.artist.name}</p>
-      `;
+  <img src="${item.images.thumbnail}" alt="${item.name}" />
+
+  <div class="overlay">
+    <h3>${item.name}</h3>
+    <p>${item.artist.name}</p>
+  </div>
+`;
     });
   } catch (error) {
     console.error("Oops! Something went wrong:", error);
