@@ -44,4 +44,13 @@ header {
   background: transparent;
   border: unset;
   outline: unset;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+hr {
+  background-color: lightgray;
+  border: none;
+  height: 1px;
+  margin-bottom: 2.3rem;
 }
