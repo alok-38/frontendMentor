@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling user events</title>
+  </head>
+  <body>
+    <button>Assignment</button>
+    <script>
+      const buttonEl = document.querySelector("button");
+      buttonEl.addEventListener("click", (event) => {
+        console.log("Clicked");
+        console.log(event.currentTarget);
+      });
+    </script>
+  </body>
+</html>

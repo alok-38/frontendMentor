@@ -20,28 +20,66 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Units Switch to Imperial/Metric Temperature Celsius (°C) Fahrenheit (°F)
-    Wind Speed km/h mph Precipitation Millimeters (mm) Inches (in) How's the sky
-    looking today? Search for a city, e.g., New York Search Feels like
-    <!-- Insert temperature here -->
+    <div class="wrapper">
+      <nav>
+        <img src="assets/images/logo.svg" alt="logo" />
+        <div>⚙️ Units ▼</div>
 
-    Humidity
-    <!-- Insert humidity here -->
+        <div class="dropdown" id="dropdown">
+          <div class="section">
+            <div class="option">
+              Switch to Metric
+            </div>
+          </div>
 
-    Wind
-    <!-- Insert wind here -->
+          <div class="divider"></div>
 
-    Precipitation
-    <!-- Insert precipitation here -->
+          <!-- Temperature -->
+          <div class="section">
+            <div class="section-title">Temperature</div>
+            <div class="option">Celsius (°C)</div>
+            <div class="option selected">
+              Fahrenheit (°F) ✓
+            </div>
+          </div>
 
-    Daily forecast
-    <!-- Insert daily forecast for the next 7 days here -->
+          <div class="divider"></div>
 
-    Hourly forecast
-    <!-- Insert hourly forecast for the selected day here -->
+          <!-- Wind -->
+          <div class="section">
+            <div class="section-title">Wind Speed</div>
+            <div class="option">km/h</div>
+            <div class="option selected">mph ✓</div>
+          </div>
 
+          <div class="divider"></div>
+
+          <!-- Precipitation -->
+          <div class="section">
+            <div class="section-title">Precipitation</div>
+            <div class="option">Millimeters (mm)</div>
+            <div class="option selected">
+              Inches (in) ✓
+            </div>
+          </div>
+        </div>
+      </nav>
+      <h1>How's the sky looking today?</h1>
+      Search for a city, e.g., New York Search Feels like
+      <!-- Insert temperature here -->
+      Humidity
+      <!-- Insert humidity here -->
+      Wind
+      <!-- Insert wind here -->
+      Precipitation
+      <!-- Insert precipitation here -->
+      Daily forecast
+      <!-- Insert daily forecast for the next 7 days here -->
+      Hourly forecast
+      <!-- Insert hourly forecast for the selected day here -->
+    </div>
   </body>
 </html>
