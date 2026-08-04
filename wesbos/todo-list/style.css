@@ -1,0 +1,176 @@
+/* =========================
+   1. Theme
+========================= */
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2933;
+  --error: #f87171;
+}
+
+/* =========================
+   2. Reset
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* =========================
+   3. Layout
+========================= */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  line-height: 1.5;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================
+   4. Typography
+========================= */
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   5. Todo List
+========================= */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.list div {
+  background: #020617;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  transition: 0.2s;
+}
+
+.list div:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+/* =========================
+   6. Form
+========================= */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input + button wrapper */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* =========================
+   7. Input
+========================= */
+input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #020617;
+  color: var(--text);
+  outline: none;
+  transition: 0.2s;
+}
+
+input::placeholder {
+  color: var(--muted);
+}
+
+input:focus {
+  border-color: var(--primary);
+}
+
+/* Error state */
+.input-error {
+  border-color: var(--error);
+  background: rgba(248, 113, 113, 0.05);
+}
+
+/* =========================
+   8. Button
+========================= */
+button {
+  width: 48px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* =========================
+   9. Error Message
+========================= */
+.error {
+  font-size: 0.85rem;
+  color: var(--error);
+  margin-top: 6px;
+  min-height: 18px;
+}
+
+/* =========================
+   10. Micro-interactions
+========================= */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.2s;
+}

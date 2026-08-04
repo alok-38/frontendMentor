@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      let oddNumbers = numbers.filter(function (number) {
+        return number % 2 != 0;
+      });
+      console.log(oddNumbers);
+      let evenNumbers = numbers.filter(function (number) {
+        return number % 2 == 0;
+      });
+      console.log(evenNumbers);
+      let oddGreaterThanThree = numbers.filter(
+        (number) => number % 2 !== 0 && number > 3,
+      );
+      console.log(oddGreaterThanThree);
+      let evenOrGreaterThanFive = numbers.filter(
+        (number) => number % 2 == 0 && number > 5,
+      );
+      console.log(evenOrGreaterThanFive);
+      let users = [
+        { name: "A", age: 25, active: true },
+        { name: "B", age: 17, active: true },
+        { name: "C", age: 30, active: false },
+      ];
+      let result = users.filter((user) => user.age >= 18 && user.active);
+      console.log(result);
+      //   Get squares of odd numbers greater than 3
+      let oddSquaresGreaterThanThree = numbers
+        .filter((number) => number % 2 !== 0 && number > 3)
+        .map((number) => number * number);
+      console.log(oddSquaresGreaterThanThree);
+      let stocks = [
+        { name: "TCS", pe: 28, roe: 40, debt: 0, growth: 12 },
+        { name: "XYZ Bank", pe: 12, roe: 15, debt: 50, growth: 8 },
+        { name: "ABC Tech", pe: 35, roe: 25, debt: 5, growth: 20 },
+        { name: "DEF Infra", pe: 18, roe: 10, debt: 80, growth: 6 },
+      ];
+      let qualityStocks = stocks
+        .filter(
+          (stock) =>
+            stock.roe > 20 && // high quality
+            stock.debt < 20 && // low debt
+            stock.growth > 10, // decent growth
+        )
+        .map((stock) => stock.name);
+        console.log(qualityStocks);
+    </script>
+  </body>
+</html>

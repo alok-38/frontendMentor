@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <h1>My Tasks</h1>
+
+      <section id="list" class="list">
+        <ul></ul>
+      </section>
+
+      <form id="new-item-form" class="form" novalidate>
+        <div class="input-group">
+          <input
+            type="text"
+            id="item-input"
+            placeholder="Add a new task..."
+            aria-describedby="error-message"
+          />
+          <button type="submit">+</button>
+        </div>
+
+        <p id="error-message" class="error" aria-live="polite"></p>
+      </form>
+    </main>
+  </body>
+</html>
