@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template strings</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "Alok",
+        job: "Developer",
+        city: "Bangalore",
+      };
+
+      const markup = `
+  <div class="person">
+      <h2>
+          ${person.name} - 
+          <span class="job">${person.job}</span>
+      </h2>
+      <p class="location">I'm based in ${person.city}</p>
+  </div>
+`;
+
+      let dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "Hugo", age: 6 },
+        { name: "Prudence", age: 8 },
+      ];
+
+      const html = `
+  <ul>
+    ${dogs
+      .map(
+        (dog) => `
+      <li>${dog.name} is ${dog.age * 7} dog years old.</li>
+    `,
+      )
+      .join("")}
+  </ul>
+`;
+
+      document.body.innerHTML  = markup + html;
+    </script>
+  </body>
+</html>

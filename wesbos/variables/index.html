@@ -7,12 +7,16 @@
   </head>
   <body>
     <script>
-      for (let i = 1; i < 10; i++) {
-        const age = 1;
-        setTimeout(() => {
-          console.log(`I am ${age} years old`);
-        }, 200);
-      }
+      let a = 5;
+      let b = 10;
+      // swap values without using a third variable
+      [a, b] = [b, a];
+      console.log(a, b);
+      let d = 1,
+        e = 2,
+        f = 3;
+      [d, e, f] = [f, e, d];
+      console.log(d, e, f);
     </script>
   </body>
 </html>
