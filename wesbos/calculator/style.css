@@ -1,69 +1,132 @@
+/* =========================
+   Base / Reset
+========================= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family:
-    Gotham Rounded,
-    sans-serif;
-  font-weight: normal;
+}
+
+:root {
+  --bg-gradient: linear-gradient(to right, #00aaff, #00ff6c);
+  --btn-bg: rgba(255, 255, 255, 0.75);
+  --btn-bg-hover: rgba(255, 255, 255, 0.9);
+  --border: 1px solid #fff;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  --shadow-active: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --accent: #4da3ff;
+  --font: "Gotham Rounded", sans-serif;
 }
 
 body {
-  padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #00aaff, #00ff6c);
-}
+  font-family: var(--font);
+  background: var(--bg-gradient);
 
-.device {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.device > button {
-  background: none;
-  cursor: pointer;
-  font-size: 2rem;
-  border: 1px solid #fff;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
+/* =========================
+   Calculator Grid
+========================= */
+.device {
+  display: grid;
+  width: 100%;
+  max-width: 420px;
 
-  /* NEW: smooth transitions */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(120px, 25vh) repeat(5, 1fr);
+
+  gap: 2px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.device > button {
+  width: 100%;
+  height: 100%;
+
+  border: var(--border);
+  background: var(--btn-bg);
+  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-weight: 500;
+  cursor: pointer;
+
   transition:
     background-color 0.2s ease,
     transform 0.1s ease,
     box-shadow 0.2s ease;
 
-  /* NEW: subtle depth */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
+  padding: 2rem;
 }
 
-/* Hover (mouse users) */
 .device > button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background: var(--btn-bg-hover);
   transform: translateY(-1px);
 }
 
-/* Focus (keyboard accessibility) */
+.device > button:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: var(--shadow-active);
+}
+
 .device > button:focus-visible {
-  outline: 2px solid #4da3ff;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Active / Press effect */
-.device > button:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+.device > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
 }
 
-/* Optional: disabled state */
-.device > button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-  transform: none;
-  box-shadow: none;
+/* =========================
+   Layout Helpers
+========================= */
+.all-clear,
+.delete {
+  grid-column: span 2;
+}
+
+.equals {
+  grid-column: span 2;
+}
+
+/* =========================
+   Display (LCD)
+========================= */
+.LCD {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+
+  word-break: break-all;
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+.current-operand {
+  color: #fff;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.zero,
+.percent {
+  grid-column: span 2;
 }
