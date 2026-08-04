@@ -20,3 +20,9 @@ formEl.addEventListener("submit", function (event) {
   }
   inputEl.value = "";
 });
+
+ulEl.addEventListener("click", function (event) {
+  if (event.target.matches("li")) {
+    event.target.remove();
+  }
+});
