@@ -1,0 +1,82 @@
+@import url(tokens.css);
+
+/* Default button styles */
+button {
+  appearance: none;
+  -webkit-appearance: none; /* For Safari/Chrome support */
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Base normalization for text-type inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="radio"],
+textarea {
+  /* 1. Ensure inputs inherit font family and size from the body */
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+
+  /* 2. Include padding and border in total width/height calculations */
+  box-sizing: border-box;
+  width: 100%;
+
+  /* 3. Reset and standardize spacing & borders */
+  margin: 0;
+  background-color: #ffffff;
+
+  /* 4. Smooth transition animations for state changes */
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  border: none;
+  outline: none;
+}
+
+/* Target Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Target Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.page {
+  font-family: var(--font-family);
+  background-color: var(--color-slate-100);
+}
+
+.mortgage-calculator {
+  background-color: var(--color-white);
+  border-radius: clamp(12px, 2vw, 24px);
+  overflow: hidden;
+}
+
+.mortgage-calculator__results-section {
+  background-color: var(--color-slate-900);
+}
+
+.mortgage-calculator__title {
+  font-size: var(--text-2-size);
+  line-height: var(--text-2-line-height);
+  font-weight: var(--text-2-weight);
+  letter-spacing: var(--text-2-letter-spacing);
+}
