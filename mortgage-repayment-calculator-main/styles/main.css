@@ -62,16 +62,39 @@ input[type="number"] {
 .page {
   font-family: var(--font-family);
   background-color: var(--color-slate-100);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mortgage-calculator {
   background-color: var(--color-white);
   border-radius: clamp(12px, 2vw, 24px);
   overflow: hidden;
+  max-width: 1008px;
+  width: 100%;
+  display: flex;
+}
+
+.mortgage-calculator__form-section,
+.mortgage-calculator__results-section {
+  padding: 40px;
+}
+
+.mortgage-calculator__form-section {
+  max-width: 424px;
+  width: 100%;
 }
 
 .mortgage-calculator__results-section {
   background-color: var(--color-slate-900);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mortgage-calculator__title {
@@ -79,4 +102,13 @@ input[type="number"] {
   line-height: var(--text-2-line-height);
   font-weight: var(--text-2-weight);
   letter-spacing: var(--text-2-letter-spacing);
+  color: var(--color-slate-900);
+}
+
+.mortgage-calculator__clear-button {
+  color: var(--color-slate-700);
+  text-decoration: underline;
+  font-size: var(--text-4-size);
+  line-height: var(--text-4-line-height);
+  font-weight: var(--text-4-weight);
 }
