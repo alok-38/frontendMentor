@@ -15,9 +15,112 @@
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/tokens.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <!-- Script -->
+    <script src="app.js" defer></script>
   </head>
   <body>
-    pomodoro short break long break start pause restart Settings Time (minutes)
-    pomodoro short break long break Font Color Apply
+    <header class="pomodoro__header">
+      <h1 class="pomodoro__title">pomodoro</h1>
+
+      <nav class="pomodoro__modes" aria-label="Timer mode">
+        <button
+          class="pomodoro__mode pomodoro__mode--active"
+          id="pomodoro-mode"
+        >
+          pomodoro
+        </button>
+
+        <button class="pomodoro__mode" id="short-break-mode">
+          short break
+        </button>
+
+        <button class="pomodoro__mode" id="long-break-mode">long break</button>
+      </nav>
+    </header>
+
+    <main class="pomodoro__main" id="pomodoro-main">
+      <!-- TIMER -->
+      <section class="pomodoro__timer" aria-label="Pomodoro timer">
+        <div class="pomodoro__timer-content">
+          <time class="pomodoro__time" id="pomodoro-time"> 25:00 </time>
+
+          <button class="pomodoro__pause" id="pomodoro-pause" type="button">
+            start
+          </button>
+        </div>
+      </section>
+
+      <!-- SETTINGS TOGGLE -->
+      <button
+        class="pomodoro__settings-toggle"
+        id="pomodoro-settings-toggle"
+        type="button"
+        aria-label="Open settings"
+      >
+        ⚙
+      </button>
+
+      <!-- SETTINGS -->
+      <section hidden class="pomodoro__settings" id="pomodoro-settings">
+        <h2 class="pomodoro__settings-title">Settings</h2>
+
+        <div class="pomodoro__setting">
+          <label class="pomodoro__label" for="pomodoro-setting">
+            pomodoro
+          </label>
+
+          <input
+            class="pomodoro__input"
+            id="pomodoro-setting"
+            type="number"
+            value="25"
+            min="1"
+          />
+        </div>
+
+        <div class="pomodoro__setting">
+          <label class="pomodoro__label" for="short-break-setting">
+            short break
+          </label>
+
+          <input
+            class="pomodoro__input"
+            id="short-break-setting"
+            type="number"
+            value="5"
+            min="1"
+          />
+        </div>
+
+        <div class="pomodoro__setting">
+          <label class="pomodoro__label" for="long-break-setting">
+            long break
+          </label>
+
+          <input
+            class="pomodoro__input"
+            id="long-break-setting"
+            type="number"
+            value="15"
+            min="1"
+          />
+        </div>
+
+        <div class="pomodoro__setting">
+          <label class="pomodoro__label" for="font-color"> Font Color </label>
+
+          <input
+            class="pomodoro__color"
+            id="font-color"
+            type="color"
+            value="#d7e0ff"
+          />
+        </div>
+
+        <button class="pomodoro__apply" id="pomodoro-apply" type="button">
+          Apply
+        </button>
+      </section>
+    </main>
   </body>
 </html>
