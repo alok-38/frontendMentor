@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* =========================================================
+     COLORS
+     ========================================================= */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-blue-950: #14172e;
+  --color-blue-900: #161932;
+  --color-blue-850: #1e213f;
+
+  --color-blue-100: #d7e0ff;
+  --color-blue-50: #eff1fa;
+
+  --color-grey-400: #bbbdcb;
+  --color-grey-200: #e4e2e2;
+
+  --color-cyan-300: #70f3f8;
+  --color-red-400: #f87070;
+  --color-purple-400: #d881f8;
+
+  /* Gradients */
+  --gradient-1-start: #2e325a;
+  --gradient-1-end: #0e112a;
+
+  --gradient-1: linear-gradient(
+    135deg,
+    var(--gradient-1-start) 0%,
+    var(--gradient-1-end) 60%
+  );
+
+  /* =========================================================
+     SPACING
+     ========================================================= */
+
+  --space-0: 0px;
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-600: 48px;
+  --space-700: 56px;
+  --space-800: 64px;
+  --space-1000: 80px;
+
+  /* =========================================================
+     RESPONSIVE / FLUID SPACING
+     ========================================================= */
+
+  --space-fluid-xs: clamp(8px, 1vw, 16px);
+  --space-fluid-sm: clamp(16px, 2vw, 24px);
+  --space-fluid-md: clamp(24px, 3vw, 40px);
+  --space-fluid-lg: clamp(32px, 5vw, 64px);
+  --space-fluid-xl: clamp(48px, 7vw, 80px);
+  --space-fluid-2xl: clamp(64px, 10vw, 120px);
+
+  /* =========================================================
+     TYPOGRAPHY — FONT FAMILIES
+     ========================================================= */
+
+  --font-kumbh: "Kumbh Sans", sans-serif;
+  --font-slab: "Roboto Slab", serif;
+  --font-mono: "Space Mono", monospace;
+
+  /* =========================================================
+     TYPOGRAPHY — FLUID DISPLAY
+     ========================================================= */
+
+  --text-display-size: clamp(80px, 8vw, 100px);
+  --text-display-line: 1.25;
+  --text-display-spacing: -5px;
+
+  --text-display-slab-size: clamp(80px, 8vw, 100px);
+  --text-display-slab-line: 1.3;
+
+  --text-display-mono-size: clamp(80px, 8vw, 100px);
+  --text-display-mono-line: 1.5;
+  --text-display-mono-spacing: -10px;
+
+  /* =========================================================
+     TYPOGRAPHY — BODY
+     ========================================================= */
+
+  --text-2-size: clamp(14px, 1.2vw, 16px);
+  --text-2-line: 1.25;
+  --text-2-spacing: 0;
+
+  --text-3-size: clamp(12px, 1vw, 14px);
+  --text-3-line: 1.25;
+  --text-3-spacing: 0;
+
+  /* =========================================================
+     SETTINGS TYPOGRAPHY
+     ========================================================= */
+
+  --settings-title-size: 28px;
+  --settings-title-line: 1.25;
+
+  --settings-text-size: 13px;
+  --settings-text-line: 1.45;
+
+  --settings-slab-size: 16px;
+  --settings-slab-line: 1.25;
+
+  --settings-mono-size: 16px;
+  --settings-mono-line: 1.25;
+
+  --settings-label-size: 13px;
+  --settings-label-line: 1.25;
+  --settings-label-spacing: 5px;
+
+  --settings-small-size: 12px;
+  --settings-small-line: 1.25;
+
+  /* =========================================================
+     LAYOUT
+     ========================================================= */
+
+  --container-max: 1440px;
+  --content-max: 1200px;
+  --reading-max: 720px;
+
+  --page-padding: clamp(16px, 4vw, 64px);
+
+  --section-padding-y: clamp(48px, 8vw, 120px);
+
+  /* =========================================================
+     GRID
+     ========================================================= */
+
+  --grid-gap: clamp(16px, 2vw, 32px);
+  --grid-gap-lg: clamp(24px, 4vw, 64px);
+
+  /* =========================================================
+     BORDERS / RADII
+     ========================================================= */
+
+  --border-width: 1px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* =========================================================
+     TRANSITIONS
+     ========================================================= */
+
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* =========================================================
+     Z-INDEX
+     ========================================================= */
+
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
