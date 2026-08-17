@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Grid landing page</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <nav class="nav" id="main-navigation">
+      <div class="nav__brand">
+        <a class="nav__logo" href="index.html">
+          <img src="assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="nav__toggle">
+        <img
+          class="nav__toggle-icon"
+          src="assets/images/Frame.png"
+          alt="Nav bar"
+        />
+      </div>
+    </nav>
+
+    <main class="main">
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <h1 class="hero__title">A classroom for every child.</h1>
+        <p class="hero__description">
+          We fund the schools, train the teachers, and measure what works — so
+          every child we reach today becomes a graduate tomorrow.
+        </p>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats" id="impact">
+        <article class="stats__item">
+          <div class="stats__content">
+            <div class="stats__metric">
+              <img
+                class="stats__icon"
+                src="assets/images/icon-sparkle.svg"
+                alt="sparkle"
+              />
+              <span class="stats__value">2.4M</span>
+            </div>
+            <div class="stats__details">
+              <h2 class="stats__title">Students reached</h2>
+              <p class="stats__description">Across 31 countries since 2011.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stats__item">
+          <div class="stats__content">
+            <div class="stats__metric">
+              <img
+                class="stats__icon"
+                src="assets/images/icon-plus.svg"
+                alt="plus"
+              />
+              <span class="stats__value">1,284</span>
+            </div>
+            <div class="stats__details">
+              <h2 class="stats__title">Schools partnered</h2>
+              <p class="stats__description">
+                In 14 countries, from Kenya to Guatemala.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stats__item">
+          <div class="stats__content">
+            <div class="stats__metric">
+              <img
+                class="stats__icon"
+                src="assets/images/icon-arrow-right.svg"
+                alt="right arrow"
+              />
+              <span class="stats__value">38K</span>
+            </div>
+            <div class="stats__details">
+              <h2 class="stats__title">Teachers trained</h2>
+              <p class="stats__description">
+                Equipped with modern tools and methodology.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="stats__item">
+          <div class="stats__content">
+            <div class="stats__metric">
+              <img
+                class="stats__icon"
+                src="assets/images/icon-trending-up.svg"
+                alt="upward trend"
+              />
+              <span class="stats__value">3.1x</span>
+            </div>
+            <div class="stats__details">
+              <h2 class="stats__title">Graduation lift</h2>
+              <p class="stats__description">
+                Partner schools outperform national averages 3x.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__copyright">© 2026 Bridge Collective</div>
+      <div class="footer__charity">
+        Registered charity <span class="footer__charity-number">12345678</span>
+      </div>
+    </footer>
+
+    <!-- Menu panel — hidden until the hamburger is activated -->
+    <div class="menu-panel" id="menu-panel">
+      <a class="menu-panel__link" href="#about">About</a>
+      <a class="menu-panel__link" href="#work">Our Work</a>
+      <a class="menu-panel__link" href="#partners">Partners</a>
+      <a class="menu-panel__link" href="#annual-report">Annual Report</a>
+      <a class="menu-panel__link menu-panel__link--donate" href="#donate">
+        Donate
+      </a>
+    </div>
+  </body>
+</html>

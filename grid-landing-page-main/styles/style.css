@@ -1,0 +1,74 @@
+:root {
+  /* Colors */
+  --color-neutral-950: #000000;
+  --color-neutral-0: #ffffff;
+
+  --color-blue-700: #2854fe;
+  --color-blue-600: #325cff;
+  --color-blue-400: #4784ff;
+  --color-blue-200: #c1ceff;
+
+  /* Typography */
+  --font-family: "Inter", sans-serif;
+
+  --text-1-size: 60px;
+  --text-1-line-height: 1.06;
+  --text-1-letter-spacing: -2px;
+
+  --text-2-size: 44px;
+  --text-2-line-height: 1.06;
+  --text-2-letter-spacing: -2px;
+
+  --text-3-size: 36px;
+  --text-3-line-height: 1.11;
+
+  --text-4-size: 32px;
+  --text-4-line-height: 1.6;
+  --text-4-letter-spacing: -2px;
+
+  --text-5-size: 17px;
+  --text-5-line-height: 1.65;
+
+  --text-6-size: 14px;
+  --text-6-line-height: 1.42;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  background-color: var(--color-blue-700);
+  color: var(--color-neutral-0);
+}
+
+.nav,
+.footer {
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.nav__toggle {
+  cursor: pointer;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
