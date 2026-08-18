@@ -1,0 +1,35 @@
+{
+  "app": {
+    "name": "TODO Application",
+    "version": "1.0.0"
+  },
+  "todos": [
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "description": "Purchase milk, eggs, bread, and vegetables.",
+      "completed": false,
+      "priority": "high",
+      "dueDate": "2026-08-18",
+      "tags": ["shopping", "personal"]
+    },
+    {
+      "id": 2,
+      "title": "Finish project report",
+      "description": "Complete the final report and submit it.",
+      "completed": false,
+      "priority": "high",
+      "dueDate": "2026-08-20",
+      "tags": ["work", "project"]
+    },
+    {
+      "id": 3,
+      "title": "Go for a walk",
+      "description": "Take a 30-minute evening walk.",
+      "completed": true,
+      "priority": "medium",
+      "dueDate": "2026-08-18",
+      "tags": ["health", "personal"]
+    }
+  ]
+}
