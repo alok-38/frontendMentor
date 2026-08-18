@@ -13,6 +13,11 @@ fetch("/data.json")
       const todo = document.createElement("li");
       todo.className = "todo";
       todo.textContent = item.title;
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+
+      todo.appendChild(checkbox);
       containerEl.appendChild(todo);
     });
   })

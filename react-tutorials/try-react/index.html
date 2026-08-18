@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 19 CDN Boilerplate</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import React from "https://esm.sh/react@19";
+      import { createRoot } from "https://esm.sh/react-dom@19/client";
+
+      function MyButton() {
+        return React.createElement("button", null, "I'm a button");
+      }
+
+      function App() {
+        return React.createElement(
+          React.Fragment,
+          null,
+          React.createElement("h1", null, "Hello from React 19 CDN!"),
+          React.createElement(MyButton),
+        );
+      }
+
+      const root = createRoot(document.getElementById("root"));
+      root.render(React.createElement(App));
+    </script>
+  </body>
+</html>
