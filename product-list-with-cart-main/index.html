@@ -1,67 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="products-section">
+        <h1>Desserts</h1>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
+        <div class="product-grid" id="product-grid">
+          <!-- Dynamically generated or static product items -->
+          <article class="product-card">
+            <div class="image-wrapper">
+              <picture>
+                <source
+                  srcset="./assets/images/image-waffle-desktop.jpg"
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="./assets/images/image-waffle-tablet.jpg"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./assets/images/image-waffle-mobile.jpg"
+                  alt="Waffle with Berries"
+                  class="product-img"
+                />
+              </picture>
+              <button class="btn-add-cart">
+                <img
+                  src="./assets/images/icon-add-to-cart.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                Add to Cart
+              </button>
+            </div>
+            <div class="product-info">
+              <span class="category">Waffle</span>
+              <h2 class="product-title">Waffle with Berries</h2>
+              <span class="price">$6.50</span>
+            </div>
+          </article>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+          <!-- Additional products follow the same article structure -->
+        </div>
+      </main>
 
-  Desserts
-
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
-
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
-
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
-
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
-
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
-
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
-
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
-
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart (<!-- Quantity -->)
-  Your added items will appear here
-
-
-</body>
+      <aside class="cart-section">
+        <h2>Your Cart (<span id="cart-count">0</span>)</h2>
+        <div class="cart-empty" id="cart-empty">
+          <img
+            src="./assets/images/illustration-empty-cart.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <p>Your added items will appear here</p>
+        </div>
+        <div class="cart-items hidden" id="cart-items">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </aside>
+    </div>
+  </body>
 </html>
