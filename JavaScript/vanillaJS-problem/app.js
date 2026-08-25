@@ -1,26 +1,20 @@
 const containerEl = document.getElementById("container");
 
-fetch("/data.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("File not found");
-    }
+const response = await fetch("/todo.json");
 
-    return response.json();
-  })
-  .then((data) => {
-    data.todos.forEach((item) => {
-      const todo = document.createElement("li");
-      todo.className = "todo";
-      todo.textContent = item.title;
+const data = await response.json();
 
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
+data.tasks.forEach((element) => {
+  const todo = document.createElement("li");
+  todo.className = "todo";
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = element.completed;
+  todo.textContent = element.title;
+  const label = document.createElement("label");
+  label.textContent = element.task;
 
-      todo.appendChild(checkbox);
-      containerEl.appendChild(todo);
-    });
-  })
-  .catch((error) => {
-    console.error("Error loading JSON:", error);
-  });
+  label.append(checkbox);
+  todo.append(label);
+  containerEl.appendChild(todo);
+});

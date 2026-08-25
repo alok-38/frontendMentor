@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="result">
+      <section class="result__score">
+        <h1 class="result__title">Your Result</h1>
+
+        <div class="result__circle">
+          <div class="result__score-value">
+            <h2 class="result__score-number">76</h2>
+            <span class="result__score-total">of 100</span>
+          </div>
+        </div>
+
+        <div class="result__message">
+          <h2 class="result__rating">Great</h2>
+          <p class="result__description">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
+
+      <section class="summary">
+        <h3 class="summary__title">Summary</h3>
+
+        <div class="summary__items">
+          <div class="summary__item summary__item--reaction">
+            <img
+              class="summary__icon"
+              src="assets/images/icon-reaction.svg"
+              alt="reaction"
+            />
+            <span class="summary__category">Reaction</span>
+            <span class="summary__score">80 / 100</span>
+          </div>
+
+          <div class="summary__item summary__item--memory">
+            <img
+              class="summary__icon"
+              src="assets/images/icon-memory.svg"
+              alt="memory"
+            />
+            <span class="summary__category">Memory</span>
+            <span class="summary__score">92 / 100</span>
+          </div>
+
+          <div class="summary__item summary__item--verbal">
+            <img
+              class="summary__icon"
+              src="assets/images/icon-verbal.svg"
+              alt="verbal"
+            />
+            <span class="summary__category">Verbal</span>
+            <span class="summary__score">61 / 100</span>
+          </div>
+
+          <div class="summary__item summary__item--visual">
+            <img
+              class="summary__icon"
+              src="assets/images/icon-visual.svg"
+              alt="visual"
+            />
+            <span class="summary__category">Visual</span>
+            <span class="summary__score">72 / 100</span>
+          </div>
+        </div>
+
+        <button class="summary__button" type="button">Continue</button>
+      </section>
+    </main>
+  </body>
+</html>
