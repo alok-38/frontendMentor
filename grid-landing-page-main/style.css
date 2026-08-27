@@ -9,6 +9,13 @@ body {
   background-color: #2854fe;
 }
 
+button {
+  background: transparent;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+}
+
 nav,
 footer {
   display: flex;
@@ -42,4 +49,20 @@ nav a {
   flex: 0 0 12px;
   border-radius: 50%;
   background: currentColor;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__menu a {
+  font-size: 32px;
+  line-height: 160%;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+.nav__menu a:hover {
+  border-bottom: 4px solid #fff;
 }
