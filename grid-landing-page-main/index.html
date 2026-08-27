@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,21 +11,27 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Grid landing page</title>
+    <title>Bridge Collective</title>
 
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
+
   <body id="page" class="page">
-    <nav id="navigation" class="nav">
-      <!-- Nav -->
+    <!-- =========================
+         Navigation
+    ========================== -->
+
+    <nav class="nav" aria-label="Main navigation">
       <div class="nav__brand">
         <a href="index.html" class="nav__logo">
-          <span class="nav__dot">.</span>Bridge Collective
+          <span class="nav__dot" aria-hidden="true"></span>
+          Bridge Collective
         </a>
       </div>
 
       <div class="nav__controls">
+        <!-- Open -->
         <button
           id="menu-toggle"
           class="nav__toggle nav__toggle--open"
@@ -38,33 +43,40 @@
           <img src="assets/images/icon-menu.svg" alt="" />
         </button>
 
+        <!-- Close -->
         <button
           id="menu-close"
           class="nav__toggle nav__toggle--close"
           type="button"
           aria-label="Close menu"
           aria-controls="menu"
-          aria-expanded="true"
+          hidden
         >
           <img src="assets/images/icon-close.svg" alt="" />
         </button>
       </div>
 
-      <div id="menu" class="nav__menu">
-        <!-- Menu panel — hidden until the hamburger is activated -->
-        <a href="#about" class="nav__link">About</a>
-        <a href="#work" class="nav__link">Our Work</a>
-        <a href="#partners" class="nav__link">Partners</a>
-        <a href="#annual-report" class="nav__link">Annual Report</a>
-        <a href="#donate" class="nav__link">Donate</a>
+      <!-- Menu -->
+      <div id="menu" class="nav__menu" aria-hidden="true">
+        <div class="nav__menu-inner">
+          <a href="#about" class="nav__link">About</a>
+          <a href="#work" class="nav__link">Our Work</a>
+          <a href="#partners" class="nav__link">Partners</a>
+          <a href="#annual-report" class="nav__link">Annual Report</a>
+          <a href="#donate" class="nav__link">Donate</a>
+        </div>
       </div>
     </nav>
 
-    <div id="main-wrapper" class="wrapper">
+    <!-- =========================
+         Main
+    ========================== -->
+
+    <div class="wrapper">
       <main id="hero" class="hero">
-        <!-- Hero -->
         <div class="hero__content">
           <h1 class="hero__title">A classroom for every child.</h1>
+
           <p class="hero__description">
             We fund the schools, train the teachers, and measure what works — so
             every child we reach today becomes a graduate tomorrow.
@@ -72,14 +84,17 @@
         </div>
       </main>
 
+      <!-- =========================
+           Stats
+      ========================== -->
+
       <section id="stats" class="stats">
-        <!-- Stats -->
         <article class="stats__item">
           <div class="stats__header">
             <img
               class="stats__icon"
               src="assets/images/icon-sparkle.svg"
-              alt="sparkle"
+              alt=""
             />
             <h2 class="stats__number">2.4M</h2>
           </div>
@@ -92,11 +107,7 @@
 
         <article class="stats__item">
           <div class="stats__header">
-            <img
-              class="stats__icon"
-              src="assets/images/icon-plus.svg"
-              alt="plus"
-            />
+            <img class="stats__icon" src="assets/images/icon-plus.svg" alt="" />
             <h2 class="stats__number">1,284</h2>
           </div>
 
@@ -113,7 +124,7 @@
             <img
               class="stats__icon"
               src="assets/images/icon-arrow-right.svg"
-              alt="right arrow"
+              alt=""
             />
             <h2 class="stats__number">38K</h2>
           </div>
@@ -131,7 +142,7 @@
             <img
               class="stats__icon"
               src="assets/images/icon-trending-up.svg"
-              alt="upward trend"
+              alt=""
             />
             <h2 class="stats__number">3.1×</h2>
           </div>
@@ -146,9 +157,13 @@
       </section>
     </div>
 
-    <footer id="footer" class="footer">
-      <!-- Footer -->
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer class="footer">
       <div class="footer__copyright">© 2026 Bridge Collective</div>
+
       <div class="footer__registration">Registered charity 12345678</div>
     </footer>
   </body>
