@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create user interfaces from components</title>
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      const video = {
+        url: "https://example.com",
+        title: "My React Video",
+        description: "This is a sample video.",
+      };
+
+      function App() {
+        return (
+          <div>
+            <h1>Hello, React!</h1>
+            <Video video={video} />
+          </div>
+        );
+      }
+
+      function Video({ video }) {
+        return (
+          <div>
+            <Thumbnail video={video} />
+
+            <a href={video.url}>
+              <h3>{video.title}</h3>
+              <p>{video.description}</p>
+            </a>
+
+            <LikeButton video={video} />
+          </div>
+        );
+      }
+
+      function Thumbnail({ video }) {
+        return (
+          <div>
+            <img
+              src="https://via.placeholder.com/320x180"
+              alt={video.title}
+              width="320"
+            />
+          </div>
+        );
+      }
+
+      function LikeButton({ video }) {
+        return (
+          <button onClick={() => alert(`Liked: ${video.title}`)}>
+            👍 Like
+          </button>
+        );
+      }
+
+      root.render(<App />);
+    </script>
+  </body>
+</html>
