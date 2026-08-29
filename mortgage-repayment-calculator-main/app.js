@@ -7,6 +7,10 @@ const interestRateEl = document.getElementById("interest-rate");
 const repaymentEl = document.getElementById("repayment");
 const interestEl = document.getElementById("interest-only");
 
+const clearAllBtn = document.querySelector(
+  ".mortgage-calculator__clear-button",
+);
+
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -21,4 +25,12 @@ formEl.addEventListener("submit", (event) => {
   if (interestEl.checked) {
     console.log("Interest Only selected");
   }
+});
+
+clearAllBtn.addEventListener("click", () => {
+  mortgageAmountEl.value = "";
+  mortgageTermEl.value = "";
+  interestRateEl.value = "";
+  repaymentEl.checked = false;
+  interestEl.checked = false;
 });
