@@ -1,0 +1,565 @@
+/* =========================================================
+   DESIGN SYSTEM
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. Fonts
+   --------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
+
+/* ---------------------------------------------------------
+   2. Design Tokens
+   --------------------------------------------------------- */
+
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-950: #111517;
+  --color-grey-400: #808080;
+  --color-grey-350: #979797;
+  --color-grey-300: #b2b2b2;
+  --color-grey-250: #c4c4c4;
+  --color-grey-50: #fcfcfc;
+
+  --color-blue-950: #202c36;
+  --color-blue-900: #2b3844;
+
+  /* Typography */
+  --font-family: "Nunito Sans", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-extrabold: 800;
+
+  /* Text sizes */
+  --text-1-size: 32px;
+  --text-2-size: 24px;
+  --text-3-size: 18px;
+  --text-4-size: 16px;
+  --text-5-size: 14px;
+  --text-6-size: 12px;
+
+  /* Line heights */
+  --text-1-line: 137.5%;
+  --text-2-line: 137.5%;
+  --text-3-line: 145%;
+  --text-4-line: 200%;
+  --text-5-line: 145%;
+  --text-5-light-line: 225%;
+  --text-6-line: 135%;
+
+  --letter-spacing: 0;
+
+  /* Spacing */
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+}
+
+/* ---------------------------------------------------------
+   3. Reset / Base
+   --------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-grey-950);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------
+   4. Typography
+   --------------------------------------------------------- */
+
+.text-1 {
+  font-size: var(--text-1-size);
+  line-height: var(--text-1-line);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-2 {
+  font-size: var(--text-2-size);
+  line-height: var(--text-2-line);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-3 {
+  font-size: var(--text-3-size);
+  line-height: var(--text-3-line);
+  font-weight: var(--font-weight-extrabold);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-4 {
+  font-size: var(--text-4-size);
+  line-height: var(--text-4-line);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-4-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-4-light {
+  font-weight: var(--font-weight-light);
+}
+
+.text-5 {
+  font-size: var(--text-5-size);
+  line-height: var(--text-5-line);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-5-light {
+  font-size: var(--text-5-size);
+  line-height: var(--text-5-light-line);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-6 {
+  font-size: var(--text-6-size);
+  line-height: var(--text-6-line);
+  letter-spacing: var(--letter-spacing);
+}
+
+.text-6-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.text-6-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.text-6-light {
+  font-weight: var(--font-weight-light);
+}
+
+/* ---------------------------------------------------------
+   5. Colors
+   --------------------------------------------------------- */
+
+/* Text */
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-grey-950 {
+  color: var(--color-grey-950);
+}
+
+.text-grey-400 {
+  color: var(--color-grey-400);
+}
+
+.text-grey-350 {
+  color: var(--color-grey-350);
+}
+
+.text-grey-300 {
+  color: var(--color-grey-300);
+}
+
+.text-grey-250 {
+  color: var(--color-grey-250);
+}
+
+.text-blue-950 {
+  color: var(--color-blue-950);
+}
+
+.text-blue-900 {
+  color: var(--color-blue-900);
+}
+
+/* Backgrounds */
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-grey-950 {
+  background-color: var(--color-grey-950);
+}
+
+.bg-grey-400 {
+  background-color: var(--color-grey-400);
+}
+
+.bg-grey-350 {
+  background-color: var(--color-grey-350);
+}
+
+.bg-grey-300 {
+  background-color: var(--color-grey-300);
+}
+
+.bg-grey-250 {
+  background-color: var(--color-grey-250);
+}
+
+.bg-grey-50 {
+  background-color: var(--color-grey-50);
+}
+
+.bg-blue-950 {
+  background-color: var(--color-blue-950);
+}
+
+.bg-blue-900 {
+  background-color: var(--color-blue-900);
+}
+
+/* ---------------------------------------------------------
+   6. Spacing Utilities
+   --------------------------------------------------------- */
+
+.p-100 {
+  padding: var(--spacing-100);
+}
+.p-200 {
+  padding: var(--spacing-200);
+}
+.p-300 {
+  padding: var(--spacing-300);
+}
+.p-400 {
+  padding: var(--spacing-400);
+}
+.p-500 {
+  padding: var(--spacing-500);
+}
+.p-600 {
+  padding: var(--spacing-600);
+}
+.p-700 {
+  padding: var(--spacing-700);
+}
+.p-800 {
+  padding: var(--spacing-800);
+}
+.p-900 {
+  padding: var(--spacing-900);
+}
+.p-1000 {
+  padding: var(--spacing-1000);
+}
+
+.px-100 {
+  padding-inline: var(--spacing-100);
+}
+.px-200 {
+  padding-inline: var(--spacing-200);
+}
+.px-300 {
+  padding-inline: var(--spacing-300);
+}
+.px-400 {
+  padding-inline: var(--spacing-400);
+}
+.px-500 {
+  padding-inline: var(--spacing-500);
+}
+.px-600 {
+  padding-inline: var(--spacing-600);
+}
+.px-700 {
+  padding-inline: var(--spacing-700);
+}
+.px-800 {
+  padding-inline: var(--spacing-800);
+}
+.px-900 {
+  padding-inline: var(--spacing-900);
+}
+.px-1000 {
+  padding-inline: var(--spacing-1000);
+}
+
+.py-100 {
+  padding-block: var(--spacing-100);
+}
+.py-200 {
+  padding-block: var(--spacing-200);
+}
+.py-300 {
+  padding-block: var(--spacing-300);
+}
+.py-400 {
+  padding-block: var(--spacing-400);
+}
+.py-500 {
+  padding-block: var(--spacing-500);
+}
+.py-600 {
+  padding-block: var(--spacing-600);
+}
+.py-700 {
+  padding-block: var(--spacing-700);
+}
+.py-800 {
+  padding-block: var(--spacing-800);
+}
+.py-900 {
+  padding-block: var(--spacing-900);
+}
+.py-1000 {
+  padding-block: var(--spacing-1000);
+}
+
+/* Margins */
+
+.m-0 {
+  margin: 0;
+}
+.mt-100 {
+  margin-top: var(--spacing-100);
+}
+.mt-200 {
+  margin-top: var(--spacing-200);
+}
+.mt-300 {
+  margin-top: var(--spacing-300);
+}
+.mt-400 {
+  margin-top: var(--spacing-400);
+}
+.mt-500 {
+  margin-top: var(--spacing-500);
+}
+.mt-600 {
+  margin-top: var(--spacing-600);
+}
+.mt-700 {
+  margin-top: var(--spacing-700);
+}
+.mt-800 {
+  margin-top: var(--spacing-800);
+}
+.mt-900 {
+  margin-top: var(--spacing-900);
+}
+.mt-1000 {
+  margin-top: var(--spacing-1000);
+}
+
+.mb-100 {
+  margin-bottom: var(--spacing-100);
+}
+.mb-200 {
+  margin-bottom: var(--spacing-200);
+}
+.mb-300 {
+  margin-bottom: var(--spacing-300);
+}
+.mb-400 {
+  margin-bottom: var(--spacing-400);
+}
+.mb-500 {
+  margin-bottom: var(--spacing-500);
+}
+.mb-600 {
+  margin-bottom: var(--spacing-600);
+}
+.mb-700 {
+  margin-bottom: var(--spacing-700);
+}
+.mb-800 {
+  margin-bottom: var(--spacing-800);
+}
+.mb-900 {
+  margin-bottom: var(--spacing-900);
+}
+.mb-1000 {
+  margin-bottom: var(--spacing-1000);
+}
+
+/* Gap */
+
+.gap-100 {
+  gap: var(--spacing-100);
+}
+.gap-200 {
+  gap: var(--spacing-200);
+}
+.gap-300 {
+  gap: var(--spacing-300);
+}
+.gap-400 {
+  gap: var(--spacing-400);
+}
+.gap-500 {
+  gap: var(--spacing-500);
+}
+.gap-600 {
+  gap: var(--spacing-600);
+}
+.gap-700 {
+  gap: var(--spacing-700);
+}
+.gap-800 {
+  gap: var(--spacing-800);
+}
+.gap-900 {
+  gap: var(--spacing-900);
+}
+.gap-1000 {
+  gap: var(--spacing-1000);
+}
+
+/* ---------------------------------------------------------
+   7. Layout Helpers
+   --------------------------------------------------------- */
+
+.container {
+  width: min(100% - var(--spacing-400), 1200px);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+}
+
+/* ---------------------------------------------------------
+   8. Common Components
+   --------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-100);
+
+  min-height: 48px;
+  padding-inline: var(--spacing-300);
+
+  border: 0;
+  border-radius: 4px;
+
+  font-size: 14px;
+  line-height: 145%;
+  font-weight: var(--font-weight-semibold);
+
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    opacity 150ms ease;
+}
+
+.btn-primary {
+  color: var(--color-white);
+  background-color: var(--color-blue-950);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-blue-900);
+}
+
+.btn-secondary {
+  color: var(--color-blue-950);
+  background-color: var(--color-grey-50);
+  border: 1px solid var(--color-grey-250);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-grey-250);
+}
+
+/* ---------------------------------------------------------
+   9. Accessibility
+   --------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--color-blue-900);
+  outline-offset: 2px;
+}
+
+/* ---------------------------------------------------------
+   10. Responsive Typography
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  :root {
+    --text-1-size: 28px;
+    --text-2-size: 22px;
+    --text-3-size: 18px;
+  }
+
+  .container {
+    width: min(100% - var(--spacing-300), 1200px);
+  }
+}
