@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>memory</h1>
+      <button id="restartTop" class="btn btn-primary">Restart Game</button>
+    </header>
+
+    <section class="board" aria-label="Memory game board" id="board"></section>
+
+    <section class="stats">
+      <div class="stat"><span>Time</span><strong id="time">0:00</strong></div>
+      <div class="stat"><span>Moves</span><strong id="moves">0</strong></div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+      <p class="eyebrow">You did it!</p>
+      <h2 id="resultTitle">Game over!</h2>
+      <p class="summary">Game completed in <strong id="finalTime">0:00</strong> with <strong id="finalMoves">0 moves</strong>.</p>
+      <div class="modal-actions">
+        <button id="restartModal" class="btn btn-primary">Restart Game</button>
+        <button id="newGame" class="btn btn-secondary">New Game</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="setup-backdrop" id="setupBackdrop">
+    <section class="setup" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
+      <h2 id="setupTitle">memory</h2>
+      <div class="setup-group">
+        <span>Pick a theme</span>
+        <div class="choice-row" id="themeChoices">
+          <button class="choice active" data-theme="numbers">Numbers</button>
+          <button class="choice" data-theme="icons">Icons</button>
+        </div>
+      </div>
+      <div class="setup-group">
+        <span>Number of players</span>
+        <div class="choice-row">
+          <button class="choice active" data-players="1">1</button>
+          <button class="choice" data-players="2">2</button>
+        </div>
+      </div>
+      <div class="setup-group">
+        <span>Grid size</span>
+        <div class="choice-row" id="gridChoices">
+          <button class="choice active" data-size="4">4x4</button>
+          <button class="choice" data-size="6">6x6</button>
+        </div>
+      </div>
+      <button id="startGame" class="btn btn-primary start">Start Game</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
