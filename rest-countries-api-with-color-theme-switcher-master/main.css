@@ -13,11 +13,36 @@ body {
 
 .countries {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 72px;
 }
 
 .country-card {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+}
+
+.country-card__flag {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .countries {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .countries {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.hidden {
+  display: none;
 }
