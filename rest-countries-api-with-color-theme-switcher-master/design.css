@@ -1,0 +1,681 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* ==========================================================================
+   DESIGN SYSTEM
+   ========================================================================== */
+
+/* ==========================================================================
+   1. DESIGN TOKENS
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     Colors
+     ------------------------------------------------------------------------ */
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-grey-950: #111517;
+  --color-grey-400: #808080;
+  --color-grey-350: #979797;
+  --color-grey-300: #b2b2b2;
+  --color-grey-250: #c4c4c4;
+  --color-grey-50: #fcfcfc;
+
+  --color-blue-950: #202c36;
+  --color-blue-900: #2b3844;
+
+  /* ------------------------------------------------------------------------
+     Typography
+     ------------------------------------------------------------------------ */
+
+  --font-family-primary: "Nunito Sans", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-extrabold: 800;
+
+  --font-size-1: 32px;
+  --font-size-2: 24px;
+  --font-size-3: 18px;
+  --font-size-4: 16px;
+  --font-size-5: 14px;
+  --font-size-6: 12px;
+
+  --line-height-1: 137.5%;
+  --line-height-2: 137.5%;
+  --line-height-3: 145%;
+  --line-height-4: 200%;
+  --line-height-5: 145%;
+  --line-height-5-light: 225%;
+  --line-height-6: 135%;
+
+  --letter-spacing-none: 0px;
+
+  /* ------------------------------------------------------------------------
+     Spacing
+     ------------------------------------------------------------------------ */
+
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-900: 72px;
+  --spacing-1000: 80px;
+}
+
+/* ==========================================================================
+   2. SEMANTIC TOKENS — LIGHT THEME
+   ========================================================================== */
+
+:root {
+  --color-background: var(--color-white);
+  --color-surface: var(--color-grey-50);
+
+  --color-text-primary: var(--color-grey-950);
+  --color-text-secondary: var(--color-grey-400);
+  --color-text-muted: var(--color-grey-350);
+
+  --color-border: var(--color-grey-250);
+  --color-border-subtle: var(--color-grey-50);
+
+  --color-primary: var(--color-blue-950);
+  --color-primary-hover: var(--color-blue-900);
+}
+
+/* ==========================================================================
+   3. SEMANTIC TOKENS — DARK THEME
+   ========================================================================== */
+
+html[data-theme="dark"] {
+  --color-background: var(--color-blue-950);
+  --color-surface: var(--color-blue-900);
+
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-grey-300);
+  --color-text-muted: var(--color-grey-350);
+
+  --color-border: var(--color-blue-900);
+  --color-border-subtle: var(--color-blue-900);
+
+  --color-primary: var(--color-white);
+  --color-primary-hover: var(--color-grey-50);
+}
+
+/* ==========================================================================
+   4. FONT FACE
+   ========================================================================== */
+
+/*
+  If you are using local font files, uncomment the @font-face rules below.
+
+  Otherwise, the Google Fonts import at the top of this file will be used.
+*/
+
+/*
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/fonts/NunitoSans-ExtraBold.woff2") format("woff2");
+}
+*/
+
+/* ==========================================================================
+   5. RESET / BASE
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-regular);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+select {
+  border: 0;
+}
+
+input,
+select {
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   6. TYPOGRAPHY
+   ========================================================================== */
+
+/* Text Preset 1
+   Nunito Sans ExtraBold
+   32px / 137.5%
+*/
+
+.text-preset-1 {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-1);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 2
+   Nunito Sans ExtraBold
+   24px / 137.5%
+*/
+
+.text-preset-2 {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-2);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 3
+   Nunito Sans ExtraBold
+   18px / 145%
+*/
+
+.text-preset-3 {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-3);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 4 — SemiBold
+   16px / 200%
+*/
+
+.text-preset-4-semibold {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-4);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 4 — Light
+   16px / 200%
+*/
+
+.text-preset-4-light {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-4);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 5 — Regular
+   14px / 145%
+*/
+
+.text-preset-5-regular {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-5);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 5 — Light
+   14px / 225%
+*/
+
+.text-preset-5-light {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-5-light);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 6 — SemiBold
+   12px / 135%
+*/
+
+.text-preset-6-semibold {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-6);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 6 — Regular
+   12px / 135%
+*/
+
+.text-preset-6-regular {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-6);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* Text Preset 6 — Light
+   12px / 135%
+*/
+
+.text-preset-6-light {
+  margin: 0;
+
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-6);
+  letter-spacing: var(--letter-spacing-none);
+}
+
+/* ==========================================================================
+   7. COLOR UTILITIES
+   ========================================================================== */
+
+/* Text colors */
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.text-grey-950 {
+  color: var(--color-grey-950);
+}
+
+.text-grey-400 {
+  color: var(--color-grey-400);
+}
+
+.text-grey-350 {
+  color: var(--color-grey-350);
+}
+
+.text-grey-300 {
+  color: var(--color-grey-300);
+}
+
+.text-grey-250 {
+  color: var(--color-grey-250);
+}
+
+.text-grey-50 {
+  color: var(--color-grey-50);
+}
+
+.text-blue-950 {
+  color: var(--color-blue-950);
+}
+
+.text-blue-900 {
+  color: var(--color-blue-900);
+}
+
+/* Background colors */
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-grey-950 {
+  background-color: var(--color-grey-950);
+}
+
+.bg-grey-400 {
+  background-color: var(--color-grey-400);
+}
+
+.bg-grey-350 {
+  background-color: var(--color-grey-350);
+}
+
+.bg-grey-300 {
+  background-color: var(--color-grey-300);
+}
+
+.bg-grey-250 {
+  background-color: var(--color-grey-250);
+}
+
+.bg-grey-50 {
+  background-color: var(--color-grey-50);
+}
+
+.bg-blue-950 {
+  background-color: var(--color-blue-950);
+}
+
+.bg-blue-900 {
+  background-color: var(--color-blue-900);
+}
+
+/* Semantic colors */
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+/* ==========================================================================
+   8. SPACING UTILITIES
+   ========================================================================== */
+
+/* Margin */
+
+.m-100 {
+  margin: var(--spacing-100);
+}
+
+.m-200 {
+  margin: var(--spacing-200);
+}
+
+.m-300 {
+  margin: var(--spacing-300);
+}
+
+.m-400 {
+  margin: var(--spacing-400);
+}
+
+.m-500 {
+  margin: var(--spacing-500);
+}
+
+.m-600 {
+  margin: var(--spacing-600);
+}
+
+.m-700 {
+  margin: var(--spacing-700);
+}
+
+.m-800 {
+  margin: var(--spacing-800);
+}
+
+.m-900 {
+  margin: var(--spacing-900);
+}
+
+.m-1000 {
+  margin: var(--spacing-1000);
+}
+
+/* Padding */
+
+.p-100 {
+  padding: var(--spacing-100);
+}
+
+.p-200 {
+  padding: var(--spacing-200);
+}
+
+.p-300 {
+  padding: var(--spacing-300);
+}
+
+.p-400 {
+  padding: var(--spacing-400);
+}
+
+.p-500 {
+  padding: var(--spacing-500);
+}
+
+.p-600 {
+  padding: var(--spacing-600);
+}
+
+.p-700 {
+  padding: var(--spacing-700);
+}
+
+.p-800 {
+  padding: var(--spacing-800);
+}
+
+.p-900 {
+  padding: var(--spacing-900);
+}
+
+.p-1000 {
+  padding: var(--spacing-1000);
+}
+
+/* Gap */
+
+.gap-100 {
+  gap: var(--spacing-100);
+}
+
+.gap-200 {
+  gap: var(--spacing-200);
+}
+
+.gap-300 {
+  gap: var(--spacing-300);
+}
+
+.gap-400 {
+  gap: var(--spacing-400);
+}
+
+.gap-500 {
+  gap: var(--spacing-500);
+}
+
+.gap-600 {
+  gap: var(--spacing-600);
+}
+
+.gap-700 {
+  gap: var(--spacing-700);
+}
+
+.gap-800 {
+  gap: var(--spacing-800);
+}
+
+.gap-900 {
+  gap: var(--spacing-900);
+}
+
+.gap-1000 {
+  gap: var(--spacing-1000);
+}
+
+/* ==========================================================================
+   9. COMMON COMPONENT FOUNDATION
+   ========================================================================== */
+
+.surface {
+  background-color: var(--color-surface);
+
+  transition: background-color 0.2s ease;
+}
+
+.border {
+  border: 1px solid var(--color-border);
+}
+
+.border-subtle {
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* ==========================================================================
+   10. FORM ELEMENTS
+   ========================================================================== */
+
+input,
+select {
+  color: var(--color-text-primary);
+  background-color: var(--color-surface);
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+select {
+  appearance: none;
+}
+
+/* ==========================================================================
+   11. ACCESSIBILITY
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-blue-900);
+  outline-offset: 2px;
+}
+
+html[data-theme="dark"] :focus-visible {
+  outline-color: var(--color-white);
+}
+
+/* ==========================================================================
+   12. REDUCED MOTION
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,10 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html data-theme="light" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REST Countries API with color theme switcher</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="icon" href="https://fav.farm/👓" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="dark-mode.js" defer></script>
   </head>
-  <body></body>
+
+  <body>
+    <header class="header">
+      <div class="header__brand">
+        <h1 class="header__title">Where in the world?</h1>
+      </div>
+
+      <div class="header__theme">
+        <button class="theme-toggle" id="toggle" type="button">
+          <img
+            class="theme-toggle__icon"
+            id="icon"
+            src="dark.png"
+            alt="Dark mode"
+          />
+          <span class="theme-toggle__label" id="mode">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+    <div class="page">
+      <section class="filters">
+        <div class="search">
+          <img class="search__icon" src="search.svg" alt="Search" />
+
+          <input
+            class="search__input"
+            id="country-search"
+            type="text"
+            placeholder="Search for a country"
+          />
+        </div>
+
+        <div class="region-filter">
+          <select
+            class="region-filter__select"
+            id="region-filter"
+            name="region"
+          >
+            <option value="">Filter by Region</option>
+          </select>
+        </div>
+      </section>
+
+      <main class="countries">
+        <article class="country-card">
+          <img class="country-card__flag" id="country-flag" src="" alt="" />
+
+          <h2 class="country-card__name" id="country-name"></h2>
+
+          <div class="country-card__facts" id="facts"></div>
+        </article>
+      </main>
+    </div>
+  </body>
 </html>

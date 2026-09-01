@@ -1,0 +1,13 @@
+@import url("/design.css");
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.filters {
+  display: flex;
+}
+
