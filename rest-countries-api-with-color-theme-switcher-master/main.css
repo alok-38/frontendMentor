@@ -11,3 +11,13 @@ body {
   display: flex;
 }
 
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 72px;
+}
+
+.country-card {
+  display: flex;
+  flex-direction: column;
+}

@@ -7,7 +7,7 @@
 
     <link rel="icon" href="https://fav.farm/👓" />
     <link rel="stylesheet" href="main.css" />
-    <script src="dark-mode.js" defer></script>
+    <script src="main.js" defer></script>
   </head>
 
   <body>
@@ -54,11 +54,14 @@
 
       <main class="countries">
         <article class="country-card">
-          <img class="country-card__flag" id="country-flag" src="" alt="" />
+          <div class="country-card__image">
+            <img class="country-card__flag" id="country-flag" src="" alt="" />
+          </div>
 
-          <h2 class="country-card__name" id="country-name"></h2>
-
-          <div class="country-card__facts" id="facts"></div>
+          <div class="country-card__content">
+            <h2 class="country-card__name" id="country-name"></h2>
+            <div class="country-card__facts" id="facts"></div>
+          </div>
         </article>
       </main>
     </div>
