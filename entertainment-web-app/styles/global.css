@@ -1,0 +1,122 @@
+:root {
+  /* Colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-blue-950: #10141e;
+  --color-blue-900: #161d2f;
+  --color-blue-500: #5a698f;
+
+  --color-red-500: #fc4747;
+
+  --color-bg: var(--color-blue-950);
+  --color-surface: var(--color-blue-900);
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-blue-500);
+  --color-accent: var(--color-red-500);
+
+  /* Typography */
+  --font-family-primary: "Outfit", sans-serif;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-100: 8px;
+  --space-200: 16px;
+  --space-300: 24px;
+  --space-400: 32px;
+  --space-500: 40px;
+  --space-700: 56px;
+  --space-900: 72px;
+  --space-1000: 80px;
+
+  /* Layout */
+  --container-max: 1440px;
+
+  /* Breakpoints */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family-primary);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-bg);
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: min(calc(100% - 32px), var(--container-max));
+
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(var(--space-500), 5vw, var(--space-1000));
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.gap-100 {
+  gap: var(--space-100);
+}
+.gap-200 {
+  gap: var(--space-200);
+}
+.gap-300 {
+  gap: var(--space-300);
+}
+.gap-400 {
+  gap: var(--space-400);
+}
+.gap-500 {
+  gap: var(--space-500);
+}
