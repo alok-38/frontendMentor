@@ -53,6 +53,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   font-family: var(--font-family-primary);
   font-size: clamp(14px, 0.875rem + 0.1vw, 15px);
   font-weight: 300;
@@ -125,8 +126,296 @@ button {
 }
 
 /* Custom CSS */
+/* =========================================================
+   Navbar
+   ========================================================= */
+
 .navbar {
+  /* Layout */
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Sizing */
+  width: 96px;
+  max-width: 96px;
+  min-height: 100vh;
+
+  /* Spacing */
+  padding: 32px 20px;
+
+  /* Appearance */
+  background-color: var(--color-blue-900);
+
+  /* Prevent padding from increasing the declared width */
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   Logo + Navigation Container
+   ========================================================= */
+
+.navbar__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Space between logo and navigation */
+  gap: 72px;
+}
+
+
+/* =========================================================
+   Logo
+   ========================================================= */
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Keeps the logo's clickable area predictable */
+  width: 40px;
+  height: 40px;
+}
+
+.navbar__logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  outline: none;
+}
+
+.navbar__logo-image {
+  display: block;
+  width: 32px;
+  height: 26px;
+}
+
+
+/* =========================================================
+   Navigation Links
+   ========================================================= */
+
+.navbar__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+
+/* Individual navigation item */
+
+.navbar__link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+
+  color: var(--color-blue-100);
+
+  text-decoration: none;
+
+  outline: none;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+
+/* Icon */
+
+.navbar__icon {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  /*
+   * SVG icons can inherit the link's color when they're
+   * designed to use currentColor.
+   */
+  opacity: 0.65;
+
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease;
+}
+
+
+/* =========================================================
+   Hover
+   ========================================================= */
+
+.navbar__link:hover {
+  color: var(--color-white);
+  background-color: var(--color-blue-800);
+}
+
+.navbar__link:hover .navbar__icon {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   Keyboard Focus
+   ========================================================= */
+
+.navbar__link:focus-visible,
+.navbar__profile:focus-visible,
+.navbar__logo a:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   Active Navigation Item
+   ========================================================= */
+
+.navbar__link--active {
+  color: var(--color-white);
+  background-color: var(--color-blue-800);
+}
+
+.navbar__link--active .navbar__icon {
+  opacity: 1;
+}
+
+
+/*
+ * Active indicator.
+ *
+ * Because this is a vertical sidebar, the indicator sits
+ * on the left side of the active navigation item.
+ */
+
+.navbar__link--active::before {
+  content: "";
+
+  position: absolute;
+
+  left: -20px;
+  top: 50%;
+
+  width: 3px;
+  height: 24px;
+
+  border-radius: 0 3px 3px 0;
+
+  background-color: var(--color-red-500);
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   Profile
+   ========================================================= */
+
+.navbar__profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  outline: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+
+/* Avatar */
+
+.navbar__avatar {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* Profile hover */
+
+.navbar__profile:hover {
+  transform: scale(1.08);
+}
+
+
+/* Profile keyboard focus */
+
+.navbar__profile:focus-visible {
+  box-shadow:
+    0 0 0 2px var(--color-blue-900),
+    0 0 0 4px var(--color-white);
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+/*
+ * Give the sidebar slightly less horizontal padding on
+ * smaller screens while preserving the 96px width.
+ */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 24px 16px;
+  }
+
+  .navbar__container {
+    gap: 56px;
+  }
+
+  .navbar__links {
+    gap: 24px;
+  }
+}
+
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__link,
+  .navbar__icon,
+  .navbar__profile {
+    transition: none;
+  }
 }
 
 .movie-card {
@@ -144,4 +433,14 @@ button {
   top: 16px;
   right: 16px;
   z-index: 10;
+  background: none;
+  outline: none;
+  border: none;
+  background-color: #979797;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

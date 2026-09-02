@@ -92,21 +92,27 @@
 
   <body class="flex gap-400">
     <!-- Primary navigation -->
-    <nav class="navbar flex justify-between" id="main-navigation" aria-label="Main navigation">
-      <div class="navbar__container">
+    <nav
+      class="navbar flex justify-between"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
+      <div class="navbar__container flex">
         <!-- Logo -->
-        <a class="navbar__logo" href="/" aria-label="Entertainment Hub home">
-          <img
-            class="navbar__logo-image"
-            src="assets/logo.svg"
-            alt="Entertainment Hub"
-            width="32"
-            height="26"
-          />
-        </a>
+        <div class="navbar__logo">
+          <a href="/" aria-label="Entertainment Hub home">
+            <img
+              class="navbar__logo-image"
+              src="assets/logo.svg"
+              alt="Entertainment Hub"
+              width="32"
+              height="26"
+            />
+          </a>
+        </div>
 
         <!-- Navigation links -->
-        <div class="navbar__links">
+        <div class="navbar__links flex gap-400">
           <a
             class="navbar__link navbar__link--active"
             href="/"
@@ -322,4 +328,3 @@
     </div>
   </body>
 </html>
-  
