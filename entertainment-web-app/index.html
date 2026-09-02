@@ -176,11 +176,11 @@
       </a>
     </nav>
 
-    <div class="wrapper">
+    <div class="wrapper flex gap-400">
       <!-- Search -->
       <header class="search" id="search">
-        <form class="search__form" role="search">
-          <label class="search__label" for="search-input">
+        <form class="search__form flex gap-400" role="search">
+          <label class="search__label" for="search-input" hidden>
             Search for movies or TV series
           </label>
 
@@ -202,15 +202,11 @@
             autocomplete="off"
             enterkeyhint="search"
           />
-
-          <button class="search__button" type="submit" aria-label="Search">
-            Search
-          </button>
         </form>
       </header>
 
       <!-- Main content -->
-      <main>
+      <main class="flex gap-400">
         <!-- Trending -->
         <section
           class="trending"

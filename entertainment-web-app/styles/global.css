@@ -150,8 +150,8 @@ button {
 
   /* Prevent padding from increasing the declared width */
   box-sizing: border-box;
+  border-radius: 20px;
 }
-
 
 /* =========================================================
    Logo + Navigation Container
@@ -165,7 +165,6 @@ button {
   /* Space between logo and navigation */
   gap: 72px;
 }
-
 
 /* =========================================================
    Logo
@@ -200,7 +199,6 @@ button {
   height: 26px;
 }
 
-
 /* =========================================================
    Navigation Links
    ========================================================= */
@@ -211,7 +209,6 @@ button {
   align-items: center;
   gap: 28px;
 }
-
 
 /* Individual navigation item */
 
@@ -239,7 +236,6 @@ button {
     transform 150ms ease;
 }
 
-
 /* Icon */
 
 .navbar__icon {
@@ -259,7 +255,6 @@ button {
     transform 150ms ease;
 }
 
-
 /* =========================================================
    Hover
    ========================================================= */
@@ -273,7 +268,6 @@ button {
   opacity: 1;
 }
 
-
 /* =========================================================
    Keyboard Focus
    ========================================================= */
@@ -284,7 +278,6 @@ button {
   outline: 2px solid var(--color-white);
   outline-offset: 3px;
 }
-
 
 /* =========================================================
    Active Navigation Item
@@ -298,7 +291,6 @@ button {
 .navbar__link--active .navbar__icon {
   opacity: 1;
 }
-
 
 /*
  * Active indicator.
@@ -325,7 +317,6 @@ button {
   transform: translateY(-50%);
 }
 
-
 /* =========================================================
    Profile
    ========================================================= */
@@ -351,7 +342,6 @@ button {
     box-shadow 150ms ease;
 }
 
-
 /* Avatar */
 
 .navbar__avatar {
@@ -365,13 +355,11 @@ button {
   border-radius: 50%;
 }
 
-
 /* Profile hover */
 
 .navbar__profile:hover {
   transform: scale(1.08);
 }
-
 
 /* Profile keyboard focus */
 
@@ -380,7 +368,6 @@ button {
     0 0 0 2px var(--color-blue-900),
     0 0 0 4px var(--color-white);
 }
-
 
 /* =========================================================
    Responsive
@@ -404,7 +391,6 @@ button {
     gap: 24px;
   }
 }
-
 
 /* =========================================================
    Reduced Motion
@@ -443,4 +429,109 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* form */
+.search__form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search__icon {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+.search__input {
+  width: 100%;
+  padding: 0 1rem 0 2.5rem;
+}
+
+/* wrapper */
+.wrapper,
+main {
+  flex-direction: column;
+}
+
+.search {
+  max-width: 385px;
+  width: 100%;
+}
+
+.search__input {
+  cursor: pointer;
+  background: none;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  height: 32px;
+}
+
+.search__input::placeholder {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Movie poster */
+.movie-card {
+  position: relative;
+  width: fit-content;
+}
+
+.movie-card__image {
+  display: block;
+  object-fit: cover;
+}
+
+/* Trending */
+.movie-card--trending .movie-card__image {
+  width: 470px;
+  height: 230px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Recommended */
+.recommended .movie-card__image {
+  width: 280px;
+  height: 174px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Bookmark */
+.movie-card__bookmark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #979797;
+}
+
+.movie-card__bookmark img {
+  width: 16px;
+  height: 16px;
+}
+
+h1,
+h2 {
+  font-weight: 400;
 }
