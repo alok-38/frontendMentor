@@ -123,3 +123,8 @@ button {
 .gap-500 {
   gap: var(--space-500);
 }
+
+/* Custom CSS */
+.navbar {
+  flex-direction: column;
+}

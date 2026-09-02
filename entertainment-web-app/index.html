@@ -2,8 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Primary SEO -->
+    <title>Entertainment Hub | Movies & TV Series</title>
+
+    <meta
+      name="description"
+      content="Discover trending movies and TV series, and find recommendations tailored to your entertainment preferences."
+    />
+
+    <meta
+      name="keywords"
+      content="movies, TV series, entertainment, trending movies, movie recommendations"
+    />
+
+    <meta name="author" content="Entertainment Hub" />
+
+    <!-- Search engine directives -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://example.com/" />
+
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -11,21 +35,290 @@
       href="./assets/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Entertainment web app</title>
+    <!-- Theme -->
+    <meta name="theme-color" content="#10141e" />
+
+    <!-- Open Graph / Social sharing -->
+    <meta
+      property="og:title"
+      content="Entertainment Hub | Movies & TV Series"
+    />
+
+    <meta
+      property="og:description"
+      content="Discover trending movies and TV series and explore personalized recommendations."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://example.com/" />
+
+    <meta
+      property="og:image"
+      content="https://example.com/assets/og-image.jpg"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Entertainment Hub movie and TV series collection"
+    />
+
+    <!-- Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Entertainment Hub | Movies & TV Series"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Discover trending movies and TV series and explore personalized recommendations."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://example.com/assets/og-image.jpg"
+    />
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
     <link rel="stylesheet" href="styles/global.css" />
+
     <script src="app.js" defer></script>
   </head>
-  <body>
-    <header>
-      <img src="assets/icon-search.svg" alt="search icon" />
-      <input type="text" placeholder="Search for movies or TV series" />
-    </header>
-    Search for movies or TV series Trending
 
-    <!-- Display trending shows -->
+  <body class="flex gap-400">
+    <!-- Primary navigation -->
+    <nav class="navbar flex justify-between" id="main-navigation" aria-label="Main navigation">
+      <div class="navbar__container">
+        <!-- Logo -->
+        <a class="navbar__logo" href="/" aria-label="Entertainment Hub home">
+          <img
+            class="navbar__logo-image"
+            src="assets/logo.svg"
+            alt="Entertainment Hub"
+            width="32"
+            height="26"
+          />
+        </a>
 
-    Recommended for you
+        <!-- Navigation links -->
+        <div class="navbar__links">
+          <a
+            class="navbar__link navbar__link--active"
+            href="/"
+            aria-label="Home"
+            aria-current="page"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-home.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
 
-    <!-- Display recommended shows -->
+          <a class="navbar__link" href="/movies" aria-label="Movies">
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-movies.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a class="navbar__link" href="/tv-series" aria-label="TV Series">
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-tv-series.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a
+            class="navbar__link"
+            href="/bookmarks"
+            aria-label="Bookmarked movies and TV series"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-bookmark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- User profile -->
+      <a class="navbar__profile" href="/profile" aria-label="View your profile">
+        <img
+          class="navbar__avatar"
+          src="assets/image-avatar.png"
+          alt="Profile"
+          width="40"
+          height="40"
+        />
+      </a>
+    </nav>
+
+    <div class="wrapper">
+      <!-- Search -->
+      <header class="search" id="search">
+        <form class="search__form" role="search">
+          <label class="search__label" for="search-input">
+            Search for movies or TV series
+          </label>
+
+          <img
+            class="search__icon"
+            src="assets/icon-search.svg"
+            alt=""
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+
+          <input
+            class="search__input"
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Search for movies or TV series"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+
+          <button class="search__button" type="submit" aria-label="Search">
+            Search
+          </button>
+        </form>
+      </header>
+
+      <!-- Main content -->
+      <main>
+        <!-- Trending -->
+        <section
+          class="trending"
+          id="trending"
+          aria-labelledby="trending-title"
+        >
+          <h1 class="trending__title" id="trending-title">Trending</h1>
+
+          <!-- Trending shows -->
+          <div class="trending__list" role="list">
+            <article class="movie-card movie-card--trending" role="listitem">
+              <a
+                class="movie-card__link"
+                href="#"
+                aria-label="View movie details"
+              >
+                <img
+                  class="movie-card__image"
+                  src=""
+                  alt=""
+                  width="470"
+                  height="230"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+
+                <div class="movie-card__overlay">
+                  <div class="movie-card__info">
+                    <div class="movie-card__metadata">
+                      <time class="movie-card__date" datetime=""></time>
+
+                      <span class="movie-card__type" aria-label="Movie"></span>
+
+                      <span class="movie-card__rating"></span>
+                    </div>
+
+                    <h2 class="movie-card__title"></h2>
+                  </div>
+                </div>
+              </a>
+
+              <button
+                class="movie-card__bookmark"
+                type="button"
+                aria-label="Add movie to bookmarks"
+              >
+                <img
+                  src="assets/icon-nav-bookmark.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- Recommendations -->
+        <section
+          class="recommended"
+          id="recommended"
+          aria-labelledby="recommended-title"
+        >
+          <h2 class="recommended__title" id="recommended-title">
+            Recommended for you
+          </h2>
+
+          <!-- Recommended shows -->
+          <div class="recommended__list" role="list">
+            <article class="movie-card" role="listitem">
+              <a
+                class="movie-card__link"
+                href="#"
+                aria-label="View movie details"
+              >
+                <img
+                  class="movie-card__image"
+                  src=""
+                  alt=""
+                  width="280"
+                  height="174"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="movie-card__info">
+                  <div class="movie-card__metadata">
+                    <time class="movie-card__date" datetime=""></time>
+
+                    <span class="movie-card__type" aria-label="Movie"></span>
+
+                    <span class="movie-card__rating"></span>
+                  </div>
+
+                  <h3 class="movie-card__title"></h3>
+                </div>
+              </a>
+
+              <button
+                class="movie-card__bookmark"
+                type="button"
+                aria-label="Add movie to bookmarks"
+              >
+                <img
+                  src="assets/icon-nav-bookmark.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+              </button>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
