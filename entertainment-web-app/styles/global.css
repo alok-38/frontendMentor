@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 :root {
   /* Colors */
   --color-white: #ffffff;
@@ -52,9 +53,11 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  background: var(--color-bg);
+  font-family: var(--font-family-primary);
+  font-size: clamp(14px, 0.875rem + 0.1vw, 15px);
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 0;
 }
 
 img,
