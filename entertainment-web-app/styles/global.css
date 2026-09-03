@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
 :root {
   /* Colors */
   --color-white: #ffffff;
@@ -6,6 +11,7 @@
 
   --color-blue-950: #10141e;
   --color-blue-900: #161d2f;
+  --color-blue-800: #222f49;
   --color-blue-500: #5a698f;
 
   --color-red-500: #fc4747;
@@ -40,6 +46,10 @@
   --bp-xl: 1440px;
 }
 
+/* =========================================================
+   RESET
+   ========================================================= */
+
 *,
 *::before,
 *::after {
@@ -48,17 +58,22 @@
 
 html {
   font-family: var(--font-family-primary);
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   color: var(--color-text-primary);
 }
 
 body {
   min-height: 100vh;
+  margin: 0;
+
   font-family: var(--font-family-primary);
   font-size: clamp(14px, 0.875rem + 0.1vw, 15px);
   font-weight: 300;
   line-height: 1.25;
   letter-spacing: 0;
+
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
 }
 
 img,
@@ -79,14 +94,21 @@ button {
   cursor: pointer;
 }
 
+/* =========================================================
+   GLOBAL HELPERS
+   ========================================================= */
+
 .container {
   width: min(calc(100% - 32px), var(--container-max));
-
   margin-inline: auto;
 }
 
 .section {
-  padding-block: clamp(var(--space-500), 5vw, var(--space-1000));
+  padding-block: clamp(
+    var(--space-500),
+    5vw,
+    var(--space-1000)
+  );
 }
 
 .flex {
@@ -112,70 +134,70 @@ button {
 .gap-100 {
   gap: var(--space-100);
 }
+
 .gap-200 {
   gap: var(--space-200);
 }
+
 .gap-300 {
   gap: var(--space-300);
 }
+
 .gap-400 {
   gap: var(--space-400);
 }
+
 .gap-500 {
   gap: var(--space-500);
 }
 
-/* Custom CSS */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
 /* =========================================================
-   Navbar
+   NAVBAR
    ========================================================= */
 
 .navbar {
-  /* Layout */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  /* Sizing */
   width: 96px;
   max-width: 96px;
   min-height: 100vh;
 
-  /* Spacing */
   padding: 32px 20px;
 
-  /* Appearance */
   background-color: var(--color-blue-900);
 
-  /* Prevent padding from increasing the declared width */
-  box-sizing: border-box;
   border-radius: 20px;
 }
-
-/* =========================================================
-   Logo + Navigation Container
-   ========================================================= */
 
 .navbar__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  /* Space between logo and navigation */
   gap: 72px;
 }
-
-/* =========================================================
-   Logo
-   ========================================================= */
 
 .navbar__logo {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Keeps the logo's clickable area predictable */
   width: 40px;
   height: 40px;
 }
@@ -189,28 +211,23 @@ button {
   height: 100%;
 
   border-radius: 8px;
-
   outline: none;
 }
 
 .navbar__logo-image {
   display: block;
+
   width: 32px;
   height: 26px;
 }
-
-/* =========================================================
-   Navigation Links
-   ========================================================= */
 
 .navbar__links {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 28px;
 }
-
-/* Individual navigation item */
 
 .navbar__link {
   position: relative;
@@ -225,7 +242,6 @@ button {
   border-radius: 8px;
 
   color: var(--color-blue-100);
-
   text-decoration: none;
 
   outline: none;
@@ -236,28 +252,18 @@ button {
     transform 150ms ease;
 }
 
-/* Icon */
-
 .navbar__icon {
   display: block;
 
   width: 20px;
   height: 20px;
 
-  /*
-   * SVG icons can inherit the link's color when they're
-   * designed to use currentColor.
-   */
   opacity: 0.65;
 
   transition:
     opacity 150ms ease,
     transform 150ms ease;
 }
-
-/* =========================================================
-   Hover
-   ========================================================= */
 
 .navbar__link:hover {
   color: var(--color-white);
@@ -268,20 +274,12 @@ button {
   opacity: 1;
 }
 
-/* =========================================================
-   Keyboard Focus
-   ========================================================= */
-
 .navbar__link:focus-visible,
 .navbar__profile:focus-visible,
 .navbar__logo a:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 3px;
 }
-
-/* =========================================================
-   Active Navigation Item
-   ========================================================= */
 
 .navbar__link--active {
   color: var(--color-white);
@@ -292,18 +290,10 @@ button {
   opacity: 1;
 }
 
-/*
- * Active indicator.
- *
- * Because this is a vertical sidebar, the indicator sits
- * on the left side of the active navigation item.
- */
-
 .navbar__link--active::before {
   content: "";
 
   position: absolute;
-
   left: -20px;
   top: 50%;
 
@@ -318,7 +308,7 @@ button {
 }
 
 /* =========================================================
-   Profile
+   PROFILE
    ========================================================= */
 
 .navbar__profile {
@@ -332,17 +322,14 @@ button {
   flex-shrink: 0;
 
   border-radius: 50%;
+  overflow: hidden;
 
   outline: none;
-
-  overflow: hidden;
 
   transition:
     transform 150ms ease,
     box-shadow 150ms ease;
 }
-
-/* Avatar */
 
 .navbar__avatar {
   display: block;
@@ -355,13 +342,9 @@ button {
   border-radius: 50%;
 }
 
-/* Profile hover */
-
 .navbar__profile:hover {
   transform: scale(1.08);
 }
-
-/* Profile keyboard focus */
 
 .navbar__profile:focus-visible {
   box-shadow:
@@ -370,16 +353,432 @@ button {
 }
 
 /* =========================================================
-   Responsive
+   SEARCH
+   ========================================================= */
+
+.search {
+  width: 100%;
+  max-width: 385px;
+}
+
+.search__form {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-400);
+}
+
+.search__icon {
+  position: absolute;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  pointer-events: none;
+}
+
+.search__input {
+  width: 100%;
+  height: 32px;
+
+  padding: 0 1rem 0 2.5rem;
+
+  border: none;
+  outline: none;
+
+  background: none;
+
+  color: var(--color-white);
+
+  cursor: text;
+}
+
+.search__input::placeholder {
+  color: var(--color-white);
+  opacity: 1;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.search__input:focus {
+  border-bottom: 1px solid var(--color-white);
+}
+
+/* =========================================================
+   PAGE LAYOUT
+   ========================================================= */
+
+.wrapper {
+  padding-top: 2rem;
+}
+
+.wrapper,
+main {
+  flex-direction: column;
+}
+
+/* =========================================================
+   TRENDING
+   ========================================================= */
+
+.trending {
+  width: 100%;
+  overflow: hidden;
+}
+
+.trending__title {
+  margin-bottom: var(--space-300);
+
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.trending__list {
+  display: flex;
+
+  gap: var(--space-300);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+}
+
+.trending__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   RECOMMENDED
+   ========================================================= */
+
+.recommended {
+  width: 100%;
+}
+
+.recommended__title {
+  margin-bottom: var(--space-300);
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.recommended__list {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(240px, 1fr)
+  );
+
+  gap: var(--space-300);
+}
+
+/* =========================================================
+   MOVIE CARD
+   ========================================================= */
+
+.movie-card {
+  position: relative;
+
+  width: fit-content;
+
+  isolation: isolate;
+}
+
+.movie-card__link {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  color: inherit;
+  text-decoration: none;
+
+  outline: none;
+}
+
+/* =========================================================
+   MOVIE IMAGE
+   ========================================================= */
+
+.movie-card__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 250ms ease;
+}
+
+/* Trending dimensions */
+
+.movie-card--trending {
+  flex: 0 0 auto;
+}
+
+.movie-card--trending .movie-card__image {
+  width: 470px;
+  height: 230px;
+
+  border-radius: 8px;
+}
+
+/* Recommended dimensions */
+
+.recommended .movie-card {
+  width: 100%;
+}
+
+.recommended .movie-card__image {
+  width: 100%;
+  height: 174px;
+
+  border-radius: 8px;
+}
+
+/* =========================================================
+   FRONTEND MENTOR STYLE OVERLAY
    ========================================================= */
 
 /*
- * Give the sidebar slightly less horizontal padding on
- * smaller screens while preserving the 96px width.
- */
+  Dark overlay sits above the image.
+*/
 
-@media (max-width: 768px) {
+.movie-card__link::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+
+  transition: opacity 200ms ease;
+}
+
+/*
+  Play button
+*/
+
+.movie-card__link::after {
+  content: "▶  Play";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 117px;
+  height: 48px;
+
+  padding: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.9);
+
+  background-color: rgba(255, 255, 255, 0.25);
+
+  border-radius: 28px;
+
+  color: var(--color-white);
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+
+  white-space: nowrap;
+
+  opacity: 0;
+
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+}
+
+/*
+  Hover state
+*/
+
+.movie-card__link:hover::before {
+  opacity: 1;
+}
+
+.movie-card__link:hover::after {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/*
+  Slight image zoom
+*/
+
+.movie-card__link:hover .movie-card__image {
+  transform: scale(1.03);
+}
+
+/*
+  Keyboard accessibility
+*/
+
+.movie-card__link:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.movie-card__link:focus-visible::before {
+  opacity: 1;
+}
+
+.movie-card__link:focus-visible::after {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+/* =========================================================
+   MOVIE CARD INFORMATION
+   ========================================================= */
+
+.movie-card__info {
+  padding-top: var(--space-200);
+}
+
+.movie-card--trending .movie-card__info {
+  position: absolute;
+
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+
+  z-index: 3;
+
+  padding-top: 0;
+}
+
+.movie-card__metadata {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 6px;
+
+  color: var(--color-white);
+
+  font-size: 13px;
+  font-weight: 300;
+
+  opacity: 0.8;
+}
+
+.movie-card__metadata > * + *::before {
+  content: "•";
+
+  margin-right: 8px;
+}
+
+.movie-card__date,
+.movie-card__type,
+.movie-card__rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.movie-card__title {
+  color: var(--color-white);
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   BOOKMARK BUTTON
+   ========================================================= */
+
+.movie-card__bookmark {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(16, 20, 30, 0.65);
+
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.movie-card__bookmark:hover {
+  background-color: var(--color-white);
+
+  transform: scale(1.05);
+}
+
+.movie-card__bookmark:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+.movie-card__bookmark img {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  body {
+    gap: 24px;
+  }
+
   .navbar {
+    width: 80px;
+    max-width: 80px;
+
     padding: 24px 16px;
   }
 
@@ -390,152 +789,167 @@ button {
   .navbar__links {
     gap: 24px;
   }
-}
 
-/* =========================================================
-   Reduced Motion
-   ========================================================= */
+  .navbar__link--active::before {
+    left: -16px;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .navbar__link,
-  .navbar__icon,
-  .navbar__profile {
-    transition: none;
+  .movie-card--trending .movie-card__image {
+    width: 400px;
+    height: 220px;
   }
 }
 
-.movie-card {
-  position: relative;
+/* =========================================================
+   TABLET / MOBILE NAVBAR
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    max-width: none;
+    min-height: 72px;
+
+    padding: 16px 24px;
+
+    border-radius: 0 0 12px 12px;
+  }
+
+  .navbar__container {
+    flex-direction: row;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    gap: 0;
+  }
+
+  .navbar__links {
+    flex-direction: row;
+
+    gap: 24px;
+  }
+
+  .navbar__link--active::before {
+    left: 50%;
+    top: auto;
+    bottom: -16px;
+
+    width: 24px;
+    height: 3px;
+
+    border-radius: 3px;
+
+    transform: translateX(-50%);
+  }
+
+  .wrapper {
+    padding: 24px;
+  }
+
+  .movie-card--trending .movie-card__image {
+    width: 340px;
+    height: 200px;
+  }
+
+  .recommended__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-.movie-card__image {
-  display: block;
-  width: 100%;
-  height: auto;
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 64px;
+
+    padding: 12px 16px;
+  }
+
+  .navbar__links {
+    gap: 12px;
+  }
+
+  .navbar__link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar__icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .navbar__profile {
+    width: 32px;
+    height: 32px;
+  }
+
+  .wrapper {
+    padding: 20px 16px;
+  }
+
+  .trending__title {
+    font-size: 24px;
+  }
+
+  .recommended__title {
+    font-size: 20px;
+  }
+
+  .movie-card--trending .movie-card__image {
+    width: 280px;
+    height: 174px;
+  }
+
+  .recommended__list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended .movie-card__image {
+    height: 180px;
+  }
+
+  .movie-card__link::after {
+    width: 105px;
+    height: 44px;
+
+    font-size: 16px;
+  }
 }
 
-.movie-card__bookmark {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
-  background: none;
-  outline: none;
-  border: none;
-  background-color: #979797;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
 
-/* form */
-.search__form {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
 
-.search__icon {
-  position: absolute;
-  left: 0;
-  width: 24px;
-  height: 24px;
-  pointer-events: none;
-}
-
-.search__input {
-  width: 100%;
-  padding: 0 1rem 0 2.5rem;
-}
-
-/* wrapper */
-.wrapper {
-  padding-top: 2rem;
-}
-
-.wrapper,
-main {
-  flex-direction: column;
-}
-
-.search {
-  max-width: 385px;
-  width: 100%;
-}
-
-.search__input {
-  cursor: pointer;
-  background: none;
-  color: #ffffff;
-  outline: none;
-  border: none;
-  height: 32px;
-}
-
-.search__input::placeholder {
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Movie poster */
-.movie-card {
-  position: relative;
-  width: fit-content;
-}
-
-.movie-card__image {
-  display: block;
-  object-fit: cover;
-}
-
-/* Trending */
-.movie-card--trending .movie-card__image {
-  width: 470px;
-  height: 230px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Recommended */
-.recommended .movie-card__image {
-  width: 280px;
-  height: 174px;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-/* Bookmark */
-.movie-card__bookmark {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
-
-  width: 32px;
-  height: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: none;
-  border-radius: 50%;
-  background-color: #979797;
-}
-
-.movie-card__bookmark img {
-  width: 16px;
-  height: 16px;
-}
-
-h1,
-h2 {
-  font-weight: 400;
+  .navbar__link,
+  .navbar__icon,
+  .navbar__profile,
+  .movie-card__link::before,
+  .movie-card__link::after,
+  .movie-card__image,
+  .movie-card__bookmark {
+    transition: none;
+  }
 }
