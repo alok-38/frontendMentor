@@ -3,10 +3,7 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Bookmarks | Entertainment Hub</title>
 
@@ -15,26 +12,64 @@
       content="View your bookmarked movies and TV series."
     />
 
-    <meta name="theme-color" content="#10141e" />
+    <meta name="author" content="Entertainment Hub" />
+
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://example.com/bookmarked.html" />
 
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/favicon-32x32.png"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <meta name="theme-color" content="#10141e" />
+
+    <meta
+      property="og:title"
+      content="Bookmarks | Entertainment Hub"
+    />
+
+    <meta
+      property="og:description"
+      content="View your bookmarked movies and TV series."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:url" content="https://example.com/bookmarked.html" />
+
+    <meta
+      property="og:image"
+      content="https://example.com/assets/og-image.jpg"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Entertainment Hub bookmarked collection"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Bookmarks | Entertainment Hub"
+    />
+
+    <meta
+      name="twitter:description"
+      content="View your bookmarked movies and TV series."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://example.com/assets/og-image.jpg"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
     <link rel="stylesheet" href="styles/global.css" />
 
@@ -42,21 +77,14 @@
   </head>
 
   <body class="flex gap-400">
-
-    <!-- Primary navigation -->
     <nav
       class="navbar flex justify-between"
       id="main-navigation"
       aria-label="Main navigation"
     >
       <div class="navbar__container flex">
-
-        <!-- Logo -->
         <div class="navbar__logo">
-          <a
-            href="index.html"
-            aria-label="Entertainment Hub home"
-          >
+          <a href="index.html" aria-label="Entertainment Hub home">
             <img
               class="navbar__logo-image"
               src="assets/logo.svg"
@@ -67,9 +95,7 @@
           </a>
         </div>
 
-        <!-- Navigation -->
         <div class="navbar__links flex gap-400">
-
           <a
             class="navbar__link"
             href="index.html"
@@ -84,11 +110,7 @@
             />
           </a>
 
-          <a
-            class="navbar__link"
-            href="movies.html"
-            aria-label="Movies"
-          >
+          <a class="navbar__link" href="movies.html" aria-label="Movies">
             <img
               class="navbar__icon"
               src="assets/icon-nav-movies.svg"
@@ -98,11 +120,7 @@
             />
           </a>
 
-          <a
-            class="navbar__link"
-            href="tv-series.html"
-            aria-label="TV Series"
-          >
+          <a class="navbar__link" href="tv-series.html" aria-label="TV Series">
             <img
               class="navbar__icon"
               src="assets/icon-nav-tv-series.svg"
@@ -112,7 +130,6 @@
             />
           </a>
 
-          <!-- Bookmarks - ACTIVE -->
           <a
             class="navbar__link navbar__link--active"
             href="bookmarked.html"
@@ -127,16 +144,10 @@
               height="20"
             />
           </a>
-
         </div>
       </div>
 
-      <!-- Profile -->
-      <a
-        class="navbar__profile"
-        href="#"
-        aria-label="View your profile"
-      >
+      <a class="navbar__profile" href="/profile" aria-label="View your profile">
         <img
           class="navbar__avatar"
           src="assets/image-avatar.png"
@@ -147,18 +158,10 @@
       </a>
     </nav>
 
-    <!-- Page -->
     <div class="wrapper flex gap-400">
-
-      <!-- Search -->
       <header class="search" id="search">
         <form class="search__form flex gap-400" role="search">
-
-          <label
-            class="search__label"
-            for="search-input"
-            hidden
-          >
+          <label class="search__label" for="search-input" hidden>
             Search for bookmarked shows
           </label>
 
@@ -180,56 +183,118 @@
             autocomplete="off"
             enterkeyhint="search"
           />
-
         </form>
       </header>
 
       <main class="flex gap-400">
-
-        <!-- Bookmarked Movies -->
         <section
           class="recommended"
           aria-labelledby="bookmarked-movies-title"
         >
-          <h1
-            class="recommended__title"
-            id="bookmarked-movies-title"
-          >
+          <h1 class="recommended__title" id="bookmarked-movies-title">
             Bookmarked Movies
           </h1>
 
-          <div
-            class="recommended__list"
-            id="bookmarked-movies"
-            role="list"
-          >
-            <!-- Bookmarked movies generated here -->
+          <div class="recommended__list" id="bookmarked-movies" role="list">
+            <article class="movie-card" role="listitem">
+              <a
+                class="movie-card__link"
+                href="#"
+                aria-label="View movie details"
+              >
+                <img
+                  class="movie-card__image"
+                  src=""
+                  alt=""
+                  width="280"
+                  height="174"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="movie-card__info">
+                  <div class="movie-card__metadata">
+                    <time class="movie-card__date" datetime=""></time>
+
+                    <span class="movie-card__type" aria-label="Movie"></span>
+
+                    <span class="movie-card__rating"></span>
+                  </div>
+
+                  <h3 class="movie-card__title"></h3>
+                </div>
+              </a>
+
+              <button
+                class="movie-card__bookmark"
+                type="button"
+                aria-label="Remove movie from bookmarks"
+              >
+                <img
+                  src="assets/icon-nav-bookmark.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+              </button>
+            </article>
           </div>
         </section>
 
-        <!-- Bookmarked TV Series -->
         <section
           class="recommended"
           aria-labelledby="bookmarked-series-title"
         >
-          <h2
-            class="recommended__title"
-            id="bookmarked-series-title"
-          >
+          <h2 class="recommended__title" id="bookmarked-series-title">
             Bookmarked TV Series
           </h2>
 
-          <div
-            class="recommended__list"
-            id="bookmarked-tv-series"
-            role="list"
-          >
-            <!-- Bookmarked TV series generated here -->
+          <div class="recommended__list" id="bookmarked-tv-series" role="list">
+            <article class="movie-card" role="listitem">
+              <a
+                class="movie-card__link"
+                href="#"
+                aria-label="View TV series details"
+              >
+                <img
+                  class="movie-card__image"
+                  src=""
+                  alt=""
+                  width="280"
+                  height="174"
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <div class="movie-card__info">
+                  <div class="movie-card__metadata">
+                    <time class="movie-card__date" datetime=""></time>
+
+                    <span class="movie-card__type" aria-label="TV Series"></span>
+
+                    <span class="movie-card__rating"></span>
+                  </div>
+
+                  <h3 class="movie-card__title"></h3>
+                </div>
+              </a>
+
+              <button
+                class="movie-card__bookmark"
+                type="button"
+                aria-label="Remove TV series from bookmarks"
+              >
+                <img
+                  src="assets/icon-nav-bookmark.svg"
+                  alt=""
+                  width="16"
+                  height="16"
+                />
+              </button>
+            </article>
           </div>
         </section>
-
       </main>
     </div>
-
   </body>
 </html>
