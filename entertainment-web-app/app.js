@@ -1,12 +1,40 @@
 "use strict";
 
-const trendingList = document.querySelector(".trending__list");
-const recommendedList = document.querySelector(".recommended__list");
-const trendingSection = document.querySelector("#trending");
-const recommendedSection = document.querySelector("#recommended");
-const searchInput = document.querySelector("#search-input");
+/* =========================================================
+   GLOBAL STATE
+   ========================================================= */
 
 let movies = [];
+
+
+/* =========================================================
+   DOM REFERENCES
+   ========================================================= */
+
+const trendingList =
+  document.querySelector(".trending__list");
+
+const recommendedList =
+  document.querySelector(".recommended__list");
+
+const trendingSection =
+  document.querySelector("#trending");
+
+const recommendedSection =
+  document.querySelector("#recommended");
+
+const searchInput =
+  document.querySelector("#search-input");
+
+
+/* =========================================================
+   PAGE DETECTION
+   ========================================================= */
+
+const currentPage =
+  window.location.pathname.split("/").pop() ||
+  "index.html";
+
 
 /* =========================================================
    LOAD MOVIE DATA
@@ -14,7 +42,8 @@ let movies = [];
 
 async function loadMovies() {
   try {
-    const response = await fetch("./data.json");
+    const response =
+      await fetch("./data.json");
 
     if (!response.ok) {
       throw new Error(
@@ -22,11 +51,16 @@ async function loadMovies() {
       );
     }
 
-    movies = await response.json();
+    movies =
+      await response.json();
 
-    renderMovies(movies);
+    initializePage();
+
   } catch (error) {
-    console.error("Unable to load movie data:", error);
+    console.error(
+      "Unable to load movie data:",
+      error
+    );
 
     showDataError();
   }
@@ -34,20 +68,161 @@ async function loadMovies() {
 
 
 /* =========================================================
-   DATA ERROR
+   INITIALIZE PAGE
    ========================================================= */
 
-function showDataError() {
-  trendingList.innerHTML = `
-    <p class="data-message">
-      Unable to load movie data.
-    </p>
-  `;
+function initializePage() {
 
-  recommendedList.innerHTML = "";
+  switch (currentPage) {
 
-  trendingSection.hidden = false;
-  recommendedSection.hidden = true;
+    case "index.html":
+      initializeHomePage();
+      break;
+
+    case "movies.html":
+      initializeMoviesPage();
+      break;
+
+    case "tv-series.html":
+      initializeTvSeriesPage();
+      break;
+
+    case "bookmarked.html":
+      initializeBookmarkedPage();
+      break;
+
+    default:
+      initializeHomePage();
+  }
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+function initializeHomePage() {
+
+  if (!trendingList || !recommendedList) {
+    return;
+  }
+
+  renderMovies(movies);
+
+  initializeSearch();
+}
+
+
+/* =========================================================
+   MOVIES PAGE
+   ========================================================= */
+
+function initializeMoviesPage() {
+
+  const moviesPageList =
+    document.querySelector(
+      "#movies-list"
+    );
+
+  if (!moviesPageList) {
+    return;
+  }
+
+  const movieItems =
+    movies.filter(
+      (movie) =>
+        movie.category === "Movie"
+    );
+
+  renderPageCards(
+    moviesPageList,
+    movieItems
+  );
+
+  initializeSearch();
+}
+
+
+/* =========================================================
+   TV SERIES PAGE
+   ========================================================= */
+
+function initializeTvSeriesPage() {
+
+  const tvSeriesList =
+    document.querySelector(
+      "#tv-series-list"
+    );
+
+  if (!tvSeriesList) {
+    return;
+  }
+
+  const tvSeries =
+    movies.filter(
+      (movie) =>
+        movie.category === "TV Series"
+    );
+
+  renderPageCards(
+    tvSeriesList,
+    tvSeries
+  );
+
+  initializeSearch();
+}
+
+
+/* =========================================================
+   BOOKMARKED PAGE
+   ========================================================= */
+
+function initializeBookmarkedPage() {
+
+  const bookmarkedMoviesList =
+    document.querySelector(
+      "#bookmarked-movies"
+    );
+
+  const bookmarkedTvSeriesList =
+    document.querySelector(
+      "#bookmarked-tv-series"
+    );
+
+
+  const bookmarkedMovies =
+    movies.filter(
+      (movie) =>
+        movie.isBookmarked &&
+        movie.category === "Movie"
+    );
+
+
+  const bookmarkedTvSeries =
+    movies.filter(
+      (movie) =>
+        movie.isBookmarked &&
+        movie.category === "TV Series"
+    );
+
+
+  if (bookmarkedMoviesList) {
+    renderPageCards(
+      bookmarkedMoviesList,
+      bookmarkedMovies
+    );
+  }
+
+
+  if (bookmarkedTvSeriesList) {
+    renderPageCards(
+      bookmarkedTvSeriesList,
+      bookmarkedTvSeries
+    );
+  }
+
+
+  initializeSearch();
 }
 
 
@@ -55,27 +230,25 @@ function showDataError() {
    CREATE MOVIE CARD
    ========================================================= */
 
-function createMovieCard(movie, index, isTrending = false) {
-  const card = document.createElement("article");
+function createMovieCard(
+  movie,
+  index,
+  isTrending = false
+) {
 
-  /*
-   * Add the appropriate card class.
-   */
-
-  card.className = isTrending
-    ? "movie-card movie-card--trending"
-    : "movie-card";
+  const card =
+    document.createElement("article");
 
 
-  /*
-   * Stagger the entrance animation.
-   *
-   * 0    → 0ms
-   * 1    → 80ms
-   * 2    → 160ms
-   * 3    → 240ms
-   * etc.
-   */
+  /* Card class */
+
+  card.className =
+    isTrending
+      ? "movie-card movie-card--trending"
+      : "movie-card";
+
+
+  /* Animation delay */
 
   card.style.setProperty(
     "--card-delay",
@@ -83,79 +256,71 @@ function createMovieCard(movie, index, isTrending = false) {
   );
 
 
-  /*
-   * Choose the correct image set.
-   *
-   * Trending:
-   * thumbnail.trending
-   *
-   * Regular:
-   * thumbnail.regular
-   */
+  /* Image */
 
-  const image = isTrending
-    ? movie.thumbnail.trending
-    : movie.thumbnail.regular;
+  const image =
+    isTrending
+      ? movie.thumbnail.trending
+      : movie.thumbnail.regular;
 
 
-  /*
-   * Trending has small + large.
-   *
-   * Regular has small + medium + large.
-   *
-   * The <picture> element lets the browser
-   * select the appropriate image.
-   */
+  /* Image markup */
 
-  const imageMarkup = isTrending
-    ? `
-      <picture>
-        <source
-          media="(min-width: 1024px)"
-          srcset="${image.large}"
-        />
+  const imageMarkup =
+    isTrending
 
-        <img
-          class="movie-card__image"
-          src="${image.small}"
-          alt="${movie.title}"
-          width="470"
-          height="230"
-          loading="${index < 2 ? "eager" : "lazy"}"
-          decoding="async"
-        />
-      </picture>
-    `
-    : `
-      <picture>
-        <source
-          media="(min-width: 1024px)"
-          srcset="${image.large}"
-        />
+      ? `
+        <picture>
 
-        <source
-          media="(min-width: 768px)"
-          srcset="${image.medium}"
-        />
+          <source
+            media="(min-width: 1024px)"
+            srcset="${image.large}"
+          />
 
-        <img
-          class="movie-card__image"
-          src="${image.small}"
-          alt="${movie.title}"
-          width="280"
-          height="174"
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
-    `;
+          <img
+            class="movie-card__image"
+            src="${image.small}"
+            alt="${movie.title}"
+            width="470"
+            height="230"
+            loading="${index < 2 ? "eager" : "lazy"}"
+            decoding="async"
+          />
+
+        </picture>
+      `
+
+      : `
+        <picture>
+
+          <source
+            media="(min-width: 1024px)"
+            srcset="${image.large}"
+          />
+
+          <source
+            media="(min-width: 768px)"
+            srcset="${image.medium}"
+          />
+
+          <img
+            class="movie-card__image"
+            src="${image.small}"
+            alt="${movie.title}"
+            width="280"
+            height="174"
+            loading="lazy"
+            decoding="async"
+          />
+
+        </picture>
+      `;
 
 
-  /*
-   * Create the card.
-   */
+  /* Card HTML */
 
   card.innerHTML = `
+
     <a
       class="movie-card__link"
       href="#"
@@ -193,6 +358,7 @@ function createMovieCard(movie, index, isTrending = false) {
 
     </a>
 
+
     <button
       class="movie-card__bookmark ${
         movie.isBookmarked
@@ -207,13 +373,16 @@ function createMovieCard(movie, index, isTrending = false) {
       }"
       aria-pressed="${movie.isBookmarked}"
     >
+
       <img
         src="assets/icon-nav-bookmark.svg"
         alt=""
         width="16"
         height="16"
       />
+
     </button>
+
   `;
 
 
@@ -222,15 +391,23 @@ function createMovieCard(movie, index, isTrending = false) {
      ======================================================= */
 
   const cardLink =
-    card.querySelector(".movie-card__link");
-
-  cardLink.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    console.log(
-      `Selected: ${movie.title}`
+    card.querySelector(
+      ".movie-card__link"
     );
-  });
+
+
+  cardLink.addEventListener(
+    "click",
+    (event) => {
+
+      event.preventDefault();
+
+      console.log(
+        `Selected: ${movie.title}`
+      );
+
+    }
+  );
 
 
   /* =======================================================
@@ -238,11 +415,15 @@ function createMovieCard(movie, index, isTrending = false) {
      ======================================================= */
 
   const bookmarkButton =
-    card.querySelector(".movie-card__bookmark");
+    card.querySelector(
+      ".movie-card__bookmark"
+    );
+
 
   bookmarkButton.addEventListener(
     "click",
     (event) => {
+
       event.preventDefault();
       event.stopPropagation();
 
@@ -250,6 +431,7 @@ function createMovieCard(movie, index, isTrending = false) {
         movie,
         bookmarkButton
       );
+
     }
   );
 
@@ -262,21 +444,16 @@ function createMovieCard(movie, index, isTrending = false) {
    TOGGLE BOOKMARK
    ========================================================= */
 
-function toggleBookmark(movie, button) {
-  /*
-   * Update the actual data object.
-   *
-   * This means the bookmark state survives
-   * a re-render caused by searching.
-   */
+function toggleBookmark(
+  movie,
+  button
+) {
 
   movie.isBookmarked =
     !movie.isBookmarked;
 
 
-  /*
-   * Update button appearance.
-   */
+  /* Update button */
 
   button.classList.toggle(
     "is-bookmarked",
@@ -284,9 +461,7 @@ function toggleBookmark(movie, button) {
   );
 
 
-  /*
-   * Update accessibility state.
-   */
+  /* Accessibility */
 
   button.setAttribute(
     "aria-pressed",
@@ -300,6 +475,20 @@ function toggleBookmark(movie, button) {
       ? `Remove ${movie.title} from bookmarks`
       : `Add ${movie.title} to bookmarks`
   );
+
+
+  /*
+   * If we're on the bookmarks page,
+   * remove the card immediately when
+   * the user unbookmarks it.
+   */
+
+  if (
+    currentPage ===
+    "bookmarked.html"
+  ) {
+    initializeBookmarkedPage();
+  }
 }
 
 
@@ -307,18 +496,33 @@ function toggleBookmark(movie, button) {
    RENDER TRENDING
    ========================================================= */
 
-function renderTrending(trendingMovies) {
+function renderTrending(
+  trendingMovies
+) {
+
+  if (!trendingList) {
+    return;
+  }
+
+
   trendingList.innerHTML = "";
+
 
   trendingMovies.forEach(
     (movie, index) => {
-      const card = createMovieCard(
-        movie,
-        index,
-        true
+
+      const card =
+        createMovieCard(
+          movie,
+          index,
+          true
+        );
+
+
+      trendingList.appendChild(
+        card
       );
 
-      trendingList.appendChild(card);
     }
   );
 }
@@ -328,63 +532,126 @@ function renderTrending(trendingMovies) {
    RENDER RECOMMENDED
    ========================================================= */
 
-function renderRecommended(recommendedMovies) {
+function renderRecommended(
+  recommendedMovies
+) {
+
+  if (!recommendedList) {
+    return;
+  }
+
+
   recommendedList.innerHTML = "";
+
 
   recommendedMovies.forEach(
     (movie, index) => {
-      const card = createMovieCard(
-        movie,
-        index,
-        false
+
+      const card =
+        createMovieCard(
+          movie,
+          index,
+          false
+        );
+
+
+      recommendedList.appendChild(
+        card
       );
 
-      recommendedList.appendChild(card);
     }
   );
 }
 
 
 /* =========================================================
-   RENDER MOVIES
+   RENDER HOME PAGE
    ========================================================= */
 
-function renderMovies(movieList) {
-  /*
-   * Separate the data according to
-   * isTrending from your JSON.
-   */
+function renderMovies(
+  movieList
+) {
 
   const trendingMovies =
     movieList.filter(
-      (movie) => movie.isTrending
+      (movie) =>
+        movie.isTrending
     );
+
 
   const recommendedMovies =
     movieList.filter(
-      (movie) => !movie.isTrending
+      (movie) =>
+        !movie.isTrending
     );
 
 
-  /*
-   * Render both sections.
-   */
-
-  renderTrending(trendingMovies);
-
-  renderRecommended(recommendedMovies);
+  renderTrending(
+    trendingMovies
+  );
 
 
-  /*
-   * Hide sections when they have
-   * no matching results.
-   */
+  renderRecommended(
+    recommendedMovies
+  );
 
-  trendingSection.hidden =
-    trendingMovies.length === 0;
 
-  recommendedSection.hidden =
-    recommendedMovies.length === 0;
+  if (trendingSection) {
+
+    trendingSection.hidden =
+      trendingMovies.length === 0;
+
+  }
+
+
+  if (recommendedSection) {
+
+    recommendedSection.hidden =
+      recommendedMovies.length === 0;
+
+  }
+}
+
+
+/* =========================================================
+   RENDER GENERIC PAGE CARDS
+   ========================================================= */
+
+function renderPageCards(
+  list,
+  movieList
+) {
+
+  list.innerHTML = "";
+
+
+  if (movieList.length === 0) {
+
+    list.innerHTML = `
+      <p class="data-message">
+        No results found.
+      </p>
+    `;
+
+    return;
+  }
+
+
+  movieList.forEach(
+    (movie, index) => {
+
+      const card =
+        createMovieCard(
+          movie,
+          index,
+          false
+        );
+
+
+      list.appendChild(card);
+
+    }
+  );
 }
 
 
@@ -392,54 +659,266 @@ function renderMovies(movieList) {
    SEARCH
    ========================================================= */
 
-function searchMovies(query) {
+function searchMovies(
+  query
+) {
+
   const searchTerm =
-    query.trim().toLowerCase();
+    query
+      .trim()
+      .toLowerCase();
 
 
   /*
-   * Empty search:
-   * restore the complete dataset.
+   * HOME
    */
 
-  if (!searchTerm) {
-    renderMovies(movies);
+  if (
+    currentPage ===
+    "index.html"
+  ) {
+
+    if (!searchTerm) {
+
+      renderMovies(movies);
+
+      return;
+    }
+
+
+    const results =
+      filterMovies(
+        movies,
+        searchTerm
+      );
+
+
+    renderMovies(results);
+
     return;
   }
 
 
   /*
-   * Search across:
-   *
-   * - title
-   * - category
-   * - year
-   * - rating
+   * MOVIES
    */
 
-  const results = movies.filter(
+  if (
+    currentPage ===
+    "movies.html"
+  ) {
+
+    const list =
+      document.querySelector(
+        "#movies-list"
+      );
+
+
+    if (!list) {
+      return;
+    }
+
+
+    const movieItems =
+      movies.filter(
+        (movie) =>
+          movie.category === "Movie"
+      );
+
+
+    const results =
+      searchTerm
+        ? filterMovies(
+            movieItems,
+            searchTerm
+          )
+        : movieItems;
+
+
+    renderPageCards(
+      list,
+      results
+    );
+
+    return;
+  }
+
+
+  /*
+   * TV SERIES
+   */
+
+  if (
+    currentPage ===
+    "tv-series.html"
+  ) {
+
+    const list =
+      document.querySelector(
+        "#tv-series-list"
+      );
+
+
+    if (!list) {
+      return;
+    }
+
+
+    const tvSeries =
+      movies.filter(
+        (movie) =>
+          movie.category === "TV Series"
+      );
+
+
+    const results =
+      searchTerm
+        ? filterMovies(
+            tvSeries,
+            searchTerm
+          )
+        : tvSeries;
+
+
+    renderPageCards(
+      list,
+      results
+    );
+
+    return;
+  }
+
+
+  /*
+   * BOOKMARKS
+   */
+
+  if (
+    currentPage ===
+    "bookmarked.html"
+  ) {
+
+    searchBookmarked(
+      searchTerm
+    );
+
+  }
+}
+
+
+/* =========================================================
+   FILTER MOVIES
+   ========================================================= */
+
+function filterMovies(
+  movieList,
+  searchTerm
+) {
+
+  return movieList.filter(
     (movie) => {
+
       return (
+
         movie.title
           .toLowerCase()
-          .includes(searchTerm) ||
+          .includes(searchTerm)
+
+        ||
 
         movie.category
           .toLowerCase()
-          .includes(searchTerm) ||
+          .includes(searchTerm)
+
+        ||
 
         String(movie.year)
-          .includes(searchTerm) ||
+          .includes(searchTerm)
+
+        ||
 
         movie.rating
           .toLowerCase()
           .includes(searchTerm)
+
       );
+
     }
   );
+}
 
 
-  renderMovies(results);
+/* =========================================================
+   SEARCH BOOKMARKS
+   ========================================================= */
+
+function searchBookmarked(
+  searchTerm
+) {
+
+  const moviesList =
+    document.querySelector(
+      "#bookmarked-movies"
+    );
+
+  const tvSeriesList =
+    document.querySelector(
+      "#bookmarked-tv-series"
+    );
+
+
+  let bookmarkedMovies =
+    movies.filter(
+      (movie) =>
+        movie.isBookmarked &&
+        movie.category === "Movie"
+    );
+
+
+  let bookmarkedTvSeries =
+    movies.filter(
+      (movie) =>
+        movie.isBookmarked &&
+        movie.category === "TV Series"
+    );
+
+
+  if (searchTerm) {
+
+    bookmarkedMovies =
+      filterMovies(
+        bookmarkedMovies,
+        searchTerm
+      );
+
+
+    bookmarkedTvSeries =
+      filterMovies(
+        bookmarkedTvSeries,
+        searchTerm
+      );
+
+  }
+
+
+  if (moviesList) {
+
+    renderPageCards(
+      moviesList,
+      bookmarkedMovies
+    );
+
+  }
+
+
+  if (tvSeriesList) {
+
+    renderPageCards(
+      tvSeriesList,
+      bookmarkedTvSeries
+    );
+
+  }
 }
 
 
@@ -447,14 +926,82 @@ function searchMovies(query) {
    SEARCH EVENT
    ========================================================= */
 
-searchInput.addEventListener(
-  "input",
-  (event) => {
-    searchMovies(
-      event.target.value
-    );
+function initializeSearch() {
+
+  if (!searchInput) {
+    return;
   }
-);
+
+
+  searchInput.addEventListener(
+    "input",
+    (event) => {
+
+      searchMovies(
+        event.target.value
+      );
+
+    }
+  );
+}
+
+
+/* =========================================================
+   DATA ERROR
+   ========================================================= */
+
+function showDataError() {
+
+  if (trendingList) {
+
+    trendingList.innerHTML = `
+      <p class="data-message">
+        Unable to load movie data.
+      </p>
+    `;
+
+  }
+
+
+  if (recommendedList) {
+
+    recommendedList.innerHTML = "";
+
+  }
+
+
+  if (trendingSection) {
+
+    trendingSection.hidden = false;
+
+  }
+
+
+  if (recommendedSection) {
+
+    recommendedSection.hidden = true;
+
+  }
+
+
+  const pageLists =
+    document.querySelectorAll(
+      ".recommended__list"
+    );
+
+
+  pageLists.forEach(
+    (list) => {
+
+      list.innerHTML = `
+        <p class="data-message">
+          Unable to load movie data.
+        </p>
+      `;
+
+    }
+  );
+}
 
 
 /* =========================================================

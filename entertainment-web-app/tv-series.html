@@ -1,20 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Entertainment web app</title>
-</head>
-<body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  Search for TV series
-  
-  TV Series
+    <title>TV Series | Entertainment Hub</title>
 
-  <!-- Display all TV series -->
-  
-</body>
+    <meta
+      name="description"
+      content="Browse TV series on Entertainment Hub."
+    />
+
+    <meta name="theme-color" content="#10141e" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <script src="app.js" defer></script>
+  </head>
+
+  <body class="flex gap-400">
+
+    <!-- Primary navigation -->
+    <nav
+      class="navbar flex justify-between"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
+      <div class="navbar__container flex">
+
+        <!-- Logo -->
+        <div class="navbar__logo">
+          <a
+            href="index.html"
+            aria-label="Entertainment Hub home"
+          >
+            <img
+              class="navbar__logo-image"
+              src="assets/logo.svg"
+              alt="Entertainment Hub"
+              width="32"
+              height="26"
+            />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navbar__links flex gap-400">
+
+          <a
+            class="navbar__link"
+            href="index.html"
+            aria-label="Home"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-home.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a
+            class="navbar__link"
+            href="movies.html"
+            aria-label="Movies"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-movies.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <!-- TV Series - ACTIVE -->
+          <a
+            class="navbar__link navbar__link--active"
+            href="tv-series.html"
+            aria-label="TV Series"
+            aria-current="page"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-tv-series.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a
+            class="navbar__link"
+            href="bookmarked.html"
+            aria-label="Bookmarked movies and TV series"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-bookmark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <a
+        class="navbar__profile"
+        href="#"
+        aria-label="View your profile"
+      >
+        <img
+          class="navbar__avatar"
+          src="assets/image-avatar.png"
+          alt="Profile"
+          width="40"
+          height="40"
+        />
+      </a>
+    </nav>
+
+    <!-- Page -->
+    <div class="wrapper flex gap-400">
+
+      <!-- Search -->
+      <header class="search" id="search">
+        <form class="search__form flex gap-400" role="search">
+          <label
+            class="search__label"
+            for="search-input"
+            hidden
+          >
+            Search for TV series
+          </label>
+
+          <img
+            class="search__icon"
+            src="assets/icon-search.svg"
+            alt=""
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+
+          <input
+            class="search__input"
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Search for TV series"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+        </form>
+      </header>
+
+      <main class="flex gap-400">
+
+        <section
+          class="recommended"
+          aria-labelledby="tv-series-title"
+        >
+          <h1
+            class="recommended__title"
+            id="tv-series-title"
+          >
+            TV Series
+          </h1>
+
+          <div class="recommended__list" role="list">
+
+            <!-- TV series cards will be generated here -->
+
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </body>
 </html>

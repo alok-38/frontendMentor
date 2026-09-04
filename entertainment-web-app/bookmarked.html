@@ -1,24 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Entertainment web app</title>
-</head>
-<body>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-  Search for bookmarked shows
-  
-  Bookmarked Movies
+    <title>Bookmarks | Entertainment Hub</title>
 
-  <!-- Display bookmarked movies -->
+    <meta
+      name="description"
+      content="View your bookmarked movies and TV series."
+    />
 
-  Bookmarked TV Series
+    <meta name="theme-color" content="#10141e" />
 
-  <!-- Display bookmarked TV series -->
-  
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/global.css" />
+
+    <script src="app.js" defer></script>
+  </head>
+
+  <body class="flex gap-400">
+
+    <!-- Primary navigation -->
+    <nav
+      class="navbar flex justify-between"
+      id="main-navigation"
+      aria-label="Main navigation"
+    >
+      <div class="navbar__container flex">
+
+        <!-- Logo -->
+        <div class="navbar__logo">
+          <a
+            href="index.html"
+            aria-label="Entertainment Hub home"
+          >
+            <img
+              class="navbar__logo-image"
+              src="assets/logo.svg"
+              alt="Entertainment Hub"
+              width="32"
+              height="26"
+            />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navbar__links flex gap-400">
+
+          <a
+            class="navbar__link"
+            href="index.html"
+            aria-label="Home"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-home.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a
+            class="navbar__link"
+            href="movies.html"
+            aria-label="Movies"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-movies.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <a
+            class="navbar__link"
+            href="tv-series.html"
+            aria-label="TV Series"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-tv-series.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+          <!-- Bookmarks - ACTIVE -->
+          <a
+            class="navbar__link navbar__link--active"
+            href="bookmarked.html"
+            aria-label="Bookmarked movies and TV series"
+            aria-current="page"
+          >
+            <img
+              class="navbar__icon"
+              src="assets/icon-nav-bookmark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <a
+        class="navbar__profile"
+        href="#"
+        aria-label="View your profile"
+      >
+        <img
+          class="navbar__avatar"
+          src="assets/image-avatar.png"
+          alt="Profile"
+          width="40"
+          height="40"
+        />
+      </a>
+    </nav>
+
+    <!-- Page -->
+    <div class="wrapper flex gap-400">
+
+      <!-- Search -->
+      <header class="search" id="search">
+        <form class="search__form flex gap-400" role="search">
+
+          <label
+            class="search__label"
+            for="search-input"
+            hidden
+          >
+            Search for bookmarked shows
+          </label>
+
+          <img
+            class="search__icon"
+            src="assets/icon-search.svg"
+            alt=""
+            width="24"
+            height="24"
+            aria-hidden="true"
+          />
+
+          <input
+            class="search__input"
+            id="search-input"
+            name="query"
+            type="search"
+            placeholder="Search for bookmarked shows"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+
+        </form>
+      </header>
+
+      <main class="flex gap-400">
+
+        <!-- Bookmarked Movies -->
+        <section
+          class="recommended"
+          aria-labelledby="bookmarked-movies-title"
+        >
+          <h1
+            class="recommended__title"
+            id="bookmarked-movies-title"
+          >
+            Bookmarked Movies
+          </h1>
+
+          <div
+            class="recommended__list"
+            id="bookmarked-movies"
+            role="list"
+          >
+            <!-- Bookmarked movies generated here -->
+          </div>
+        </section>
+
+        <!-- Bookmarked TV Series -->
+        <section
+          class="recommended"
+          aria-labelledby="bookmarked-series-title"
+        >
+          <h2
+            class="recommended__title"
+            id="bookmarked-series-title"
+          >
+            Bookmarked TV Series
+          </h2>
+
+          <div
+            class="recommended__list"
+            id="bookmarked-tv-series"
+            role="list"
+          >
+            <!-- Bookmarked TV series generated here -->
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </body>
 </html>
