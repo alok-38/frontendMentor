@@ -1,0 +1,781 @@
+/* =========================================================
+   FLUID DESIGN SYSTEM
+   Colors · Typography · Spacing · Responsive primitives
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  /* -------------------------------------------------------
+     Colors
+     ------------------------------------------------------- */
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --grey-600: #3d6666;
+  --grey-550: #547878;
+  --grey-500: #5e7a7d;
+  --grey-400: #7f9d9f;
+  --grey-300: #9ebbbd;
+  --grey-200: #c5e4e7;
+  --grey-50: #f3f9fa;
+
+  --green-900: #00474b;
+  --green-800: #085c61;
+  --green-750: #0d686d;
+  --green-400: #26c2ae;
+  --green-200: #9fe8df;
+
+  --orange-400: #e17052;
+
+  /* -------------------------------------------------------
+     Semantic colors
+     ------------------------------------------------------- */
+
+  --color-background: var(--grey-50);
+  --color-surface: var(--white);
+  --color-surface-alt: var(--grey-200);
+
+  --color-text: var(--green-900);
+  --color-text-secondary: var(--grey-500);
+  --color-text-muted: var(--grey-400);
+
+  --color-border: var(--grey-300);
+
+  --color-primary: var(--green-400);
+  --color-primary-hover: var(--green-750);
+  --color-primary-active: var(--green-800);
+  --color-primary-text: var(--green-900);
+
+  --color-success: var(--green-400);
+  --color-error: var(--orange-400);
+
+  /* -------------------------------------------------------
+     Typography
+     ------------------------------------------------------- */
+
+  --font-family:
+    "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /*
+   * Fluid typography
+   *
+   * Desktop values match the supplied specification.
+   * Smaller screens scale down automatically.
+   */
+
+  --text-1: clamp(2rem, 1.25rem + 2.5vw, 3rem);
+  --text-2: clamp(1.75rem, 1.15rem + 1.5vw, 2rem);
+  --text-3: clamp(1.375rem, 1rem + 0.75vw, 1.5rem);
+  --text-4: clamp(1.125rem, 0.95rem + 0.4vw, 1.25rem);
+  --text-5: 1rem;
+  --text-6: 0.8125rem;
+
+  /* Line heights */
+
+  --line-height-1: 71px;
+  --line-height-2: 47px;
+  --line-height-3: 36px;
+  --line-height-4: 30px;
+  --line-height-5: 24px;
+  --line-height-6: 19px;
+
+  /* Letter spacing */
+
+  --letter-spacing-1: -1px;
+  --letter-spacing-2: -0.67px;
+  --letter-spacing-3: 0;
+  --letter-spacing-4: 0;
+  --letter-spacing-5: 0;
+  --letter-spacing-6: 0;
+
+  /* -------------------------------------------------------
+     Spacing
+     ------------------------------------------------------- */
+
+  --spacing-0: 0px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-600: 48px;
+  --spacing-1000: 80px;
+  --spacing-1200: 96px;
+  --spacing-1500: 120px;
+  --spacing-1600: 128px;
+
+  /* -------------------------------------------------------
+     Fluid layout tokens
+     ------------------------------------------------------- */
+
+  --container-max-width: 1200px;
+
+  --container-padding: clamp(var(--spacing-200), 4vw, var(--spacing-1000));
+
+  --section-padding: clamp(var(--spacing-600), 8vw, var(--spacing-1500));
+
+  /* -------------------------------------------------------
+     Radius
+     ------------------------------------------------------- */
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* -------------------------------------------------------
+     Borders
+     ------------------------------------------------------- */
+
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+
+  /* -------------------------------------------------------
+     Shadows
+     ------------------------------------------------------- */
+
+  --shadow-sm: 0 2px 8px rgb(0 71 75 / 8%);
+
+  --shadow-md: 0 8px 24px rgb(0 71 75 / 12%);
+
+  /* -------------------------------------------------------
+     Motion
+     ------------------------------------------------------- */
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* =========================================================
+   2. RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  max-width: 70ch;
+}
+
+/* =========================================================
+   3. TYPOGRAPHY
+   ========================================================= */
+
+.text-1 {
+  font-family: var(--font-family);
+  font-size: var(--text-1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-spacing-1);
+}
+
+.text-2 {
+  font-family: var(--font-family);
+  font-size: var(--text-2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-2);
+  letter-spacing: var(--letter-spacing-2);
+}
+
+.text-3 {
+  font-family: var(--font-family);
+  font-size: var(--text-3);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-3);
+  letter-spacing: var(--letter-spacing-3);
+}
+
+.text-4 {
+  font-family: var(--font-family);
+  font-size: var(--text-4);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-4);
+  letter-spacing: var(--letter-spacing-4);
+}
+
+.text-5 {
+  font-family: var(--font-family);
+  font-size: var(--text-5);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-5);
+  letter-spacing: var(--letter-spacing-5);
+}
+
+.text-6 {
+  font-family: var(--font-family);
+  font-size: var(--text-6);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-6);
+  letter-spacing: var(--letter-spacing-6);
+}
+
+/* Heading aliases */
+
+h1 {
+  font-size: var(--text-1);
+  line-height: var(--line-height-1);
+  letter-spacing: var(--letter-spacing-1);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--text-2);
+  line-height: var(--line-height-2);
+  letter-spacing: var(--letter-spacing-2);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-size: var(--text-3);
+  line-height: var(--line-height-3);
+  letter-spacing: var(--letter-spacing-3);
+  font-weight: var(--font-weight-bold);
+}
+
+h4 {
+  font-size: var(--text-4);
+  line-height: var(--line-height-4);
+  letter-spacing: var(--letter-spacing-4);
+  font-weight: var(--font-weight-bold);
+}
+
+/* =========================================================
+   4. LAYOUT
+   ========================================================= */
+
+.container {
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-max-width)
+  );
+
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+/* Fluid grid */
+
+.grid {
+  display: grid;
+  gap: clamp(var(--spacing-200), 3vw, var(--spacing-400));
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+/* Flex cluster */
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-200);
+}
+
+/* Vertical stack */
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-100 {
+  gap: var(--spacing-100);
+}
+
+.stack-200 {
+  gap: var(--spacing-200);
+}
+
+.stack-300 {
+  gap: var(--spacing-300);
+}
+
+.stack-400 {
+  gap: var(--spacing-400);
+}
+
+.stack-600 {
+  gap: var(--spacing-600);
+}
+
+/* =========================================================
+   5. SURFACES
+   ========================================================= */
+
+.surface {
+  background: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.surface--dark {
+  background: var(--green-900);
+  color: var(--white);
+  border-color: transparent;
+}
+
+.surface--primary {
+  background: var(--green-400);
+  color: var(--green-900);
+  border-color: transparent;
+}
+
+/* =========================================================
+   6. BUTTONS
+   ========================================================= */
+
+.btn {
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--spacing-100);
+
+  padding: var(--spacing-100) var(--spacing-300);
+
+  border: var(--border-width-medium) solid transparent;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+
+  font-size: var(--text-5);
+  font-weight: var(--font-weight-bold);
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--duration-normal) var(--ease-standard),
+    color var(--duration-normal) var(--ease-standard),
+    border-color var(--duration-normal) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.btn:hover {
+  background: var(--green-200);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Secondary */
+
+.btn--secondary {
+  background: transparent;
+  border-color: var(--green-800);
+  color: var(--green-800);
+}
+
+.btn--secondary:hover {
+  background: var(--green-800);
+  color: var(--white);
+}
+
+/* Dark */
+
+.btn--dark {
+  background: var(--green-900);
+  color: var(--white);
+}
+
+.btn--dark:hover {
+  background: var(--green-750);
+}
+
+/* Danger */
+
+.btn--danger {
+  background: var(--orange-400);
+  color: var(--white);
+}
+
+/* Small */
+
+.btn--small {
+  min-height: 40px;
+  padding-inline: var(--spacing-200);
+}
+
+/* =========================================================
+   7. FORM ELEMENTS
+   ========================================================= */
+
+.field {
+  display: grid;
+  gap: var(--spacing-100);
+}
+
+.label {
+  font-size: var(--text-6);
+  font-weight: var(--font-weight-bold);
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  min-height: 48px;
+
+  padding: var(--spacing-100) var(--spacing-200);
+
+  border: var(--border-width-medium) solid var(--color-border);
+
+  border-radius: var(--radius-sm);
+
+  background: var(--white);
+  color: var(--color-text);
+
+  transition:
+    border-color var(--duration-normal) var(--ease-standard),
+    box-shadow var(--duration-normal) var(--ease-standard);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--grey-400);
+}
+
+.input:hover,
+.select:hover,
+.textarea:hover {
+  border-color: var(--grey-500);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: var(--green-400);
+
+  box-shadow: 0 0 0 3px rgb(38 194 174 / 18%);
+
+  outline: none;
+}
+
+/* =========================================================
+   8. BADGES
+   ========================================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 28px;
+
+  padding-inline: var(--spacing-100);
+
+  border-radius: var(--radius-full);
+
+  background: var(--green-200);
+  color: var(--green-900);
+
+  font-size: var(--text-6);
+  font-weight: var(--font-weight-bold);
+}
+
+.badge--dark {
+  background: var(--green-900);
+  color: var(--white);
+}
+
+.badge--error {
+  background: var(--orange-400);
+  color: var(--white);
+}
+
+/* =========================================================
+   9. DIVIDERS
+   ========================================================= */
+
+.divider {
+  width: 100%;
+  height: 1px;
+
+  margin-block: var(--spacing-400);
+
+  border: 0;
+  background: var(--color-border);
+}
+
+/* =========================================================
+   10. SPACING UTILITIES
+   ========================================================= */
+
+.p-0 {
+  padding: var(--spacing-0);
+}
+.p-100 {
+  padding: var(--spacing-100);
+}
+.p-200 {
+  padding: var(--spacing-200);
+}
+.p-300 {
+  padding: var(--spacing-300);
+}
+.p-400 {
+  padding: var(--spacing-400);
+}
+.p-600 {
+  padding: var(--spacing-600);
+}
+.p-1000 {
+  padding: var(--spacing-1000);
+}
+.p-1200 {
+  padding: var(--spacing-1200);
+}
+.p-1500 {
+  padding: var(--spacing-1500);
+}
+.p-1600 {
+  padding: var(--spacing-1600);
+}
+
+.px-100 {
+  padding-inline: var(--spacing-100);
+}
+.px-200 {
+  padding-inline: var(--spacing-200);
+}
+.px-300 {
+  padding-inline: var(--spacing-300);
+}
+.px-400 {
+  padding-inline: var(--spacing-400);
+}
+.px-600 {
+  padding-inline: var(--spacing-600);
+}
+
+.py-100 {
+  padding-block: var(--spacing-100);
+}
+.py-200 {
+  padding-block: var(--spacing-200);
+}
+.py-300 {
+  padding-block: var(--spacing-300);
+}
+.py-400 {
+  padding-block: var(--spacing-400);
+}
+.py-600 {
+  padding-block: var(--spacing-600);
+}
+.py-1000 {
+  padding-block: var(--spacing-1000);
+}
+.py-1200 {
+  padding-block: var(--spacing-1200);
+}
+
+/* =========================================================
+   11. GAP UTILITIES
+   ========================================================= */
+
+.gap-100 {
+  gap: var(--spacing-100);
+}
+.gap-200 {
+  gap: var(--spacing-200);
+}
+.gap-300 {
+  gap: var(--spacing-300);
+}
+.gap-400 {
+  gap: var(--spacing-400);
+}
+.gap-600 {
+  gap: var(--spacing-600);
+}
+.gap-1000 {
+  gap: var(--spacing-1000);
+}
+
+/* =========================================================
+   12. WIDTH UTILITIES
+   ========================================================= */
+
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.max-content {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
+
+/* =========================================================
+   13. ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+  outline: 3px solid var(--green-400);
+
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   14. RESPONSIVE BEHAVIOR
+   ========================================================= */
+
+/*
+ * Mobile:
+ * Components naturally become full-width.
+ */
+
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
+  }
+
+  .cluster > .btn {
+    flex: 1 1 100%;
+  }
+
+  .surface {
+    border-radius: var(--radius-md);
+  }
+}
+
+/*
+ * Tablet / desktop:
+ */
+
+@media (min-width: 768px) {
+  .cluster > .btn {
+    width: auto;
+  }
+}
+
+/* =========================================================
+   15. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--grey-200);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  max-width: var(--container-max-width);
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+/* Footer */
+.site-footer {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.site-footer a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
