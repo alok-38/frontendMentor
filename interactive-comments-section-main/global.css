@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 /* =========================================================
    DESIGN TOKENS
    ========================================================= */
@@ -55,16 +57,13 @@
      Spacing
      ------------------------- */
 
-  --spacing-100: 0.5rem; /* 8px */
-  --spacing-200: 1rem; /* 16px */
-  --spacing-300: 1.5rem; /* 24px */
-  --spacing-500: 2.5rem; /* 40px */
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-500: 2.5rem;
 
   /*
-   * Fluid layout spacing.
-   *
-   * These allow gaps/padding to grow
-   * between mobile and desktop.
+   * Fluid layout spacing
    */
   --space-fluid-xs: clamp(0.5rem, 1vw, 1rem);
   --space-fluid-sm: clamp(1rem, 2vw, 1.5rem);
@@ -84,31 +83,6 @@
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
-}
-
-/* =========================================================
-   FONT FACE
-   ========================================================= */
-
-/*
- * Replace the paths with the actual Rubik files
- * in your project.
- */
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/fonts/Rubik-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/fonts/Rubik-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
 }
 
 /* =========================================================
@@ -216,7 +190,10 @@ a {
    ========================================================= */
 
 .container {
-  width: min(100% - (var(--container-padding) * 2), var(--container-max-width));
+  width: min(
+    calc(100% - (var(--container-padding) * 2)),
+    var(--container-max-width)
+  );
 
   margin-inline: auto;
 }
@@ -290,40 +267,36 @@ a {
    CSS GRID
    ========================================================= */
 
-/*
- * Automatically creates as many columns as fit.
- * No breakpoint is required for the basic responsive
- * behavior.
- */
-
 .grid {
   display: grid;
   gap: var(--grid-gap);
 }
 
 .grid-auto {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 15rem), 1fr)
+  );
 }
-
-/*
- * Useful for two-column layouts.
- * It collapses naturally when columns become too narrow.
- */
 
 .grid-responsive {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 20rem), 1fr)
+  );
 
   gap: var(--grid-gap);
 }
 
-/*
- * Three-column responsive grid.
- */
-
 .grid-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 16rem), 1fr)
+  );
 
   gap: var(--grid-gap);
 }
@@ -484,13 +457,14 @@ a {
    RESPONSIVE BEHAVIOR
    ========================================================= */
 
-/*
- * Small screens
- */
+/* Small screens */
 
 @media (max-width: 39.999rem) {
   .container {
-    width: min(100% - 2rem, var(--container-max-width));
+    width: min(
+      calc(100% - 2rem),
+      var(--container-max-width)
+    );
   }
 
   .header {
@@ -502,9 +476,7 @@ a {
   }
 }
 
-/*
- * Medium screens
- */
+/* Medium screens */
 
 @media (min-width: 40rem) {
   :root {
@@ -512,9 +484,7 @@ a {
   }
 }
 
-/*
- * Large screens
- */
+/* Large screens */
 
 @media (min-width: 64rem) {
   :root {
