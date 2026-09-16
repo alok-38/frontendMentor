@@ -20,24 +20,20 @@
   <body>
     <!-- Pull dynamic content from the data.json file -->
     <main class="container">
-      <section>
-        <div>
-          <button>+</button>
-          <span>
-            <!-- number -->
-          </span>
-          <button>-</button>
-        </div>
-        <div>
-          <div>
-            <!-- user avatar -->
-            <img src="" alt="">
-          </div>
-          <p>
-            <!-- Comment -->
-          </p>
-        </div>
+      <section id="comments" class="comments">
+        <!-- Comments rendered by JavaScript -->
       </section>
+
+      <form id="comment-form" class="comment-form card">
+        <textarea
+          id="comment-input"
+          class="textarea"
+          placeholder="Add a comment..."
+          required
+        ></textarea>
+
+        <button type="submit" class="button button--primary">SEND</button>
+      </form>
     </main>
   </body>
 </html>
