@@ -6,7 +6,7 @@ let data = null;
 
 async function loadComments() {
   try {
-    const response = await fetch("./data.json");
+    const response = await fetch("/data.json");
 
     if (!response.ok) {
       throw new Error("Could not load comments");
