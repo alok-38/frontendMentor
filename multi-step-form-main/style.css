@@ -1,0 +1,23 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body base styles */
+body {
+  /* Using HSL on purpose. */
+  background-color: hsl(218, 100%, 97%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  background-color: #fff;
+  box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.0951);
+  border-radius: 15px;
+  max-width: 940px;
+  width: 100%;
+}
