@@ -1,155 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-    <!-- Primary SEO -->
-    <title>
-      Article Preview Component | Frontend Mentor Challenge Solution
-    </title>
-    <meta
-      name="description"
-      content="A responsive article preview component built as part of the Frontend Mentor challenge. Features clean UI, mobile-first design, and modern CSS techniques."
-    />
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="canonical"
-      href="https://your-site.com/article-preview-component"
-    />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
 
-    <!-- Theme -->
-    <meta name="theme-color" content="#ecf2f8" />
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
 
-    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Article Preview Component | Frontend Mentor Solution"
-    />
-    <meta
-      property="og:description"
-      content="Responsive article preview component built with modern HTML and CSS. Frontend Mentor challenge solution."
-    />
-    <meta
-      property="og:url"
-      content="https://your-site.com/article-preview-component"
-    />
-    <meta
-      property="og:image"
-      content="https://your-site.com/images/preview.jpg"
-    />
+  Shift the overall look and feel by adding these wonderful 
+  touches to furniture in your home
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Article Preview Component | Frontend Mentor Solution"
-    />
-    <meta
-      name="twitter:description"
-      content="Responsive article preview component built with modern HTML and CSS."
-    />
-    <meta
-      name="twitter:image"
-      content="https://your-site.com/images/preview.jpg"
-    />
+  Ever been in a room and felt like something was missing? Perhaps 
+  it felt slightly bare and uninviting. I’ve got some simple tips 
+  to help you make any room feel complete.
 
-    <!-- Preload critical font -->
-    <link
-      rel="preload"
-      href="fonts/Manrope-Variable.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+  Michelle Appleton
+  28 Jun 2020
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/main.css" />
-
-    <!-- JavaScript -->
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <main class="article-preview" role="main">
-      <figure class="article-preview__media">
-        <img
-          class="article-preview__image"
-          src="images/drawers.jpg"
-          alt="Wooden drawers with a decorative vase placed on top"
-        />
-      </figure>
-      <article class="article-preview__content">
-        <h1 class="article-preview__title">
-          Shift the overall look and feel by adding these wonderful touches to
-          furniture in your home
-        </h1>
-        <p class="article-preview__text">
-          Ever been in a room and felt like something was missing? Perhaps it
-          felt slightly bare and uninviting. I've got some simple tips to help
-          you make any room feel complete.
-        </p>
-        <section class="footer-preview__content">
-          <div
-            class="article-preview__author"
-            itemscope
-            itemtype="https://schema.org/Person"
-          >
-            <img
-              class="article-preview__avatar"
-              src="images/avatar-michelle.jpg"
-              alt="Avatar of Michelle Appleton"
-            />
-            <div class="article-preview__author-info">
-              <h2 class="article-preview__author-name" itemprop="name">
-                Michelle Appleton
-              </h2>
-              <time class="article-preview__date" datetime="2020-06-28">
-                28 Jun 2020
-              </time>
-            </div>
-          </div>
-          <div class="article-preview__social" id="modal">
-            <h3>SHARE</h3>
-            <a href="www.facebook.com" target="_blank" rel="noreferrer">
-              <img src="images/icon-facebook.svg" alt="facebook icon" />
-            </a>
-            <a href="www.x.com" target="_blank" rel="noreferrer">
-              <img src="images/icon-twitter.svg" alt="twitter icon" />
-            </a>
-            <a href="www.pinterest.com" target="_blank" rel="noreferrer">
-              <img src="images/icon-pinterest.svg" alt="pinterest icon" />
-            </a>
-          </div>
-          <button
-            id="shareButton"
-            class="article-preview__share-button"
-            aria-label="Share article"
-            type="button"
-          >
-            <img
-              class="article-preview__share-icon"
-              src="images/icon-share.svg"
-              alt=""
-              aria-hidden="true"
-            />
-          </button>
-        </section>
-      </article>
-    </main>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Alokananda Y</a>.
-    </footer>
-  </body>
+  Share
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
 </html>
