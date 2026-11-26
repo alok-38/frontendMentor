@@ -1,38 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-  <meta name="description" content="qr code component">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | QR code component</title>
 
-  <title>Frontend Mentor | QR code component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-  <script src="app.js" defer></script>
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <main>
-    <figure id="qrcode"></figure>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="qr-card" id="main-content">
+        <figure class="qr-card__figure">
+          <img
+            class="qr-card__image"
+            src="images/image-qr-code.png"
+            alt="QR code linking to Frontend Mentor"
+          />
+          <figcaption class="qr-card__caption">Image of a QR code</figcaption>
+        </figure>
 
+        <section class="qr-card__content">
+          <h1 class="qr-card__title">
+            Improve your front-end skills by building projects
+          </h1>
+          <p class="qr-card__description">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </section>
+      </main>
 
-    <article>
-      <h1>Improve your front-end skills by building projects</h1>
-      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
-    </article>
-  </main>
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Alokananda Y</a>.
-  </footer>
-
-</body>
-
+      <footer class="attribution">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="attribution__link" href="https://github.com/alok-38">Alok</a>.
+      </footer>
+    </div>
+  </body>
 </html>
