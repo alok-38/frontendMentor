@@ -1,3 +1,4 @@
+
 /* ========================================
    1. Design Tokens
    ======================================== */
@@ -9,10 +10,8 @@
   --color-slate-300: #d5e1ef;
   --color-white: #ffffff;
 
-  /* Font family */
+  /* Typography */
   --font-family: "Outfit", sans-serif;
-
-  /* Font weights */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
@@ -30,6 +29,13 @@
   --spacing-500: 2.5rem;
   --spacing-300: 1.5rem;
   --spacing-200: 1rem;
+
+  /* Border Radius */
+  --radius-lg: 1.25rem;
+  --radius-md: 0.625rem;
+
+  /* Shadow */
+  --shadow-card: 0 25px 25px rgba(0, 0, 0, 0.0477);
 }
 
 /* ========================================
@@ -44,6 +50,124 @@
   padding: 0;
 }
 
-figcaption {
-  visibility: hidden;
+/* ========================================
+   3. Base Styles
+   ======================================== */
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-slate-300);
+  color: var(--color-slate-900);
+}
+
+/* ========================================
+   4. Page Layout
+   ======================================== */
+
+.wrapper {
+  display: grid;
+  place-items: center;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--spacing-200);
+
+  position: relative;
+}
+
+/* ========================================
+   5. QR Card Component
+   ======================================== */
+
+.qr-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+
+  width: 100%;
+  max-width: 20rem;
+
+  padding: var(--spacing-200)
+           var(--spacing-200)
+           var(--spacing-500);
+
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+
+  text-align: center;
+}
+
+.qr-card__figure {
+  width: 100%;
+}
+
+.qr-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* Visually hidden, accessible to screen readers */
+.qr-card__caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.qr-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+
+  padding-inline: var(--spacing-200);
+}
+
+.qr-card__title {
+  font-size: var(--text-preset-1-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--text-preset-1-line-height);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+}
+
+.qr-card__description {
+  font-size: var(--text-preset-2-size);
+  line-height: var(--text-preset-2-line-height);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+  color: var(--color-slate-500);
+}
+
+/* ========================================
+   6. Attribution
+   ======================================== */
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  inset-inline: 1rem;
+
+  text-align: center;
+  font-size: 0.6875rem;
+}
+
+.attribution__link {
+  color: var(--color-slate-900);
+}
+
+/* Prevent footer overlap on short screens */
+@media (max-height: 580px) {
+  .wrapper {
+    padding-bottom: 3.5rem;
+  }
 }
